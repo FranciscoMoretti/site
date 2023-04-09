@@ -17,11 +17,13 @@
     "@trpc/next": "^10.18.0",
     "@trpc/react-query": "^10.18.0",
     "@trpc/server": "^10.18.0",
+    "clsx": "^1.2.1",
     "next": "^13.2.4",
     "next-auth": "^4.21.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "superjson": "1.12.2",
+    "tailwind-merge": "^1.12.0",
     "zod": "^3.21.4"
   },
   "devDependencies": {
