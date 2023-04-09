@@ -22,6 +22,7 @@
     "next-auth": "^4.21.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-wrap-balancer": "^0.4.0",
     "superjson": "1.12.2",
     "tailwind-merge": "^1.12.0",
     "zod": "^3.21.4"
