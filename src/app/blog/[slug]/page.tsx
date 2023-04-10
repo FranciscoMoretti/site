@@ -4,6 +4,7 @@ import { Mdx } from '~/components/mdx';
 import { allBlogs } from 'contentlayer/generated';
 import Balancer from 'react-wrap-balancer';
 import { siteURL } from '~/config/info';
+import Script from 'next/script';
 
 export async function generateStaticParams() {
   return allBlogs.map((post) => ({
@@ -64,9 +65,11 @@ export default async function Blog({ params }) {
 
   return (
     <section>
-      <script type="application/ld+json">
-        {JSON.stringify(post.structuredData)}
-      </script>
+      <Script
+        id='structured-data'
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(post.structuredData)}}
+        />
       <h1 className="font-bold text-3xl font-serif max-w-[650px]">
         <Balancer>{post.title}</Balancer>
       </h1>
