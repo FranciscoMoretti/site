@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { Mdx } from '~/components/mdx';
 import { allBlogs } from 'contentlayer/generated';
 import Balancer from 'react-wrap-balancer';
+import { siteURL } from '~/config/info';
 
 export async function generateStaticParams() {
   return allBlogs.map((post) => ({
@@ -26,8 +27,8 @@ export async function generateMetadata({
     slug,
   } = post;
   const ogImage = image
-    ? `https://leerob.io${image}`
-    : `https://leerob.io/api/og?title=${title}`;
+    ? `${siteURL}${image}`
+    : `${siteURL}/api/og?title=${title}`;
 
   return {
     title,
@@ -37,7 +38,7 @@ export async function generateMetadata({
       description,
       type: 'article',
       publishedTime,
-      url: `https://leerob.io/blog/${slug}`,
+      url: `${siteURL}/blog/${slug}`,
       images: [
         {
           url: ogImage,
