@@ -1,7 +1,10 @@
 import Link from "next/link";
 import Image from 'next/image';
 
-import { name, about, bio, avatar } from '~/utils/info';
+import { name } from '~/config/info';
+import { about } from '~/config/about';
+import { bio } from '~/config/bio';
+import { avatar } from '~/config/avatar';
 // import { signIn, signOut, useSession } from "next-auth/react";
 
 // import { api } from "~/utils/api";
