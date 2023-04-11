@@ -151,7 +151,7 @@ export default makeSource({
       [
         rehypePrettyCode,
         {
-          theme: "github-dark",
+          theme: "dark-plus",
           onVisitLine(node) {
             // Prevent lines from collapsing in `display: grid` mode, and allow empty
             // lines to be copy/pasted
