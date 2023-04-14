@@ -1,3 +1,4 @@
+import { Logo } from "@/config/logo"
 import {
   AlertTriangle,
   ArrowRight,
@@ -27,7 +28,7 @@ import {
 export type Icon = LucideIcon
 
 export const Icons = {
-  logo: Command,
+  logo: Logo,
   close: X,
   spinner: Loader2,
   chevronLeft: ChevronLeft,
