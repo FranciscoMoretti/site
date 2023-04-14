@@ -2,16 +2,16 @@ import { MarketingConfig } from "types"
 
 export const marketingConfig: MarketingConfig = {
   mainNav: [
-    {
-      title: "Features",
-      href: "/features",
-      disabled: true,
-    },
-    {
-      title: "Pricing",
-      href: "/pricing",
-      disabled: true,
-    },
+    // {
+    //   title: "Features",
+    //   href: "/features",
+    //   disabled: true,
+    // },
+    // {
+    //   title: "Pricing",
+    //   href: "/pricing",
+    //   disabled: true,
+    // },
     {
       title: "Blog",
       href: "/blog",
@@ -19,12 +19,11 @@ export const marketingConfig: MarketingConfig = {
     {
       title: "Documentation",
       href: "/docs",
-      disabled: true,
     },
-    {
-      title: "Contact",
-      href: "/contact",
-      disabled: true,
-    },
+    // {
+    //   title: "Contact",
+    //   href: "/contact",
+    //   disabled: true,
+    // },
   ],
 }
