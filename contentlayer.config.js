@@ -18,7 +18,7 @@ const computedFields = {
 
 export const Doc = defineDocumentType(() => ({
   name: "Doc",
-  filePathPattern: `docs/**/*.mdx`,
+  filePathPattern: `docs/**/*.md*`,
   contentType: "mdx",
   fields: {
     title: {
@@ -27,6 +27,22 @@ export const Doc = defineDocumentType(() => ({
     },
     description: {
       type: "string",
+    },
+    category: {
+      type: "string",
+      required: true,
+    },
+    date: {
+      type: "string",
+    },
+    slug: {
+      type: "string",
+    },
+    page_id: {
+      type: "string",
+    },
+    sidebar_position: {
+      type: "number",
     },
     published: {
       type: "boolean",
@@ -38,7 +54,7 @@ export const Doc = defineDocumentType(() => ({
 
 export const Guide = defineDocumentType(() => ({
   name: "Guide",
-  filePathPattern: `guides/**/*.mdx`,
+  filePathPattern: `guides/**/*.md*`,
   contentType: "mdx",
   fields: {
     title: {
@@ -66,7 +82,7 @@ export const Guide = defineDocumentType(() => ({
 
 export const Post = defineDocumentType(() => ({
   name: "Post",
-  filePathPattern: `blog/**/*.mdx`,
+  filePathPattern: `blog/**/*.md*`,
   contentType: "mdx",
   fields: {
     title: {
@@ -80,13 +96,23 @@ export const Post = defineDocumentType(() => ({
       type: "date",
       required: true,
     },
+    slug: {
+      type: "string",
+    },
+    page_id: {
+      type: "string",
+    },
+    sidebar_position: {
+      type: "number",
+    },
     published: {
       type: "boolean",
       default: true,
     },
     image: {
       type: "string",
-      required: true,
+      required: false,
+      default: '/images/blog/blog-post-1.jpg'
     },
     authors: {
       // Reference types are not embedded.
@@ -95,7 +121,8 @@ export const Post = defineDocumentType(() => ({
       // of: Author,
       type: "list",
       of: { type: "string" },
-      required: true,
+      required: false,
+      default: ['fmoretti']
     },
   },
   computedFields,
@@ -127,7 +154,7 @@ export const Author = defineDocumentType(() => ({
 
 export const Page = defineDocumentType(() => ({
   name: "Page",
-  filePathPattern: `pages/**/*.mdx`,
+  filePathPattern: `pages/**/*.md*`,
   contentType: "mdx",
   fields: {
     title: {
@@ -136,6 +163,15 @@ export const Page = defineDocumentType(() => ({
     },
     description: {
       type: "string",
+    },
+    slug: {
+      type: "string",
+    },
+    page_id: {
+      type: "string",
+    },
+    sidebar_position: {
+      type: "number",
     },
   },
   computedFields,
