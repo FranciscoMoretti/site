@@ -5,6 +5,7 @@ date: 2023-01-25
 description: Learn how to create an animation effect that is triggered when a component comes into view using React Intersection Observer and Tailwind in a Next.js app directory. Discover the options available in the react-intersection-observer package and how to use the tailwindcss-animate package to style the animations. Follow the code example provided to implement this feature in your Next.js app.
 slug: how-to-animate-on-scroll-with-react-intersection-observer-and-tailwind-in-a-nextjs-app
 page_id: 5fbcf19c-c414-47e3-be18-1c7b1eab68be
+image: /images/blog/blog-post-3.jpg
 ---
 
 
