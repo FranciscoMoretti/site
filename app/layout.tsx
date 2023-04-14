@@ -83,7 +83,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <head />
       <body className="min-h-screen">
         {children}
-        <Analytics />
+        {/* <Analytics /> */}
         <Toaster />
         <TailwindIndicator />
       </body>
