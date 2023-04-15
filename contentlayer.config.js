@@ -13,15 +13,15 @@ const computedFields =
   defineComputedFields <
   ("Page" | "Doc" | "Guide" | "Post" | "Author") >
   {
-  slug: {
-    type: "string",
-    resolve: (doc) => `/${doc._raw.flattenedPath}`,
-  },
-  slugAsParams: {
-    type: "string",
-    resolve: (doc) => doc._raw.flattenedPath.split("/").slice(1).join("/"),
-  },
-}
+    slug: {
+      type: "string",
+      resolve: (doc) => `/${doc._raw.flattenedPath}`,
+    },
+    slugAsParams: {
+      type: "string",
+      resolve: (doc) => doc._raw.flattenedPath.split("/").slice(1).join("/"),
+    },
+  }
 
 export const Doc = defineDocumentType(() => ({
   name: "Doc",
@@ -213,8 +213,11 @@ export default makeSource({
       [
         rehypeAutolinkHeadings,
         {
+          behavior: "wrap",
           properties: {
-            className: ["subheading-anchor"],
+            className: [
+              "before:content-['#'] before:absolute before:invisible before:-ml-[1em] hover:before:visible before:text-slate-300 pl-[1em] -ml-[1em]",
+            ],
             ariaLabel: "Link to section",
           },
         },
