@@ -9,19 +9,16 @@ import rehypeSlug from "rehype-slug"
 import rehypeAutolinkHeadings from "rehype-autolink-headings"
 
 /** @type {import('contentlayer/source-files').ComputedFields} */
-const computedFields =
-  defineComputedFields <
-  ("Page" | "Doc" | "Guide" | "Post" | "Author") >
-  {
-    slug: {
-      type: "string",
-      resolve: (doc) => `/${doc._raw.flattenedPath}`,
-    },
-    slugAsParams: {
-      type: "string",
-      resolve: (doc) => doc._raw.flattenedPath.split("/").slice(1).join("/"),
-    },
-  }
+const computedFields = {
+  slug: {
+    type: "string",
+    resolve: (doc) => `/${doc._raw.flattenedPath}`,
+  },
+  slugAsParams: {
+    type: "string",
+    resolve: (doc) => doc._raw.flattenedPath.split("/").slice(1).join("/"),
+  },
+}
 
 export const Doc = defineDocumentType(() => ({
   name: "Doc",
