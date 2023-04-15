@@ -119,7 +119,7 @@ export const Post = defineDocumentType(() => ({
     image: {
       type: "string",
       required: false,
-      default: '/images/blog/blog-post-1.jpg'
+      default: "/images/blog/blog-post-1.jpg",
     },
     authors: {
       // Reference types are not embedded.
@@ -129,7 +129,7 @@ export const Post = defineDocumentType(() => ({
       type: "list",
       of: { type: "string" },
       required: false,
-      default: ['fmoretti']
+      default: ["fmoretti"],
     },
   },
   computedFields,
