@@ -50,8 +50,8 @@ export default async function IndexPage() {
           </p>
         </div>
         <div className="flex gap-4">
-          <Link href="/login" className={cn(buttonVariants({ size: "lg" }))}>
-            Get Started
+          <Link href="/blog" className={cn(buttonVariants({ size: "lg" }))}>
+            Read blog
           </Link>
           <Link
             href={siteConfig.links.github}
@@ -63,7 +63,7 @@ export default async function IndexPage() {
           </Link>
         </div>
       </section>
-      <hr className="border-slate-200" />
+      {/* <hr className="border-slate-200" />
       <section className="container grid justify-center gap-6 py-8 md:py-12 lg:py-24">
         <div className="mx-auto flex flex-col gap-4 md:max-w-[52rem]">
           <h2 className="text-3xl font-bold leading-[1.1] tracking-tighter sm:text-3xl md:text-6xl">
@@ -218,7 +218,7 @@ export default async function IndexPage() {
             </div>
           </Link>
         )}
-      </section>
+      </section> */}
     </>
   )
 }
