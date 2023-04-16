@@ -1,6 +1,6 @@
 ---
 title: Use pronounceable and meaningful variable names
-sidebar_position: 7
+sidebar_position: 4
 date: 2022-03-21
 description: Choosing good names takes time but it saves even more time. Names should be easy to pronounce and they should give you useful information.
 category: Variables

@@ -1,6 +1,6 @@
 ---
 title: Functions should do one thing
-sidebar_position: 14
+sidebar_position: 8
 date: 2022-06-13
 description: Create a function for each action or concept. Functions should do one and only one thing.
 category: Functions

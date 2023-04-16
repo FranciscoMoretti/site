@@ -1,6 +1,6 @@
 ---
 title: Don't ignore caught errors
-sidebar_position: 25
+sidebar_position: 26
 date: 2022-11-10
 description: Thrown errors are a good thing and you can do something about them. The rule is “ Don't ignore caught errors”
 category: General

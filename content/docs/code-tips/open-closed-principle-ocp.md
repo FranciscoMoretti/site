@@ -1,6 +1,6 @@
 ---
 title: Open-Closed Principle (OCP)
-sidebar_position: 1
+sidebar_position: 13
 date: 2022-09-13
 description: Software entities should be closed for modification but open for extension. In other words, you shouldn’t need to change existing code to add more functionality to a class. This is one of the SOLID principles.
 category: SOLID

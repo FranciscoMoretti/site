@@ -1,6 +1,6 @@
 ---
 title: Use Explanatory Variables
-sidebar_position: 18
+sidebar_position: 2
 date: 2022-05-16
 description: Break the calculations up into intermediate values that are held in variables with meaningful names. The names give meaning and clarity to the code. 
 category: Variables

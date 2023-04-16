@@ -1,6 +1,6 @@
 ---
 title: Don't add unneeded context
-sidebar_position: 17
+sidebar_position: 22
 date: 2022-05-30
 description: If your class or object name tells you something, don't repeat that in your variable name.
 category: General
@@ -10,7 +10,7 @@ page_id: 372464db-2bce-474b-a396-69b1cb9e95f0
 
 
 
-☑️ Topic: Variables
+☑️ Topic: General
 
 
 ☑️ Idea: If your class or object name tells you something, don't repeat that in your variable name.

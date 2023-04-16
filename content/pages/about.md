@@ -29,7 +29,3 @@ Today, I help people (just like you!) grow their programming skills with code cl
 
 
 At the moment, I'm working with TypeScript, React, Next.js, and Tailwind CSS. I use JavaScript to illustrate some examples.
-
-
-You can find free code tips at **[Problem Internal Link]**.
-

@@ -1,6 +1,6 @@
 ---
 title: Use the same vocabulary for the same concept
-sidebar_position: 20
+sidebar_position: 23
 date: 2022-03-14
 description: Pick one word per concept and stick with it. Consistency, consistency, consistency!
 category: General

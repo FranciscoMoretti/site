@@ -1,6 +1,6 @@
 ---
 title: Don’t Use Magic Numbers
-sidebar_position: 19
+sidebar_position: 3
 date: 2022-05-09
 description: Code should be readable and searchable. Constants should have a name. Use searchable names.
 category: Variables

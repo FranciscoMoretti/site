@@ -1,6 +1,6 @@
 ---
 title: Don’t Over Optimize
-sidebar_position: 8
+sidebar_position: 18
 date: 2022-08-08
 description:  Trying to optimize your code is a waste of time in some cases. Modern browsers do a lot of optimizations at runtime.
 category: General

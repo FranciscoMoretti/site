@@ -1,6 +1,6 @@
 ---
 title: Avoid Negative Conditionals
-sidebar_position: 9
+sidebar_position: 19
 date: 2022-08-01
 description: Negatives are harder to understand. Conditional functions should be expressed as positives every time.
 category: General

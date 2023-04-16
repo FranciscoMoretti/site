@@ -1,6 +1,6 @@
 ---
 title: Liskov Substitution Principle (LSP)
-sidebar_position: 2
+sidebar_position: 14
 date: 2022-09-22
 description: If S is a subtype of T, then objects of type T may be replaced with objects of type S. If you have a parent class and a child class, then the child class can be used where the base class is accepted without getting incorrect results.
 category: SOLID

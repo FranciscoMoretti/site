@@ -1,6 +1,6 @@
 ---
 title: Encapsulate conditionals
-sidebar_position: 11
+sidebar_position: 21
 date: 2022-07-18
 description: Encapsulate the expressions used in conditionals and use the new function name to indicate their intent. Boolean logic is easier to understand if it’s read in isolation.
 category: General

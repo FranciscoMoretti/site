@@ -1,6 +1,6 @@
 ---
 title: Remove dead code
-sidebar_position: 10
+sidebar_position: 20
 date: 2022-07-25
 description: Delete code that isn’t executed. It will still be in your git history if you need it. 
 category: General
@@ -10,7 +10,7 @@ page_id: 2db7d892-c1cd-49b1-ba9f-af869483a510
 
 
 
-☑️ Topic: Functions
+☑️ Topic: General
 
 
 ☑️ Idea: Delete code that isn’t executed. It will still be in your git history if you need it. 

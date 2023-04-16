@@ -1,6 +1,6 @@
 ---
 title: Single Responsibility Principle (SRP)
-sidebar_position: 0
+sidebar_position: 12
 date: 2022-09-06
 description: Each class should have a single responsibility. That means that there should be only one reason to change it. This is one of the SOLID principles.
 category: SOLID

@@ -1,6 +1,6 @@
 ---
 title: Avoid side effects in functions
-sidebar_position: 15
+sidebar_position: 5
 date: 2023-01-09
 description: A side effect is when a function does something besides just taking some values and returning other values. Side effects can be hard to test and debug, and they can cause unexpected behavior. But there's an easy way to avoid them write "pure" functions.
 

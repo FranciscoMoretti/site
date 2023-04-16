@@ -1,6 +1,6 @@
 ---
 title: Dependency Inversion Principle (DIP)
-sidebar_position: 4
+sidebar_position: 16
 date: 2022-10-05
 description: High-level modules should not depend on low-level modules and both should depend on abstractions. Abstractions should not depend upon details, but details should depend on abstractions. Classes shouldn’t have to know implementation details from their dependencies.
 category: SOLID

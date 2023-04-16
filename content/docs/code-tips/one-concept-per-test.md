@@ -1,6 +1,6 @@
 ---
 title: One concept per test
-sidebar_position: 24
+sidebar_position: 25
 date: 2022-10-27
 description: The rule is really simple. The only thing you have to do is to choose a single concept to test in every unit test you write.
 category: General

@@ -1,6 +1,6 @@
 ---
 title: Function names should say what they do
-sidebar_position: 13
+sidebar_position: 7
 date: 2022-07-04
 description: Say what the function does with its name. The name should tell you what it expects as inputs as well.
 category: Functions

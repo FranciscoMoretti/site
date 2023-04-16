@@ -1,6 +1,6 @@
 ---
 title: Few Function Arguments
-sidebar_position: 16
+sidebar_position: 9
 date: 2022-06-06
 description: Fewer arguments make your function easier to test. They are also easier to handle.
 category: Functions

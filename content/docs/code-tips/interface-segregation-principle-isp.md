@@ -1,6 +1,6 @@
 ---
 title: Interface Segregation Principle (ISP)
-sidebar_position: 3
+sidebar_position: 15
 date: 2022-09-28
 description: Clients should not be forced to depend upon interfaces that they do not use. Large interfaces should be broken up into smaller interfaces.
 category: SOLID
