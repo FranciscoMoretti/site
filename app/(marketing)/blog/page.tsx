@@ -48,7 +48,9 @@ export default async function BlogPage() {
               )}
               <h2 className="text-2xl font-extrabold">{post.title}</h2>
               {post.description && (
-                <p className="text-slate-600 line-clamp-2">{post.description}</p>
+                <p className="text-slate-600 line-clamp-2">
+                  {post.description}
+                </p>
               )}
               {post.date && (
                 <p className="text-sm text-slate-600">

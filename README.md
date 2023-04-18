@@ -89,11 +89,11 @@ pnpm dev
 ```
 
 4. Run the DB
+
 ```sh
 pscale auth login
 pscale connect site main --port 3306
 ```
-
 
 ## License
 

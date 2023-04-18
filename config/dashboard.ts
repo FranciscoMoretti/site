@@ -17,13 +17,13 @@ export const dashboardConfig: DashboardConfig = {
       title: "Posts",
       href: "/dashboard",
       icon: "post",
-      disabled: true
+      disabled: true,
     },
     {
       title: "Billing",
       href: "/dashboard/billing",
       icon: "billing",
-      disabled: true
+      disabled: true,
     },
     {
       title: "Settings",

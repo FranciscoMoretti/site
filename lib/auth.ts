@@ -11,8 +11,6 @@ import { db } from "@/lib/db"
 // TODO: Move env vars to env a la t3.
 // const postmarkClient = new Client(process.env.POSTMARK_API_TOKEN || "")
 
-
-
 export const authOptions: NextAuthOptions = {
   // huh any! I know.
   // This is a temporary fix for prisma client.
