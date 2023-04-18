@@ -8,13 +8,9 @@ slug: kiss-keep-it-short-and-simple
 page_id: dce1696f-7574-46ab-815d-3090490c1989
 ---
 
-
-
 ## The KISS principle: Keep it short and simple!
 
-
 The KISS principle states that most systems work best if they are kept simple rather than made complicated; therefore, simplicity should be a key goal in design, and unnecessary complexity should be avoided.
-
 
 ### Also known as
 
@@ -32,7 +28,6 @@ The KISS principle states that most systems work best if they are kept simple ra
 > to make it so complicated that there are no obvious  
 > deficiencies.”– C.A.R. Hoare.
 
-
 ### Similar concepts
 
 - Leonardo da Vinci's "Simplicity is the ultimate sophistication"
@@ -47,7 +42,6 @@ The KISS principle states that most systems work best if they are kept simple ra
 - You aren't gonna need it (YAGNI)
 
 ### Summary
-
 
 Rule: Keep it short and simple (KISS)
 

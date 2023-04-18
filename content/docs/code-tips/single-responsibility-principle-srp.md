@@ -8,10 +8,7 @@ slug: single-responsibility-principle-srp
 page_id: 36fcf141-1cd9-48ab-8a71-907a5be39c23
 ---
 
-
-
-## The SOLID Principles 
-
+## The SOLID Principles
 
 SOLID is an acronym for five other class-design principles:
 
@@ -23,18 +20,13 @@ SOLID is an acronym for five other class-design principles:
 
 ## The Single Responsibility Principle (SRP)
 
-
 ☑️ Topic: Objects and Data Structures
-
 
 ☑️ Idea: Each class should have a single responsibility. That means that there should be only one reason to change it. This is one of the SOLID principles.
 
-
 ☑️ Benefits: Maintainability, Reusability
 
-
 ☑️ Guideline: If you can’t say what the class does without using “and”, “or” , or “if” it’s likely doing more than one thing.
-
 
 ### Benefits Explained
 
@@ -44,15 +36,13 @@ SOLID is an acronym for five other class-design principles:
 
 ## Example
 
-
 ### BAD
-
 
 ```javascript
 // BAD
 class UserSettings {
   constructor(user) {
-    this.user = user;
+    this.user = user
   }
 
   changeSettings(settings) {
@@ -67,15 +57,13 @@ class UserSettings {
 }
 ```
 
-
 ### GOOD
-
 
 ```javascript
 // GOOD
 class UserAuth {
   constructor(user) {
-    this.user = user;
+    this.user = user
   }
 
   verifyCredentials() {
@@ -85,8 +73,8 @@ class UserAuth {
 
 class UserSettings {
   constructor(user) {
-    this.user = user;
-    this.auth = new UserAuth(user);
+    this.user = user
+    this.auth = new UserAuth(user)
   }
 
   changeSettings(settings) {
@@ -96,4 +84,3 @@ class UserSettings {
   }
 }
 ```
-

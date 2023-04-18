@@ -8,10 +8,7 @@ slug: open-closed-principle-ocp
 page_id: 5f58330f-6b78-4eeb-b9da-d467eaf5372f
 ---
 
-
-
-## The SOLID Principles 
-
+## The SOLID Principles
 
 SOLID is an acronym for five other class-design principles:
 
@@ -23,18 +20,13 @@ SOLID is an acronym for five other class-design principles:
 
 ## The Open-Closed Principle (OCP)
 
-
 ☑️ Topic: Objects and Data Structures
-
 
 ☑️ Idea: Classes should be closed for modification but open for extension. In other words, you shouldn’t need to change existing code to add more functionality to a class.
 
-
 ☑️ Benefits: Maintainability, Re-usability
 
-
 ☑️ Guideline: If you are thinking of adapting a class to add new functionality, consider extending it instead.
-
 
 ### Benefits Explained
 
@@ -43,40 +35,38 @@ SOLID is an acronym for five other class-design principles:
 
 ## Example
 
-
 ### BAD
-
 
 ```javascript
 // BAD
 class AjaxAdapter extends Adapter {
   constructor() {
-    super();
-    this.name = "ajaxAdapter";
+    super()
+    this.name = "ajaxAdapter"
   }
 }
 
 class NodeAdapter extends Adapter {
   constructor() {
-    super();
-    this.name = "nodeAdapter";
+    super()
+    this.name = "nodeAdapter"
   }
 }
 
 class HttpRequester {
   constructor(adapter) {
-    this.adapter = adapter;
+    this.adapter = adapter
   }
 
   fetch(url) {
     if (this.adapter.name === "ajaxAdapter") {
-      return makeAjaxCall(url).then(response => {
+      return makeAjaxCall(url).then((response) => {
         // transform response and return
-      });
+      })
     } else if (this.adapter.name === "nodeAdapter") {
-      return makeHttpCall(url).then(response => {
+      return makeHttpCall(url).then((response) => {
         // transform response and return
-      });
+      })
     }
   }
 }
@@ -88,18 +78,15 @@ function makeAjaxCall(url) {
 function makeHttpCall(url) {
   // request and return promise
 }
-
 ```
 
-
 ### GOOD
-
 
 ```javascript
 class AjaxAdapter extends Adapter {
   constructor() {
-    super();
-    this.name = "ajaxAdapter";
+    super()
+    this.name = "ajaxAdapter"
   }
 
   request(url) {
@@ -109,8 +96,8 @@ class AjaxAdapter extends Adapter {
 
 class NodeAdapter extends Adapter {
   constructor() {
-    super();
-    this.name = "nodeAdapter";
+    super()
+    this.name = "nodeAdapter"
   }
 
   request(url) {
@@ -120,14 +107,13 @@ class NodeAdapter extends Adapter {
 
 class HttpRequester {
   constructor(adapter) {
-    this.adapter = adapter;
+    this.adapter = adapter
   }
 
   fetch(url) {
-    return this.adapter.request(url).then(response => {
+    return this.adapter.request(url).then((response) => {
       // transform response and return
-    });
+    })
   }
 }
 ```
-

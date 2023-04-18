@@ -8,34 +8,27 @@ slug: avoid-mental-mapping
 page_id: f1f95ad0-ef6b-4d11-ad63-f35b9c483217
 ---
 
-
-
 ☑️ Topic: Variables
-
 
 ☑️ Idea: Use explicit names for variables instead of using an alias. A single-letter name is just a placeholder for the reader to map into the actual concept and this is a problem.
 
-
 ☑️ Benefit: Readability. Readers don’t need to translate your name into other names they already know.
 
-
-☑️ Guideline: Explicit is better than implicit. If you can’t read the code like a sentence, you should rename the variables that are off. 
-
+☑️ Guideline: Explicit is better than implicit. If you can’t read the code like a sentence, you should rename the variables that are off.
 
 ```javascript
 // BAD
-const locations = ["Austin", "New York", "San Francisco"];
-locations.forEach(l => {
-  doStuff();
+const locations = ["Austin", "New York", "San Francisco"]
+locations.forEach((l) => {
+  doStuff()
   // Wait, what is `l` for again?
-  dispatch(l);
-});
+  dispatch(l)
+})
 
 // GOOD
-const locations = ["Austin", "New York", "San Francisco"];
-locations.forEach(location => {
-  doStuff();
-  dispatch(location);
-});
+const locations = ["Austin", "New York", "San Francisco"]
+locations.forEach((location) => {
+  doStuff()
+  dispatch(location)
+})
 ```
-

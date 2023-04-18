@@ -7,22 +7,15 @@ slug: a-short-introduction-to-python-collections
 page_id: 8268c82d-dff2-4bce-ad73-ea627e8f4a39
 ---
 
-
-
 **Use the right data structure for the job with the containers from Python’s** [**`collections`**](https://docs.python.org/3/library/collections.html#module-collections) **module.**
-
 
 A collection can be defined as a container data type. They have different characteristics primarily regarding their `declaration` and their `usage`.
 
-
 Python has 4 collection data types: `list`, `tuple`, `set` and `dict` (dictionary). These types are general and have some limitations, that’s why other options are available in a built-in module named [`collections`](https://docs.python.org/3/library/collections.html#module-collections). Let’s go through some of these well known structures and some of the specialized data structures in detail.
-
 
 ## Common Container Data Structures
 
-
 These are built-in types that you can use without importing anything. These containers can solve most problems but sometimes they are not the best tool for the job.
-
 
 ### List
 
@@ -58,17 +51,14 @@ These are built-in types that you can use without importing anything. These cont
 
 ## Specialized Collections Data Structures
 
-
 The `collections` module implements many specialized data structures that with properties that differ from the built-in container data types. These are useful to solve more specific programming problems in a Pythonic and efficient manner.
 
-
 Here are some of them.
-
 
 ### namedtuple()
 
 - A factory function to create subclasses of `tuple` with named fields
-	- A name is assigned to every value
+  - A name is assigned to every value
 - Elements can be assigned with index or names
 - [`namedtuple()`](https://docs.python.org/3/library/collections.html#collections.namedtuple)[ docs](https://docs.python.org/3/library/collections.html#collections.namedtuple)
 
@@ -105,9 +95,7 @@ Here are some of them.
 
 ## Base Classes
 
-
 On top of the specialized classes, `collections`also has some base classes. These are the starting points if you want to subclass `dictionary`, `list` or `string`.
-
 
 ### UserDict
 

@@ -8,10 +8,7 @@ slug: liskov-substitution-principle-lsp
 page_id: 569036de-36d1-4f97-bbbb-8bc49a9539ae
 ---
 
-
-
-## The SOLID Principles 
-
+## The SOLID Principles
 
 SOLID is an acronym for five other class-design principles:
 
@@ -23,18 +20,13 @@ SOLID is an acronym for five other class-design principles:
 
 ## The Liskov Substitution Principle (LSP)
 
-
 ☑️ Topic: Objects and Data Structures
-
 
 ☑️ Idea: If S is a subtype of T, then objects of type T may be replaced with objects of type S. If you have a parent class and a child class, then the child class can be used where the base class is accepted without getting incorrect results.
 
-
 ☑️ Benefits: Re-usability, Testability.
 
-
 ☑️ Guideline: If your interface works for a class it should also work for other classes than inherit from it.
-
 
 ### Benefits Explained
 
@@ -44,15 +36,11 @@ SOLID is an acronym for five other class-design principles:
 
 ## Simple example
 
-
 A simple example can be demonstrated with birds.
-
 
 Ducks can fly, but ostrich cannot, and they are both birds.
 
-
 ### BAD
-
 
 ```javascript
 public class Bird{
@@ -62,9 +50,7 @@ public class Duck extends Bird{} // Ducks can fly
 public class Ostrich extends Bird{} // Ostriches also have a `fly` method, but ostriches can't fly.
 ```
 
-
 ### GOOD
-
 
 ```javascript
 public class Bird{}
@@ -75,85 +61,94 @@ public class Duck extends FlyingBirds{} // Ducks can fly
 public class Ostrich extends Bird{} // Ostrich can't fly, but they are still birds
 ```
 
-
 ## Complex example
-
 
 Let’s look at a design example with squares and rectangles.
 
-
-If the designer makes `Square` inherit from `Rectangle` using the “is a” rule (`Square`is a `Rectangle`), then the design can violate the Liskov substitution principle. 
-
+If the designer makes `Square` inherit from `Rectangle` using the “is a” rule (`Square`is a `Rectangle`), then the design can violate the Liskov substitution principle.
 
 ### BAD
-
 
 ```javascript
 // BAD
 class Rectangle {
   constructor() {
-    this.width = 0;
-    this.height = 0;
+    this.width = 0
+    this.height = 0
   }
-  render(area) { /* ... */ }
-  setWidth(width) { this.width = width; }
-  setHeight(height) { this.height = height; }
-  getArea() { return this.width * this.height; }
-}
-
-class Square extends Rectangle { // Square "is a" Rectangle
+  render(area) {
+    /* ... */
+  }
   setWidth(width) {
-    this.width = width;
-    this.height = width;
+    this.width = width
   }
   setHeight(height) {
-    this.width = height;
-    this.height = height;
+    this.height = height
+  }
+  getArea() {
+    return this.width * this.height
   }
 }
 
-function renderLargeRectangles(rectangles) { // `rectangle` can be a Square 
-  rectangles.forEach(rectangle => {
-    rectangle.setWidth(4);
-    rectangle.setHeight(5);
-    const area = rectangle.getArea(); // BAD: Returns 25 for Square. Should be 20.
-    rectangle.render(area);
-  });
+class Square extends Rectangle {
+  // Square "is a" Rectangle
+  setWidth(width) {
+    this.width = width
+    this.height = width
+  }
+  setHeight(height) {
+    this.width = height
+    this.height = height
+  }
+}
+
+function renderLargeRectangles(rectangles) {
+  // `rectangle` can be a Square
+  rectangles.forEach((rectangle) => {
+    rectangle.setWidth(4)
+    rectangle.setHeight(5)
+    const area = rectangle.getArea() // BAD: Returns 25 for Square. Should be 20.
+    rectangle.render(area)
+  })
 }
 ```
 
-
 ### GOOD
-
 
 ```javascript
 // GOOD
 class Shape {
-  render(area) {/* ... */}
+  render(area) {
+    /* ... */
+  }
 }
 
 class Rectangle extends Shape {
   constructor(width, height) {
-    super();
-    this.width = width;
-    this.height = height;
+    super()
+    this.width = width
+    this.height = height
   }
-  getArea() { return this.width * this.height; }
+  getArea() {
+    return this.width * this.height
+  }
 }
 
 class Square extends Shape {
   constructor(length) {
-    super();
-    this.length = length;
+    super()
+    this.length = length
   }
-  getArea() { return this.length * this.length;  }
+  getArea() {
+    return this.length * this.length
+  }
 }
 
-function renderLargeShapes(shapes) { // Works for Shape and its descendants
-  shapes.forEach(shape => {
-    const area = shape.getArea();
-    shape.render(area);
-  });
+function renderLargeShapes(shapes) {
+  // Works for Shape and its descendants
+  shapes.forEach((shape) => {
+    const area = shape.getArea()
+    shape.render(area)
+  })
 }
 ```
-

@@ -8,13 +8,9 @@ slug: composition-vs-inheritance-which-is-better-for-your-code
 page_id: 3b0cb376-9615-49e7-bc1e-f2eb9839dc4e
 ---
 
-
-
 ## Composition vs inheritance, what’s the difference?
 
-
 Hey coders! As you know, it's important to make your code as flexible and scalable as possible. One way to do this is by choosing the right way to organize your code.
-
 
 There are two main ways to organize your code: composition and inheritance. Let's break it down:
 
@@ -23,12 +19,9 @@ There are two main ways to organize your code: composition and inheritance. Let'
 
 So, how do you choose between the two? Here are some tips to help you decide:
 
-
 ## **Tips for Choosing Between Composition and Inheritance**
 
-
 Here are some things to consider when picking between composition and inheritance:
-
 
 ### When to use inheritance over composition
 
@@ -44,61 +37,55 @@ Here are some things to consider when picking between composition and inheritanc
 
 ## **Composition: The Flexible and Scalable Choice**
 
-
 In the end, composition is often the better choice because it's super flexible and easy to change. You can just modify the smaller classes that a class is made of to change its behavior. Plus, you don't have to deal with a bunch of extra classes in your inheritance hierarchy.
-
 
 When you're deciding between inheritance and composition, think about what you need for your code and choose the approach that will give you the most flexibility and scalability. Happy coding!
 
-
 ## Example
-
 
 ### Bad
 
-
 This is bad because `EmployeeTaxData` is not an `Employee`.
-
 
 ```javascript
 // BAD
 class Employee {
-  constructor(name) { this.name = name; }
+  constructor(name) {
+    this.name = name
+  }
 }
 
 class EmployeeTaxData extends Employee {
   constructor(salary) {
-    super();
-    this.salary = salary;
+    super()
+    this.salary = salary
   }
 }
 ```
 
-
 ### Good
 
-
 This is good because an `Employee` has `EmployeeTaxData`.
-
 
 ```javascript
 // GOOD
 class EmployeeTaxData {
-  constructor(salary) { this.salary = salary;}
+  constructor(salary) {
+    this.salary = salary
+  }
 }
 
 class Employee {
-  constructor(name) {this.name = name;}
-  
+  constructor(name) {
+    this.name = name
+  }
+
   setTaxData(salary) {
-    this.taxData = new EmployeeTaxData(salary);
+    this.taxData = new EmployeeTaxData(salary)
   }
 }
 ```
 
-
 ## Summary
 
-
 In short, composition often is a more flexible and scalable approach to code organization than inheritance. However, inheritance can be the better choice for some situations.
-

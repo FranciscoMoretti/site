@@ -8,19 +8,13 @@ slug: use-getters-and-setters
 page_id: 67678dfe-bf1f-4f95-98c9-bd5c587a394b
 ---
 
-
-
 ☑️ Topic: Objects and Data Structures
-
 
 ☑️ Idea: Using getters and setters is better than accessing the object property directly. Accessing properties directly breaks encapsulation.
 
-
 ☑️ Benefits: Maintainability, Encapsulation, Reusability
 
-
-☑️ Guideline: If you need to get or set information from an object consider getters and setters. 
-
+☑️ Guideline: If you need to get or set information from an object consider getters and setters.
 
 Other benefits:
 
@@ -33,19 +27,20 @@ Other benefits:
 ```javascript
 // GOOD
 class Person {
-    constructor(name) {
-        this.setName(name); // name is private
+  constructor(name) {
+    this.setName(name) // name is private
+  }
+  getName() {
+    // a "getter"
+    return this._name
+  }
+  setName(newName) {
+    // a "setter"
+    // ... validate before updating
+    if (newName === "") {
+      throw "The name cannot be empty"
     }
-    getName() { // a "getter"
-        return this._name;
-    }
-    setName(newName) { // a "setter"
-				// ... validate before updating
-        if (newName === '') {
-            throw 'The name cannot be empty';
-        }
-        this._name= newName;
-    }
+    this._name = newName
+  }
 }
 ```
-
