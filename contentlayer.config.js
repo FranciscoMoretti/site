@@ -116,7 +116,6 @@ export const Post = defineDocumentType(() => ({
     image: {
       type: "string",
       required: false,
-      default: "/images/blog/blog-post-1.jpg",
     },
     authors: {
       // Reference types are not embedded.

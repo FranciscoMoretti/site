@@ -5,7 +5,6 @@ date: 2022-05-14
 description: A guide to help you set up Google Analytics 4 on your Next.js website.
 slug: how-to-set-up-google-analytics-on-a-nextjs-website
 page_id: affc7219-c01a-4087-a4b1-4aa11a632c75
-image: /images/blog/blog-post-4.jpg
 ---
 
 

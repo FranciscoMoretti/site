@@ -5,7 +5,6 @@ date: 2021-12-15
 description: Use the right data structure for the job with the containers from Python's collections module.
 slug: a-short-introduction-to-python-collections
 page_id: 8268c82d-dff2-4bce-ad73-ea627e8f4a39
-image: /images/blog/blog-post-2.jpg
 ---
 
 
