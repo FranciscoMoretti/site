@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -16,8 +20,12 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"],
-      "contentlayer/generated": ["./.contentlayer/generated"]
+      "@/*": [
+        "./*"
+      ],
+      "contentlayer/generated": [
+        "./.contentlayer/generated"
+      ]
     },
     "plugins": [
       {
@@ -31,7 +39,10 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    ".contentlayer/generated"
+    ".contentlayer/generated",
+    "/home/fran/code/site/.next/types/**/*.ts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }
