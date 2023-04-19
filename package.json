@@ -13,6 +13,7 @@
     "start": "next start",
     "lint": "next lint",
     "preview": "next build && next start",
+    "format": "prettier --write .",
     "postinstall": "prisma generate"
   },
   "dependencies": {
@@ -98,7 +99,7 @@
     "eslint-config-next": "13.0.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-react": "^7.31.11",
-    "eslint-plugin-tailwindcss": "^3.8.0",
+    "eslint-plugin-tailwindcss": "^3.11.0",
     "husky": "^8.0.2",
     "mdast-util-toc": "^6.1.0",
     "postcss": "^8.4.14",
