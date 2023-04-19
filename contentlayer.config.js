@@ -41,6 +41,7 @@ export const Doc = defineDocumentType(() => ({
     },
     slug: {
       type: "string",
+      required: true,
     },
     page_id: {
       type: "string",
@@ -102,6 +103,7 @@ export const Post = defineDocumentType(() => ({
     },
     slug: {
       type: "string",
+      required: true,
     },
     page_id: {
       type: "string",
@@ -169,6 +171,7 @@ export const Page = defineDocumentType(() => ({
     },
     slug: {
       type: "string",
+      required: true,
     },
     page_id: {
       type: "string",
