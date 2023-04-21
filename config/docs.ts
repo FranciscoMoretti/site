@@ -1,5 +1,6 @@
 import { DocsConfig } from "types"
 import { allDocs } from "contentlayer/generated"
+import { siteConfig } from "./siteConfig"
 
 const simplifiedDocs = allDocs.map((doc) => ({
   title: doc.title,
@@ -45,16 +46,10 @@ function transformDocPagesToConfig(docPages: DocPage[]): DocsConfig {
   })
 
   return {
-    mainNav: [
-      {
-        title: "Documentation",
-        href: "/docs",
-      },
-      // {
-      //   title: "Guides",
-      //   href: "/guides",
-      // },
-    ],
+    mainNav: siteConfig.navLinks.map((link) => ({
+      title: link.name,
+      href: link.href,
+    })),
     sidebarNav,
   }
 }
