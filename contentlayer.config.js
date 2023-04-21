@@ -1,12 +1,11 @@
-import {
-  defineDocumentType,
-  makeSource,
-  defineComputedFields,
-} from "contentlayer/source-files"
+import { defineDocumentType, makeSource } from "contentlayer/source-files"
 import remarkGfm from "remark-gfm"
 import rehypePrettyCode from "rehype-pretty-code"
 import rehypeSlug from "rehype-slug"
+
 import rehypeAutolinkHeadings from "rehype-autolink-headings"
+import { remarkWikiLink, getPermalinks } from "@flowershow/remark-wiki-link"
+import { siteConfig } from "./config/siteConfig"
 
 /** @type {import('contentlayer/source-files').ComputedFields} */
 const computedFields = {
@@ -103,7 +102,6 @@ export const Post = defineDocumentType(() => ({
     },
     slug: {
       type: "string",
-      required: true,
     },
     page_id: {
       type: "string",
@@ -171,7 +169,6 @@ export const Page = defineDocumentType(() => ({
     },
     slug: {
       type: "string",
-      required: true,
     },
     page_id: {
       type: "string",
@@ -183,44 +180,51 @@ export const Page = defineDocumentType(() => ({
   computedFields,
 }))
 
-export default makeSource({
-  contentDirPath: "./content",
-  documentTypes: [Page, Doc, Guide, Post, Author],
-  mdx: {
-    remarkPlugins: [remarkGfm],
-    rehypePlugins: [
-      rehypeSlug,
-      [
-        rehypePrettyCode,
-        {
-          theme: "dark-plus",
-          onVisitLine(node) {
-            // Prevent lines from collapsing in `display: grid` mode, and allow empty
-            // lines to be copy/pasted
-            if (node.children.length === 0) {
-              node.children = [{ type: "text", value: " " }]
-            }
-          },
-          onVisitHighlightedLine(node) {
-            node.properties.className.push("line--highlighted")
-          },
-          onVisitHighlightedWord(node) {
-            node.properties.className = ["word--highlighted"]
-          },
-        },
+export default makeSource(async () => {
+  const permalinks = await getPermalinks(siteConfig.content)
+  return {
+    contentDirPath: siteConfig.content,
+    documentTypes: [Page, Doc, Guide, Post, Author],
+    mdx: {
+      cwd: process.cwd(),
+      remarkPlugins: [
+        remarkGfm,
+        [remarkWikiLink, { permalinks, pathFormat: "obsidian-short" }],
       ],
-      [
-        rehypeAutolinkHeadings,
-        {
-          behavior: "wrap",
-          properties: {
-            className: [
-              "before:content-['#'] before:absolute before:invisible before:-ml-[1em] hover:before:visible before:text-slate-300 pl-[1em] -ml-[1em]",
-            ],
-            ariaLabel: "Link to section",
+      rehypePlugins: [
+        rehypeSlug,
+        [
+          rehypePrettyCode,
+          {
+            theme: "dark-plus",
+            onVisitLine(node) {
+              // Prevent lines from collapsing in `display: grid` mode, and allow empty
+              // lines to be copy/pasted
+              if (node.children.length === 0) {
+                node.children = [{ type: "text", value: " " }]
+              }
+            },
+            onVisitHighlightedLine(node) {
+              node.properties.className.push("line--highlighted")
+            },
+            onVisitHighlightedWord(node) {
+              node.properties.className = ["word--highlighted"]
+            },
           },
-        },
+        ],
+        [
+          rehypeAutolinkHeadings,
+          {
+            behavior: "wrap",
+            properties: {
+              className: [
+                "before:content-['#'] before:absolute before:invisible before:-ml-[1em] hover:before:visible before:text-slate-300 pl-[1em] -ml-[1em]",
+              ],
+              ariaLabel: "Link to section",
+            },
+          },
+        ],
       ],
-    ],
-  },
+    },
+  }
 })
