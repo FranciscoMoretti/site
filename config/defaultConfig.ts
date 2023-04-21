@@ -1,4 +1,6 @@
-export const defaultConfig = {
+import { SiteConfig } from "@/types"
+
+export const defaultConfig: SiteConfig = {
   title: "",
   description: "",
   name: "",
@@ -11,7 +13,7 @@ export const defaultConfig = {
     github: "",
   },
   twitter: {
-    handle: "@franmoretti_",
+    handle: "",
   },
 
   editLinkRoot: "",
@@ -33,18 +35,18 @@ export const defaultConfig = {
     provider: "giscus", // supported providers: giscus, utterances, disqus
     pages: ["blog"], // page directories where we want commments
     config: {
-      repo: process.env.NEXT_PUBLIC_GISCUS_REPO,
-      repositoryId: process.env.NEXT_PUBLIC_GISCUS_REPOSITORY_ID,
-      category: process.env.NEXT_PUBLIC_GISCUS_CATEGORY,
-      categoryId: process.env.NEXT_PUBLIC_GISCUS_CATEGORY_ID,
+      repo: "",
+      repositoryId: "",
+      category: "",
+      categoryId: "",
     },
   },
   search: {
     provider: "algolia",
     config: {
-      appId: process.env.NEXT_PUBLIC_DOCSEARCH_APP_ID,
-      apiKey: process.env.NEXT_PUBLIC_DOCSEARCH_API_KEY,
-      indexName: process.env.NEXT_PUBLIC_DOCSEARCH_INDEX_NAME,
+      appId: "",
+      apiKey: "",
+      indexName: "",
     },
   },
   navLinks: [

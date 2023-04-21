@@ -27,16 +27,59 @@ export type SidebarNavItem = {
     }
 )
 
-export type SiteConfig = {
-  name: string
+type SiteConfig = {
+  title: string
   description: string
+  name: string
   url: string
+  favicon: string
   ogImage: string
   links: {
     twitter: string
     github: string
   }
+  twitter: {
+    handle: string
+  }
+  editLinkRoot: string
+  showEditLink: boolean
+  showToc: boolean
+  showSidebar: boolean
+  content: string
+  contentExclude: string[]
+  contentInclude: string[]
+  blogDir: string
+  peopleDir: string
+  comments: {
+    provider: "giscus" | "utterances" | "disqus"
+    pages: string[]
+    config: {
+      repo: string
+      repositoryId: string
+      category: string
+      categoryId: string
+    }
+  }
+  search: {
+    provider: "algolia"
+    config: {
+      appId: string
+      apiKey: string
+      indexName: string
+    }
+  }
+  navLinks: {
+    href: string
+    name: string
+  }[]
 }
+
+type UserConfig = {
+  title: string
+  description: string
+  name: string
+  url: string
+} & Partial<Config>
 
 export type DocsConfig = {
   mainNav: MainNavItem[]

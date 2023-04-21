@@ -1,6 +1,6 @@
 import { DocsConfig } from "types"
 import { allDocs } from "contentlayer/generated"
-import { siteConfig } from "./siteConfig"
+import { siteConfig } from "@/config/site"
 
 const simplifiedDocs = allDocs.map((doc) => ({
   title: doc.title,

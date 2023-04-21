@@ -5,7 +5,7 @@ import rehypeSlug from "rehype-slug"
 
 import rehypeAutolinkHeadings from "rehype-autolink-headings"
 import { remarkWikiLink, getPermalinks } from "@flowershow/remark-wiki-link"
-import { siteConfig } from "./config/siteConfig"
+import { siteConfig } from "./config/site"
 
 /** @type {import('contentlayer/source-files').ComputedFields} */
 const computedFields = {

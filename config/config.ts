@@ -1,4 +1,6 @@
-const config = {
+import { UserConfig } from "../types/index"
+
+const config: UserConfig = {
   title: "Francisco Moretti",
   description: "A personal site built with modern web technologies.",
   name: "Francisco Moretti",
