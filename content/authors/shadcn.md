@@ -1,5 +1,5 @@
 ---
 title: shadcn
-avatar: /images/avatars/shadcn.png
+avatar: /assets/avatars/shadcn.png
 twitter: shadcn
 ---

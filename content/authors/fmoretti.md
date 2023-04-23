@@ -1,5 +1,5 @@
 ---
 title: fmoretti
-avatar: /images/avatars/shadcn.png
+avatar: /assets/avatars/shadcn.png
 twitter: fmoretti
 ---

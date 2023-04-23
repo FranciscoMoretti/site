@@ -7,7 +7,7 @@ slug: how-to-set-up-google-analytics-on-a-nextjs-website
 page_id: affc7219-c01a-4087-a4b1-4aa11a632c75
 ---
 
-## Intro
+## Introduction
 
 Hey devs, this guide will help you set up Google Analytics 4 on your Next.js website.
 
@@ -43,7 +43,7 @@ Enter a name for the property (e.g. “My Business, Inc website”) and select 
 
 Click **Web** to add a new data stream for your website.
 
-![Data Stream options](/images/docs/1379904656.png)
+![Data Stream options](/assets/docs/1379904656.png)
 
 1. Enter the URL of your primary website, e.g., “example.com”, and a Stream name, e.g. “Example, Inc. (web stream)”.
 1. You have the option to enable or disable [enhanced measurement](https://support.google.com/analytics/answer/9216061). Enhanced measurement automatically collects page views and other events.
@@ -55,7 +55,7 @@ Follow these instructions to find your “G-” ID. This ID will connect your we
 1. Click [**Admin**](https://support.google.com/analytics/answer/6132368).
 1. In the *Property* column, check that you have your new Google Analytics 4 property selected, then click **Data Streams**, then **Web**. Click the data stream. Your “G-” ID appears at the upper right.
 
-![The “G-” ID property](/images/docs/1483602372.png)
+![The “G-” ID property](/assets/docs/1483602372.png)
 
 ## Step 5: Use Google Analytics on the Next.js site
 

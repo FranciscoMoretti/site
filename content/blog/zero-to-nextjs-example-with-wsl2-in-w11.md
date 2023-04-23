@@ -51,11 +51,11 @@ wsl --install
 
 For additional resources check [this website](https://docs.microsoft.com/en-us/windows/wsl/install).
 
-![Instal WSL](/images/docs/1089865260.png)
+![Instal WSL](/assets/docs/1089865260.png)
 
 After a few minutes, you should be able to open it in a new Terminal tab. **You will need to do a few setup steps the first time you run your WSL2 Ubuntu distribution, just follow the instructions that appear in the Ubuntu bash tab.**
 
-![Open Ubuntu from terminal](/images/docs/2038276324.gif)
+![Open Ubuntu from terminal](/assets/docs/2038276324.gif)
 
 ### Set up NVM in Ubuntu
 
@@ -87,7 +87,7 @@ npx create-next-app@latest blog-app
 
 You should see something like this once it’s done.
 
-![Create next app usage](/images/docs/2088943018.png)
+![Create next app usage](/assets/docs/2088943018.png)
 
 ### Open with VS Code
 
@@ -99,7 +99,7 @@ code blog-app
 
 The result should look like the following screenshot. Note the `WSL:Ubuntu` at the bottom left corner indicating that VS Code is connected to that WSL distribution.
 
-![Blog app in VS Code](/images/docs/14215319.png)
+![Blog app in VS Code](/assets/docs/14215319.png)
 
 ### Running the app
 
@@ -119,11 +119,11 @@ npm run dev
 
 Your VS Code terminal should indicate that the application is running now.
 
-![App started in VS Code](/images/docs/1208757097.png)
+![App started in VS Code](/assets/docs/1208757097.png)
 
 Your application should have started in http://localhost:3000/ in Windows now and you should be able to access it with any browser.
 
-![App running in browser](/images/docs/697954683.png)
+![App running in browser](/assets/docs/697954683.png)
 
 ## Conclusion
 

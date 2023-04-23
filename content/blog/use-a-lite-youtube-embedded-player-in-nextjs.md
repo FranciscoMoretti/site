@@ -13,7 +13,7 @@ I needed a way to play videos locally in a page where I post notes I take from c
 
 The screenshot shows a video player at the top of a post page.
 
-![Lite YouTube embedded player](/images/docs/1900254244.png)
+![Lite YouTube embedded player](/assets/docs/1900254244.png)
 
 ## Method 1: IFrame Player
 
@@ -47,7 +47,7 @@ I also saw a small delay to load the player when I opened the webpage in my PC.
 
 Here is an image from the report with more details from the issue.
 
-![IFrame embedded player](/images/docs/680068699.png)
+![IFrame embedded player](/assets/docs/680068699.png)
 
 This method is still useful if you don’t mind the small degradation in performance. Also, there are many ways to lazy load it which can solve this issue.
 
@@ -95,7 +95,7 @@ It also has some privacy settings enabled by default, it will try to reach `yout
 
 The Lighthouse report with the `LiteYouTubeEmbed` component had a sweet 7% increase in performance.
 
-![Lite YouTube Embed player](/images/docs/1416473031.png)
+![Lite YouTube Embed player](/assets/docs/1416473031.png)
 
 ## Conclusion
 

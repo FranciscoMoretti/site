@@ -47,4 +47,4 @@ You can also add a new variable with another commands. Check the documentation f
 
 And just like that, all the environment variables were created and completed in my local repository. Pretty cool, right?
 
-![ENV variables in the local file](/images/docs/468490004.png)
+![ENV variables in the local file](/assets/docs/468490004.png)

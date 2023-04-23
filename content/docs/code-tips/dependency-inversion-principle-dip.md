@@ -75,7 +75,7 @@ class SQLiteDatabase {
 
 The dependency is direct
 
-![](/images/docs/924250135.png)
+![](/assets/docs/924250135.png)
 
 ### GOOD
 
@@ -109,7 +109,7 @@ class SQLiteDatabase implements Database {
 
 The dependency was inverted
 
-![](/images/docs/893356382.png)
+![](/assets/docs/893356382.png)
 
 ## Example in JavaScript
 

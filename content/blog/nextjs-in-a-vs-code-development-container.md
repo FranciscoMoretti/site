@@ -44,7 +44,7 @@ A simple and minimalistic template to develop your Next.js application in a VS C
 
 ## Usage example
 
-![Usage Example](/images/docs/53866313.gif)
+![Usage Example](/assets/docs/53866313.gif)
 
 ## Code
 

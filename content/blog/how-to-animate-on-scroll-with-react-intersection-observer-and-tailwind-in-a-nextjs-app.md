@@ -47,7 +47,6 @@ To ensure compliance with Next.js app directory guidelines, I had to work a bit.
 Here's the final code for animation on scroll in Next.js app directory:
 
 ```typescript
-Copy code
 'use client';
 
 import { InView } from "react-intersection-observer";

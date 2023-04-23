@@ -79,7 +79,7 @@ class Duck implements Animal {
 
 The dependency looks like this
 
-![](/images/docs/1150321057.png)
+![](/assets/docs/1150321057.png)
 
 ### GOOD
 
@@ -114,7 +114,7 @@ class Duck implements AnimalCanWalk, AnimalCanFly {
 
 And now that the interface was segregated this is what the dependency diagram looks like.
 
-![](/images/docs/335237699.png)
+![](/assets/docs/335237699.png)
 
 ## Example in Javascript
 
