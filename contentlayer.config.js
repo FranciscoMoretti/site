@@ -56,34 +56,6 @@ export const Doc = defineDocumentType(() => ({
   computedFields,
 }))
 
-export const Guide = defineDocumentType(() => ({
-  name: "Guide",
-  filePathPattern: `guides/**/*.md*`,
-  contentType: "mdx",
-  fields: {
-    title: {
-      type: "string",
-      required: true,
-    },
-    description: {
-      type: "string",
-    },
-    date: {
-      type: "date",
-      required: true,
-    },
-    published: {
-      type: "boolean",
-      default: true,
-    },
-    featured: {
-      type: "boolean",
-      default: false,
-    },
-  },
-  computedFields,
-}))
-
 export const Post = defineDocumentType(() => ({
   name: "Post",
   filePathPattern: `blog/**/*.md*`,
@@ -184,7 +156,7 @@ export default makeSource(async () => {
   const permalinks = await getPermalinks(siteConfig.content)
   return {
     contentDirPath: siteConfig.content,
-    documentTypes: [Page, Doc, Guide, Post, Author],
+    documentTypes: [Page, Doc, Post, Author],
     mdx: {
       cwd: process.cwd(),
       remarkPlugins: [
