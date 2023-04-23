@@ -54,7 +54,4 @@ function transformDocPagesToConfig(docPages: DocPage[]): DocsConfig {
   }
 }
 
-const codeTipsDocs = simplifiedDocs.filter((doc) =>
-  doc.slug.startsWith("/docs/code-tips")
-)
-export const docsConfig = transformDocPagesToConfig(codeTipsDocs)
+export const docsConfig = transformDocPagesToConfig(simplifiedDocs)
