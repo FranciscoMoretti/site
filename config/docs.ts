@@ -47,7 +47,7 @@ function transformDocPagesToConfig(docPages: DocPage[]): DocsConfig {
 
   return {
     mainNav: siteConfig.navLinks.map((link) => ({
-      title: link.name,
+      title: link.title,
       href: link.href,
     })),
     sidebarNav,

@@ -70,7 +70,7 @@ type SiteConfig = {
   }
   navLinks: {
     href: string
-    name: string
+    title: string
   }[]
 }
 

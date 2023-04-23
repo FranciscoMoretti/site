@@ -31,8 +31,8 @@ const config: UserConfig = {
   },
   analytics: "G-RQWLTRWBS2",
   navLinks: [
-    { href: "/docs", name: "Docs" },
-    { href: "/blog", name: "Blog" },
+    { href: "/docs", title: "Docs" },
+    { href: "/blog", title: "Blog" },
   ],
   social: [
     { label: "github", href: "https://github.com/flowershow/flowershow" },
