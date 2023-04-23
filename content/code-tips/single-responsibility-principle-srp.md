@@ -12,11 +12,11 @@ page_id: 36fcf141-1cd9-48ab-8a71-907a5be39c23
 
 SOLID is an acronym for five other class-design principles:
 
-- [Single Responsibility Principle (SRP)](single-responsibility-principle-srp.md)
-- [Open-Closed Principle (OCP)](open-closed-principle-ocp.md)
-- [Liskov Substitution Principle (LSP)](liskov-substitution-principle-lsp.md)
-- [Interface Segregation Principle (ISP)](interface-segregation-principle-isp.md)
-- [Dependency Inversion Principle (DIP)](dependency-inversion-principle-dip.md)
+- [Single Responsibility Principle (SRP)](single-responsibility-principle-srp)
+- [Open-Closed Principle (OCP)](open-closed-principle-ocp)
+- [Liskov Substitution Principle (LSP)](liskov-substitution-principle-lsp)
+- [Interface Segregation Principle (ISP)](interface-segregation-principle-isp)
+- [Dependency Inversion Principle (DIP)](dependency-inversion-principle-dip)
 
 ## The Single Responsibility Principle (SRP)
 

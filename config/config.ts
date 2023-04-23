@@ -31,7 +31,7 @@ const config: UserConfig = {
   },
   analytics: "G-RQWLTRWBS2",
   navLinks: [
-    { href: "/docs", title: "Docs" },
+    { href: "/code-tips", title: "Code Tips" },
     { href: "/blog", title: "Blog" },
   ],
   social: [
