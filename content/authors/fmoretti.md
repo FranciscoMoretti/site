@@ -1,5 +1,5 @@
 ---
 title: fmoretti
-avatar: /assets/avatars/shadcn.png
+avatar: /profile_picutre_512x512.png
 twitter: franmoretti_
 ---
