@@ -6,7 +6,7 @@ const config: UserConfig = {
   name: "Francisco Moretti",
   url: "https://site-sand-two.vercel.app/",
   favicon: "",
-  profilePicture: "/profile_picutre.png",
+  profilePicture: "/profile_picture.jpg",
   ogImage: "https://site-sand-two.vercel.app/og.jpg",
 
   links: {
