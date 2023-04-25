@@ -110,7 +110,7 @@ export default async function PostPage({ params }: PostPageProps) {
           {post.title}
         </h1>
         {authors?.length ? (
-          <div className="mt-4 flex space-x-4">
+          <div className="mt-4 mb-2 flex space-x-4">
             {authors.map((author) =>
               author ? (
                 <Link
