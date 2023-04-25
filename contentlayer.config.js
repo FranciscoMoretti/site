@@ -106,7 +106,7 @@ export const Post = defineDocumentType(() => ({
 
 export const Author = defineDocumentType(() => ({
   name: "Author",
-  filePathPattern: `authors/**/*.mdx`,
+  filePathPattern: `authors/**/*.md*`,
   contentType: "mdx",
   fields: {
     title: {
