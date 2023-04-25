@@ -38,10 +38,11 @@ export const Doc = defineDocumentType(() => ({
     date: {
       type: "string",
     },
-    slug: {
-      type: "string",
-      required: true,
-    },
+    // TODO: Solve slug - permalink mechanism
+    // slug: {
+    //   type: "string",
+    //   required: true,
+    // },
     page_id: {
       type: "string",
     },
@@ -72,9 +73,9 @@ export const Post = defineDocumentType(() => ({
       type: "date",
       required: true,
     },
-    slug: {
-      type: "string",
-    },
+    // slug: {
+    //   type: "string",
+    // },
     page_id: {
       type: "string",
     },
@@ -139,9 +140,9 @@ export const Page = defineDocumentType(() => ({
     description: {
       type: "string",
     },
-    slug: {
-      type: "string",
-    },
+    // slug: {
+    //   type: "string",
+    // },
     page_id: {
       type: "string",
     },
@@ -156,6 +157,7 @@ export default makeSource(async () => {
   const permalinks = await getPermalinks(siteConfig.content)
   return {
     contentDirPath: siteConfig.content,
+    onExtraFieldData: "ignore",
     documentTypes: [Page, Doc, Post, Author],
     mdx: {
       cwd: process.cwd(),
