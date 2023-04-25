@@ -4,10 +4,10 @@ const config: UserConfig = {
   title: "Francisco Moretti",
   description: "A personal site built with modern web technologies.",
   name: "Francisco Moretti",
-  url: "https://franciscomoretti.com/",
+  url: "https://site-sand-two.vercel.app/",
   favicon: "",
   profilePicture: "/profile_picutre.png",
-  ogImage: "https://franciscomoretti.com/og.jpg",
+  ogImage: "https://site-sand-two.vercel.app/og.jpg",
 
   links: {
     twitter: "https://twitter.com/franmoretti_",
