@@ -1,10 +1,10 @@
-# Taxonomy
+# Site
 
-An open source application built using the new router, server components and everything new in Next.js 13.
+An personal site built with modern web technologies that uses @shadcn [Taxonomy](https://github.com/shadcn/taxonomy) as a starter.
 
 > **Warning**
-> This app is a work in progress. I'm building this in public. You can follow the progress on Twitter [@shadcn](https://twitter.com/shadcn).
-> See the roadmap below.
+> This app is a work in progress. I'm building this in public. You can use it for your own site but breaking changes.
+> You can follow the progress on LinkedIn [@franciscomoretti](https://www.linkedin.com/in/franciscomoretti).
 
 ## Demo
 
@@ -12,61 +12,39 @@ An open source application built using the new router, server components and eve
 
 ## About this project
 
-Right now, I'm using this project as an experiment to see how a modern app (with features like authentication, subscriptions, API routes, static pages for docs ...etc) would work in Next.js 13 and server components.
+This project uses Next.js app router and other new technologies. It's build with modern web development in mind.
 
-I'll be posting updates and issues here.
-
-A few people have asked me to turn this into a starter. I think we could do that once the new features are out of beta.
+The plan is to implement all the features and niceness for a personal blog.
 
 ## Note on Performance
 
 > **Warning**
 > This app is using the canary releases for Next.js 13 and React 18. The new router and app dir is still in beta and not production-ready.
-> NextAuth.js, which is used for authentication, is also not fully supported in Next.js 13 and RSC.
 > **Expect some performance hits when testing the dashboard**.
-> If you see something broken, you can ping me [@shadcn](https://twitter.com/shadcn).
+> If you see something broken, you can ping me [@franmoretti\_](https://twitter.com/franmoretti_).
 
 ## Features
 
-- New `/app` dir,
-- Routing, Layouts, Nested Layouts and Layout Groups
-- Data Fetching, Caching and Mutation
+- New `/app` dir
+- Obsidian compatibility
+- TOC (Table of contents)
+- Documentation-like layout
+- Blog-like layout
 - Loading UI
 - Server and Client Components
-- API Routes and Middlewares
-- Authentication using **NextAuth.js**
-- ORM using **Prisma**
-- Database on **PlanetScale**
+- OG Image per post generated at the edge
 - UI Components built using **Radix UI**
-- Documentation and blog using **MDX** and **Contentlayer**
-- Subscriptions using **Stripe**
+- **code-tips** (documentation) and **blog** using **MDX** and **Contentlayer**
 - Styled using **Tailwind CSS**
 - Validations using **Zod**
 - Written in **TypeScript**
 
 ## Roadmap
 
-- [x] ~Add MDX support for basic pages~
-- [x] ~Build marketing pages~
-- [x] ~Subscriptions using Stripe~
-- [x] ~Responsive styles~
-- [x] ~Add OG image for blog using @vercel/og~
+- [ ] Copy code button
+- [ ] Show views for each page using ORM using **Prisma** and **PlanetScale**
 - [ ] Add tests
 - [ ] Dark mode
-
-## Known Issues
-
-A list of things not working right now:
-
-1. ~GitHub authentication (use email)~
-2. ~[Prisma: Error: ENOENT: no such file or directory, open '/var/task/.next/server/chunks/schema.prisma'](https://github.com/prisma/prisma/issues/16117)~
-3. ~[Next.js 13: Client side navigation does not update head](https://github.com/vercel/next.js/issues/42414)~
-
-## Why not tRPC, Turborepo or X?
-
-I might add this later. For now, I want to see how far we can get using Next.js only.
-
-If you have some suggestions, feel free to create an issue.
 
 ## Running Locally
 
@@ -88,13 +66,6 @@ cp .env.example .env.local
 pnpm dev
 ```
 
-4. Run the DB
-
-```sh
-pscale auth login
-pscale connect site main --port 3306
-```
-
 ## License
 
-Licensed under the [MIT license](https://github.com/shadcn/taxonomy/blob/main/LICENSE.md).
+Licensed under the [MIT license](https://github.com/franciscomoretti/site/blob/main/LICENSE.md).
