@@ -7,6 +7,7 @@ export const defaultConfig: SiteConfig = {
   url: "",
   favicon: "",
   ogImage: "",
+  profilePicture: "",
 
   links: {
     twitter: "",

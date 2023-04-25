@@ -6,6 +6,7 @@ const config: UserConfig = {
   name: "Francisco Moretti",
   url: "https://franciscomoretti.com/",
   favicon: "",
+  profilePicture: "/profile_picutre_512x512.png",
   ogImage: "https://franciscomoretti.com/og.jpg",
 
   links: {
