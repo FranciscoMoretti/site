@@ -42,6 +42,7 @@ The plan is to implement all the features and niceness for a personal blog.
 ## Roadmap
 
 - [ ] Copy code button
+- [ ] Custom tailwind styles
 - [ ] Show views for each page using ORM using **Prisma** and **PlanetScale**
 - [ ] Add tests
 - [ ] Dark mode
