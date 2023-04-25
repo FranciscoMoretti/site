@@ -153,10 +153,28 @@ export const Page = defineDocumentType(() => ({
   computedFields,
 }))
 
+const contentLayerExcludeDefaults = [
+  "node_modules",
+  ".git",
+  ".yarn",
+  ".cache",
+  ".next",
+  ".contentlayer",
+  "package.json",
+  "tsconfig.json",
+]
+
 export default makeSource(async () => {
-  const permalinks = await getPermalinks(siteConfig.content)
+  const permalinks = await getPermalinks(siteConfig.content).filter(
+    (link) => !link.startsWith("/.obsidian/")
+  )
+
   return {
     contentDirPath: siteConfig.content,
+    contentDirExclude: contentLayerExcludeDefaults.concat([
+      ".obsidian",
+      ...siteConfig.contentExclude,
+    ]),
     onExtraFieldData: "ignore",
     documentTypes: [Page, Doc, Post, Author],
     mdx: {
