@@ -43,6 +43,7 @@ The plan is to implement all the features and niceness for a personal blog.
 
 - [ ] Copy code button
 - [ ] Custom tailwind styles
+- [ ] Framer motion animations on home screen
 - [ ] Show views for each page using ORM using **Prisma** and **PlanetScale**
 - [ ] Add tests
 - [ ] Dark mode
@@ -61,11 +62,17 @@ pnpm install
 cp .env.example .env.local
 ```
 
-3. Start the development server:
+3. Create a symlink from `/assets` to `/public/assets` for assets
+
+4. Start the development server:
 
 ```sh
 pnpm dev
 ```
+
+5. Customize the site by using your own info in `config/config.ts`
+
+6. Change the content in the `/content` folder
 
 ## License
 
