@@ -8,7 +8,7 @@ An personal site built with modern web technologies that uses @shadcn [Taxonomy]
 
 ## Demo
 
-![screenshot-2](https://user-images.githubusercontent.com/124599/198038921-2b16b18b-cb4d-44b1-bd1d-6419d4a8d92c.png)
+![Site Preview](/site_preview.png)
 
 ## About this project
 
