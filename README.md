@@ -48,6 +48,11 @@ The plan is to implement all the features and niceness for a personal blog.
 - [ ] Add tests
 - [ ] Dark mode
 
+## Inspiration
+
+- https://tx.shadcn.com/
+- https://flowershow.app/
+
 ## Running Locally
 
 1. Install dependencies using pnpm:
