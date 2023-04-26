@@ -1,0 +1,204 @@
+{
+  "main": {
+    "id": "316f5fee938dd654",
+    "type": "split",
+    "children": [
+      {
+        "id": "d5dbc052872d93e5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5cecc80ac31deba7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "code-tips/dependency-inversion-principle-dip.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c1b827cbd2ac9624",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "blog/vs-code-competitive-programming-setup.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ab3d484bed23b041",
+    "type": "split",
+    "children": [
+      {
+        "id": "9e0817daa0ab6d48",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8d7eb37f7c399031",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "f823d379afe8993e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "250d3610db71f2ef",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 415.5
+  },
+  "right": {
+    "id": "9ea5bfdc8844847f",
+    "type": "split",
+    "children": [
+      {
+        "id": "7c8b5515e6dc956f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "357f97f6731c97e4",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "blog/vs-code-competitive-programming-setup.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "dcea112b44753047",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "blog/vs-code-competitive-programming-setup.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "2bd5a22bd0a438f5",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "3707b9f61ca8bf56",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "blog/vs-code-competitive-programming-setup.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "8d7eb37f7c399031",
+  "lastOpenFiles": [
+    "code-tips/dependency-inversion-principle-dip.md",
+    "code-tips/open-closed-principle-ocp.md",
+    "blog/vs-code-competitive-programming-setup.md",
+    "assets/Pasted image 20230425114932.png",
+    "blog/a-short-introduction-to-python-collections.md",
+    "assets/Pasted image 20230425115039.png",
+    "assets/Pasted image 20230425115017.png",
+    "assets/Pasted image 20230425115000.png",
+    "assets/Pasted image 20230425114940.png",
+    "code-tips/interface-segregation-principle-isp.md",
+    "code-tips/liskov-substitution-principle-lsp.md",
+    "code-tips/single-responsibility-principle-srp.md",
+    "code-tips/dont-ignore-caught-errors.md",
+    "code-tips/avoid-negative-conditionals.md",
+    "code-tips/avoid-side-effects-in-functions.md",
+    "code-tips/dont-add-unneeded-context.md",
+    "code-tips/dont-over-optimize.md",
+    "code-tips/dont-use-flags-as-function-parameters.md",
+    "code-tips/encapsulate-conditionals.md",
+    "code-tips/index.md",
+    "code-tips/one-concept-per-test.md",
+    "code-tips/functions-should-do-one-thing.md",
+    "code-tips/kiss-keep-it-short-and-simple.md",
+    "code-tips/few-function-arguments.md",
+    "code-tips/function-names-should-say-what-they-do.md",
+    "code-tips/avoid-mental-mapping.md",
+    "docs/tools/pretty-typescript-errors.md",
+    "docs/tools/index.md",
+    "docs/tools",
+    "blog/how-to-animate-on-scroll-with-react-intersection-observer-and-tailwind-in-a-nextjs-app.md",
+    "blog/2022-11-21-updated-features.md",
+    "assets/blog/blog-post-3.jpg",
+    "assets/docs/53866313.gif",
+    "assets/avatars/shadcn.png",
+    "assets/docs/924250135.png",
+    "assets/docs/893356382.png",
+    "assets/docs",
+    "assets/avatars",
+    "assets/blog"
+  ]
+}
