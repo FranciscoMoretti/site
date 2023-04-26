@@ -67,9 +67,13 @@ pnpm install
 cp .env.example .env.local
 ```
 
-3. Create a symlink from `/assets` to `/public/assets` for assets
+3. Create a symlink from `/assets` to `/public/assets` for assets. The link has to be relative like this. Otherwise, the development server won't know about your absolute local path.
 
-4. Start the development server:
+```
+ln -s ../content/assets/ public/assets
+```
+
+1. Start the development server:
 
 ```sh
 pnpm dev
