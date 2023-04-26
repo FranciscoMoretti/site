@@ -44,7 +44,7 @@ The plan is to implement all the features and niceness for a personal blog.
 - [ ] Copy code button
 - [ ] Custom tailwind styles
 - [ ] Framer motion animations on home screen
-- [ ] Show views for each page using ORM using **Prisma** and **PlanetScale**
+- [ ] Show views for each page using **Prisma** and **PlanetScale**
 - [ ] Add tests
 - [ ] Dark mode
 
