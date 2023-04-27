@@ -30,7 +30,7 @@ export default async function handler(req: NextRequest) {
     const { mode } = values
     const paint = mode === "dark" ? "#fff" : "#000"
 
-    const fontSize = heading.length > 100 ? "70px" : "100px"
+    const fontSize = heading.length > 100 ? "35px" : "50px"
 
     return new ImageResponse(
       (
