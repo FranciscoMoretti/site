@@ -67,21 +67,9 @@ pnpm install
 cp .env.example .env.local
 ```
 
-3. Create a symlink from `/assets` to `/public/assets` for assets. The link has to be relative like this. Otherwise, the development server won't know about your absolute local path.
+3. Customize the site by using your own info in `config/config.ts`
 
-```
-ln -s ../content/assets/ public/assets
-```
-
-1. Start the development server:
-
-```sh
-pnpm dev
-```
-
-5. Customize the site by using your own info in `config/config.ts`
-
-6. Change the content in the `/content` folder
+4. Put your content into the content directory and your assets in content/assets directory.
 
 ## License
 
