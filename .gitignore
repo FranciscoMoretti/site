@@ -41,3 +41,6 @@ next-env.d.ts
 
 # obsidian
 content/.obsidian
+
+# Public assets synced with script
+public/assets
