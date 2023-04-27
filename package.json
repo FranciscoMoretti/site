@@ -7,15 +7,15 @@
     "url": "https://twitter.com/shadcn"
   },
   "scripts": {
-    "dev": "pnpm run sync && next dev",
+    "dev": "pnpm run rsync & next dev",
     "turbo": "next dev --turbo",
-    "build": "pnpm run sync && next build",
+    "build": "pnpm run rsync && next build",
     "start": "next start",
     "lint": "next lint",
     "preview": "next build && next start",
     "format": "prettier --write .",
     "postinstall": "prisma generate",
-    "sync": "rsync -avz content/assets/ public/assets/"
+    "rsync": "node scripts/sync.js"
   },
   "dependencies": {
     "@editorjs/code": "^2.7.0",
@@ -79,6 +79,7 @@
     "react-editor-js": "^2.1.0",
     "react-hook-form": "^7.38.0",
     "react-textarea-autosize": "^8.3.4",
+    "rsync": "^0.6.1",
     "sharp": "^0.31.1",
     "shiki": "^0.11.1",
     "stripe": "^11.1.0",

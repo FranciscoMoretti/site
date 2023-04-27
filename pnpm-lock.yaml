@@ -184,6 +184,9 @@ dependencies:
   react-textarea-autosize:
     specifier: ^8.3.4
     version: 8.3.4(@types/react@18.0.15)(react@18.2.0)
+  rsync:
+    specifier: ^0.6.1
+    version: 0.6.1
   sharp:
     specifier: ^0.31.1
     version: 0.31.1
@@ -7229,6 +7232,10 @@ packages:
     dependencies:
       glob: 7.2.3
     dev: true
+
+  /rsync@0.6.1:
+    resolution: {integrity: sha512-39HcwWuM67CQ9tHloazShXWUOWa2m3SGqX6XQhQMSj0VCQMkSI9PodoxM7/+hKf2p4v2umbhfoarYqd1gwII/w==}
+    dev: false
 
   /run-parallel@1.2.0:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
