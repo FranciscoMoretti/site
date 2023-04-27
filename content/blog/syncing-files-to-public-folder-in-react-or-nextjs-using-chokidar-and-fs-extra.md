@@ -2,7 +2,7 @@
 title: Syncing Files to a Public Folder in React or Next.js using Chokidar and fs-extra
 sidebar_position: 10
 date: 2023-04-27
-description:Learn how to automatically sync files to the public folder in React or Next.js using Chokidar and fs-extra. This tutorial provides a step-by-step guide to set up a watch task that detects file changes and copies them to the public folder, ensuring that your website's assets are always up-to-date.
+description: Learn how to automatically sync files to the public folder in React or Next.js using Chokidar and fs-extra. This tutorial provides a step-by-step guide to set up a watch task that detects file changes and copies them to the public folder, ensuring that your website's assets are always up-to-date.
 slug: syncing-files-to-public-folder-in-react-or-nextjs-using-chokidar-and-fs-extra
 page_id: none
 ---
