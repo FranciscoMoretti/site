@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { toast } from "@/src/hooks/use-toast"
+import { toast } from "@/hooks/use-toast"
 
 import { cn } from "@/lib/utils"
 
