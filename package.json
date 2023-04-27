@@ -7,7 +7,7 @@
     "url": "https://twitter.com/shadcn"
   },
   "scripts": {
-    "dev": "pnpm run sync & next dev",
+    "dev": "pnpm run sync --watch & next dev",
     "turbo": "next dev --turbo",
     "build": "pnpm run sync && next build",
     "start": "next start",
