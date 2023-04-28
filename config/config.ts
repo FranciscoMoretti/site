@@ -2,7 +2,7 @@ import { UserConfig } from "../types/index"
 
 const config: UserConfig = {
   title: "Francisco Moretti",
-  description: "A personal site built with modern web technologies.",
+  description: 'Hi there! My name is Francisco Moretti. I talk about web development, good programming practices, and how to learn better.',
   name: "Francisco Moretti",
   url: "https://www.franciscomoretti.com/",
   favicon: "",
