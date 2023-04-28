@@ -15,7 +15,7 @@ export function SiteFooter() {
               rel="noreferrer"
               className="font-medium underline underline-offset-4"
             >
-              shadcn
+              franmoretti_
             </a>
             . Hosted on{" "}
             <a
@@ -25,15 +25,6 @@ export function SiteFooter() {
               className="font-medium underline underline-offset-4"
             >
               Vercel
-            </a>
-            . Illustrations by{" "}
-            <a
-              href="https://popsy.co"
-              target="_blank"
-              rel="noreferrer"
-              className="font-medium underline underline-offset-4"
-            >
-              Popsy
             </a>
             .
           </p>
