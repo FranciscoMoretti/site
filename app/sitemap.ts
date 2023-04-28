@@ -2,12 +2,12 @@ import { allPosts, allDocs } from "contentlayer/generated"
 
 export default async function sitemap() {
   const posts = allPosts.map((post) => ({
-    url: `https://franciscomoretti.com"/blog/${post.slug}`,
+    url: `https://franciscomoretti.com${post.slug}`,
     lastModified: post.date,
   }))
 
   const docs = allDocs.map((doc) => ({
-    url: `https://franciscomoretti.com"/code-tips/${doc.slug}`,
+    url: `https://franciscomoretti.com${doc.slug}`,
     lastModified: doc.date,
   }))
 
