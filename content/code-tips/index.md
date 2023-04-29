@@ -2,7 +2,7 @@
 title: Code Tips
 sidebar_position: 0
 date: 2023-04-16
-description: Welcome to the Code Tips documentation
+description: Welcome to the Code Tips documentation! Here, we share valuable insights, techniques, and best practices for writing clean, efficient, and maintainable code.
 category: Introduction
 slug: index
 page_id: 967807cc-b214-4960-9841-a4d6253e7759
