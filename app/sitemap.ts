@@ -13,7 +13,7 @@ export default async function sitemap() {
 
   // const routes = ["", "/about", "/blog", "/guestbook", "/uses"].map(
   const routes = ["", "/blog"].map((route) => ({
-    url: `https://franciscomoretti.com"${route}`,
+    url: `https://franciscomoretti.com${route}`,
     lastModified: new Date().toISOString().split("T")[0],
   }))
 
