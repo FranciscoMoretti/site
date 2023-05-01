@@ -32,4 +32,4 @@ if (shouldShowSpinner(fsmInstance, listNodeInstance)) {
 }
 ```
 
-The responsibility of the encapsulated condicional Is to determine the condit [Functions should do one thing](functions-should-do-one-thing.md)
+The responsibility of the encapsulated condicional Is to determine the condit [Functions should do one thing](functions-should-do-one-thing)
