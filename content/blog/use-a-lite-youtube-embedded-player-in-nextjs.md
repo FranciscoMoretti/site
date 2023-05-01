@@ -9,7 +9,7 @@ page_id: eda33bb3-7191-4347-938b-c6d1794ac2d0
 
 ## Using a Youtube Embedded Player in a Next.js application
 
-I needed a way to play videos locally in a page where I post notes I take from conference talks. This is [an example](https://franciscomoretti.com/talk/bFSnXNIsK4A) of one of those pages.
+I needed a way to play videos locally in a page where I post notes I take from conference talks.
 
 The screenshot shows a video player at the top of a post page.
 
