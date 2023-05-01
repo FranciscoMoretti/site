@@ -20,7 +20,7 @@ The rule is really simple. The only thing you have to do is to choose a single c
 
 Defining the scope of a unit test is not easy, that’s why I follow a rule. The rule solves the problem of not having to think about how to organize my tests. I only need to think about what to test.
 
-The idea is similar to [Functions should do one thing](functions-should-do-one-thing.md) and it shares many of its benefits.
+The idea is similar to [Functions should do one thing](functions-should-do-one-thing) and it shares many of its benefits.
 
 But there are also some benefits of this rule in particular…
 
