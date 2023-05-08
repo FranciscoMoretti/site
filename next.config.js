@@ -60,6 +60,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/avoid-negative-conditionals",
+        destination: "/code-tips/avoid-negative-conditionals",
+        permanent: true,
+      },
+      {
         source: "/dependency-inversion-principle-dip--solid",
         destination: "/code-tips/dependency-inversion-principle-dip",
         permanent: true,
