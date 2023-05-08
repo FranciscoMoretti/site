@@ -1,6 +1,6 @@
 ---
 title: Next.js in a VS Code development container
-sidebar_position: 4
+
 date: 2021-06-11
 description: A simple and minimalistic template to develop your Next.js application in a VS Code development container.
 slug: nextjs-in-a-vs-code-development-container

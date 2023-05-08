@@ -1,6 +1,7 @@
 ---
+
 title: VS Code Competitive programming setup
-sidebar_position: 10
+
 date: 2021-10-21
 description: How to set up VS Code to solve coding challenges from CodeForces.
 slug: vs-code-competitive-programming-setup

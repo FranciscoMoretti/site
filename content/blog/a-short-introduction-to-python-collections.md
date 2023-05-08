@@ -1,6 +1,6 @@
 ---
 title: A short introduction to python collections
-sidebar_position: 5
+
 date: 2021-12-15
 description: Use the right data structure for the job with the containers from Python's collections module.
 slug: a-short-introduction-to-python-collections

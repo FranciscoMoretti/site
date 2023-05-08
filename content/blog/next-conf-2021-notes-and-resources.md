@@ -1,6 +1,6 @@
 ---
 title: Next Conf 2021 Notes and Resources
-sidebar_position: 7
+
 date: 2021-11-13
 description: Notes and resources from Next Conf 2021 and Next.js 12.
 slug: next-conf-2021-notes-and-resources

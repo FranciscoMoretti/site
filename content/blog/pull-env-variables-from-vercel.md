@@ -1,6 +1,6 @@
 ---
 title: Pull ENV variables from Vercel
-sidebar_position: 3
+
 date: 2022-04-18
 description: Pull the ENV variables from a Vercel project using the CLI.
 slug: pull-env-variables-from-vercel

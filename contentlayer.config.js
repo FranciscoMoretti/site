@@ -79,9 +79,6 @@ export const Post = defineDocumentType(() => ({
     page_id: {
       type: "string",
     },
-    sidebar_position: {
-      type: "number",
-    },
     published: {
       type: "boolean",
       default: true,
@@ -145,9 +142,6 @@ export const Page = defineDocumentType(() => ({
     // },
     page_id: {
       type: "string",
-    },
-    sidebar_position: {
-      type: "number",
     },
   },
   computedFields,
