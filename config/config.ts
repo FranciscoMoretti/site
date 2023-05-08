@@ -2,7 +2,8 @@ import { UserConfig } from "../types/index"
 
 const config: UserConfig = {
   title: "Francisco Moretti",
-  description: 'Hi there! My name is Francisco Moretti. I talk about web development, good programming practices, and how to learn better.',
+  description:
+    "Hi there! My name is Francisco Moretti. I talk about web development, good programming practices, and how to learn better.",
   name: "Francisco Moretti",
   url: "https://www.franciscomoretti.com/",
   favicon: "",
@@ -19,6 +20,8 @@ const config: UserConfig = {
   showEditLink: true,
   showToc: true,
   showSidebar: false,
+
+  contentExclude: ["templates"],
 
   comments: {
     provider: "giscus", // supported providers: giscus, utterances, disqus
