@@ -1,10 +1,14 @@
 ---
-title: A short introduction to python collections
+tag: Python
+alias:
 
-date: 2021-12-15
-description: Use the right data structure for the job with the containers from Python's collections module.
+publish: false
 slug: a-short-introduction-to-python-collections
-page_id: 8268c82d-dff2-4bce-ad73-ea627e8f4a39
+
+title: A short introduction to python collections
+description: Use the right data structure for the job with the containers from Python's collections module.
+date: 2021-12-15
+image:
 ---
 
 **Use the right data structure for the job with the containers from Python’s** [**`collections`**](https://docs.python.org/3/library/collections.html#module-collections) **module.**

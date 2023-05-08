@@ -2,12 +2,14 @@ import { DocsConfig } from "types"
 import { allDocs } from "contentlayer/generated"
 import { siteConfig } from "@/config/site"
 
-const simplifiedDocs = allDocs.map((doc) => ({
-  title: doc.title,
-  slug: doc.slug ? doc.slug : "error_slug",
-  category: doc.category,
-  sidebar_position: doc.sidebar_position ? doc.sidebar_position : 0,
-}))
+const simplifiedDocs = allDocs
+  .filter((doc) => doc.publish)
+  .map((doc) => ({
+    title: doc.title,
+    slug: doc.slug ? doc.slug : "error_slug",
+    category: doc.category,
+    sidebar_position: doc.sidebar_position ? doc.sidebar_position : 0,
+  }))
 
 interface DocPage {
   title: string

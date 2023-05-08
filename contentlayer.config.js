@@ -46,7 +46,7 @@ export const Doc = defineDocumentType(() => ({
     sidebar_position: {
       type: "number",
     },
-    published: {
+    publish: {
       type: "boolean",
       default: true,
     },
@@ -73,7 +73,7 @@ export const Post = defineDocumentType(() => ({
     // slug: {
     //   type: "string",
     // },
-    published: {
+    publish: {
       type: "boolean",
       default: true,
     },
