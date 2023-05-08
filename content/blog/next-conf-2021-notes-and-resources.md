@@ -1,9 +1,15 @@
 ---
-title: Next Conf 2021 Notes and Resources
+tag: Next.js, Vercel
+alias: 
 
-date: 2021-11-13
-description: Notes and resources from Next Conf 2021 and Next.js 12.
+publish: true
 slug: next-conf-2021-notes-and-resources
+
+title: Next Conf 2021 Notes and Resources
+description: Notes and resources from Next Conf 2021 and Next.js 12.
+date: 2021-11-13
+image: 
+
 page_id: f1f58fa6-eecd-486e-ac9b-fb98c31514c4
 ---
 

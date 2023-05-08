@@ -1,10 +1,15 @@
 ---
+tag: VS Code
+alias:
+
+publish: true
+slug: vs-code-competitive-programming-setup
 
 title: VS Code Competitive programming setup
-
-date: 2021-10-21
 description: How to set up VS Code to solve coding challenges from CodeForces.
-slug: vs-code-competitive-programming-setup
+date: 2021-10-21
+image:
+
 page_id: ab2a6753655144fe8378a0aa314d33e3
 ---
 
@@ -67,7 +72,6 @@ To fully integrate it with the setup you can add this lines to the `VS Code Work
 After doing this and using the `Competitive Companion` extension with a new problem, the **new file** should be **created with a template**.
 
 ![[Pasted image 20230425115039.png]]
-
 
 ## Usage
 
