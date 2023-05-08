@@ -1,5 +1,5 @@
 ---
-tags: Meta, Svelte, Blogging
+tags: Next.js, WSL2, Windows
 publish: true
 slug: zero-to-nextjs-example-with-wsl2-in-w11
 title: Zero to Next.js Example with WSL2 in W11
