@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "author": {
-    "name": "shadcn",
-    "url": "https://twitter.com/shadcn"
+    "name": "FranciscoMoretti",
+    "url": "https://github.com/franciscomoretti/"
   },
   "scripts": {
     "dev": "pnpm run sync --watch & next dev",
