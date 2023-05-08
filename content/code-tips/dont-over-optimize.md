@@ -5,7 +5,6 @@ date: 2022-08-08
 description: Trying to optimize your code is a waste of time in some cases. Modern browsers do a lot of optimizations at runtime.
 category: General
 slug: dont-over-optimize
-page_id: bbc75f7b-f13f-4ed0-83b2-34fd166b7b6b
 ---
 
 ☑️ Topic: Functions

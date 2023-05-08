@@ -1,6 +1,6 @@
 ---
 tag: Next.js, TailwindCSS
-alias: 
+alias:
 
 publish: true
 slug: how-to-animate-on-scroll-with-react-intersection-observer-and-tailwind-in-a-nextjs-app
@@ -8,10 +8,7 @@ slug: how-to-animate-on-scroll-with-react-intersection-observer-and-tailwind-in-
 title: How to Animate on Scroll with React Intersection Observer and Tailwind in a Next.js App
 description: Learn how to create an animation effect that is triggered when a component comes into view using React Intersection Observer and Tailwind in a Next.js app directory. Discover the options available in the react-intersection-observer package and how to use the tailwindcss-animate package to style the animations. Follow the code example provided to implement this feature in your Next.js app.
 date: 2023-01-25
-image: 
-
-
-page_id: mages/blog/blog-post-3.jpg
+image:
 ---
 
 ## React Intersection observer for animate on scroll behavior
@@ -54,23 +51,32 @@ To ensure compliance with Next.js app directory guidelines, I had to work a bit.
 Here's the final code for animation on scroll in Next.js app directory:
 
 ```typescript
-'use client';
+"use client"
 
-import { InView } from "react-intersection-observer";
+import { InView } from "react-intersection-observer"
 
-export default function AnimationOnScroll({ children, classNameInView, classNameNotInView }: { children: React.ReactNode, classNameInView: string, classNameNotInView: string }) {
-    return (
-        <InView triggerOnce threshold={1} >
-            {({ inView, ref, entry }) => (
-                <div ref={ref} className={inView ? classNameInView : classNameNotInView}>
-                    {children}
-                </div>
-            )}
-        </InView >
-    );
+export default function AnimationOnScroll({
+  children,
+  classNameInView,
+  classNameNotInView,
+}: {
+  children: React.ReactNode
+  classNameInView: string
+  classNameNotInView: string
+}) {
+  return (
+    <InView triggerOnce threshold={1}>
+      {({ inView, ref, entry }) => (
+        <div
+          ref={ref}
+          className={inView ? classNameInView : classNameNotInView}
+        >
+          {children}
+        </div>
+      )}
+    </InView>
+  )
 }
-
-
 ```
 
 This will give you a great animation effect that is triggered when the component comes into view, using React Intersection Observer and Tailwind in a Next.js app directory.

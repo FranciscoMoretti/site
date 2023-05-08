@@ -5,7 +5,6 @@ date: 2022-09-13
 description: Software entities should be closed for modification but open for extension. In other words, you shouldn’t need to change existing code to add more functionality to a class. This is one of the SOLID principles.
 category: SOLID
 slug: open-closed-principle-ocp
-page_id: 5f58330f-6b78-4eeb-b9da-d467eaf5372f
 ---
 
 ## The SOLID Principles

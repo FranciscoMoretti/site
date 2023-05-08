@@ -5,7 +5,6 @@ date: 2022-11-10
 description: Thrown errors are a good thing and you can do something about them. The rule is “ Don't ignore caught errors”
 category: General
 slug: dont-ignore-caught-errors
-page_id: 245d1c9d-9965-431c-87b3-35599cd78941
 ---
 
 ## Errors are inevitable

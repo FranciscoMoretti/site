@@ -5,7 +5,6 @@ date: 2022-10-27
 description: The rule is really simple. The only thing you have to do is to choose a single concept to test in every unit test you write.
 category: General
 slug: one-concept-per-test
-page_id: f3366d12-3bd2-4045-a616-0d906e024bf8
 ---
 
 ### Introduction

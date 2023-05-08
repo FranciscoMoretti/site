@@ -9,8 +9,6 @@ title: VS Code Competitive programming setup
 description: How to set up VS Code to solve coding challenges from CodeForces.
 date: 2021-10-21
 image:
-
-page_id: ab2a6753655144fe8378a0aa314d33e3
 ---
 
 ## Use the power of VS Code to solve coding challenges

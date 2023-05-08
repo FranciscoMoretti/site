@@ -5,7 +5,6 @@ date: 2023-01-16
 description: Do you want to make your code super flexible and easy to change? Composition might be the way to go! In this post, we'll learn about the difference between composition and inheritance and figure out which one is best for different situations.
 category: Classes
 slug: composition-vs-inheritance-which-is-better-for-your-code
-page_id: 3b0cb376-9615-49e7-bc1e-f2eb9839dc4e
 ---
 
 ## Composition vs inheritance, what’s the difference?

@@ -5,7 +5,6 @@ date: 2022-08-22
 description: Using getters and setters is better than accessing the object property directly. Accessing properties directly breaks encapsulation.
 category: Classes
 slug: use-getters-and-setters
-page_id: 67678dfe-bf1f-4f95-98c9-bd5c587a394b
 ---
 
 ☑️ Topic: Objects and Data Structures

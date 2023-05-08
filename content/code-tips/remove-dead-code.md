@@ -5,7 +5,6 @@ date: 2022-07-25
 description: Delete code that isn’t executed. It will still be in your git history if you need it.
 category: General
 slug: remove-dead-code
-page_id: 2db7d892-c1cd-49b1-ba9f-af869483a510
 ---
 
 ☑️ Topic: General

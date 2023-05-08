@@ -5,7 +5,6 @@ date: 2022-06-06
 description: Fewer arguments make your function easier to test. They are also easier to handle.
 category: Functions
 slug: few-function-arguments
-page_id: 01758e2f-1f8c-4c6a-8cd7-c17a2a6d959e
 ---
 
 ☑️ Topic: Functions

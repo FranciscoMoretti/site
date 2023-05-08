@@ -1,6 +1,6 @@
 ---
 tag: Next.js, Vercel
-alias: 
+alias:
 
 publish: true
 slug: next-conf-2021-notes-and-resources
@@ -8,9 +8,7 @@ slug: next-conf-2021-notes-and-resources
 title: Next Conf 2021 Notes and Resources
 description: Notes and resources from Next Conf 2021 and Next.js 12.
 date: 2021-11-13
-image: 
-
-page_id: f1f58fa6-eecd-486e-ac9b-fb98c31514c4
+image:
 ---
 
 Check [“The Future of React & Next.js”](https://www.youtube.com/watch?v=dMBYI7pTR4Q&list=PLBnKlKpPeagnJYpc5geAHU40ld5hk8i82) for an engaging keynote of the conference that features several demos. Also, visit the [official Next.js 12 page](https://nextjs.org/blog/next-12).

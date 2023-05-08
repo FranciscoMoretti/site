@@ -2,7 +2,6 @@
 title: About
 sidebar_position: 3
 slug: about
-page_id: b0273608-3145-49dc-bebc-3d0a1e669663
 ---
 
 I teach developers how to create better software and deliver it faster with code tips and productivity tools.

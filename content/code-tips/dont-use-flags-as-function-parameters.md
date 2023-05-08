@@ -5,7 +5,6 @@ date: 2022-07-11
 description: Flags tell you that a function does more than one thing. Functions should do only one thing.
 category: Functions
 slug: dont-use-flags-as-function-parameters
-page_id: c8e95c7c-8008-4472-a2f5-812dc53eeb34
 ---
 
 ☑️ Topic: Functions

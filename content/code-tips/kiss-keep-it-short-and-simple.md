@@ -5,7 +5,6 @@ date: 2022-12-14
 description: The KISS principle states that most systems work best if they are kept simple rather than made complicated; therefore, simplicity should be a key goal in design, and unnecessary complexity should be avoided.
 category: General
 slug: kiss-keep-it-short-and-simple
-page_id: dce1696f-7574-46ab-815d-3090490c1989
 ---
 
 ## The KISS principle: Keep it short and simple!

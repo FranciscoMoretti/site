@@ -5,7 +5,6 @@ date: 2022-05-09
 description: Code should be readable and searchable. Constants should have a name. Use searchable names.
 category: Variables
 slug: dont-use-magic-numbers
-page_id: a3130207-b86e-4623-8548-471978823c2f
 ---
 
 ☑️ Topic: **Variables**

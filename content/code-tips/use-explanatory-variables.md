@@ -5,7 +5,6 @@ date: 2022-05-16
 description: Break the calculations up into intermediate values that are held in variables with meaningful names. The names give meaning and clarity to the code.
 category: Variables
 slug: use-explanatory-variables
-page_id: 4cca507e-6587-4984-a752-c623970656e2
 ---
 
 ☑️ Topic: Variables

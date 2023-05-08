@@ -43,9 +43,6 @@ export const Doc = defineDocumentType(() => ({
     //   type: "string",
     //   required: true,
     // },
-    page_id: {
-      type: "string",
-    },
     sidebar_position: {
       type: "number",
     },
@@ -76,9 +73,6 @@ export const Post = defineDocumentType(() => ({
     // slug: {
     //   type: "string",
     // },
-    page_id: {
-      type: "string",
-    },
     published: {
       type: "boolean",
       default: true,
@@ -140,8 +134,8 @@ export const Page = defineDocumentType(() => ({
     // slug: {
     //   type: "string",
     // },
-    page_id: {
-      type: "string",
+    sidebar_position: {
+      type: "number",
     },
   },
   computedFields,

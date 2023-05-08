@@ -5,7 +5,6 @@ date: 2022-09-28
 description: Clients should not be forced to depend upon interfaces that they do not use. Large interfaces should be broken up into smaller interfaces.
 category: SOLID
 slug: interface-segregation-principle-isp
-page_id: 46ae8052-85f0-4bc9-9a8b-2c2871752235
 ---
 
 ## The SOLID Principles

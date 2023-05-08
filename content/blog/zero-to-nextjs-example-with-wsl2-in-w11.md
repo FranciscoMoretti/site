@@ -8,8 +8,6 @@ title: Zero to Next.js Example with WSL2 in W11
 description: How to set up your web development environment with WSL2 in Windows 11 to run a Next.js example.
 date: 2022-04-16
 image:
-
-page_id: c99c1755-6cb1-4273-90ad-68a75bdf9987
 ---
 
 ## Set up a development environment with

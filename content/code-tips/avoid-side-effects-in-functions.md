@@ -6,7 +6,6 @@ description: A side effect is when a function does something besides just taking
 
 category: Functions
 slug: avoid-side-effects-in-functions
-page_id: c00f27b0-f905-4c24-96ff-7fd745ab3384
 ---
 
 ## Introduction to side effects

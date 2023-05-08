@@ -5,7 +5,6 @@ date: 2022-10-05
 description: High-level modules should not depend on low-level modules and both should depend on abstractions. Abstractions should not depend upon details, but details should depend on abstractions. Classes shouldn’t have to know implementation details from their dependencies.
 category: SOLID
 slug: dependency-inversion-principle-dip
-page_id: d043b367-62b1-462a-9993-065679efdbb7
 ---
 
 ## The SOLID Principles

@@ -1,6 +1,6 @@
 ---
 tag: Vercel, CLI
-alias: 
+alias:
 
 publish: true
 slug: pull-env-variables-from-vercel
@@ -8,9 +8,7 @@ slug: pull-env-variables-from-vercel
 title: Pull ENV variables from Vercel
 description: Pull the ENV variables from a Vercel project using the CLI.
 date: 2022-04-18
-image: 
-
-page_id: 718ecd49-9be2-403b-b1ec-d5784c38f1b5
+image:
 ---
 
 ## Pull the ENV variables from a Vercel project using the CLI

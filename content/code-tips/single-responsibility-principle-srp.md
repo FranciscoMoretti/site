@@ -5,7 +5,6 @@ date: 2022-09-06
 description: Each class should have a single responsibility. That means that there should be only one reason to change it. This is one of the SOLID principles.
 category: SOLID
 slug: single-responsibility-principle-srp
-page_id: 36fcf141-1cd9-48ab-8a71-907a5be39c23
 ---
 
 ## The SOLID Principles

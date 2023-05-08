@@ -5,7 +5,6 @@ date: 2022-05-23
 description: Use explicit names for variables instead of using an alias. A single-letter name is just a placeholder for the reader to map into the actual concept and this is a problem.
 category: Variables
 slug: avoid-mental-mapping
-page_id: f1f95ad0-ef6b-4d11-ad63-f35b9c483217
 ---
 
 ☑️ Topic: Variables

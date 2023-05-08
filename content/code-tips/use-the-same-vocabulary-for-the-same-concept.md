@@ -5,7 +5,6 @@ date: 2022-03-14
 description: Pick one word per concept and stick with it. Consistency, consistency, consistency!
 category: General
 slug: use-the-same-vocabulary-for-the-same-concept
-page_id: 99147f9c-0566-4614-abbe-da82d602d491
 ---
 
 ☑️ Topic: Functions

@@ -5,7 +5,6 @@ date: 2022-07-18
 description: Encapsulate the expressions used in conditionals and use the new function name to indicate their intent. Boolean logic is easier to understand if it’s read in isolation.
 category: General
 slug: encapsulate-conditionals
-page_id: fbacc290-8097-42de-8f0c-f4d183444c1f
 ---
 
 ☑️ Topic: Functions

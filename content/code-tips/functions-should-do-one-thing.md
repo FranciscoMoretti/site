@@ -5,7 +5,6 @@ date: 2022-06-13
 description: Create a function for each action or concept. Functions should do one and only one thing.
 category: Functions
 slug: functions-should-do-one-thing
-page_id: 4e23979b-ba01-478b-954e-4aa1b0234ff5
 ---
 
 ☑️ Topic: Functions

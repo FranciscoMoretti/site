@@ -5,7 +5,6 @@ date: 2022-07-04
 description: Say what the function does with its name. The name should tell you what it expects as inputs as well.
 category: Functions
 slug: function-names-should-say-what-they-do
-page_id: 44e89885-9785-49b1-b431-15ef4cc7e0f7
 ---
 
 ☑️ Topic: Functions
