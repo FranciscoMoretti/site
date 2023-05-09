@@ -95,7 +95,7 @@ export default async function PostPage({ params }: PostPageProps) {
     <article className="container relative max-w-3xl py-6 lg:py-10">
       <Link
         href="/blog"
-        className="absolute top-14 left-[-200px] hidden items-center justify-center text-sm font-medium text-slate-600 hover:text-slate-900 xl:inline-flex"
+        className="absolute left-[-200px] top-14 hidden items-center justify-center text-sm font-medium text-slate-600 hover:text-slate-900 xl:inline-flex"
       >
         <Icons.chevronLeft className="mr-2 h-4 w-4" />
         See all posts
@@ -110,7 +110,7 @@ export default async function PostPage({ params }: PostPageProps) {
           {post.title}
         </h1>
         {authors?.length ? (
-          <div className="mt-4 mb-2 flex space-x-4">
+          <div className="mb-2 mt-4 flex space-x-4">
             {authors.map((author) =>
               author ? (
                 <Link

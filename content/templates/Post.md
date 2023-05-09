@@ -1,16 +1,14 @@
 ---
-tag: 
+tag:
 alias:
 
 publish: true
-slug: 
+slug:
 
-title: {{title}}
-description: 
-date: {{date}}
+title: { { title } }
+description:
+date: { { date } }
 image:
 ---
-
-
 
 Content

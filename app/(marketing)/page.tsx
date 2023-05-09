@@ -39,7 +39,7 @@ export default async function IndexPage() {
 
   return (
     <>
-      <section className="container grid items-center justify-center gap-6 pt-6 pb-8 md:pt-10 md:pb-12 lg:pt-16 lg:pb-24">
+      <section className="container grid items-center justify-center gap-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:pb-24 lg:pt-16">
         <UserAvatar
           user={{
             name: siteConfig.name || null,
@@ -215,7 +215,7 @@ export default async function IndexPage() {
                 </svg>
               </div>
               <div className="flex items-center">
-                <div className="h-4 w-4 border-y-8 border-r-8 border-l-0 border-solid border-y-transparent border-r-slate-800"></div>
+                <div className="h-4 w-4 border-y-8 border-l-0 border-r-8 border-solid border-y-transparent border-r-slate-800"></div>
                 <div className="flex h-10 items-center rounded-md border border-slate-800 bg-slate-800 px-4  font-medium text-slate-200">
                   {stars} stars on GitHub
                 </div>
