@@ -29,8 +29,8 @@ dependencies:
     specifier: ^2.0.4
     version: 2.0.4
   '@flowershow/remark-wiki-link':
-    specifier: ^1.1.0
-    version: 1.1.0
+    specifier: ^1.1.2
+    version: 1.1.2
   '@hookform/resolvers':
     specifier: ^2.9.10
     version: 2.9.10(react-hook-form@7.38.0)
@@ -219,9 +219,6 @@ devDependencies:
   '@ianvs/prettier-plugin-sort-imports':
     specifier: ^3.7.1
     version: 3.7.1(prettier@2.7.1)
-  '@tailwindcss/line-clamp':
-    specifier: ^0.4.2
-    version: 0.4.2(tailwindcss@3.3.2)
   '@tailwindcss/typography':
     specifier: ^0.5.7
     version: 0.5.7(tailwindcss@3.3.2)
@@ -1145,8 +1142,8 @@ packages:
       - '@types/react'
     dev: false
 
-  /@flowershow/remark-wiki-link@1.1.0:
-    resolution: {integrity: sha512-6ugIEYvu3PvIwkgkqNuAgRC/xHv8s2Akd/okI4DsOIHGjpm3UOcYuPiDK0XDuK/LH1YFzjatfua8GcWxkyOvGw==}
+  /@flowershow/remark-wiki-link@1.1.2:
+    resolution: {integrity: sha512-BfRkavWSx0zUDQJwyLYa7q+EFNR+M6o5VvV1FrUcaqLzB3FgJnkwQzgiaxlIGNseK1n1gtlKIniCg+YIy4x0hw==}
     dependencies:
       mdast-util-to-markdown: 1.5.0
       mdast-util-wiki-link: 0.0.2
@@ -2739,14 +2736,6 @@ packages:
     dependencies:
       tslib: 2.5.0
     dev: false
-
-  /@tailwindcss/line-clamp@0.4.2(tailwindcss@3.3.2):
-    resolution: {integrity: sha512-HFzAQuqYCjyy/SX9sLGB1lroPzmcnWv1FHkIpmypte10hptf4oPUfucryMKovZh2u0uiS9U5Ty3GghWfEJGwVw==}
-    peerDependencies:
-      tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
-    dependencies:
-      tailwindcss: 3.3.2(ts-node@10.9.1)
-    dev: true
 
   /@tailwindcss/typography@0.5.7(tailwindcss@3.3.2):
     resolution: {integrity: sha512-JTTSTrgZfp6Ki4svhPA4mkd9nmQ/j9EfE7SbHJ1cLtthKkpW2OxsFXzSmxbhYbEkfNIyAyhle5p4SYyKRbz/jg==}
