@@ -79,4 +79,10 @@ Here's an example of how you can use the `line-clamp-{n}` utility as part of a b
 <p class="text-slate-600 line-clamp-2">{post.description}</p>
 ```
 
+No matter how long the description, it takes 2 lines at most. This is what it looks like:
+
+![[20230509092216.png]]
+
+
+
 With the TailwindCSS line-clamp, you can easily create consistent and visually pleasing blog post descriptions on your website. Try it out today and see the difference it can make! 🚀
