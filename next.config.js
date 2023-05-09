@@ -35,6 +35,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/web-dev-in-windows-11",
+        destination: "/blog/zero-to-nextjs-example-with-wsl2-in-w11",
+        permanent: true,
+      },
+      {
         source: "/vs-code-competitive-programming-setup",
         destination: "/blog/vs-code-competitive-programming-setup",
         permanent: true,
@@ -112,23 +117,33 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/interface-segregation-principle-isp--solid",
-        destination: "/code-tips/interface-segregation-principle-isp--solid",
-        permanent: true,
-      },
-      {
         source: "/kiss-keep-it-short-and-simple",
         destination: "/code-tips/kiss-keep-it-short-and-simple",
         permanent: true,
       },
       {
+        source: "/single-responsibility-principle-srp--solid",
+        destination: "/code-tips/single-responsibility-principle-srp",
+        permanent: true,
+      },
+      {
+        source: "/interface-segregation-principle-isp--solid",
+        destination: "/code-tips/interface-segregation-principle-isp",
+        permanent: true,
+      },
+      {
         source: "/liskov-substitution-principle-lsp--solid",
-        destination: "/code-tips/liskov-substitution-principle-lsp--solid",
+        destination: "/code-tips/liskov-substitution-principle-lsp",
         permanent: true,
       },
       {
         source: "/open-closed-principle-ocp--solid",
-        destination: "/code-tips/open-closed-principle-ocp--solid",
+        destination: "/code-tips/open-closed-principle-ocp",
+        permanent: true,
+      },
+      {
+        source: "/dependency-inversion-principle-dip--solid",
+        destination: "/code-tips/dependency-inversion-principle-dip",
         permanent: true,
       },
       {
@@ -154,11 +169,6 @@ const nextConfig = {
       {
         source: "/avoid-negative-conditionals",
         destination: "/code-tips/avoid-negative-conditionals",
-        permanent: true,
-      },
-      {
-        source: "/dependency-inversion-principle-dip--solid",
-        destination: "/code-tips/dependency-inversion-principle-dip",
         permanent: true,
       },
     ]
