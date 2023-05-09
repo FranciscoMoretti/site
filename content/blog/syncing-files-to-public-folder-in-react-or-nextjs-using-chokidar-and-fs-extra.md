@@ -11,8 +11,6 @@ date: 2023-04-27
 image:
 ---
 
-# Syncing Files to the Public Folder in React or Next.js using Chokidar and fs-extra
-
 When building a website with React or Next.js, you may have some assets (e.g. images, videos, or other static files) that need to be accessible on the server. These assets can be stored in a dedicated folder, but they won't be automatically included in the build process. In this tutorial, we'll learn how to use Chokidar and fs-extra to automatically sync files to the public folder, making them available to your website.
 
 ## Prerequisites
@@ -95,4 +93,4 @@ With this setup, any changes you make to files in the content/assets folder will
 
 In the `build` script, we first run the `sync` script to sync the latest files to the `public/assets` folder. After that, we run the `next build` command to build the Next.js application.
 
-That's it! With this setup, you can easily sync files from a source directory to a public directory in a React or Next.js project using `Chokidar` and `fs-extra`.
+That's it! With this setup, you can easily sync files from a source directory to a public directory in a React or Next.js project using `c[]()hokidar` and `fs-extra`.
