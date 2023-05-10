@@ -60,6 +60,12 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/pull-env-variables-from-vercel",
+        destination:
+          "/blog/how-to-simplify-your-local-development-with-vercel-env",
+        permanent: true,
+      },
+      {
         source: "/composition-vs-inheritance-which-is-better-for-your-code",
         destination:
           "/code-tips/composition-vs-inheritance-which-is-better-for-your-code",
