@@ -51,9 +51,12 @@ export default async function IndexPage() {
           <h1 className="text-3xl font-bold leading-[1.1] tracking-tighter sm:text-5xl md:text-6xl">
             Francisco Moretti
           </h1>
+          <h2 className="text-lg font-semibold tracking-tighter sm:text-2xl md:text-3xl">
+            Modern Web, Happy Coding
+          </h2>
           <p className="max-w-[42rem] leading-normal text-slate-700 sm:text-xl sm:leading-8">
-            Software Development Engineering at iRobot | Web, Design, Best
-            Practices
+            Software Development Engineering at iRobot | Delivering High-Quality
+            Features with Joy
           </p>
         </div>
         <div className="flex gap-4">
