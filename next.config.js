@@ -88,6 +88,12 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/use-pronounceable-and-meaningful-variable-names",
+        destination:
+          "/code-tips/use-pronounceable-and-meaningful-variable-names",
+        permanent: true,
+      },
+      {
         source: "/dont-use-flags-as-function-parameters",
         destination: "/code-tips/dont-use-flags-as-function-parameters",
         permanent: true,
