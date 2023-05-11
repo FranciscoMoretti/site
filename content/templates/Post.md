@@ -5,9 +5,9 @@ alias:
 publish: true
 slug:
 
-title: { { title } }
+title: {{ title }}
 description:
-date: { { date } }
+date: {{ date }}
 image:
 ---
 
