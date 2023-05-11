@@ -11,7 +11,7 @@ date: 2023-05-10
 image:
 ---
 
-Are you tired of manually setting up environment variables every time you work on a local development project? Vercel has a solution for you! Using Vercel Env from Vercel CLI can save you time and trouble, allowing you to work more efficiently and happily. 
+Are you tired of manually setting up environment variables every time you work on a local development project? Vercel has a solution for you! Using Vercel Env from Vercel CLI can save you time and trouble, allowing you to work more efficiently and happily.
 
 ## What is Vercel Env?
 
@@ -26,47 +26,51 @@ Vercel Env is a command-line interface (CLI) tool that makes it easy for you to 
 ## How to Use Vercel Env
 
 ### Install
+
 Install the Vercel CLI by running the following command in your terminal:
 
-   ```
-   npm i -g vercel
-   ```
+```npm
+npm i -g vercel
+```
 
-### Pull 
+### Pull
+
 Run the following command to export your project's environment variables to a local file:
 
-   ```
-   vercel env pull <file>
-   ```
+```bash
+vercel env pull <file>
+```
 
-   This will export your project's environment variables to the specified file (e.g., `.env`).
+This will export your project's environment variables to the specified file (e.g., `.env`).
 
 ### List
+
 To list all environment variables in a Vercel project, run the following command:
 
-   ```
-   vercel env ls
-   ```
+```bash
+vercel env ls
+```
 
 ### Add
+
 To add an environment variable to a Vercel project, run the following command:
 
-   ```
-   vercel env add
-   ```
+```bash
+vercel env add
+```
 
 ### Remove
+
 To remove an environment variable from a Vercel project, run the following command:
 
-   ```
-   vercel env rm
-   ```
+```bash
+vercel env rm
+```
 
-   You'll be prompted to enter the name and value of the environment variable you want to add or remove.
-   
+You'll be prompted to enter the name and value of the environment variable you want to add or remove.
+
 Note: After updating environment variables on Vercel (via the dashboard, `vercel env add`, or `vercel env rm`), run `vercel env pull <file>` again to get the updated values.
-   
 
 ## Conclusion
 
-In this blog post, we've explored the features and benefits of using the [Vercel CLI env](https://vercel.com/docs/cli/env) commands. If you're a modern web developer looking to simplify environment variable management during local development, `vercel env` is the perfect tool for you. Check out other blog posts on this site to learn more about other useful tools for modern web development. Happy coding! 
+In this blog post, we've explored the features and benefits of using the [Vercel CLI env](https://vercel.com/docs/cli/env) commands. If you're a modern web developer looking to simplify environment variable management during local development, `vercel env` is the perfect tool for you. Check out other blog posts on this site to learn more about other useful tools for modern web development. Happy coding!
