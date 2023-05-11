@@ -1,5 +1,5 @@
 ---
-tag: Next.js, React
+tag: Next.js, React.js
 alias:
 
 publish: true
