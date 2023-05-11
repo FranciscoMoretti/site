@@ -36,13 +36,13 @@ A simple and minimalistic template to develop your Next.js application in a VS C
    - **Option 2:** Add your Next.js project as a [Git Submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules) `git submodule add https://github.com/cassidoo/next-netlify-starter.git`
 3. Go to the newly created directory to run `npm` commands. Just replace `your_project_folder` with the name folder name of the project you just added.
 
-   ```
+   ```bash
    cd `your_project_folder`
    ```
 
 4. Run the development server
 
-   ```shell
+   ```npm
    npm run dev
    ```
 
