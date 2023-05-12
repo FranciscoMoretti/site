@@ -3,11 +3,11 @@ tag:
 alias:
 
 publish: true
-slug:
+slug: {{title}}
 
-title: {{ title }}
+title:
 description:
-date: {{ date }}
+date: {{date}}
 image:
 ---
 
