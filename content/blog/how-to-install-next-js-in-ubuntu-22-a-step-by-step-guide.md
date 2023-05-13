@@ -11,9 +11,9 @@ date: 2023-05-13
 image:
 ---
 
-Are you looking to start building web applications with Next.js on Ubuntu 22? You're in the right place! In this tutorial, we will guide you through the step-by-step process of setting up and running Next.js on your Ubuntu 22 distribution. 
+Are you looking to start building web applications with Next.js on Ubuntu 22? You're in the right place! This tutorial will guide you through the step-by-step process of setting up and running Next.js on your Ubuntu 22 distribution.
 
-Before we get started, if you're running Windows, check out our previous post on [How to Install Next.js in Windows Using WSL2](/blog/how-to-install-next-js-in-windows-using-wsl2-a-step-by-step-guide). Now, let's dive into the installation process.
+Before we get started, if you're running Windows, check out the post on [How to Install Next.js in Windows Using WSL2](/blog/how-to-install-next-js-in-windows-using-wsl2-a-step-by-step-guide). Now, let's dive into the installation process.
 
 ### Step 1: Set up NVM in Ubuntu
 First things first, we need to set up Node with its version manager. Open up the Ubuntu bash tab and paste in the following commands:
@@ -25,15 +25,17 @@ sudo apt upgrade -y
 ## Install nvm and node
 ## nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+```
+Close and reopen your terminal to start using NVM and then run the following command:
 
-## node
+```text
 nvm install --lts
 ```
 
 With these commands, you'll have Node and its version manager (nvm) set up in your Ubuntu 22 distribution.
 
 ### Step 2: Create a Next.js App
-Now that we have Node set up, let's create a new Next.js application to test if everything is working correctly. To create a new application named `blog-app`, run the following command:
+Now that we have Node set up, let's create a new Next.js application to test if everything is working correctly. To create a new application named `blog-app`, run the following command in the Ubuntu bash session:
 
 ```text
 npx create-next-app@latest blog-app

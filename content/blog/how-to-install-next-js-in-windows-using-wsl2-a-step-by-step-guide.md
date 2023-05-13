@@ -10,9 +10,23 @@ date: 2023-05-13
 image:
 ---
 
-Are you interested in setting up a development environment to run a Next.js example on your Windows computer? In this tutorial, we'll show you how to install the necessary tools and software to get started.  By the end of this tutorial, you will have a Next.js example running on your Windows 11 machine.
+Are you interested in setting up a development environment to run a Next.js example on your Windows computer? In this tutorial, I'll show you how to install the necessary tools and software to get started.  By the end of this tutorial, you will have a Next.js example running on your Windows 11 machine.
 
-Note: If you already have an Ubuntu distribution, you can skip the previous steps and go straight to the tutorial [How to Install Next.js in Ubuntu 22](how-to-install-next-js-in-ubuntu-22-a-step-by-step-guide).
+Note: If you already have an Ubuntu distribution, you can skip these---
+tag:
+alias:
+
+publish: true
+slug: how-to-install-next-js-in-windows-using-wsl2-a-step-by-step-guide
+
+title:
+description:
+date: 2023-05-13
+image:
+---
+
+Content
+ steps and go straight to the tutorial [How to Install Next.js in Ubuntu 22](how-to-install-next-js-in-ubuntu-22-a-step-by-step-guide).
 
 ## Step 1: Download and Install VS Code
 
@@ -20,11 +34,13 @@ Before we get started, we need to have VS Code installed. Simply download it fro
 
 ## Step 2: Install the Remote - WSL Extension for VS Code
 
-To connect to WSL, you'll need to install the Remote - WSL extension for VS Code. To do this, open the extension panel with `ctrl+shift+X` and search for `Remote - WSL`. Click on install to add the extension.
+To connect to WSL, you'll need to install the Remote - WSL extension for VS Code. To do this, open the extension panel with `ctrl+shift+X` and search for `ms-vscode-remote.remote-wsl` (WSL). Click on install to add the extension.
 
 ## Step 3: Install Windows Terminal
 
-Windows Terminal is a modern host application for the command-line shell. It allows you to run commands in Windows. Open the Terminal by typing `Terminal` in the search bar.
+Windows Terminal is a modern host application for the command-line shell. It allows you to run commands in Windows. 
+1. Open the Microsoft Store and install `Windows Terminal`
+2. Launch the Terminal by typing `Terminal` in the Windows search bar.
 
 ## Step 4: Install WSL2
 
@@ -46,7 +62,7 @@ The Windows subsystem for Linux has the following advantages:
 
 ### Install an Ubuntu distribution with WSL
 
-To install an Ubuntu distribution in WSL2 simply run the following command in PowerShell.
+To install an Ubuntu distribution in WSL2 simply run the following command in PowerShell in the windows terminal.
 
 ```powershell
 wsl --install
@@ -55,6 +71,8 @@ wsl --install
 For additional resources, check the [Microsoft website](https://docs.microsoft.com/en-us/windows/wsl/install).
 
 ![Instal WSL](/assets/docs/1089865260.png)
+
+Note: You'll need to reboot system after installing it.
 
 After a few minutes, you should be able to open it in a new Terminal tab. The first time you run your WSL2 Ubuntu distribution, you will need to do a few setup steps. Just follow the instructions that appear in the Ubuntu bash tab.
 
@@ -70,22 +88,22 @@ Now that you've set up WSL2, it's time to open it with VS Code. There are two wa
 
 From the Ubuntu session in the terminal, run:
 ```bash
-`code ~`
+code ~
 ```
 
 ### Option 2
 
-Open the VS Code application in Windows and open the command palette (`Ctrl+Shift+P`). Type `WSL: Open folder in WSL...` and then open the home folder `~` or `/home/<username>`.
+Open the VS Code application in Windows and open the command palette (`Ctrl+Shift+P`). Type `WSL: Connect to WSL` and then open the home folder `~` or `/home/<username>`.
 
+Note: the first time you run vscode in Ubuntu it will install the VS Code server.
 
+After following these steps, you should be able to open your Ubuntu distribution with VS Code and start developing your Next.js app. You should be able to see `WSL: Ubuntu` in the bottom-left corner indicator.
 
-After following these steps, you should be able to open your Ubuntu distribution with VS Code and start developing your Next.js app.
-
-![Blog app in VS Code](/assets/docs/14215319.png)
+![WSL Ubuntu in VS Code](/assets/Code_2UZY0Qu6EQ.png)
 
 ## Step 6: Installing and Running Next.js in Your WSL Ubuntu Distribution
 
-After setting up VS Code, Remote-WSL extension, Windows Terminal, and an Ubuntu distribution with WSL2, you can now continue in your WSL Ubuntu distribution to install and run Next.js. Simply follow the instructions in our guide on [How to Install Next.js in Ubuntu 22](how-to-install-next-js-in-ubuntu-22-a-step-by-step-guide).
+After setting up VS Code, Remote-WSL extension, Windows Terminal, and an Ubuntu distribution with WSL2, you can now continue in your WSL Ubuntu distribution to install and run Next.js. Simply follow the instructions in [How to Install Next.js in Ubuntu 22](how-to-install-next-js-in-ubuntu-22-a-step-by-step-guide).
 
 ## Conclusion
 
