@@ -35,11 +35,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/web-dev-in-windows-11",
-        destination: "/blog/zero-to-nextjs-example-with-wsl2-in-w11",
-        permanent: true,
-      },
-      {
         source: "/vs-code-competitive-programming-setup",
         destination: "/blog/vs-code-competitive-programming-setup",
         permanent: true,
@@ -50,8 +45,15 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/web-dev-in-windows-11",
+        destination:
+          "/blog/how-to-install-next-js-in-windows-using-wsl2-a-step-by-step-guide",
+        permanent: true,
+      },
+      {
         source: "/zero-to-nextjs-example-with-wsl2-in-w11",
-        destination: "/blog/zero-to-nextjs-example-with-wsl2-in-w11",
+        destination:
+          "/blog/how-to-install-next-js-in-windows-using-wsl2-a-step-by-step-guide",
         permanent: true,
       },
       {
