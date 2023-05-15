@@ -5,6 +5,7 @@ import { useMDXComponent } from "next-contentlayer/hooks"
 import { cn } from "@/lib/utils"
 import { Callout } from "@/components/callout"
 import { Card } from "@/components/card"
+import { CopyButton } from "./copy-button"
 
 const components = {
   h1: ({ className, ...props }) => (
@@ -141,19 +142,36 @@ const components = {
       {...props}
     />
   ),
-  pre: ({ className, ...props }) => (
-    <pre
-      className={cn(
-        "mb-4 mt-6 overflow-x-auto rounded-lg bg-slate-900 py-4",
-        className
+  pre: ({
+    className,
+    __rawString__,
+    __withMeta__,
+    ...props
+  }: React.HTMLAttributes<HTMLPreElement> & {
+    __rawString__?: string
+    __src__?: string
+    __withMeta__?: string
+  }) => (
+    <>
+      <pre
+        className={cn(
+          "mb-4 mt-6 max-h-[650px] overflow-x-auto rounded-lg border py-4 data-[theme=dark]:bg-background data-[theme=light]:bg-white",
+          className
+        )}
+        {...props}
+      />
+      {__rawString__ && (
+        <CopyButton
+          value={__rawString__}
+          className={cn("absolute right-4 top-4", __withMeta__ && "top-16")}
+        />
       )}
-      {...props}
-    />
+    </>
   ),
-  code: ({ className, ...props }) => (
+  code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <code
       className={cn(
-        "relative rounded border bg-slate-300/25 px-[0.3rem] py-[0.2rem] font-mono text-sm text-slate-600",
+        "relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm",
         className
       )}
       {...props}
