@@ -7,11 +7,6 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings"
 import { remarkWikiLink, getPermalinks } from "@flowershow/remark-wiki-link"
 import { siteConfig } from "./config/site"
 import { visit } from "unist-util-visit"
-import { rehypeComponent } from "./lib/rehype-component"
-import {
-  rehypePrettyCodeClasses,
-  rehypePrettyCodeOptions,
-} from "./lib/rehype-pretty-code"
 
 /** @type {import('contentlayer/source-files').ComputedFields} */
 const computedFields = {
