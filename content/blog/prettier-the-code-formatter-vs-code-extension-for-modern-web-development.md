@@ -16,6 +16,8 @@ As a web developer, I know how important it is to write clean and organized code
 ## Installation
 Simply search for `esbenp.prettier-vscode` in VS Code Extensions panel and hit install. Or **[Install via the Visual Studio Code Marketplace →](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)**.
 
+**Note:** if Prettier is not installed in your project you can install it by following the [official installation instructions](https://prettier.io/docs/en/install.html).
+
 ### Setting Prettier as the Default Formatter
 To make sure that Prettier is used instead of any other code formatter extensions you might have, set it as the default formatter in your VS Code settings. Simply add the following code snippet to your VS Code settings file:
 
