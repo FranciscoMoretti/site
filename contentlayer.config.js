@@ -6,6 +6,7 @@ import rehypeSlug from "rehype-slug"
 import rehypeAutolinkHeadings from "rehype-autolink-headings"
 import { remarkWikiLink, getPermalinks } from "@flowershow/remark-wiki-link"
 import { siteConfig } from "./config/site"
+import { visit } from "unist-util-visit"
 
 /** @type {import('contentlayer/source-files').ComputedFields} */
 const computedFields = {
@@ -173,10 +174,28 @@ export default makeSource(async () => {
       ],
       rehypePlugins: [
         rehypeSlug,
+        () => (tree) => {
+          visit(tree, (node) => {
+            if (node?.type === "element" && node?.tagName === "pre") {
+              const [codeEl] = node.children
+              if (codeEl.tagName !== "code") {
+                return
+              }
+
+              node.__rawString__ = codeEl.children?.[0].value
+              node.__src__ = node.properties?.__src__
+            }
+          })
+        },
         [
           rehypePrettyCode,
           {
-            theme: "dark-plus",
+            theme: {
+              dark: "dark-plus",
+              light: "light-plus",
+            },
+            keepBackground: false,
+
             onVisitLine(node) {
               // Prevent lines from collapsing in `display: grid` mode, and allow empty
               // lines to be copy/pasted
@@ -192,6 +211,28 @@ export default makeSource(async () => {
             },
           },
         ],
+        () => (tree) => {
+          visit(tree, (node) => {
+            if (node?.type === "element" && node?.tagName === "div") {
+              if (!("data-rehype-pretty-code-fragment" in node.properties)) {
+                return
+              }
+
+              const preElement = node.children.at(-1)
+              if (preElement.tagName !== "pre") {
+                return
+              }
+
+              preElement.properties["__withMeta__"] =
+                node.children.at(0).tagName === "div"
+              preElement.properties["__rawString__"] = node.__rawString__
+
+              if (node.__src__) {
+                preElement.properties["__src__"] = node.__src__
+              }
+            }
+          })
+        },
         [
           rehypeAutolinkHeadings,
           {
