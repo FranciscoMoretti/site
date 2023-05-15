@@ -38,10 +38,10 @@ The plan is to implement all the features and niceness for a personal blog.
 - Styled using **Tailwind CSS**
 - Validations using **Zod**
 - Written in **TypeScript**
+- Copy code button
 
 ## Roadmap
 
-- [ ] Copy code button
 - [ ] Custom tailwind styles
 - [ ] Framer motion animations on home screen
 - [ ] Show views for each page using **Prisma** and **PlanetScale**
