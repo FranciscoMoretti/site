@@ -38,4 +38,4 @@ In the world of modern web development, where time is of the essence and collabo
 ## Resources
 - [Official installation guide](https://prettier.io/docs/en/install.html)
 - [Why Prettier, even more reasons](https://prettier.io/docs/en/why-prettier.html)
-- [Prettier - The Code Formatter VS Code Extension for Modern Web Development](/blog/prettier-the-code-formatter-vs-code-extension-for-modern-web-development.md)
+- [Prettier - The Code Formatter VS Code Extension for Modern Web Development](/blog/prettier-the-code-formatter-vs-code-extension-for-modern-web-development)
