@@ -7,6 +7,8 @@ import { formatDate } from "@/lib/utils"
 
 export const metadata = {
   title: "Blog",
+  description:
+    "Welcome to the Happy Coding Blog! Join us in the world of modern web development and discover expert insights, tips, and tutorials. Happy Coding!",
 }
 
 export default async function BlogPage() {
@@ -21,11 +23,17 @@ export default async function BlogPage() {
       <div className="flex flex-col items-start gap-4 md:flex-row md:justify-between md:gap-8">
         <div className="flex-1 space-y-4">
           <h1 className="inline-block text-4xl font-extrabold tracking-tight text-slate-900 lg:text-5xl">
-            Blog
+            The Happy Coding Blog!
           </h1>
+          <h2 className="inline-block text-2xl font-bold tracking-tight text-slate-800 lg:text-3xl">
+            Modern Web, Happy coding 🌐😄
+          </h2>
           <p className="text-xl text-slate-600">
-            A blog built using Contentlayer. Posts are written in MDX.
+            {
+              "In this blog, we embrace the power of modern tools and technologies like VS Code, Next.js, React, TailwindCSS, and Typescript to make your development process easier and your coding experience more enjoyable. With their intuitive features, seamless integrations, and extensive community support, these tools empower you to create stunning websites and web applications with ease. Say goodbye to tedious workflows and hello to efficient coding that sparks joy!"
+            }
           </p>
+          <p className="text-xl text-slate-600">Happy Coding! 😄🎉</p>
         </div>
       </div>
       <hr className="my-8 border-slate-200" />
