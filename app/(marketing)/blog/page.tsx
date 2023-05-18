@@ -8,7 +8,7 @@ import { formatDate } from "@/lib/utils"
 export const metadata = {
   title: "Blog",
   description:
-    "Welcome to the Happy Coding Blog! Join us in the world of modern web development and discover expert insights, tips, and tutorials. Happy Coding!",
+    "Welcome to the Happy Coding Blog! Join us in the world of modern web development and discover tools, tips, and tutorials. Happy Coding!",
 }
 
 export default async function BlogPage() {
@@ -30,7 +30,7 @@ export default async function BlogPage() {
           </h2>
           <p className="text-xl text-slate-600">
             {
-              "In this blog, we embrace the power of modern tools and technologies like VS Code, Next.js, React, TailwindCSS, and Typescript to make your development process easier and your coding experience more enjoyable. With their intuitive features, seamless integrations, and extensive community support, these tools empower you to create stunning websites and web applications with ease. Say goodbye to tedious workflows and hello to efficient coding that sparks joy!"
+              "In this blog, we use modern tools like VS Code, Next.js, React, TailwindCSS, and Typescript to make development easier and coding more enjoyable. These tools are user-friendly, perform well, and have strong community support. They help you effortlessly create awesome websites and web apps. Say goodbye to tedious workflows and hello to efficient coding that sparks joy!"
             }
           </p>
           <p className="text-xl text-slate-600">Happy Coding! 😄🎉</p>
