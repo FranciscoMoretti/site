@@ -8,7 +8,7 @@ import { formatDate } from "@/lib/utils"
 export const metadata = {
   title: "Blog",
   description:
-    "Welcome to the Happy Coding Blog! Join us in the world of modern web development and discover tools, tips, and tutorials. Happy Coding!",
+    "Welcome to the Happy Coding Blog! Enter the world of modern web development and discover tools, tips, and tutorials. Happy Coding!",
 }
 
 export default async function BlogPage() {
