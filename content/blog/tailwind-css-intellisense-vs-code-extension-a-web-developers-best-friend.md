@@ -20,7 +20,7 @@ Are you tired of scrolling through long CSS files just to find the right class n
 TailwindCSS has become one of the most popular CSS frameworks due to its simplicity and flexibility. On the other hand, VS Code is a very flexible editor, but it requires some tuning by adding the right extensions to really shine. The Tailwind CSS IntelliSense VS Code extension takes it to the next level by making your development experience more efficient and effective.
 
 ## Installation
-Simply search for `bradlc.vscode-tailwindcss` in VS Code Extensions panel and hit install. Or **[Install via the Visual Studio Code Marketplace →](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss "https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss")**.
+Simply search for `bradlc.vscode-tailwindcss` in VS Code Extensions panel and hit install. Or [Install via the Visual Studio Code Marketplace →](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss).
 
 **Note:** To ensure that the Tailwind CSS IntelliSense VS Code extension works properly, make sure that you have tailwindcss installed and a Tailwind config file named `tailwind.config.js` or `tailwind.config.cjs` in your workspace.
 
