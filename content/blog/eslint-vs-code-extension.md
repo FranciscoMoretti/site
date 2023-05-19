@@ -5,7 +5,7 @@ alias:
 publish: true
 slug: eslint-vs-code-extension
 
-title: Eslint VS Code Extension: Simplifying Error Detection and Fixing in Modern Web Development 🛠️
+title: Eslint VS Code Extension - Simplifying Error Detection and Fixing in Modern Web Development 🛠️
 description: Simplify error detection and fixing in modern web development with the Eslint VS Code extension. Find out how it enhances code quality and saves you time. 🚀
 date: 2023-05-19
 image:
