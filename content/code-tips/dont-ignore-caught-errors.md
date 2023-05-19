@@ -46,8 +46,8 @@ Rule: **Don't ignore caught errors**
 How:
 
 1. Log it in the console as an error
-1. Creating a code path to handle the error gracefully
-1. Reporting it to a service
+2. Creating a code path to handle the error gracefully
+3. Reporting it to a service
 
 What do you think of thrown errors and `try/catch` blocks?
 
