@@ -55,7 +55,7 @@ export default async function IndexPage() {
             Modern Web, Happy Coding
           </h2>
           <p className="max-w-[42rem] leading-normal text-slate-700 sm:text-xl sm:leading-8">
-            Delivering High-Quality Features with Joy
+            I help you learn web development with joy
           </p>
         </div>
         <div className="flex gap-4">
