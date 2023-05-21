@@ -8,9 +8,9 @@ slug: functions-should-do-one-thing
 ---
 ## Usage
 ### 📝 Guideline
-> "Functions should do one thing."
+"Functions should do one thing."
 
-### 🔀 Alternate Names
+### 🔀 Alternative Names
 N/A
 
 ### 🛠️ How to apply
