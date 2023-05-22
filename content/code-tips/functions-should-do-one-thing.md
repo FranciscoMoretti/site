@@ -7,17 +7,18 @@ category: Functions
 slug: functions-should-do-one-thing
 ---
 ## Usage
-### 📝 Guideline
-"Functions should do one thing."
 
-### 🔀 Alternative Names
-N/A
+### 📝 Guideline
+**Functions should do one thing**: Create a function for each action or concept. Functions should do one and only one thing.
+
+A function in clean code should have a clear purpose and perform a single task. It should not be responsible for multiple actions or concepts. By following this principle, your code becomes more modular, readable, and maintainable.
 
 ### 🛠️ How to apply
 - Each function should have a clear and specific purpose, focusing on a single task. 🎯
 - Avoid including multiple functionalities or responsibilities within a single function. 🚫
 - Aim to keep your functions concise and easily understandable. 📚
 - Refactor complex functions into smaller, modular ones, each handling a specific task. 🔧
+- Avoid functions that need "and," "or," or "if" to indicate multiple tasks or conditions. ⛔
 
 ## Pros and Cons
 ### 👍 Pros
@@ -70,3 +71,4 @@ function walkDog(): void {
 ## Related principles
 - **Separation of concerns**: Functions should focus on specific tasks, promoting a modular and organized codebase. 🧩
 - **Single Responsibility Principle**: Each function should have a single responsibility, contributing to maintainable and reusable code. 🎛️
+- **KISS (Keep It Simple, Stupid)**: Strive for simplicity in design and implementation. 🤏

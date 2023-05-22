@@ -1,7 +1,7 @@
 ---
 title: Use Explanatory Variables
 sidebar_position: 2
-date: 2022-05-16
+date: 2023-05-21
 description: Break the calculations up into intermediate values that are held in variables with meaningful names. The names give meaning and clarity to the code.
 category: Variables
 slug: use-explanatory-variables
@@ -10,10 +10,9 @@ slug: use-explanatory-variables
 ## Usage
 
 ### 📝 Guideline
-"Use explanatory variables to make your code more readable."
+**Use Explanatory Variables**: Break the calculations up into intermediate values that are held in variables with meaningful names. The names give meaning and clarity to the code.
 
-### 🔀 Alternative Names
-- N/A
+Explanatory variables improve the readability and maintainability of the code by breaking complex calculations into smaller, well-named intermediate values. By assigning meaningful names to these variables, the purpose and intent of the code become clear.
 
 ### 🛠️ How to apply
 - Break down complex expressions into smaller, meaningful variables. 🧩
@@ -32,8 +31,6 @@ slug: use-explanatory-variables
 ### 👎 Cons
 - **Increased Memory Usage**: Introducing additional variables might slightly increase memory consumption, although the impact is typically negligible. 🧠
 - **Possible Overuse**: While explanatory variables can improve code clarity, excessive use may lead to an unnecessarily high number of variables, potentially hindering code comprehension. 🚦
-- **Maintenance Overhead**: Adding explanatory variables requires thoughtful naming and occasional updates if underlying logic changes, which can introduce additional maintenance overhead. 🛠️
-- **Learning Curve**: Adopting the practice of using explanatory variables may require a learning curve for developers unfamiliar with the concept. 📚
 
 ## Examples
 
@@ -56,9 +53,11 @@ if (isLargeRadius && isRedOrBlue) {
 }
 ```
 
-## Related principles
-- **Single Responsibility Principle**: Explanatory variables support the Single Responsibility Principle by making code more modular and focused on a single task. 🔗
-- **Don't Repeat Yourself (DRY)**: Using explanatory variables helps avoid code duplication by reusing meaningful variables instead of duplicating complex expressions. 🔄
-- **Naming Conventions**: Explanatory variables align with good naming conventions, promoting clarity and understanding of code elements. 🏷️
-- **Separation of Concerns**: By separating complex expressions into smaller variables, you achieve a clearer separation of concerns within your codebase. 🧩
-- **KISS Principle (Keep It Simple, Stupid)**: Explanatory variables contribute to keeping code simple and straightforward, making it easier to comprehend and maintain. 🤓
+## References
+
+### 🔀 Related principles
+
+- **Choose Descriptive Names**: Meaningful variable names complement the use of explanatory variables, further enhancing code clarity. 📛
+- **Separation of Concerns**: Breaking down complex calculations into smaller steps aligns with the principle of dividing code into distinct, manageable units. 🧩
+- **Single Responsibility Principle**: By using explanatory variables, you promote code that follows the single responsibility principle, as each variable represents a specific calculation or concept. 🎯
+- **Don't Repeat Yourself (DRY)**: Reusing explanatory variables reduces code duplication and fosters a more maintainable codebase. 🔁
