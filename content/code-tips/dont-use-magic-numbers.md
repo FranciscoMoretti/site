@@ -1,26 +1,61 @@
 ---
 title: Don’t Use Magic Numbers
 sidebar_position: 3
-date: 2022-05-09
+date: 2023-05-24
 description: Code should be readable and searchable. Constants should have a name. Use searchable names.
 category: Variables
 slug: dont-use-magic-numbers
 ---
+# Don't Use Magic Numbers
 
-☑️ Topic: **Variables**
+## Usage
 
-☑️ Idea: Code should be readable and searchable. Constants should have a name. Use searchable names.
+### 📝 Guideline
+**Don't Use Magic Numbers**: Avoid using literal values in your code; instead, assign them to constants with meaningful names. Magic numbers make code hard to understand and maintain.
 
-☑️ Benefit: Readability. Naming variables adds meaning to the program. This will help the readers understand it faster.
+Numbers that appear in the code without explanation are known as "magic numbers." They make the code less readable and searchable. By assigning these values to constants with meaningful names, you can make the code more expressive and self-explanatory.
 
-☑️ Guideline: Don’t use numbers or other hardcoded values directly, assign them to constants.
+### 🛠️ How to Apply
+- Define constants to represent magic numbers. 🧙‍♂️
+- Use meaningful names for the constants. 🌟
+- Replace magic numbers with the corresponding constants. ✨
+- Update constants if the values need to change. 🔄
 
-```javascript
-// BAD
-setTimeout(blastOff, 86400000) // What is 86400000?
+## Pros and Cons
 
-// GOOD
-// Declare them as capitalized named constants.
-const MILLISECONDS_PER_DAY = 60 * 60 * 24 * 1000 //86400000;
-setTimeout(blastOff, MILLISECONDS_PER_DAY)
+### 👍 Pros
+- **Improved Readability**: Constants with meaningful names make the code easier to understand. 📖
+- **Enhanced Maintainability**: Updating constants instead of scattered magic numbers simplifies code maintenance. 🔧
+- **Searchability**: Constants are easily searchable, allowing other developers to quickly locate and comprehend the purpose of the numbers used in the code. 🔍
+
+### 👎 Cons
+-   **Increased Indirection**: The use of constants introduces an additional layer of indirection, requiring developers to refer to the constants instead of the actual numbers. 🔄
+-   **Potential Overhead**: Defining constants for every numerical value may result in an increase in the number of variables in your code, which can have a minor impact on performance and memory usage. ⚠️
+
+## Examples
+
+### ❌ Bad
+```typescript
+// Calculate the discount amount
+function calculateDiscount(totalAmount: number): number {
+  return totalAmount - (totalAmount * 0.15);
+}
 ```
+
+### ✅ Good
+```typescript
+const DISCOUNT_PERCENTAGE = 0.15;
+
+// Calculate the discount amount
+function calculateDiscount(totalAmount: number): number {
+  return totalAmount - (totalAmount * DISCOUNT_PERCENTAGE);
+}
+```
+
+## References
+
+### 🔀 Related Principles
+- **Use Descriptive Names**: Meaningful names for constants are essential for code readability. 🌈
+- **Avoid Magic Strings**: Similar to magic numbers, using magic strings should be avoided. 🪄
+- **Avoid Hard-Coding**: Don't hard-code values directly in your code; use configurable options instead. 🚫
+- **Separation of Concerns**: By using constants, you separate the data from the logic. 🗃️
