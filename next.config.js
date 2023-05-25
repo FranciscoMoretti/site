@@ -185,6 +185,11 @@ const nextConfig = {
         destination: "/code-tips/avoid-negative-conditionals",
         permanent: true,
       },
+      {
+        source: "/code-tips/use-pronounceable-and-meaningful-variable-names",
+        destination: "/code-tips/use-pronounceable-names",
+        permanent: true,
+      },
     ]
   },
 }
