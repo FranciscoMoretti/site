@@ -1,7 +1,7 @@
 ---
 title: Don’t use flags as function parameters
 sidebar_position: 6
-date: 2022-07-11
+date: 2023-05-26
 description: Flags tell you that a function does more than one thing. Functions should do only one thing.
 category: Functions
 slug: dont-use-flags-as-function-parameters
