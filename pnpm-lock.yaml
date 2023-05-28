@@ -29,8 +29,8 @@ dependencies:
     specifier: ^2.0.4
     version: 2.0.4
   '@flowershow/remark-wiki-link':
-    specifier: ^1.1.2
-    version: 1.1.2
+    specifier: ^1.2.0
+    version: 1.2.0
   '@hookform/resolvers':
     specifier: ^2.9.10
     version: 2.9.10(react-hook-form@7.38.0)
@@ -1142,8 +1142,8 @@ packages:
       - '@types/react'
     dev: false
 
-  /@flowershow/remark-wiki-link@1.1.2:
-    resolution: {integrity: sha512-BfRkavWSx0zUDQJwyLYa7q+EFNR+M6o5VvV1FrUcaqLzB3FgJnkwQzgiaxlIGNseK1n1gtlKIniCg+YIy4x0hw==}
+  /@flowershow/remark-wiki-link@1.2.0:
+    resolution: {integrity: sha512-CI4+jjoZ0n036tZBjvMX4XyVAzHxU/6hDrl78511VSgwnRAYMEo6Jqxg9suq+mW0FlREz3mSQGpsbXcc92sqhA==}
     dependencies:
       mdast-util-to-markdown: 1.5.0
       mdast-util-wiki-link: 0.0.2
