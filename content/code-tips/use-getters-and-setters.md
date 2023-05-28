@@ -18,7 +18,6 @@ Getters and setters are methods that allow controlled access to an object's prop
 -   **Encapsulate Properties**: Declare private properties and provide getters and setters to access and modify them. 🏷️
 -   **Perform Validation**: Add validation logic inside setters to ensure the data integrity of the object. ✅
 -   **Enable Computed Properties**: Implement getters that compute and return derived values based on the object's properties. 🔄
--   **Facilitate Future Changes**: By using getters and setters, you can modify the underlying implementation of the property without affecting the external usage. 🔮
 
 ## Pros and Cons
 
