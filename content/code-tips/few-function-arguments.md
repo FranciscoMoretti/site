@@ -17,9 +17,8 @@ Functions with many arguments hinder understanding and reasoning. Testing comple
 
 ### 🛠️ How to apply
 - **Break down complex functions**: If a function has too many arguments, consider breaking it down into smaller functions with fewer arguments. 🧩
-- **Group related arguments**: Identify arguments that are closely related and bundle them together into a single object or data structure. 📦
+- **Group related a[rguments**: Identify arguments that are closely related and bundle them together into a single obj]()ect or data structure. 📦
 - **Use default values**: Utilize default values for optional arguments to minimize the need for passing multiple arguments. 🏷️
-- **Consider using keyword arguments**: If the programming language supports keyword arguments, utilize them to improve the clarity and flexibility of function calls. 🔤
 - **Less than 3 arguments:** Aim for zero or few arguments, avoiding three or more to prevent excessive complexity. 3️⃣
 
 ## Pros and Cons
@@ -30,7 +29,6 @@ Functions with many arguments hinder understanding and reasoning. Testing comple
 - **Reduced coupling**: Fewer arguments reduce the dependencies between functions, promoting loose coupling and better modular design. 🔗
 
 ### 👎 Cons
-- **Potential for increased function complexity**: In some cases, reducing the number of function arguments might lead to more complex implementation logic within the function. 🕸️
 - **Increased dependency on shared state**: When reducing function arguments, it's common to rely more on shared state or global variables. This can introduce hidden dependencies and make the code harder to reason about or debug. 🕵️
 - **Potential performance impact**: In some cases, combining arguments or using configuration objects may introduce a slight performance overhead due to additional object creation or property access. 🐌
 
