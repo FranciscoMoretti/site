@@ -1,45 +1,96 @@
 ---
 title: Use Getters and Setters
 sidebar_position: 10
-date: 2022-08-22
+date: 2023-05-28
 description: Using getters and setters is better than accessing the object property directly. Accessing properties directly breaks encapsulation.
 category: Classes
 slug: use-getters-and-setters
 ---
 
-☑️ Topic: Objects and Data Structures
+## Usage
 
-☑️ Idea: Using getters and setters is better than accessing the object property directly. Accessing properties directly breaks encapsulation.
+### 📝 Guideline
+**Use Getters and Setters**: Accessing properties directly breaks encapsulation.
 
-☑️ Benefits: Maintainability, Encapsulation, Reusability
+Getters and setters are methods that allow controlled access to an object's properties. Instead of directly accessing the properties, you should use getters and setters to encapsulate the access and provide an interface for interacting with the object's state.
 
-☑️ Guideline: If you need to get or set information from an object consider getters and setters.
+### 🛠️ How to apply
+-   **Encapsulate Properties**: Declare private properties and provide getters and setters to access and modify them. 🏷️
+-   **Perform Validation**: Add validation logic inside setters to ensure the data integrity of the object. ✅
+-   **Enable Computed Properties**: Implement getters that compute and return derived values based on the object's properties. 🔄
+-   **Facilitate Future Changes**: By using getters and setters, you can modify the underlying implementation of the property without affecting the external usage. 🔮
 
-Other benefits:
+## Pros and Cons
 
-- When you want to do more beyond getting an object property, you don't have to look up and change every accessor in your codebase.
-- Makes adding validation simple when doing a `set`.
-- Encapsulates the internal representation.
-- It’s easy to add logging and error handling when getting and setting.
-- You can lazy load your object's properties, let's say getting it from a server.
+### 👍 Pros
+-   **Encapsulation**: Getters and setters promote encapsulation by hiding the internal representation of an object and providing controlled access to its properties. 🔒
+-   **Validation**: Setters enable validation logic, allowing you to validate input values and prevent incorrect data from being set. ✅
+-   **Computed Properties**: Getters allow the calculation of values based on other properties, providing convenience and reducing redundant code. 🔄
+-   **Future Compatibility**: Using getters and setters gives you the flexibility to change the internal representation of a property without affecting the external usage. 🔁
 
-```javascript
-// GOOD
+### 👎 Cons
+- **Additional Complexity**: Introducing getters and setters adds an extra layer of complexity to the codebase, which may not be necessary for simple properties. 📦
+- **Performance impact**: Compared to direct property access, using getters and setters might introduce a slight performance overhead due to the method invocation and additional function calls. ⏱️
+- **Breaking Existing Code**: If the codebase already accesses properties directly, introducing getters and setters may require modifying the existing code, resulting in additional effort. ⚠️
+
+## Examples
+
+### ❌ Bad
+```typescript
 class Person {
-  constructor(name) {
-    this.setName(name) // name is private
+  name: string;
+
+  constructor(name: string) {
+    this.name = name;
   }
-  getName() {
-    // a "getter"
-    return this._name
-  }
-  setName(newName) {
-    // a "setter"
-    // ... validate before updating
-    if (newName === "") {
-      throw "The name cannot be empty"
-    }
-    this._name = newName
+
+  greet() {
+    console.log(`Hello, my name is ${this.name}!`);
   }
 }
+
+const person = new Person('Alice');
+console.log(person.name); // Directly accessing property
+person.name = 'Bob'
+person.greet(); // Calling method
+
 ```
+
+### ✅ Good
+```typescript
+class Person {
+  private _name: string;
+
+  constructor(name: string) {
+    this._name = name;
+  }
+
+  get name(): string {
+    return this._name;
+  }
+
+  set name(newName: string) 
+    // ... validate before updating
+    if (newName.length == 0) {
+      throw "The name cannot be empty"
+    }
+    this._name = name;
+  }
+
+  greet() {
+    console.log(`Hello, my name is ${this.name}!`);
+  }
+}
+
+const person = new Person('Alice');
+console.log(person.name); // Using getter
+person.name = 'Bob'; // Using setter
+person.greet(); // Calling method
+```
+
+## References
+
+### 🔀 Related principles
+- **Encapsulation**: Encapsulation and the use of getters and setters go hand in hand to maintain a well-structured and controlled object interface. 🔒
+- **Data integrity**: By using getters and setters, you can enforce data validation and maintain data integrity within the class. ✅
+- **Modularity**: Using getters and setters promotes modularity by isolating internal changes to a class and minimizing their impact on other parts of the codebase. 🧩
