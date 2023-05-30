@@ -45,7 +45,9 @@ export async function generateMetadata({
   ogUrl.searchParams.set("mode", "dark")
 
   return {
-    title: doc.title,
+    title: {
+      absolute: doc.title + " | Code Tips Database 📚",
+    },
     description: doc.description,
     openGraph: {
       title: doc.title,
