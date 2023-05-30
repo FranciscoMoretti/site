@@ -1,13 +1,102 @@
 ---
 title: Dependency Inversion Principle (DIP)
 sidebar_position: 16
-date: 2022-10-05
+date: 2023-30-05
 description: High-level modules should not depend on low-level modules and both should depend on abstractions. Abstractions should not depend upon details, but details should depend on abstractions. Classes shouldn’t have to know implementation details from their dependencies.
 category: SOLID
 slug: dependency-inversion-principle-dip
 ---
 
-## The SOLID Principles
+## Usage
+
+### 📝 Guideline
+**Dependency Inversion Principle**: High-level modules should not depend on low-level modules and both should depend on abstractions.
+
+The Dependency Inversion Principle states that classes should not rely on the implementation details of their dependencies. Instead, they should depend on abstractions or interfaces. This principle promotes decoupling and flexibility in the codebase.
+
+### 🛠️ How to apply
+
+- **Abstraction over implementation**: Depend on abstractions or interfaces rather than concrete implementations. This allows for interchangeable dependencies. ⚙️
+- **Dependency Injection**: Instead of directly creating and managing dependencies within a class, inject them from external sources. 🧩
+- **Use Interfaces or Abstract Classes**: Define abstractions for dependencies, and have classes depend on these interfaces or abstract classes rather than concrete implementations. 🎛️
+- **Invert Control**: Invert the control of creating and managing objects by relying on a higher-level component or framework to provide the necessary dependencies. 🔄
+
+## Pros and Cons
+
+### 👍 Pros
+- **Reduced Coupling**: High-level modules and low-level modules become loosely coupled, leading to a more modular and maintainable codebase. 🧩
+- **Ease of testing**: By depending on abstractions rather than concrete implementations, unit testing becomes simpler as mock objects can be easily substituted. 🧪
+- **Flexibility**: By depending on abstractions, code becomes more flexible and easier to modify, as dependencies can be swapped without modifying the high-level module. 🔄
+- **Scalability**: The use of abstractions allows for scalable and extensible systems, as new implementations can be easily added without affecting existing code. 🚀
+
+### 👎 Cons
+- **Additional complexity**: Implementing the Dependency Inversion Principle can introduce additional layers of abstraction, which may increase complexity and require a deeper understanding of the codebase. 🤔
+- **Overuse of interfaces**: Overusing interfaces may result in unnecessary abstractions and bloated code, leading to reduced readability and maintainability. 📚
+- **Complexity**: The use of interfaces or abstract classes to define abstractions can introduce additional complexity to the codebase. 🤯
+
+## Examples
+
+### ❌ Bad
+
+```typescript
+class UserService {
+  private database: DatabaseService;
+
+  constructor() {
+    this.database = new DatabaseService(); // Depends on concrete implementation
+  }
+
+  getUser(id: string): User {
+    // Retrieves user from the database
+  }
+}
+
+const userService = new UserService();
+userService.getUser("123");
+```
+
+### ✅ Good
+
+```typescript
+interface Database {
+  getUser(id: string): User;
+}
+
+class DatabaseService implements Database {
+  getUser(id: string): User {
+    // Retrieves user from the database
+  }
+}
+
+class UserService {
+  private database: Database;
+
+  constructor(database: Database) {
+    this.database = database; // Depends on abstraction
+  }
+
+  getUser(id: string): User {
+    return this.database.getUser(id);
+  }
+}
+
+const databaseService = new DatabaseService();
+const userService = new UserService(databaseService);
+userService.getUser("123");
+```
+
+## References
+
+
+### 🔀 Related principles
+
+- **Open-Closed Principle**: The Dependency Inversion Principle complements the Open-Closed Principle by promoting the extension of behavior through abstractions rather than modifying existing code. 🚪
+- **Liskov Substitution Principle**: The Dependency Inversion Principle aligns with the Liskov Substitution Principle, as both emphasize the use of abstractions to enable interchangeability of implementations. ↔️
+- **Interface Segregation Principle**: The Dependency Inversion Principle supports the Interface Segregation Principle by advocating for smaller, focused interfaces that clients can depend on. ✂️
+- **Single Responsibility Principle**: The Dependency Inversion Principle contributes to the Single Responsibility Principle by reducing the coupling between modules, ensuring each class has a single responsibility. 🎯
+- **Law of Demeter**: The Dependency Inversion Principle helps adhere to the Law of Demeter by relying on abstractions and avoiding direct knowledge of implementation details in classes. 📏
+
+### 🧱 SOLID Principles
 
 SOLID is an acronym for five other class-design principles:
 
@@ -16,180 +105,3 @@ SOLID is an acronym for five other class-design principles:
 - [Liskov Substitution Principle (LSP)](liskov-substitution-principle-lsp)
 - [Interface Segregation Principle (ISP)](interface-segregation-principle-isp)
 - [Dependency Inversion Principle (DIP)](dependency-inversion-principle-dip)
-
-## The Dependency Inversion Principle (DIP)
-
-☑️ Topic: Objects and Data Structures
-
-☑️ Idea: High-level modules should not depend on low-level modules and both should depend on abstractions. Abstractions should not depend upon details, but details should depend on abstractions. Classes shouldn’t have to know implementation details from their dependencies.
-
-☑️ Benefits: Low coupling, Maintainability.
-
-☑️ Guideline: If your class depends on a lower-level module, you should change that module for an interface. If your class depends on implementation details from another class, you should encapsulate those behind an interface and use the interface instead.
-
-## Benefits Explained
-
-- Lowers coupling: It keeps high-level modules from knowing the details of their low-level modules and setting them up, reducing coupling between modules.
-- Less maintenance: If some implementation details change, no changes are needed on the clients because it only depends on an interface.
-
-## Interfaces in JavaScript and Typescript
-
-JavaScript doesn't have explicit interfaces. Interfaces are implicit contracts in JavaScript because of duck typing.
-
-Typescript has interfaces and the Dependency Inversion Principle can be applied directly to it. I’ll use Typescript to explain this principle.
-
-## Example in Typescript
-
-Let’s look at a design example that applies the Dependency Inversion Principle to databases.
-
-### BAD
-
-Here`RecordService` depends on a specific database class called `MySQLiteDatabase`. If we wanted to use another database we’d have to change the `RecordService` implementation.
-
-```javascript
-// BAD
-class RecordService {
-  database: MySQLiteDatabase
-  // constructor
-
-  save(record: Record): void {
-    if (record.id === undefined) {
-      this.database.insert(record)
-    } else {
-      this.database.update(record)
-    }
-  }
-}
-
-class SQLiteDatabase {
-  insert(record: Record) {
-    // insert
-  }
-
-  update(record: Record) {
-    // update
-  }
-}
-```
-
-The dependency is direct
-
-![](/assets/docs/924250135.png)
-
-### GOOD
-
-Here`RecordService` depends on a `Database` interface. We can use a `SqliteDatabase` or a different database without changes in `RecordService`.
-
-```javascript
-// GOOD
-class RecordService {
-  database: Database
-  // constructor
-
-  save(record: Record): void {
-    this.database.save(record)
-  }
-}
-
-interface Database {
-  save(record: Record): void;
-}
-
-class SQLiteDatabase implements Database {
-  save(record: Record) {
-    if (record.id === undefined) {
-      // insert
-    } else {
-      // update
-    }
-  }
-}
-```
-
-The dependency was inverted
-
-![](/assets/docs/893356382.png)
-
-## Example in JavaScript
-
-Let’s look at a design example that uses the Dependency Inversion Principle in JavaScript. This is a bit more complex because interfaces are implicit.
-
-### BAD
-
-```javascript
-// BAD
-class InventoryRequester {
-  constructor() {
-    this.REQ_METHODS = ["HTTP"]
-  }
-
-  requestItem(item) {
-    // ...
-  }
-}
-
-class InventoryTracker {
-  constructor(items) {
-    this.items = items
-
-    // BAD: We have created a dependency on a specific request implementation.
-    // We should just have requestItems depend on a request method: `request`
-    this.requester = new InventoryRequester()
-  }
-
-  requestItems() {
-    this.items.forEach((item) => {
-      this.requester.requestItem(item)
-    })
-  }
-}
-
-const inventoryTracker = new InventoryTracker(["apples", "bananas"])
-inventoryTracker.requestItems()
-```
-
-### GOOD
-
-```javascript
-//GOOD
-class InventoryTracker {
-  constructor(items, requester) {
-    this.items = items
-    this.requester = requester
-  }
-
-  requestItems() {
-    this.items.forEach((item) => {
-      this.requester.requestItem(item)
-    })
-  }
-}
-
-class InventoryRequesterV1 {
-  constructor() {
-    this.REQ_METHODS = ["HTTP"]
-  }
-
-  requestItem(item) {
-    // ...
-  }
-}
-
-class InventoryRequesterV2 {
-  constructor() {
-    this.REQ_METHODS = ["WS"]
-  }
-
-  requestItem(item) {
-    // ...
-  }
-}
-
-// By constructing our dependencies externally and injecting them, we can easily
-// substitute our request module for a fancy new one that uses WebSockets.
-const inventoryTracker = new InventoryTracker(
-  ["apples", "bananas"],
-  new InventoryRequesterV2()
-)
-inventoryTracker.requestItems()
-```
