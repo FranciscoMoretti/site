@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Primary: feba16 */
+/* Secondary: 178fc5 */
+/* background: FDF8EC (light primary)*/
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -67,5 +71,15 @@
     --ring: 216 34% 17%;
 
     --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
