@@ -6,8 +6,6 @@ description: Code should be readable and searchable. Constants should have a nam
 category: Variables
 slug: dont-use-magic-numbers
 ---
-# Don't Use Magic Numbers
-
 ## Usage
 
 ### 📝 Guideline
