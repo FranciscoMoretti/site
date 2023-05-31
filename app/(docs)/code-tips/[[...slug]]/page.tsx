@@ -46,7 +46,7 @@ export async function generateMetadata({
 
   return {
     title: {
-      absolute: doc.title + " | Code Tips Database 📚",
+      absolute: doc.title + " | Code Tips 📚",
     },
     description: doc.description,
     openGraph: {

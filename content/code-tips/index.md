@@ -1,5 +1,5 @@
 ---
-title: Code Tips
+title: Intro
 sidebar_position: 0
 date: 2023-04-16
 description: Welcome to the Code Tips documentation! Here, we share valuable insights, techniques, and best practices for writing clean, efficient, and maintainable code.
