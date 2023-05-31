@@ -62,14 +62,6 @@ export default async function IndexPage() {
           <Link href="/blog" className={cn(buttonVariants({ size: "lg" }))}>
             Read blog
           </Link>
-          <Link
-            href={siteConfig.links.github}
-            target="_blank"
-            rel="noreferrer"
-            className={cn(buttonVariants({ variant: "outline", size: "lg" }))}
-          >
-            GitHub
-          </Link>
         </div>
       </section>
       {
