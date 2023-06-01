@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Primary: 004164 */
+/* Primary: 00507B */
 /* Secondary: FFCC4A */
 /* background: FDF8EC (light primary)*/
 
@@ -23,8 +23,7 @@
     --card: 0 0% 100%;
     --card-foreground: 222.2 47.4% 11.2%;
 
-    --primary: 00 65 100;
-    /* --primary: #178fc5; */
+    --primary: 00 80 123;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 255 204 74;
