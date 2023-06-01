@@ -15,10 +15,16 @@ slug: use-getters-and-setters
 Getters and setters are methods that allow controlled access to an object's properties. Instead of directly accessing the properties, you should use getters and setters to encapsulate the access and provide an interface for interacting with the object's state.
 
 ### 🛠️ How to apply
--   **Encapsulate Properties**: Declare private properties and provide getters and setters to access and modify them. 🏷️
--   **Perform Validation**: Add validation logic inside setters to ensure the data integrity of the object. ✅
--   **Enable Computed Properties**: Implement getters that compute and return derived values based on the object's properties. 🔄
-- **Avoid intensive computation**: Getters and setters should not perform computationally expensive operations or slow operations, as this can lead to unexpected delays and hinder performance.
+- **Encapsulate Properties**: Declare private properties and provide getters and setters to access and modify them. 🏷️
+- **Perform Validation**: Add validation logic inside setters to ensure the data integrity of the object. ✅
+- **Avoid intensive computation**: Getters and setters should not perform computationally expensive operations or slow operations, as this can lead to unexpected delays and hinder performance. ⚡️
+- **Consider property requirements**: Evaluate the specific requirements of each property to determine whether it needs a getter, a setter, or neither.
+  - **Read-only property**: Provide a getter method for properties that should be read but not modified. 📖
+  - **Writable-only property**: Provide a setter method without a corresponding getter for properties that can be set but should not be read externally. 📝
+  - **Read-write property**: For properties that can be both read and written, provide both a getter and a setter method. ✏️
+  - **Derived or calculated property**: Use a getter method to compute and return the value of derived or calculated properties. ♻️
+  - **Internal property**: Internal properties that should not be accessed from external code should have no getter or setter methods. ⛔️
+
 
 ## Pros and Cons
 
