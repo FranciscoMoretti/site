@@ -45,7 +45,7 @@ export default async function IndexPage() {
             name: siteConfig.name || null,
             image: siteConfig.profilePicture || null,
           }}
-          className="h-28 w-28 bg-gradient-to-tl from-blue-400 to-blue-200 shadow-lg ring-[5px] ring-blue-400"
+          className="h-36 w-36 bg-gradient-to-b from-primary to-blue-200 shadow-lg ring-4 ring-primary/80"
         />
         <div className="mx-auto flex flex-col items-start gap-4 lg:w-[52rem]">
           <h1 className="text-3xl font-bold leading-[1.1] tracking-tighter sm:text-5xl md:text-6xl">
