@@ -101,6 +101,6 @@ person.greet(); // Calling method
 - **Data integrity**: By using getters and setters, you can enforce data validation and maintain data integrity within the class. ✅
 - **Modularity**: Using getters and setters promotes modularity by isolating internal changes to a class and minimizing their impact on other parts of the codebase. 🧩
 
-### Books
+### 📚 Books
 - Effective C++: 55 Specific Ways to Improve Your Programs and Designs - Scott Meyers
 - Effective Python: 90 Specific Ways to Write Better Python - Brett Slatkin
