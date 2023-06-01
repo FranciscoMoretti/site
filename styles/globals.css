@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Primary: feba16 */
-/* Secondary: 178fc5 */
+/* Primary: 004164 */
+/* Secondary: FFCC4A */
 /* background: FDF8EC (light primary)*/
 
 @layer base {
@@ -23,11 +23,11 @@
     --card: 0 0% 100%;
     --card-foreground: 222.2 47.4% 11.2%;
 
-    --primary: 198 79% 43%;
+    --primary: 00 65 100;
     /* --primary: #178fc5; */
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
+    --secondary: 255 204 74;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --accent: 210 40% 96.1%;
