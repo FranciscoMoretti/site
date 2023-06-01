@@ -100,7 +100,6 @@ class EmailService {
 - **Dependency Inversion Principle**: Works hand in hand with the Single Responsibility Principle to decouple classes and facilitate maintainability.⚖️
 - **Don't Repeat Yourself (DRY)**: Aligns with the Single Responsibility Principle by reducing code duplication within classes and enforcing a focused and concise codebase. 🔄
 
-
 ### 🧱 SOLID Principles
 
 SOLID is an acronym for five other class-design principles:
