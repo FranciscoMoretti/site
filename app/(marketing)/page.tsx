@@ -38,8 +38,8 @@ export default async function IndexPage() {
 
   return (
     <>
-      <section className="container flex flex-row items-center justify-center gap-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:pb-24 lg:pt-16">
-        <div className="flex flex-col items-start gap-4 ">
+      <section className="container flex flex-col-reverse items-center justify-center gap-6 pb-8 pt-6 sm:flex-row md:pb-12 md:pt-10 lg:pb-24 lg:pt-16">
+        <div className="flex flex-col items-center gap-4 sm:items-start ">
           <h1 className="text-3xl font-bold leading-[1.1] tracking-tighter sm:text-5xl md:text-6xl">
             Francisco Moretti
           </h1>
