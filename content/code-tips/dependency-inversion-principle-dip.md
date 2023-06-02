@@ -87,15 +87,6 @@ userService.getUser("123");
 
 ## References
 
-
-### 🔀 Related principles
-
-- **Open-Closed Principle**: The Dependency Inversion Principle complements the Open-Closed Principle by promoting the extension of behavior through abstractions rather than modifying existing code. 🚪
-- **Liskov Substitution Principle**: The Dependency Inversion Principle aligns with the Liskov Substitution Principle, as both emphasize the use of abstractions to enable interchangeability of implementations. ↔️
-- **Interface Segregation Principle**: The Dependency Inversion Principle supports the Interface Segregation Principle by advocating for smaller, focused interfaces that clients can depend on. ✂️
-- **Single Responsibility Principle**: The Dependency Inversion Principle contributes to the Single Responsibility Principle by reducing the coupling between modules, ensuring each class has a single responsibility. 🎯
-- **Law of Demeter**: The Dependency Inversion Principle helps adhere to the Law of Demeter by relying on abstractions and avoiding direct knowledge of implementation details in classes. 📏
-
 ### 🧱 SOLID Principles
 
 SOLID is an acronym for five other class-design principles:
@@ -105,3 +96,12 @@ SOLID is an acronym for five other class-design principles:
 - [Liskov Substitution Principle (LSP)](liskov-substitution-principle-lsp)
 - [Interface Segregation Principle (ISP)](interface-segregation-principle-isp)
 - [Dependency Inversion Principle (DIP)](dependency-inversion-principle-dip)
+
+### 🔀 Related principles
+
+- **Open-Closed Principle**: The Dependency Inversion Principle complements the Open-Closed Principle by promoting the extension of behavior through abstractions rather than modifying existing code. 🚪
+- **Liskov Substitution Principle**: The Dependency Inversion Principle aligns with the Liskov Substitution Principle, as both emphasize the use of abstractions to enable interchangeability of implementations. ↔️
+- **Interface Segregation Principle**: The Dependency Inversion Principle supports the Interface Segregation Principle by advocating for smaller, focused interfaces that clients can depend on. ✂️
+- **Single Responsibility Principle**: The Dependency Inversion Principle contributes to the Single Responsibility Principle by reducing the coupling between modules, ensuring each class has a single responsibility. 🎯
+- **Law of Demeter**: The Dependency Inversion Principle helps adhere to the Law of Demeter by relying on abstractions and avoiding direct knowledge of implementation details in classes. 📏
+- 

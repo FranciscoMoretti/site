@@ -92,14 +92,6 @@ class EmailService {
 
 ## References
 
-### 🔀 Related principles
-
-	- **Open/Closed Principle**: Complements the Single Responsibility Principle by promoting the separation of concerns and facilitating future modifications. 🔒
-- **Liskov Substitution Principle**: Aligns with the Single Responsibility Principle by emphasizing the need for well-defined and consistent behavior. ↔️
-- **Interface Segregation Principle**: Supports the Single Responsibility Principle by advocating for focused and cohesive interfaces. 📚
-- **Dependency Inversion Principle**: Works hand in hand with the Single Responsibility Principle to decouple classes and facilitate maintainability.⚖️
-- **Don't Repeat Yourself (DRY)**: Aligns with the Single Responsibility Principle by reducing code duplication within classes and enforcing a focused and concise codebase. 🔄
-
 ### 🧱 SOLID Principles
 
 SOLID is an acronym for five other class-design principles:
@@ -109,3 +101,11 @@ SOLID is an acronym for five other class-design principles:
 - [Liskov Substitution Principle (LSP)](liskov-substitution-principle-lsp)
 - [Interface Segregation Principle (ISP)](interface-segregation-principle-isp)
 - [Dependency Inversion Principle (DIP)](dependency-inversion-principle-dip)
+
+### 🔀 Related principles
+
+- **Open/Closed Principle**: Complements the Single Responsibility Principle by promoting the separation of concerns and facilitating future modifications. 🔒
+- **Liskov Substitution Principle**: Aligns with the Single Responsibility Principle by emphasizing the need for well-defined and consistent behavior. ↔️
+- **Interface Segregation Principle**: Supports the Single Responsibility Principle by advocating for focused and cohesive interfaces. 📚
+- **Dependency Inversion Principle**: Works hand in hand with the Single Responsibility Principle to decouple classes and facilitate maintainability.⚖️
+- **Don't Repeat Yourself (DRY)**: Aligns with the Single Responsibility Principle by reducing code duplication within classes and enforcing a focused and concise codebase. 🔄

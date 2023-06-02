@@ -85,14 +85,6 @@ class OrderInvoice {
 
 ## References
 
-### 🔀 Related principles
-
-- **Single Responsibility Principle**: Encourages classes to have a single responsibility, aligning with the Open-Closed Principle for better code maintainability. 🎯
-- **Liskov Substitution Principle**: Focuses on substitutability, supporting the Open-Closed Principle by allowing seamless extension with subclass objects. 🔄
-- **Interface Segregation Principle**: Suggests smaller and more focused interfaces, complementing the Open-Closed Principle's emphasis on abstraction and extension. 📦
-- **Dependency Inversion Principle**: Promotes depending on abstractions, aligning with the Open-Closed Principle's goal of extending functionality without modifying existing code. 🔧
-- **Don't Repeat Yourself (DRY)**: DRY principle reduces code duplication, helping adhere to the Open-Closed Principle by minimizing unnecessary modifications. ♻️
-
 ### 🧱 SOLID Principles
 
 SOLID is an acronym for five other class-design principles:
@@ -102,3 +94,11 @@ SOLID is an acronym for five other class-design principles:
 - [Liskov Substitution Principle (LSP)](liskov-substitution-principle-lsp)
 - [Interface Segregation Principle (ISP)](interface-segregation-principle-isp)
 - [Dependency Inversion Principle (DIP)](dependency-inversion-principle-dip)
+
+### 🔀 Related principles
+
+- **Single Responsibility Principle**: Encourages classes to have a single responsibility, aligning with the Open-Closed Principle for better code maintainability. 🎯
+- **Liskov Substitution Principle**: Focuses on substitutability, supporting the Open-Closed Principle by allowing seamless extension with subclass objects. 🔄
+- **Interface Segregation Principle**: Suggests smaller and more focused interfaces, complementing the Open-Closed Principle's emphasis on abstraction and extension. 📦
+- **Dependency Inversion Principle**: Promotes depending on abstractions, aligning with the Open-Closed Principle's goal of extending functionality without modifying existing code. 🔧
+- **Don't Repeat Yourself (DRY)**: DRY principle reduces code duplication, helping adhere to the Open-Closed Principle by minimizing unnecessary modifications. ♻️
