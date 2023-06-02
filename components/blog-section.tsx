@@ -24,6 +24,7 @@ export default function BlogSection({ MAX_DISPLAY }) {
           {!posts.length && "No posts found."}
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
             const { slug, date, title, description, tags } = frontMatter
+            return (
               <li key={slug} className="py-12">
                 <article>
                   <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
