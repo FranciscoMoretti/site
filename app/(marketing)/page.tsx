@@ -1,12 +1,10 @@
-import Image from "next/image"
 import Link from "next/link"
 
+import BlogSection from "@/components/blog-section"
+import { buttonVariants } from "@/components/ui/button"
+import { UserAvatar } from "@/components/user-avatar"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
-import { buttonVariants } from "@/components/ui/button"
-import hero from "../../public/images/hero.png"
-import { UserAvatar } from "@/components/user-avatar"
-import BlogSection from "@/components/blog-section"
 
 async function getGitHubStars(): Promise<string | null> {
   try {
@@ -53,7 +51,7 @@ export default async function IndexPage() {
           </p>
           <div className="flex gap-4">
             <Link href="/blog" className={cn(buttonVariants({ size: "lg" }))}>
-              Read blog
+              Visit my blog
             </Link>
           </div>
         </div>
@@ -65,8 +63,13 @@ export default async function IndexPage() {
           className="mx-16 h-36 w-36 bg-gradient-to-b from-primary to-blue-200 shadow-lg ring-4 ring-primary/80"
         />
       </section>
-      <hr className="border-slate-200" />
-
+      <hr className="container border-secondary" />
+      <section className="container justify-center gap-6 py-8 md:px-24 md:py-12 lg:px-28 lg:py-24 ">
+        <div className="flex w-full flex-col items-start justify-start gap-4">
+          <BlogSection MAX_DISPLAY={3} />
+        </div>
+      </section>
+      <hr className="container border-secondary" />
       <section className="container grid justify-center gap-6 py-8 md:py-12 lg:py-24">
         <div className="mx-auto flex flex-col gap-4 md:max-w-[52rem]">
           <h2 className="text-2xl font-bold leading-[1.1] tracking-tighter sm:text-2xl md:text-5xl">

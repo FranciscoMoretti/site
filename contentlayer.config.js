@@ -18,6 +18,14 @@ const computedFields = {
     type: "string",
     resolve: (doc) => doc._raw.flattenedPath.split("/").slice(1).join("/"),
   },
+  tags: {
+    type: "list",
+    of: { type: "string" },
+    required: false,
+    resolve: (doc) => {
+      return doc.tag ? doc.tag.split(", ") : []
+    },
+  },
 }
 
 export const Doc = defineDocumentType(() => ({
@@ -91,6 +99,11 @@ export const Post = defineDocumentType(() => ({
       of: { type: "string" },
       required: false,
       default: ["fmoretti"],
+    },
+    tag: {
+      type: "string",
+      required: false,
+      default: "",
     },
   },
   computedFields,
