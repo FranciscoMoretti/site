@@ -1,13 +1,76 @@
 ---
 title: Interface Segregation Principle (ISP)
 sidebar_position: 15
-date: 2022-09-28
+date: 2023-06-28
 description: Clients should not be forced to depend upon interfaces that they do not use. Large interfaces should be broken up into smaller interfaces.
 category: SOLID
 slug: interface-segregation-principle-isp
 ---
 
-## The SOLID Principles
+## Usage
+
+### 📝 Guideline
+**Interface Segregation Principle**: Clients should not be forced to depend upon interfaces that they do not use. Large interfaces should be broken up into smaller interfaces.
+
+This principle emphasizes that interfaces should be tailored to the specific needs of the clients using them. It suggests breaking down large interfaces into smaller, more focused ones to avoid imposing unnecessary dependencies on clients.
+
+### 🛠️ How to apply
+- **Identify client-specific requirements**: Understand the distinct needs of each client or consumer of an interface. 🔍
+- **Design cohesive interfaces**: Create interfaces that contain only the methods and properties required by the clients using them. 🧩
+- **Create fine-grained interfaces**: Design interfaces that are small and focused, catering to specific client needs. 📦
+- **Avoid "fat" interfaces**: Refrain from creating interfaces with excessive methods that might not be relevant to all clients. 🦣
+- **Use composition**: Instead of relying on a single monolithic interface, consider composing interfaces to fulfill specific requirements. 🎯
+
+## Pros and Cons
+
+### 👍 Pros
+- **Flexible and adaptable**: Smaller interfaces provide flexibility by allowing clients to depend only on the functionality they require. 🧘‍♂️
+- **Enhances maintainability**: Breaking down large interfaces into smaller ones simplifies maintenance and reduces the impact of changes. 🧹
+- **Promotes reusability**: Fine-grained interfaces enable reusing code across different client contexts, improving productivity. 🔄
+
+### 👎 Cons
+- **Increased complexity**: Managing multiple smaller interfaces may introduce some complexity compared to a single interface. 🤔
+- **Dependency management**: Fine-grained interfaces may require more effort to handle dependencies and ensure proper composition. ⚙️
+- **Higher development overhead**: Creating and managing multiple interfaces requires careful planning and design effort. 💼
+
+## Examples
+
+### ❌ Bad
+```typescript
+// A single interface with multiple methods
+interface IShape {
+  draw(): void;
+  resize(): void;
+  rotate(): void;
+  calculateArea(): void;
+  calculatePerimeter(): void;
+}
+```
+
+### ✅ Good
+```typescript
+// Separated interfaces for different aspects of a shape
+interface IDrawable {
+  draw(): void;
+}
+
+interface IResizable {
+  resize(): void;
+}
+
+interface IRotatable {
+  rotate(): void;
+}
+
+interface ICalculatable {
+  calculateArea(): void;
+  calculatePerimeter(): void;
+}
+```
+
+## References
+
+### 🧱 SOLID Principles
 
 SOLID is an acronym for five other class-design principles:
 
@@ -17,170 +80,10 @@ SOLID is an acronym for five other class-design principles:
 - [Interface Segregation Principle (ISP)](interface-segregation-principle-isp)
 - [Dependency Inversion Principle (DIP)](dependency-inversion-principle-dip)
 
-## The Interface Segregation Principle (ISP)
-
-☑️ Topic: Objects and Data Structures
-
-☑️ Idea: Clients should not be forced to depend upon interfaces that they do not use. Large interfaces should be broken up into smaller interfaces.
-
-☑️ Benefits: Low coupling, Maintainability
-
-☑️ Guideline: Make fine-grained interfaces that are client specific. Objects can implement one of those interfaces or more, but their clients should only know about the interface they use.
-
-### Benefits Explained
-
-- Reduces coupling: if you have to include things you don't need then you are coupling 2 entities (objects, classes, or modules) together that don't have a relationship.
-- Less Maintainability: classes that implement smaller interfaces will have fewer methods to maintain.
-
-## Interfaces in JavaScript and Typescript
-
-JavaScript doesn't have explicit interfaces. Interfaces are implicit contracts in JavaScript because of duck typing.
-
-This means that it doesn’t force enforce the implementation of anything via interfaces.
-
-Typescript has interfaces and the Interface Segregation Principle can be applied directly to it. I’ll use Typescript to explain this principle.
-
-## Example in Typescript
-
-Let’s check an example with animals. Have in mind that cats can’t fly, but they can walk. And that ducks can fly and walk.
-
-### BAD
-
-The `Animal` interface forces implementation of methods that some classes don’t need.
-
-```javascript
-// BAD
-interface Animal {
-  walk(): void;
-  fly(): void;
-}
-
-class Cat implements Animal {
-  walk() {
-    console.log("Pat pat pat")
-  }
-
-  fly() {
-    throw new Error("Cats can't fly")
-  }
-}
-
-class Duck implements Animal {
-  walk() {
-    console.log("Pat pat pat")
-  }
-
-  fly() {
-    console.log("Flap flap")
-  }
-}
-```
-
-The dependency looks like this
-
-![](/assets/docs/1150321057.png)
-
-### GOOD
-
-The `Animal` interface was segregated into the `AnimalCanWalk` and `AnimalCanFly` interfaces. Every client implements only what they use.
-
-```javascript
-// GOOD
-interface AnimalCanWalk {
-  walk(): void;
-}
-
-interface AnimalCanFly {
-  fly(): void;
-}
-
-class Cat implements AnimalCanWalk {
-  walk() {
-    console.log("Pat pat pat")
-  }
-}
-
-class Duck implements AnimalCanWalk, AnimalCanFly {
-  walk() {
-    console.log("Pat pat pat")
-  }
-
-  fly() {
-    console.log("Flap flap")
-  }
-}
-```
-
-And now that the interface was segregated this is what the dependency diagram looks like.
-
-![](/assets/docs/335237699.png)
-
-## Example in Javascript
-
-Let’s look at a design example that uses the Interface Segregation Principle in Javascript. This is a bit more complex because interfaces are implicit.
-
-### BAD
-
-In this case, the `DOMTraverser` class requires a `animationModule`. For most cases, the animation module is not needed because animations are not required while traversing. Setting this useless config is extra work for the client and it increases the coupling between the 2 classes.
-
-```javascript
-// BAD
-class DOMTraverser {
-  constructor(settings) {
-    this.settings = settings
-    this.setup()
-  }
-
-  setup() {
-    this.rootNode = this.settings.rootNode
-    this.settings.animationModule.setup()
-  }
-
-  traverse() {
-    // ...
-  }
-}
-
-const $ = new DOMTraverser({
-  rootNode: document.getElementsByTagName("body"),
-  animationModule() {}, // Most of the time, we won't need to animate when traversing.
-  // ...
-})
-```
-
-### GOOD
-
-In this case, the `DOMTraverser` class doesn’t require an `animationModule` because it’s optional. The interface was segregated by putting the `animationModule` in `options`. This makes it much easier to use `DOMTraverser`.
-
-```javascript
-// GOOD
-class DOMTraverser {
-  constructor(settings) {
-    this.settings = settings
-    this.options = settings.options
-    this.setup()
-  }
-
-  setup() {
-    this.rootNode = this.settings.rootNode
-    this.setupOptions()
-  }
-
-  setupOptions() {
-    if (this.options.animationModule) {
-      // ...
-    }
-  }
-
-  traverse() {
-    // ...
-  }
-}
-
-const $ = new DOMTraverser({
-  rootNode: document.getElementsByTagName("body"),
-  options: {
-    animationModule() {},
-  },
-})
-```
+### 🔀 Related principles
+- **Single Responsibility Principle**: The Interface Segregation Principle complements the Single Responsibility Principle by promoting the separation of concerns at the interface level. 🎯
+- **Dependency Inversion Principle**: Breaking up interfaces can facilitate the application of the Dependency Inversion Principle by allowing clients to depend on abstractions rather than concrete implementations. 🔄
+- **Open/Closed Principle**: The Interface Segregation Principle aligns with the Open-Closed Principle by encouraging the creation of smaller, cohesive interfaces that are more likely to remain stable and closed for modification.🔒
+- **Liskov Substitution Principle**: The Interface Segregation Principle works with the Liskov Substitution Principle by ensuring that client code can be substituted with any implementation of the smaller interfaces without affecting the correctness of the program. ↔️
+- **Don't Repeat Yourself (DRY)**: Applying the Interface Segregation Principle helps to avoid duplication of code and promotes reusability by creating focused interfaces that encapsulate specific functionality. 🌟
+- **Composition over Inheritance**: Breaking up interfaces into smaller, specialized ones promotes the use of composition over inheritance, allowing for greater flexibility and extensibility in the system's design. 💎
