@@ -1,5 +1,5 @@
 ---
-tag:
+tag: EsLint
 alias:
 
 publish: true

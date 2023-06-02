@@ -1,5 +1,5 @@
 ---
-tag:
+tag: EsLint, VS Code
 alias:
 
 publish: true
