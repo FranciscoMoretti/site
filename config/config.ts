@@ -3,7 +3,7 @@ import { UserConfig } from "../types/index"
 const config: UserConfig = {
   title: "Francisco Moretti",
   description:
-    "Hi there! My name is Francisco Moretti. I talk about web development, good programming practices, and how to learn better.",
+    "Hi, I'm Francisco! I'm learning in public and sharing my journey. Join me as I explore modern web technologies like Next.js, React, TailwindCSS, and TypeScript. Let's learn together!",
   name: "Francisco Moretti",
   url: "https://www.franciscomoretti.com/",
   favicon: "",
