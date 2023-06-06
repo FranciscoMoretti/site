@@ -6,7 +6,6 @@ description: Negatives are harder to understand. Conditional functions should be
 category: General
 slug: avoid-negative-conditionals
 ---
-# Avoid Negative Conditionals
 
 ## Usage
 ### 📝 Guideline
