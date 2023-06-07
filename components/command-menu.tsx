@@ -1,13 +1,13 @@
 "use client"
 
-import * as React from "react"
-import { useRouter } from "next/navigation"
 import { DialogProps } from "@radix-ui/react-alert-dialog"
-import { Circle, File, Laptop, Moon, SunMedium } from "lucide-react"
+import { Circle, File, Laptop, Moon, SunMedium, BookOpen } from "lucide-react"
 import { useTheme } from "next-themes"
+import { useRouter } from "next/navigation"
+import * as React from "react"
 
-import { docsConfig } from "@/config/docs"
-import { cn } from "@/lib/utils"
+import { allPosts } from "@/.contentlayer/generated"
+
 import { Button } from "@/components/ui/button"
 import {
   CommandDialog,
@@ -18,6 +18,8 @@ import {
   CommandList,
   CommandSeparator,
 } from "@/components/ui/command"
+import { docsConfig } from "@/config/docs"
+import { cn } from "@/lib/utils"
 
 export function CommandMenu({ ...props }: DialogProps) {
   const router = useRouter()
@@ -51,7 +53,9 @@ export function CommandMenu({ ...props }: DialogProps) {
         onClick={() => setOpen(true)}
         {...props}
       >
-        <span className="hidden lg:inline-flex">Search documentation...</span>
+        {/* desktop text  */}
+        <span className="hidden lg:inline-flex">Search...</span>
+        {/* mobile text  */}
         <span className="inline-flex lg:hidden">Search...</span>
         <kbd className="pointer-events-none absolute right-1.5 top-2 hidden h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex">
           <span className="text-xs">⌘</span>K
@@ -95,6 +99,23 @@ export function CommandMenu({ ...props }: DialogProps) {
               ))}
             </CommandGroup>
           ))}
+          <CommandSeparator />
+          <CommandGroup heading="Blog">
+            {allPosts
+              //   .filter((navitem) => !navitem.external)
+              .map((post) => (
+                <CommandItem
+                  key={post.slug}
+                  value={post.title}
+                  onSelect={() => {
+                    runCommand(() => router.push(post.slug as string))
+                  }}
+                >
+                  <BookOpen className="mr-2 h-4 w-4" />
+                  {post.title}
+                </CommandItem>
+              ))}
+          </CommandGroup>
           <CommandSeparator />
           <CommandGroup heading="Theme">
             <CommandItem onSelect={() => runCommand(() => setTheme("light"))}>
