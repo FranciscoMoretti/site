@@ -16,16 +16,10 @@ export type SidebarNavItem = {
   disabled?: boolean
   external?: boolean
   icon?: keyof typeof Icons
-} & (
-  | {
-      href: string
-      items?: never
-    }
-  | {
-      href?: string
-      items: NavLink[]
-    }
-)
+} & {
+  href?: string
+  items: NavLink[]
+}
 
 type SiteConfig = {
   title: string
