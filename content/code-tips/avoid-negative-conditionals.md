@@ -13,7 +13,7 @@ slug: avoid-negative-conditionals
 
 Conditional functions that use negative statements can make the code harder to read and comprehend. By expressing conditional logic in positive terms, you can enhance code readability and make it easier to understand the intended behavior.
 
-### 🛠️ How to apply
+### 🛠️ How to Apply
 - **Use positive conditionals**: Instead of checking for the absence of a condition, check for its presence. This can make the code more straightforward and easier to follow. 🐣
 - **Use descriptive variable and function names**: Choose names that clearly convey the purpose of the condition, making the code more self-explanatory. 📛
 - **Invert conditions sparingly**: If inverting a condition improves code clarity, do so sparingly. Be mindful of the potential impact on code readability. 🤏

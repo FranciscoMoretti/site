@@ -14,7 +14,7 @@ slug: dependency-inversion-principle-dip
 
 The Dependency Inversion Principle states that classes should not rely on the implementation details of their dependencies. Instead, they should depend on abstractions or interfaces. This principle promotes decoupling and flexibility in the codebase.
 
-### 🛠️ How to apply
+### 🛠️ How to Apply
 
 - **Abstraction over implementation**: Depend on abstractions or interfaces rather than concrete implementations. This allows for interchangeable dependencies. ⚙️
 - **Dependency Injection**: Instead of directly creating and managing dependencies within a class, inject them from external sources. 🧩

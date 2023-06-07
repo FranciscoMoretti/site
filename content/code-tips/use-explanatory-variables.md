@@ -14,7 +14,7 @@ slug: use-explanatory-variables
 
 Explanatory variables improve the readability and maintainability of the code by breaking complex calculations into smaller, well-named intermediate values. By assigning meaningful names to these variables, the purpose and intent of the code become clear.
 
-### 🛠️ How to apply
+### 🛠️ How to Apply
 - Break down complex expressions into smaller, meaningful variables. 🧩
 - Use descriptive variable names that convey the purpose or meaning of the value they hold. 💡
 - Avoid using hard-coded values directly in your code; assign them to variables with explanatory names. 📝

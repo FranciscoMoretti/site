@@ -14,7 +14,7 @@ slug: use-descriptive-names
 
 A good practice in clean code development is to use descriptive names for variables, functions, classes, and other code entities. By opting for meaningful names, you enhance the readability and maintainability of your codebase. Descriptive names provide clarity and convey the intent of the code, allowing other developers to understand your code quickly.
 
-### 🛠️ How to apply
+### 🛠️ How to Apply
 - Choose meaningful names that accurately describe the purpose, role, or behavior of the code entity. 📌
 - Avoid using ambiguous or generic names that can lead to confusion. Be specific and precise in your naming choices. 🧐
 - Use common programming conventions and naming patterns to make your code more consistent and familiar to other developers. 🔄

@@ -13,7 +13,7 @@ slug: encapsulate-conditionals
 
 Encapsulating conditionals means extracting the condition into a well-named function, making the code more readable and self-explanatory. By doing so, you improve the maintainability and understandability of the codebase.
 
-### 🛠️ How to apply
+### 🛠️ How to Apply
 - **Extract Expressions**: Identify complex Boolean expressions within conditionals and extract them into separate functions or variables.💡
 - **Use Meaningful Function Names**: Choose function names that clearly convey the purpose and intent of the condition. This helps other developers understand the logic without needing to read the implementation details. 🧐
 - **Use Extracted Functions**: Replace the original expression in the conditional with a function call to the newly created function. 🔄

@@ -14,7 +14,7 @@ slug: dont-over-optimize
 
 Optimizing your code can sometimes be a waste of time. Modern browsers and hardware are equipped with powerful optimization mechanisms that automatically optimize code at runtime, making manual optimizations unnecessary in many cases.
 
-### 🛠️ How to apply
+### 🛠️ How to Apply
 - **Prioritize readability**: Focus on writing clean and understandable code rather than obsessing over minor performance improvements. 📖
 - **Leverage browser optimizations**: Trust the capabilities of modern browsers to optimize your code automatically and efficiently. 🚀
 - **Measure performance**: Identify critical performance bottlenecks in your code and optimize only where necessary. ⏱️

@@ -13,7 +13,7 @@ slug: functions-should-do-one-thing
 
 A function in clean code should have a clear purpose and perform a single task. It should not be responsible for multiple actions or concepts. By following this principle, your code becomes more modular, readable, and maintainable.
 
-### 🛠️ How to apply
+### 🛠️ How to Apply
 - Each function should have a clear and specific purpose, focusing on a single task. 🎯
 - Avoid including multiple functionalities or responsibilities within a single function. 🚫
 - Aim to keep your functions concise and easily understandable. 📚

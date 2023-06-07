@@ -14,7 +14,7 @@ slug: use-getters-and-setters
 
 Getters and setters are methods that allow controlled access to an object's properties. Instead of directly accessing the properties, you should use getters and setters to encapsulate the access and provide an interface for interacting with the object's state.
 
-### 🛠️ How to apply
+### 🛠️ How to Apply
 - **Encapsulate Properties**: Declare private properties and provide getters and setters to access and modify them. 🏷️
 - **Perform Validation**: Add validation logic inside setters to ensure the data integrity of the object. ✅
 - **Avoid intensive computation**: Getters and setters should not perform computationally expensive operations or slow operations, as this can lead to unexpected delays and hinder performance. ⚡️

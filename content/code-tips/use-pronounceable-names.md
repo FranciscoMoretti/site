@@ -14,7 +14,7 @@ slug: use-pronounceable-names
 
 Choosing good names takes time but it saves even more time. Names should be easy to pronounce to be able to communicate with your teammates verbally.
 
-### 🛠️ How to apply
+### 🛠️ How to Apply
 - Choose names that can be effortlessly pronounced and understood by team members. 👥
 - Avoid using ambiguous or cryptic names that may lead to confusion or miscommunication. 🤷‍♀️
 - Prioritize readability and clarity when selecting names, aiming for simplicity and ease of verbal communication. 📢

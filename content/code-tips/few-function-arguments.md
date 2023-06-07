@@ -15,7 +15,7 @@ slug: few-function-arguments
 
 Functions with many arguments hinder understanding and reasoning. Testing complexity increases due to the need for values in multiple test cases. Minimize arguments for clarity and easier testing.
 
-### 🛠️ How to apply
+### 🛠️ How to Apply
 - **Break down complex functions**: If a function has too many arguments, consider breaking it down into smaller functions with fewer arguments. 🧩
 - **Group related a[rguments**: Identify arguments that are closely related and bundle them together into a single obj]()ect or data structure. 📦
 - **Use default values**: Utilize default values for optional arguments to minimize the need for passing multiple arguments. 🏷️

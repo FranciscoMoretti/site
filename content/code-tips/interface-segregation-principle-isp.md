@@ -14,7 +14,7 @@ slug: interface-segregation-principle-isp
 
 This principle emphasizes that interfaces should be tailored to the specific needs of the clients using them. It suggests breaking down large interfaces into smaller, more focused ones to avoid imposing unnecessary dependencies on clients.
 
-### 🛠️ How to apply
+### 🛠️ How to Apply
 - **Identify client-specific requirements**: Understand the distinct needs of each client or consumer of an interface. 🔍
 - **Design cohesive interfaces**: Create interfaces that contain only the methods and properties required by the clients using them. 🧩
 - **Create fine-grained interfaces**: Design interfaces that are small and focused, catering to specific client needs. 📦

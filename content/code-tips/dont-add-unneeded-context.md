@@ -13,7 +13,7 @@ slug: dont-add-unneeded-context
 
 Avoid using redundant words or phrases in variable or method names that duplicate information already conveyed by the context in which they are used. Trust the naming conventions and let the surrounding code provide the necessary context.
 
-### 🛠️ How to apply
+### 🛠️ How to Apply
 - **Avoid repetition**: If the class or object name already conveys the context, there's no need to repeat it in the variable name. 🔄
 - **Use descriptive names**: Instead of adding redundant context, use names that describe the specific purpose or behavior of the variable. 📚
 - **Consider the scope**: When naming variables, take into account the scope of the code to ensure clarity and avoid confusion. 🎯

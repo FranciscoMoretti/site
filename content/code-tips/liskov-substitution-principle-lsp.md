@@ -14,7 +14,7 @@ slug: liskov-substitution-principle-lsp
 
 The Liskov Substitution Principle states that if S is a subtype of T, then objects of type T may be replaced with objects of type S. In simpler terms, if you have a parent class and a child class, you should be able to use the child class wherever the base class is expected without encountering incorrect results.
 
-### 🛠️ How to apply
+### 🛠️ How to Apply
 - **Use inheritance correctly**: Make sure that subclasses can be used interchangeably with their base classes without causing unexpected behavior or violating the base class's contract. 🔄
 - **Adhere to method signatures**: Child classes should maintain the same method signatures as their base classes to ensure that they can be used as substitutes without introducing errors. 🖋️
 - **Avoid violating preconditions**: Subclasses should not impose more restrictions on input parameters than their base classes. Strive to relax or maintain the same preconditions as the base class methods. 🔓

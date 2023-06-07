@@ -15,7 +15,7 @@ slug: single-responsibility-principle-srp
 
 A class should be designed in such a way that it has only one reason to change. It should have a well-defined and focused responsibility, making it easier to understand, maintain, and modify.
 
-### 🛠️ How to apply
+### 🛠️ How to Apply
 
 - **Identify clear responsibilities**: Define specific tasks and responsibilities for each class. Use distinct names that reflect their purpose. 🎯
 - **Separate concerns**: Avoid mixing unrelated functionalities within a single class. Delegate tasks to other classes to maintain a focused and modular codebase. 🧩
