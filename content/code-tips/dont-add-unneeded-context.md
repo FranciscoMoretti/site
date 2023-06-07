@@ -1,32 +1,78 @@
 ---
 title: Don't add unneeded context
 sidebar_position: 22
-date: 2022-05-30
+date: 2023-06-07
 description: If your class or object name tells you something, don't repeat that in your variable name.
 category: General
 slug: dont-add-unneeded-context
 ---
 
-☑️ Topic: General
+## Usage
+### 📝 Guideline
+**Don't add unneeded context**: Avoid repeating information that is already provided by the surrounding code context.
 
-☑️ Idea: If your class or object name tells you something, don't repeat that in your variable name.
+Avoid using redundant words or phrases in variable or method names that duplicate information already conveyed by the context in which they are used. Trust the naming conventions and let the surrounding code provide the necessary context.
 
-☑️ Benefit: Readability. Code is easier to read if there is no unnecessary information bloating it.
+### 🛠️ How to apply
+- **Avoid repetition**: If the class or object name already conveys the context, there's no need to repeat it in the variable name. 🔄
+- **Use descriptive names**: Instead of adding redundant context, use names that describe the specific purpose or behavior of the variable. 📚
+- **Consider the scope**: When naming variables, take into account the scope of the code to ensure clarity and avoid confusion. 🎯
 
-☑️ Guideline: Shorter names are generally better than longer ones, so long as they are clear. Only add things if they provide real value to a name.
+## Pros and Cons
 
-```javascript
-// BAD
-const Car = {
-  carMake: "Honda",
-  carModel: "Accord",
-  carColor: "Blue",
+### 👍 Pros
+- **Improved readability**: Removing redundant context from variable names makes the code easier to read and understand. 👁️
+- **Concise code**: Eliminating unnecessary repetition in variable names leads to more compact and cleaner code. 🧹
+- **Reduces cognitive load**: Clear and concise variable names decrease the cognitive load on developers, making it easier to comprehend and work with the codebase. ⚡
+
+### 👎 Cons
+- **Loss of clarity**: If variable names lack context due to the omission of redundant information, it may become harder to understand their purpose. 🤔
+- **Potential ambiguity**: Overly generic or abbreviated variable names may introduce ambiguity, especially when used in different contexts. ❓
+
+## Examples
+
+### ❌ Bad
+```typescript
+// Bad variable names with unnecessary context
+class Car {
+  private carModel: string;
+  private carMake: string;
+
+  constructor(carModel: string, carMake: string) {
+    this.carModel = carModel;
+    this.carMake = carMake;
+  }
+
+  public getCarModel(): string {
+    return this.carModel;
+  }
 }
 
-// GOOD
-const Car = {
-  make: "Honda",
-  model: "Accord",
-  color: "Blue",
-}
 ```
+
+### ✅ Good
+```typescript
+// Good variable names without redundant context
+class Car {
+  private model: string;
+  private make: string;
+
+  constructor(model: string, make: string) {
+    this.model = model;
+    this.make = make;
+  }
+  
+  public getModel(): string {
+    return this.model;
+  }
+}
+
+```
+
+## References
+
+### 🔀 Related principles
+- **Avoid redundant comments**: Don't add unnecessary context through comments, as it can duplicate information already present in the code. 💬
+- **Single responsibility principle**: By adhering to the single responsibility principle, you can avoid adding unneeded context and keep classes and methods focused on their core purpose. 🎯
+- **Consistency in naming**: Maintaining consistency in naming conventions helps to avoid unnecessary context and promotes clarity and understanding in the codebase. 🔄
+- **Don't repeat yourself (DRY)**: Duplicating code or logic can introduce redundant context, so follow the DRY principle to eliminate unnecessary repetition. 🚱
