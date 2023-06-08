@@ -17,7 +17,7 @@ Functions with many arguments hinder understanding and reasoning. Testing comple
 
 ### 🛠️ How to Apply
 - **Break down complex functions**: If a function has too many arguments, consider breaking it down into smaller functions with fewer arguments. 🧩
-- **Group related a[rguments**: Identify arguments that are closely related and bundle them together into a single obj]()ect or data structure. 📦
+- **Group related arguments**: Identify arguments that are closely related and bundle them together into a single object or data structure. 📦
 - **Use default values**: Utilize default values for optional arguments to minimize the need for passing multiple arguments. 🏷️
 - **Less than 3 arguments:** Aim for zero or few arguments, avoiding three or more to prevent excessive complexity. 3️⃣
 
