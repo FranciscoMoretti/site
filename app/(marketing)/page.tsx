@@ -64,8 +64,8 @@ export default async function IndexPage() {
         />
       </section>
       <hr className="container border-secondary" />
-      <section className="container justify-center gap-6 py-8 md:px-24 md:py-12 lg:px-28 lg:py-24 ">
-        <div className="flex w-full flex-col items-start justify-start gap-4">
+      <section className="container justify-center gap-6 py-8 md:px-24 md:py-12 lg:px-28 lg:py-16 ">
+        <div className="flex w-full flex-col items-start justify-start ">
           <BlogSection MAX_DISPLAY={3} />
         </div>
       </section>
