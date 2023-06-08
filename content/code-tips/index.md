@@ -7,8 +7,6 @@ category: Introduction
 slug: index
 ---
 
-This is the documentation for Code Tips.
-
 Welcome to the Code Tips documentation! Here, we share valuable insights, techniques, and best practices for writing clean, efficient, and maintainable code.
 
 Whether you're a seasoned developer or just starting out, our goal is to help you improve your coding skills and make your life as a programmer easier. From tips on optimizing performance to advice on writing elegant and understandable code, we've got you covered.
