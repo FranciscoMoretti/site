@@ -29,7 +29,7 @@ Functions with fewer arguments are generally easier to understand and maintain. 
 
 ### 👎 Cons
 - **Temptation to Rely on Shared State**: Minimizing arguments may tempt developers to rely on shared state or global variables, which is usually worse than many function arguments. 🚫
-- **Potential performance impact**: In some cases, combining arguments or using configuration objects may introduce a slight performance overhead due to additional object creation or property access. However, this impact is usually negligible in most scenarios.🐌
+- **Potential performance impact**: In some cases, combining arguments or using configuration objects may introduce a slight performance overhead due to additional object creation or property access. However, this impact is usually negligible in most scenarios. 🐌
 
 
 ## Examples
