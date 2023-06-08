@@ -13,7 +13,7 @@ slug: few-function-arguments
 
 **Use Few Function Arguments**: Reduce the number of function arguments to enhance testability and simplify handling.
 
-Functions with fewer arguments are generally easier to understand and maintain. Testing complexity increases with many arguments due to the need for values in multiple test cases. By minimizing the number of function arguments, you can improve code readability and reduce complexity.
+Functions with fewer arguments are generally easier to understand and maintain. Testing complexity increases with many arguments due to the need for value combinations. By minimizing the number of function arguments, you can improve code readability and reduce complexity.
 
 ### 🛠️ How to Apply
 - **Break down complex functions**: If a function has too many arguments, consider breaking it down into smaller functions with fewer arguments. 🧩
