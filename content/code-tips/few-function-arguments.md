@@ -13,13 +13,12 @@ slug: few-function-arguments
 
 **Use Few Function Arguments**: Reduce the number of function arguments to enhance testability and simplify handling.
 
-Functions with many arguments hinder understanding and reasoning. Testing complexity increases due to the need for values in multiple test cases. Minimize arguments for clarity and easier testing.
+Functions with fewer arguments are generally easier to understand and maintain. Testing complexity increases with many arguments due to the need for values in multiple test cases. By minimizing the number of function arguments, you can improve code readability and reduce complexity.
 
 ### 🛠️ How to Apply
 - **Break down complex functions**: If a function has too many arguments, consider breaking it down into smaller functions with fewer arguments. 🧩
 - **Group related arguments**: Identify arguments that are closely related and bundle them together into a single object or data structure. 📦
 - **Use default values**: Utilize default values for optional arguments to minimize the need for passing multiple arguments. 🏷️
-- **Less than 3 arguments:** Aim for zero or few arguments, avoiding three or more to prevent excessive complexity. 3️⃣
 
 ## Pros and Cons
 
@@ -29,8 +28,8 @@ Functions with many arguments hinder understanding and reasoning. Testing comple
 - **Reduced coupling**: Fewer arguments reduce the dependencies between functions, promoting loose coupling and better modular design. 🔗
 
 ### 👎 Cons
-- **Increased dependency on shared state**: When reducing function arguments, it's common to rely more on shared state or global variables. This can introduce hidden dependencies and make the code harder to reason about or debug. 🕵️
-- **Potential performance impact**: In some cases, combining arguments or using configuration objects may introduce a slight performance overhead due to additional object creation or property access. 🐌
+- **Temptation to Rely on Shared State**: Minimizing arguments may tempt developers to rely on shared state or global variables, which is usually worse than many function arguments. 🚫
+- **Potential performance impact**: In some cases, combining arguments or using configuration objects may introduce a slight performance overhead due to additional object creation or property access. However, this impact is usually negligible in most scenarios.🐌
 
 
 ## Examples
