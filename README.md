@@ -39,6 +39,7 @@ The plan is to implement all the features and niceness for a personal blog.
 - Validations using **Zod**
 - Written in **TypeScript**
 - Copy code button
+- Search with cmdk
 
 ## Roadmap
 
