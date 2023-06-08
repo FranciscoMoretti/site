@@ -25,21 +25,21 @@ The plan is to implement all the features and niceness for a personal blog.
 
 ## Features
 
-- New `/app` dir
-- Obsidian compatibility
-- TOC (Table of contents)
-- Documentation-like layout
-- Blog-like layout
-- Loading UI
-- Server and Client Components
-- OG Image per post generated at the edge
-- UI Components built using **Radix UI**
-- **code-tips** (documentation) and **blog** using **MDX** and **Contentlayer**
-- Styled using **Tailwind CSS**
-- Validations using **Zod**
-- Written in **TypeScript**
-- Copy code button
-- Search with cmdk
+- ✅ New `/app` dir
+- ✅ Obsidian compatibility
+- ✅ TOC (Table of contents)
+- ✅ Documentation-like layout
+- ✅ Blog-like layout
+- ✅ Loading UI
+- ✅ Server and Client Components
+- ✅ OG Image per post generated at the edge
+- ✅ UI Components built using **Radix UI** through **Shadcn/ui**
+- ✅ **code-tips** (documentation) and **blog** using **MDX** and **Contentlayer**
+- ✅ Styled using **Tailwind CSS**
+- ✅ Validations using **Zod**
+- ✅ Written in **TypeScript**
+- ✅ Copy code button
+- ✅ Search with **cmdk**
 
 ## Roadmap
 
@@ -48,11 +48,12 @@ The plan is to implement all the features and niceness for a personal blog.
 - [ ] Framer motion animations on home screen
 - [ ] Show views for each page using **Prisma** and **PlanetScale**
 - [ ] Dark mode
-- [ ] Add tests
+- [ ] Unit tests
 
 ## Inspiration
 
 - https://tx.shadcn.com/
+- https://ui.shadcn.com/
 - https://flowershow.app/
 
 ## Running Locally
