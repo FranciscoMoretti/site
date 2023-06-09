@@ -1,5 +1,6 @@
 ---
 title: Use Few Function Arguments
+alias: Minimal Function Arguments, Limited Function Arguments
 sidebar_position: 9
 date: 2023-05-27
 description: Fewer arguments make your function easier to test. They are also easier to handle.
