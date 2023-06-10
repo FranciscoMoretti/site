@@ -24,6 +24,8 @@ export default function BlogSection({ MAX_DISPLAY }) {
           {!posts.length && "No posts found."}
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
             const { slug, date, title, description, tags } = frontMatter
+            console.log(slug)
+
             return (
               <li key={slug} className="py-12">
                 <article>
@@ -39,7 +41,7 @@ export default function BlogSection({ MAX_DISPLAY }) {
                         <div>
                           <h3 className="mb-2 mt-8 scroll-m-20 text-2xl font-semibold tracking-tight">
                             <Link
-                              href={`/blog/${slug}`}
+                              href={slug}
                               className="text-gray-900 dark:text-gray-100"
                             >
                               {title}
