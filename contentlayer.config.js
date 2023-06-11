@@ -10,7 +10,7 @@ import { visit } from "unist-util-visit"
 
 /** @type {import('contentlayer/source-files').ComputedFields} */
 const computedFields = {
-  slug: {
+  route: {
     type: "string",
     resolve: (doc) => `/${doc._raw.flattenedPath}`,
   },
@@ -48,10 +48,10 @@ export const Doc = defineDocumentType(() => ({
       type: "string",
     },
     // TODO: Solve slug - permalink mechanism
-    // slug: {
-    //   type: "string",
-    //   required: true,
-    // },
+    slug: {
+      type: "string",
+      required: true,
+    },
     sidebar_position: {
       type: "number",
     },
@@ -79,9 +79,10 @@ export const Post = defineDocumentType(() => ({
       type: "date",
       required: true,
     },
-    // slug: {
-    //   type: "string",
-    // },
+    slug: {
+      type: "string",
+      required: true,
+    },
     publish: {
       type: "boolean",
       default: true,
@@ -145,9 +146,10 @@ export const Page = defineDocumentType(() => ({
     description: {
       type: "string",
     },
-    // slug: {
-    //   type: "string",
-    // },
+    slug: {
+      type: "string",
+      required: true,
+    },
     sidebar_position: {
       type: "number",
     },
