@@ -1,5 +1,6 @@
-import { notFound } from "next/navigation"
+import { db } from "@/lib/db"
 import { allAuthors, allPosts } from "contentlayer/generated"
+import { notFound } from "next/navigation"
 
 import { Mdx } from "@/components/mdx"
 import "@/styles/mdx.css"
@@ -7,8 +8,12 @@ import { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 
-import { absoluteUrl, formatDate } from "@/lib/utils"
 import { Icons } from "@/components/icons"
+import { absoluteUrl, formatDate } from "@/lib/utils"
+import { Suspense } from "react"
+import { PageViews } from "@/components/page-views"
+
+export const revalidate = 0
 
 interface PostPageProps {
   params: {
@@ -75,6 +80,33 @@ export async function generateMetadata({
 export async function generateStaticParams(): Promise<
   PostPageProps["params"][]
 > {
+  const promises = allPosts.map(async (post) => {
+    const { slug } = post
+    try {
+      const result = await db.post.upsert({
+        where: {
+          slug,
+        },
+        create: {
+          slug,
+          views: 0,
+        },
+        update: {},
+      })
+      return result
+    } catch (error) {
+      console.log(error)
+    }
+  })
+
+  await Promise.all(promises)
+    .then(() => {
+      console.log("All promises completed")
+    })
+    .catch((error) => {
+      console.log("Error:", error)
+    })
+
   return allPosts.map((post) => ({
     slug: post.slugAsParams.split("/"),
   }))
@@ -101,11 +133,17 @@ export default async function PostPage({ params }: PostPageProps) {
         See all posts
       </Link>
       <div>
-        {post.date && (
-          <time dateTime={post.date} className="block text-sm text-slate-600">
-            Published on {formatDate(post.date)}
-          </time>
-        )}
+        <div className="flex space-x-4 text-sm text-slate-600">
+          {post.date && (
+            <time dateTime={post.date} className="block">
+              Published on {formatDate(post.date)}
+            </time>
+          )}
+          <Suspense fallback={<span>Loading…</span>}>
+            {/* @ts-expect-error */}
+            <PageViews slug={post.slug} />
+          </Suspense>
+        </div>
         <h1 className="mt-2 inline-block text-4xl font-extrabold leading-tight text-slate-900 lg:text-5xl">
           {post.title}
         </h1>
