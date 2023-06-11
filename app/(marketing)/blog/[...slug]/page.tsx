@@ -11,7 +11,7 @@ import Link from "next/link"
 import { Icons } from "@/components/icons"
 import { absoluteUrl, formatDate } from "@/lib/utils"
 import { Suspense } from "react"
-import { PageViews } from "@/components/page-views"
+import { PostPageViews } from "@/components/post-page-views"
 
 export const revalidate = 0
 
@@ -141,7 +141,7 @@ export default async function PostPage({ params }: PostPageProps) {
           )}
           <Suspense fallback={<span>Loading…</span>}>
             {/* @ts-expect-error */}
-            <PageViews slug={post.slug} />
+            <PostPageViews slug={post.slug} />
           </Suspense>
         </div>
         <h1 className="mt-2 inline-block text-4xl font-extrabold leading-tight text-slate-900 lg:text-5xl">
