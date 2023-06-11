@@ -88,7 +88,7 @@ export default async function PostPage({ params }: PostPageProps) {
   }
 
   const authors = post.authors.map((author) =>
-    allAuthors.find(({ slug }) => slug === `/authors/${author}`)
+    allAuthors.find(({ route }) => route === `/authors/${author}`)
   )
 
   return (

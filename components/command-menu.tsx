@@ -108,7 +108,7 @@ export function CommandMenu({ ...props }: DialogProps) {
                   key={post.slug}
                   value={post.title}
                   onSelect={() => {
-                    runCommand(() => router.push(post.slug as string))
+                    runCommand(() => router.push(post.route as string))
                   }}
                 >
                   <BookOpen className="mr-2 h-4 w-4" />

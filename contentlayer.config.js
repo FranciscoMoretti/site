@@ -146,10 +146,6 @@ export const Page = defineDocumentType(() => ({
     description: {
       type: "string",
     },
-    slug: {
-      type: "string",
-      required: true,
-    },
     sidebar_position: {
       type: "number",
     },

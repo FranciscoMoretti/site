@@ -22,9 +22,8 @@ export default function BlogSection({ MAX_DISPLAY }) {
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && "No posts found."}
-          {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
-            const { slug, date, title, description, tags } = frontMatter
-            console.log(slug)
+          {posts.slice(0, MAX_DISPLAY).map((post) => {
+            const { route, slug, date, title, description, tags } = post
 
             return (
               <li key={slug} className="py-12">
@@ -41,7 +40,7 @@ export default function BlogSection({ MAX_DISPLAY }) {
                         <div>
                           <h3 className="mb-2 mt-8 scroll-m-20 text-2xl font-semibold tracking-tight">
                             <Link
-                              href={slug}
+                              href={route}
                               className="text-gray-900 dark:text-gray-100"
                             >
                               {title}
@@ -59,7 +58,7 @@ export default function BlogSection({ MAX_DISPLAY }) {
                       </div>
                       <div className="text-base font-medium leading-6">
                         <Link
-                          href={slug}
+                          href={route}
                           className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                           aria-label={`Read "${title}"`}
                         >

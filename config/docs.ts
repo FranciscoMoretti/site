@@ -6,14 +6,14 @@ const simplifiedDocs = allDocs
   .filter((doc) => doc.publish)
   .map((doc) => ({
     title: doc.title,
-    slug: doc.slug ? doc.slug : "error_slug",
+    route: doc.route ? doc.route : "error_slug",
     category: doc.category,
     sidebar_position: doc.sidebar_position ? doc.sidebar_position : 0,
   }))
 
 interface DocPage {
   title: string
-  slug: string
+  route: string
   category: string
   sidebar_position: number
 }
@@ -41,7 +41,7 @@ function transformDocPagesToConfig(docPages: DocPage[]): DocsConfig {
       title: category,
       items: pages.map((page) => ({
         title: page.title,
-        href: page.slug,
+        href: page.route,
       })),
     }
     sidebarNav.push(sidebarSection)

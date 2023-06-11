@@ -36,7 +36,7 @@ export default function MdxHead({ params, og }: MdxHeadProps) {
   return (
     <>
       <title>{title}</title>
-      <link rel="canonical" href={absoluteUrl(mdxDoc.slug)} />
+      <link rel="canonical" href={absoluteUrl(mdxDoc.route)} />
       <meta name="description" content={ogDescription} />
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width" />
