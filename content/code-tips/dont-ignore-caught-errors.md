@@ -1,77 +1,52 @@
 ---
 title: Don't ignore caught errors
+alias: Avoid Ignoring Caught Errors, Handle All Caught Errors
 sidebar_position: 26
-date: 2022-11-10
-description: Thrown errors are a good thing and you can do something about them. The rule is “ Don't ignore caught errors”
+date: 2023-06-11
+description: Thrown errors are a good thing and you can do something about them. The rule is “Don't ignore caught errors”
 category: General
 slug: dont-ignore-caught-errors
 ---
 
-## Errors are inevitable
+## Usage
+### 📝 Guideline
+**Don't ignore caught errors**: Always handle errors that are caught during the execution of your program.
 
-Everyone tries to create apps that are free of bugs, but errors happen anyway.
+Ignoring caught errors can lead to unexpected behavior, incorrect results, and even system crashes. Properly handling errors ensures that issues are identified and addressed, improving the overall stability and reliability of your code.
 
-Thrown errors are a good thing and you can do something about them.
+### 🛠️ How to Apply
+- **Avoid empty catch blocks**: Empty catch blocks hide errors and make it challenging to identify and fix issues. ❌
+- **Log errors**: Use a logging mechanism to record caught errors. This helps in identifying the root cause of the error and facilitates debugging.🔍
+- **Provide meaningful error messages**: Display descriptive error messages to help users understand what went wrong and how to resolve the issue. 📢
+- **Take appropriate actions**: Implement error handling mechanisms, such as retries, fallbacks, or alternative workflows, to gracefully handle caught errors and ensure the program can continue execution without disruptions. 🔄
 
-The rule is “**Don't ignore caught errors”**
+## Pros and Cons
 
-## Thrown errors are a good thing
+### 👍 Pros
+- **Improved stability**: Handling caught errors prevents unexpected crashes or failures, making your code more stable and reliable. 💪
+- **Better user experience**: When errors are handled properly, users receive informative messages and appropriate actions are taken, resulting in a better user experience. 😊
+- **Easier debugging**: Properly handling caught errors allows developers to identify and fix issues more efficiently, as the errors are logged and can provide insights into the problem. 🔧
 
-Thrown errors are good? Yes. If you don’t ignore them.
+### 👎 Cons
+- **Increased complexity**: Implementing error handling logic adds complexity to the codebase, requiring careful design and consideration of potential edge cases. 🧩
+- **Additional development time**: Writing error handling code and documenting error handling strategies may increase development time. ⏳
+- **Potential performance impact**: Depending on the error handling mechanism used, there may be a slight performance impact. It's important to find a balance between error handling and performance optimization. ⚡
 
-Thrown errors mean the execution of the program has identified something going wrong. The program is letting you know about it. Then 3 things happen.
+## Examples
 
-- It stops the execution on the current stack.
-- It kills the process (in node)
-- It notifies you in the console with a stack trace.
-
-An error is an opportunity to fix a problem or to react to it.
-
-## What to do when you catch an error?
-
-Just logging the error is not much better than ignoring the error. If the error is logged with other messages then it can get lost.
-
-When you put your error-throwing code in a `try/catch` block you should do something about it.
-
-Here are some useful things that you can do in the catch block
-
-- Log it in the console as an error. `console.error` writes an error message to the console using a special format that makes it stand out.
-- Create a code path to handle the error gracefully. This can include letting the user know about it. Or it can be using a different more stable solution to continue with the program.
-- Report it to a service. By doing this you’ll have the information about the error. You’ll also have information about how often each error happens. Knowing how often bugs happen is important to understand how critical they are. E.g. you can work on bugs that affect the most users.
-
-## Summary
-
-Rule: **Don't ignore caught errors**
-
-How:
-
-1. Log it in the console as an error
-2. Creating a code path to handle the error gracefully
-3. Reporting it to a service
-
-What do you think of thrown errors and `try/catch` blocks?
-
-## Example
-
-### Bad
-
-```javascript
-// Bad
-
+### ❌ Bad
+```typescript
 try {
-  functionThatMightThrow()
+  // Some code that may throw an error
 } catch (error) {
-  console.log(error)
+  // Ignore the caught error and continue execution
 }
 ```
 
-### Good
-
-```javascript
-// Good
-
+### ✅ Good
+```typescript
 try {
-  functionThatMightThrow()
+  // Some code that may throw an error
 } catch (error) {
   // One option (more noisy than console.log):
   console.error(error)
@@ -79,6 +54,14 @@ try {
   notifyUserOfError(error)
   // Another option:
   reportErrorToService(error)
-  // OR do all three!
+  // Or do all three!
 }
 ```
+
+## References
+
+### 🔀 Related principles
+- **Don't swallow exceptions**: Swallowing exceptions, similar to ignoring caught errors, can lead to unhandled issues and hinder debugging efforts. ❌
+- **Principle of Defensive Programming**: Handling caught errors aligns with the principle of defensive programming by anticipating and addressing potential issues in the code. 🛡️
+- **Principle of Graceful Degradation**: Handling caught errors contributes to the principle of graceful degradation by ensuring the system can gracefully handle errors and continue functioning despite issues. 💯
+- **Fail Fast**: The principle of "Fail Fast" complements "Don't ignore caught errors" by advocating for immediate detection and handling of errors to prevent further issues. ⏩

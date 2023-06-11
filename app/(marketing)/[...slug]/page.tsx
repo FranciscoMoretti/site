@@ -48,7 +48,7 @@ export async function generateMetadata({
       title: page.title,
       description: page.description,
       type: "article",
-      url: absoluteUrl(page.slug),
+      url: absoluteUrl(page.route),
       images: [
         {
           url: ogUrl.toString(),

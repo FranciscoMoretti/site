@@ -3,6 +3,10 @@ import Link from "next/link"
 import { allPosts } from "contentlayer/generated"
 import { compareDesc } from "date-fns"
 import { formatDate } from "@/lib/utils"
+import { Suspense } from "react"
+import { PostCardViews } from "@/components/post-card-views"
+
+export const revalidate = 0
 
 export const metadata = {
   title: "Blog",
@@ -59,12 +63,18 @@ export default async function BlogPage() {
                   {post.description}
                 </p>
               )}
-              {post.date && (
-                <p className="text-sm text-slate-600">
-                  {formatDate(post.date)}
-                </p>
-              )}
-              <Link href={post.slug} className="absolute inset-0">
+              <div className="flex space-x-4 text-sm text-slate-600">
+                {post.date && (
+                  <p className="text-sm text-slate-600">
+                    {formatDate(post.date)}
+                  </p>
+                )}
+                <Suspense fallback={<span>Loading…</span>}>
+                  {/* @ts-expect-error */}
+                  <PostCardViews slug={post.slug} />
+                </Suspense>
+              </div>
+              <Link href={post.route} className="absolute inset-0">
                 <span className="sr-only">View Article</span>
               </Link>
             </article>
