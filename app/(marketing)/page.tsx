@@ -57,8 +57,8 @@ export default async function IndexPage() {
         </div>
         <UserAvatar
           user={{
-            name: siteConfig.name || null,
-            image: siteConfig.profilePicture || null,
+            name: siteConfig.name || "",
+            image: siteConfig.profilePicture,
           }}
           className="mx-16 h-36 w-36 bg-gradient-to-b from-primary to-blue-200 shadow-lg ring-4 ring-primary/80"
         />
