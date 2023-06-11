@@ -3,6 +3,7 @@ import Link from "next/link"
 import { allPosts } from "contentlayer/generated"
 import { compareDesc } from "date-fns"
 import { formatDate } from "@/lib/utils"
+import { db } from "@/lib/db"
 
 export const metadata = {
   title: "Blog",
@@ -11,6 +12,16 @@ export const metadata = {
 }
 
 export default async function BlogPage() {
+  const postsViews = await db.post.findMany({
+    select: {
+      slug: true,
+      views: true,
+    },
+    where: {},
+  })
+
+  console.log(postsViews)
+
   const posts = allPosts
     .filter((post) => post.publish)
     .sort((a, b) => {
