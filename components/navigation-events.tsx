@@ -7,13 +7,10 @@ export function NavigationEvents() {
   const pathname = usePathname()
 
   useEffect(() => {
-    if (process.env.NODE_ENV === "production") {
-      console.log("prod")
-    }
     // TODO: create simpler logic
     const slug = pathname?.split("/blog/").slice(1).join("/")
-    console.log("slug:", slug)
-    if (slug) {
+
+    if (slug && process.env.NODE_ENV === "production") {
       const response = fetch("/api/posts/" + slug, {
         method: "POST",
         headers: {
