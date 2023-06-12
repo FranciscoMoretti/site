@@ -1,4 +1,5 @@
 "use server"
+
 import { db } from "@/lib/db"
 
 export async function updatePostViews({ slug }: { slug: string }) {
@@ -13,6 +14,20 @@ export async function updatePostViews({ slug }: { slug: string }) {
     },
   })
   return result.views
+}
+
+export async function increasePostViews({ slug }: { slug: string }) {
+  const result = await db.post.update({
+    where: {
+      slug: slug,
+    },
+    data: {
+      views: {
+        increment: 1,
+      },
+    },
+  })
+  return result
 }
 
 export async function getPostViews({ slug }: { slug: string }) {
