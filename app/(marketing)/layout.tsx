@@ -8,6 +8,8 @@ import { buttonVariants } from "@/components/ui/button"
 import { siteConfig } from "@/config/site"
 import { CommandMenu } from "@/components/command-menu"
 import { Icons } from "@/components/icons"
+import { Suspense } from "react"
+import { NavigationEvents } from "@/components/navigation-events"
 
 interface MarketingLayoutProps {
   children: React.ReactNode
@@ -18,6 +20,9 @@ export default async function MarketingLayout({
 }: MarketingLayoutProps) {
   return (
     <div className="flex min-h-screen flex-col">
+      <Suspense fallback={null}>
+        <NavigationEvents />
+      </Suspense>
       <header className="sticky top-0 z-40 w-full border-b border-b-secondary bg-white">
         <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
           <MainNav items={siteConfig.navLinks} />
