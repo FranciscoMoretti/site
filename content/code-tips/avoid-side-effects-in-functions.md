@@ -1,82 +1,68 @@
 ---
 title: Avoid side effects in functions
+alias: Side Effect Prevention, Side Effect Minimization, Side Effect Avoidance
 sidebar_position: 5
-date: 2023-01-09
+date: 2023-06-12
 description: A side effect is when a function does something besides just taking some values and returning other values. Side effects can be hard to test and debug, and they can cause unexpected behavior. But there's an easy way to avoid them write "pure" functions.
-
 category: Functions
 slug: avoid-side-effects-in-functions
 ---
 
-## Introduction to side effects
+## Usage
+### 📝 Guideline
+**Avoid Side Effects**: Minimize or eliminate code that modifies state or produces non-obvious consequences.
 
-Ever had your code done something super weird and unexpected? It could be because of side effects!
+Code that produces unexpected changes to the system's state or has hidden consequences can be difficult to reason about and debug. By avoiding side effects, you can create code that is more predictable, easier to test, and less prone to bugs.
 
-Let's learn how to avoid them and keep our code clean.
+### 🛠️ How to Apply
+- **Isolate Mutable State**: Encapsulate mutable state within well-defined boundaries, such as classes or functions, to minimize the potential for unintended side effects. 🧩
+- **Immutability**: Favor immutability whenever possible to prevent accidental modifications of shared data. 🚫
+- **Pure Functions**: Write pure functions that only depend on their input and produce consistent output, without modifying external state. 🧪
+- **Avoid Global State**: Minimize the use of global variables or shared state, as they can lead to hidden dependencies and unintended side effects. 🌍
 
-Sometimes the code does something really strange that we didn't expect. It could be because our functions have side effects.
+## Pros and Cons
 
-### What's a side effect?
+### 👍 Pros
+- **Predictability**: Code without side effects is easier to understand and predict because its behavior is more explicit and deterministic. 🎯
+- **Testability**: Side-effect-free code is easier to test, as it can be isolated and its behavior can be verified without the need for complex setup or mocking. 🧪
+- **Concurrency**: Code with fewer side effects is generally more amenable to concurrent or parallel execution, as it avoids shared mutable state and potential race conditions. 🏃‍♂️
 
-It's when a function does something besides just taking some values and returning other values.
+### 👎 Cons
+- **Performance impact**: Avoiding side effects may introduce additional data copies or indirection, impacting performance slightly. However, improved maintainability and reliability often outweigh this trade-off. 🐢
+- **Integration challenges**: When working with legacy codebases or third-party libraries that heavily rely on side effects, adopting a side effect-free approach can be challenging. 🚧
 
-A side effect could be writing to a file, changing a global variable, or sending all your money to a stranger (yikes!).
 
-## Write pure functions to avoid side effects
+## Examples
 
-Side effects can be hard to test and debug, and they can cause unexpected behavior. But there's an easy way to avoid them: write "pure" functions.
+### ❌ Bad
+```typescript
+// Bad example: Function with side effects
+let counter = 0;
 
-Pure functions are functions that don't have side effects. They just take some values and return other values. These types of functions are much easier to test and debug, and they make our code more predictable and reliable.
-
-### How to write pure functions
-
-So, how do we write pure functions? Here are some tips:
-
-- Use local variables instead of global variables
-- Don't change objects that are passed as arguments
-- Don't call external functions or APIs that have side effects
-
-## When side effects are needed, keep them in one place
-
-But sometimes, we do need to use side effects in our code. Like when we need to write a file. So what do we do?
-
-We centralize our side effects! Instead of having lots of different functions and classes that write to the same file, we have one class that does all the file writing. This way, we have just one place to control everything, and it's easier to keep track of what's happening in our code.
-
-By keeping our side effects in one place, we can keep our code clean and organized.
-
-## Example
-
-### Bad
-
-```javascript
-// BAD
-let name = "Francisco Moretti"
-
-function splitIntoFirstAndLastName() {
-  name = name.split(" ") // Uses a global variable
+function incrementCounter() {
+  counter++;
 }
 
-splitIntoFirstAndLastName()
-
-console.log(name) // ['Francisco', 'Moretti'];
+incrementCounter();
+console.log(counter); // Output: 1
 ```
 
-### Good
-
-```javascript
-// GOOD
-function splitIntoFirstAndLastName(name) {
-  return name.split(" ")
+### ✅ Good
+```typescript
+// Good example: Pure function without side effects
+function incrementCounter(counter: number): number {
+  return counter + 1;
 }
 
-const name = "Francisco Moretti"
-const newName = splitIntoFirstAndLastName(name)
-
-console.log(newName) // ['Francisco', 'Moretti'];
+let counter = 0;
+counter = incrementCounter(counter);
+console.log(counter); // Output: 1
 ```
 
-## Summary
+## References
 
-In short, pure functions are easier to test and debug, and centralizing side effects makes our code more organized.
-
-Do you have any other tips for managing side effects in your code? Let's talk about it in the comments!
+### 🔀 Related principles
+- **Separation of Concerns**: Avoiding side effects is closely related to the principle of separation of concerns, as it promotes modular and decoupled code by isolating state manipulation. 🧩
+- **Immutable Data**: The concept of immutability complements side effect prevention by emphasizing the use of unmodifiable data structures to prevent unintended changes. 🔒
+- **Pure Functions**: Side effect avoidance aligns with the use of pure functions, which have no side effects and produce consistent results based solely on their input. 🧪
+- **Functional Composition**: Pure functions without side effects can be easily composed together to create larger and more complex functions. This encourages modular and reusable code. 🔀
