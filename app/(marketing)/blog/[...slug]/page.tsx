@@ -185,6 +185,7 @@ export default async function PostPage({ params }: PostPageProps) {
           priority
         />
       )}
+      <hr className="my-4 border-slate-200" />
       <Mdx code={post.body.code} />
       <hr className="my-4 border-slate-200" />
       <div className="flex justify-center py-6 lg:py-10">
