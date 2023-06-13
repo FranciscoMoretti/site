@@ -64,14 +64,12 @@ export default async function IndexPage() {
         />
       </section>
       <hr className="container border-secondary" />
-      <section className="container justify-center gap-6 py-8 md:px-24 md:py-12 lg:px-28 lg:py-16 ">
-        <div className="flex w-full flex-col items-start justify-start ">
-          <BlogSection MAX_DISPLAY={3} />
-        </div>
+      <section className="container space-y-8 py-8 md:max-w-4xl md:py-12 lg:py-16">
+        <BlogSection MAX_DISPLAY={3} />
       </section>
       <hr className="container border-secondary" />
-      <section className="container grid justify-center gap-6 py-8 md:py-12 lg:py-24">
-        <div className="mx-auto flex flex-col gap-4 md:max-w-[52rem]">
+      <section className="container gap-6 py-8 md:max-w-4xl md:py-12 lg:py-24">
+        <div className="flex flex-col justify-start gap-4">
           <h2 className="text-2xl font-bold leading-[1.1] tracking-tighter sm:text-2xl md:text-5xl">
             Proudly Open Source
           </h2>
