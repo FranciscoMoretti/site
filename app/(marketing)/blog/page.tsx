@@ -1,10 +1,6 @@
-import Image from "next/image"
-import Link from "next/link"
 import { allPosts } from "contentlayer/generated"
 import { compareDesc } from "date-fns"
-import { formatDate } from "@/lib/utils"
-import { Suspense } from "react"
-import { PostCardViews } from "@/components/post-card-views"
+import { PostCard } from "@/components/post-card"
 
 export const revalidate = 0
 
@@ -42,43 +38,7 @@ export default async function BlogPage() {
       <hr className="my-8 border-slate-200" />
       {posts?.length ? (
         <div className="grid gap-10 sm:grid-cols-2">
-          {posts.map((post, index) => (
-            <article
-              key={post._id}
-              className="group relative flex flex-col space-y-2"
-            >
-              {post.image && (
-                <Image
-                  src={post.image}
-                  alt={post.title}
-                  width={804}
-                  height={452}
-                  className="rounded-md border border-slate-200 bg-slate-200 transition-colors group-hover:border-slate-900"
-                  priority={index <= 1}
-                />
-              )}
-              <h2 className="text-2xl font-extrabold">{post.title}</h2>
-              {post.description && (
-                <p className="line-clamp-2 text-slate-600">
-                  {post.description}
-                </p>
-              )}
-              <div className="flex space-x-4 text-sm text-slate-600">
-                {post.date && (
-                  <p className="text-sm text-slate-600">
-                    {formatDate(post.date)}
-                  </p>
-                )}
-                <Suspense fallback={<span>Loading…</span>}>
-                  {/* @ts-expect-error */}
-                  <PostCardViews slug={post.slug} />
-                </Suspense>
-              </div>
-              <Link href={post.route} className="absolute inset-0">
-                <span className="sr-only">View Article</span>
-              </Link>
-            </article>
-          ))}
+          {posts.map((post, index) => PostCard({ post, index }))}
         </div>
       ) : (
         <p>No posts published.</p>
