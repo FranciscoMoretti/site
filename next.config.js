@@ -70,15 +70,14 @@ const nextConfig = {
       },
       {
         source: "/composition-vs-inheritance-which-is-better-for-your-code",
-        destination:
-          "/code-tips/composition-vs-inheritance-which-is-better-for-your-code",
-        permanent: true,
+        destination: "/",
+        permanent: false, // Temporarily redirect to home until I create a better page
       },
       {
-        source: "/composition-vs-inheritance-which-is-better-for-your-code",
-        destination:
+        source:
           "/code-tips/composition-vs-inheritance-which-is-better-for-your-code",
-        permanent: true,
+        destination: "/",
+        permanent: false, // Temporarily redirect to home until I create a better page
       },
       {
         source: "/dont-add-unneeded-context",
@@ -123,8 +122,13 @@ const nextConfig = {
       },
       {
         source: "/prefer-es6-classes-over-es5-functions",
-        destination: "/code-tips/prefer-es6-classes-over-es5-functions",
-        permanent: true,
+        destination: "/",
+        permanent: true, // Temporarily redirect to home until I create a better page
+      },
+      {
+        source: "/code-tips/prefer-es6-classes-over-es5-functions",
+        destination: "/",
+        permanent: true, // Temporarily redirect to home until I create a better page
       },
       {
         source: "/functions-should-do-one-thing",

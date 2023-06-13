@@ -5,6 +5,7 @@ date: 2022-08-15
 description: ES6 is better than ES5 for readable class inheritance, construction and methods.
 category: JavaScript
 slug: prefer-es6-classes-over-es5-functions
+publish: false
 ---
 
 ☑️ Topic: Classes
