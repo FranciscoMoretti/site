@@ -31,15 +31,20 @@ export async function increasePostViews({ slug }: { slug: string }) {
 }
 
 export async function getPostViews({ slug }: { slug: string }) {
-  const result = await db.post.findUnique({
-    select: {
-      views: true,
-    },
-    where: {
-      slug: slug,
-    },
-  })
-  return result?.views
+  try {
+    const result = await db.post.findUnique({
+      select: {
+        views: true,
+      },
+      where: {
+        slug: slug,
+      },
+    })
+    return result?.views
+  } catch (error) {
+    console.log(error)
+    return null
+  }
 }
 
 export async function getAllViews() {
