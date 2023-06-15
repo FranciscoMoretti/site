@@ -2,5 +2,5 @@ import { getPostViews } from "@/app/(marketing)/actions"
 
 export async function PostCardViews({ slug }: { slug: string }) {
   const count = await getPostViews({ slug })
-  return <span title="Views">{count ? count : "-"} views</span>
+  return <span title="Views">{count != null ? count : "-"} views</span>
 }
