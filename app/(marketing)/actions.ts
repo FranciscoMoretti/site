@@ -42,7 +42,9 @@ export async function getPostViews({ slug }: { slug: string }) {
     })
     return result?.views
   } catch (error) {
-    console.log(error)
+    if (process.env.NODE_ENV === "production") {
+      console.error(error)
+    }
     return null
   }
 }
