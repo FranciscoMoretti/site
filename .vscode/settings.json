@@ -18,10 +18,13 @@
     "strings": true
   },
   "cSpell.words": [
-    "Lucide",
-    "upsert",
+    "callees",
+    "classname",
     "contentlayer",
     "fmoretti",
-    "franmoretti"
+    "franmoretti",
+    "Lucide",
+    "tailwindcss",
+    "upsert"
   ]
 }
