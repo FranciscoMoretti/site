@@ -1,11 +1,11 @@
 ---
-title: Avoid side effects in functions
+title: Avoid side effects
 alias: Side Effect Prevention, Side Effect Minimization, Side Effect Avoidance
 sidebar_position: 5
 date: 2023-06-12
-description: A side effect is when a function does something besides just taking some values and returning other values. Side effects can be hard to test and debug, and they can cause unexpected behavior. But there's an easy way to avoid them write "pure" functions.
+description: Code that produces unexpected changes to the system's state or has hidden consequences can be difficult to reason about and debug. By avoiding side effects, you can create code that is more predictable, easier to test, and less prone to bugs.
 category: Functions
-slug: avoid-side-effects-in-functions
+slug: avoid-side-effects
 ---
 
 ## Usage

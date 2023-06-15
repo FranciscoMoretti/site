@@ -176,6 +176,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/code-tips/avoid-side-effects-in-functions",
+        destination: "/code-tips/avoid-side-effects",
+        permanent: true,
+      },
+      {
         source: "/use-explanatory-variables",
         destination: "/code-tips/use-explanatory-variables",
         permanent: true,
