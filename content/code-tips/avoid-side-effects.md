@@ -15,7 +15,6 @@ slug: avoid-side-effects
 Code that produces unexpected changes to the system's state or has hidden consequences can be difficult to reason about and debug. By avoiding side effects, you can create code that is more predictable, easier to test, and less prone to bugs.
 
 ### 🛠️ How to Apply
-- **Isolate Mutable State**: Encapsulate mutable state within well-defined boundaries, such as classes or functions, to minimize the potential for unintended side effects. 🧩
 - **Immutability**: Favor immutability whenever possible to prevent accidental modifications of shared data. 🚫
 - **Pure Functions**: Write pure functions that only depend on their input and produce consistent output, without modifying external state. 🧪
 - **Avoid Global State**: Minimize the use of global variables or shared state, as they can lead to hidden dependencies and unintended side effects. 🌍
