@@ -28,7 +28,7 @@ Code that produces unexpected changes to the system's state or has hidden conseq
 
 ### 👎 Cons
 - **Performance impact**: Avoiding side effects may introduce additional data copies or indirection, impacting performance slightly. However, improved maintainability and reliability often outweigh this trade-off. 🐢
-- **Integration challenges**: When working with legacy codebases or third-party libraries that heavily rely on side effects, adopting a side effect-free approach can be challenging. 🚧
+- **Integration challenges**: When working with legacy codebases or third-party libraries that heavily rely on side effects, adopting a side effect free approach can be challenging. 🚧
 
 
 ## Examples
