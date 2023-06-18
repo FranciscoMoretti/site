@@ -24,6 +24,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/blog/youtube-embedded-player",
+        destination: "/blog/use-a-lite-youtube-embedded-player-in-nextjs",
+        permanent: true,
+      },
+      {
         source:
           "/how-to-animate-on-scroll-with-react-intersection-observer-and-tailwind-in-a-nextjs-app",
         destination:
@@ -46,7 +51,7 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/web-dev-in-windows-11",
+        source: "/blog/web-dev-in-windows-11",
         destination:
           "/blog/how-to-install-next-js-in-windows-using-wsl2-a-step-by-step-guide",
         permanent: true,
@@ -198,6 +203,26 @@ const nextConfig = {
       {
         source: "/code-tips/use-pronounceable-and-meaningful-variable-names",
         destination: "/code-tips/use-pronounceable-names",
+        permanent: true,
+      },
+      {
+        source: "/use-the-same-vocabulary-for-the-same-concept",
+        destination: "/code-tips/use-the-same-vocabulary-for-the-same-concept",
+        permanent: true,
+      },
+      {
+        source: "/dont-ignore-caught-errors",
+        destination: "/code-tips/dont-ignore-caught-errors",
+        permanent: true,
+      },
+      {
+        source: "/use-getters-and-setters",
+        destination: "/code-tips/use-getters-and-setters",
+        permanent: true,
+      },
+      {
+        source: "/clean-code-tips",
+        destination: "/code-tips",
         permanent: true,
       },
     ]
