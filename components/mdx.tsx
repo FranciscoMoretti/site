@@ -1,7 +1,7 @@
 import * as React from "react"
 import Image from "next/image"
 import { useMDXComponent } from "next-contentlayer/hooks"
-
+import sizeOf from "image-size"
 import { cn } from "@/lib/utils"
 import { Callout } from "@/components/callout"
 import { Card } from "@/components/card"
@@ -99,14 +99,38 @@ const components = {
     className,
     alt,
     ...props
-  }: React.ImgHTMLAttributes<HTMLImageElement>) => (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img
-      className={cn("rounded-md border border-slate-200", className)}
-      alt={alt}
-      {...props}
-    />
-  ),
+  }: React.ImgHTMLAttributes<HTMLImageElement>) => {
+    console.info("props:", props)
+    if (props.src?.endsWith(".gif") && props.src?.startsWith("/")) {
+      const dimensions = sizeOf("./public/" + props.src)
+      if (!dimensions.width || !dimensions.height) {
+        console.error(
+          `Image [${props.src}] has incomplete dimensions [${dimensions}]`
+        )
+        return <></>
+      }
+      return (
+        <Image
+          src={props.src}
+          alt={alt ? alt : props.src}
+          {...props}
+          placeholder="empty"
+          width={Number(dimensions.width)}
+          height={Number(dimensions.height)}
+          className={cn("rounded-md border border-slate-200", className)}
+        />
+      )
+    } else {
+      return (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          className={cn("rounded-md border border-slate-200", className)}
+          alt={alt}
+          {...props}
+        />
+      )
+    }
+  },
   hr: ({ ...props }) => (
     <hr className="my-4 border-slate-200 md:my-8" {...props} />
   ),
