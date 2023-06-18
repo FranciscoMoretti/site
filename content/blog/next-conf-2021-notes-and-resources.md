@@ -13,7 +13,6 @@ image:
 
 Check [“The Future of React & Next.js”](https://www.youtube.com/watch?v=dMBYI7pTR4Q&list=PLBnKlKpPeagnJYpc5geAHU40ld5hk8i82) for an engaging keynote of the conference that features several demos. Also, visit the [official Next.js 12 page](https://nextjs.org/blog/next-12).
 
-# Notes and Resources
 
 ## The Next.js SDK
 

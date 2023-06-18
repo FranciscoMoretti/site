@@ -11,8 +11,6 @@ date: 2023-05-16
 image:
 ---
 
-# Prettier Code Formatter VS Code Extension - A Time-Saving Marvel 🌟
-
 Are you tired of spending countless minutes tweaking the formatting of your code? Do you wish there was a magical tool that could take care of all the tedious spacing, line breaks, and quote choices for you? In this blog post, we'll dive into the wonderful world of the Prettier Code Formatter VS Code extension and discover how it can transform your coding experience. 💻✨
 
 ## What is Prettier? 🧐 

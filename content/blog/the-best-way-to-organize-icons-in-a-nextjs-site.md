@@ -129,7 +129,7 @@ export function GithubIcon({ ...props }: LucideProps) {
 
 You can import that logo into `Icons.tsx` as shown in the Using a Single File for Icons" section.
 
-# Conclusion
+## Conclusion
 
 In this article, we've covered the benefits of organizing icons in a Next.js site and the best way to do so using a single file and Tailwind for styling. By adopting this approach, you can ensure consistency, simplicity, and write less code.
 
