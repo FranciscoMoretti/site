@@ -221,6 +221,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/remove-dead-code",
+        destination: "/code-tips/remove-dead-code",
+        permanent: true,
+      },
+      {
         source: "/clean-code-tips",
         destination: "/code-tips",
         permanent: true,
