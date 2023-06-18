@@ -6,7 +6,7 @@ publish: true
 slug: use-a-lite-youtube-embedded-player-in-nextjs
 
 title: Use a Lite YouTube Embedded Player in Next.js
-description: How to integrate a lite YouTube Player in a Next.js application for performance improvements.
+description: Learn how to integrate a lite YouTube player in Next.js for improved performance using an iframe player or the react-lite-youtube-embed package.
 date: 2021-10-24
 image:
 ---

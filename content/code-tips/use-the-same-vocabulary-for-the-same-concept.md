@@ -3,7 +3,7 @@ title: Use the same vocabulary for the same concept
 alias: Consistent naming, Uniform vocabulary, Standardized terminology, Same language for the same concept, One word per concept, No synonym confusion
 sidebar_position: 23
 date: 2023-06-08
-description: Pick one word per concept and stick with it. Consistency, consistency, consistency!
+description: Ensure clarity and maintainability in your codebase by using consistent vocabulary for the same concept. Stick to one word per concept.
 category: General
 slug: use-the-same-vocabulary-for-the-same-concept
 ---

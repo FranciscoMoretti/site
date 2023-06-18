@@ -2,7 +2,7 @@
 title: Remove dead code
 sidebar_position: 20
 date: 2023-06-06
-description: Delete code that isn’t executed. It will still be in your git history if you need it.
+description: Discover the benefits of removing dead code: improved maintainability, reduced risk of bugs, enhanced readability, and better performance.
 category: General
 slug: remove-dead-code
 ---

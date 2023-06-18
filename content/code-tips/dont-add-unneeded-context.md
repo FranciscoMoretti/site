@@ -2,7 +2,7 @@
 title: Don't add unneeded context
 sidebar_position: 22
 date: 2023-06-07
-description: If your class or object name tells you something, don't repeat that in your variable name.
+description: Learn how to write clear and concise code by avoiding unnecessary repetition of context in variable names. Enhance code readability and maintainability.
 category: General
 slug: dont-add-unneeded-context
 ---

@@ -2,7 +2,7 @@
 title: Use Pronounceable Names
 sidebar_position: 4
 date: 2023-05-25
-description: Choosing good names takes time but it saves even more time. Names should be easy to pronounce.
+description: Learn the importance of using pronounceable names in your code. Discover how it improves communication and enhances code readability and maintainability.
 category: Variables
 slug: use-pronounceable-names
 ---

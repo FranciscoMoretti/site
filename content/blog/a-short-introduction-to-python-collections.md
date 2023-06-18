@@ -6,7 +6,7 @@ publish: false
 slug: a-short-introduction-to-python-collections
 
 title: A short introduction to python collections
-description: Use the right data structure for the job with the containers from Python's collections module.
+description: Discover the power of Python's collections module for using the right data structure. Learn about lists, tuples, sets, dictionaries, and other data structures.
 date: 2021-12-15
 image:
 ---

@@ -6,7 +6,7 @@ publish: true
 slug: using-tailwindcss-line-clamp-for-consistent-descriptions-on-blog-post-cards
 
 title: Using TailwindCSS Line Clamp for Consistent Descriptions on Blog Post Cards
-description: Learn how to use the TailwindCSS Line Clamp plugin to create consistent descriptions for blog post cards. This plugin provides utilities for visually truncating text after a fixed number of lines, making it easy to keep your card descriptions looking great. In this post, we'll walk you through the installation and usage of the plugin, and show you how to use it in a component. Upgrade to Tailwind 3.3 to get the utility without a plugin.
+description: Learn how to use TailwindCSS Line Clamp plugin to create consistent descriptions for blog post cards. Upgrade to Tailwind 3.3 for this useful utility.
 date: 2023-05-09
 image:
 ---

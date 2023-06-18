@@ -2,7 +2,7 @@
 title: Don’t Use Magic Numbers
 sidebar_position: 3
 date: 2023-05-24
-description: Code should be readable and searchable. Constants should have a name. Use searchable names.
+description: Improve code clarity and searchability by replacing magic numbers with constants. Make your code more expressive and self-explanatory.
 category: Variables
 slug: dont-use-magic-numbers
 ---
