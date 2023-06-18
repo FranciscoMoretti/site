@@ -2,7 +2,7 @@
 title: Functions should do one thing
 sidebar_position: 8
 date: 2023-05-20
-description: Learn about the principle of writing functions that do one thing in this comprehensive guide. Discover the pros and cons, explore bad and good code examples, and uncover related principles for a clean codebase. 🌟
+description: Discover the principle of writing functions that do one thing. Improve code modularity, reusability, and organization for a cleaner codebase.
 category: Functions
 slug: functions-should-do-one-thing
 ---

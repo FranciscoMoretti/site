@@ -2,7 +2,7 @@
 title: Encapsulate conditionals
 sidebar_position: 21
 date: 2023-06-06
-description: Encapsulate the expressions used in conditionals and use the new function name to indicate their intent. Boolean logic is easier to understand if it’s read in isolation.
+description: Discover how to encapsulate conditionals for clearer code. Extract expressions into functions with meaningful names to improve readability and simplify logic.
 category: General
 slug: encapsulate-conditionals
 ---

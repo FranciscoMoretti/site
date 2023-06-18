@@ -3,7 +3,7 @@ title: Keep it short and simple (KISS)
 alias: Keep It Simple Stupid, Keep It Stupid Simple, Keep It Super Simple, keep it short and simple, keep it small and simple
 sidebar_position: 24
 date: 2023-06-09
-description: The KISS principle states that most systems work best if they are kept simple rather than made complicated; therefore, simplicity should be a key goal in design, and unnecessary complexity should be avoided.
+description: Learn about the KISS principle and its impact on software development. Prioritize simplicity, improve maintainability, and enhance code readability.
 category: General
 slug: kiss-keep-it-short-and-simple
 ---

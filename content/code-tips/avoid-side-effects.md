@@ -3,7 +3,7 @@ title: Avoid side effects
 alias: Side Effect Prevention, Side Effect Minimization, Side Effect Avoidance
 sidebar_position: 5
 date: 2023-06-12
-description: Code that produces unexpected changes to the system's state or has hidden consequences can be difficult to reason about and debug. By avoiding side effects, you can create code that is more predictable, easier to test, and less prone to bugs.
+description: Improve code reliability by avoiding side effects. Minimize hidden consequences, enhance predictability, and simplify testing.
 category: Functions
 slug: avoid-side-effects
 ---

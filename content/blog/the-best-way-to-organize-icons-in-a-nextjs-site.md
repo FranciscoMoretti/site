@@ -6,7 +6,7 @@ publish: true
 slug: the-best-way-to-organize-icons-in-a-nextjs-site
 
 title: The Best Way to Organize Icons in a Next.js Site
-description: Learn the best way to organize icons in your Next.js site for consistency, simplicity, and less code. Follow our step-by-step guide to using a single file and Tailwind for styling. Check out our blog for more Next.js articles.
+description: Learn how to organize icons in your Next.js site for consistency and simplicity. Follow the convention of using a single file and Tailwind CSS for styling.
 date: 2023-05-12
 image:
 ---

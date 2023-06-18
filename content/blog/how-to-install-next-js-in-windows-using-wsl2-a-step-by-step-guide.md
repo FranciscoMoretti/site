@@ -5,7 +5,7 @@ alias:
 publish: true
 slug: how-to-install-next-js-in-windows-using-wsl2-a-step-by-step-guide
 title: How to Install Next.js in Windows Using WSL2 - A Step-by-Step Guide
-description: Learn how to set up your web development environment with WSL2 in Windows 11 to run a Next.js example. This tutorial guides you through the installation of VS Code, the Remote-WSL extension, Windows Terminal, and an Ubuntu distribution with WSL2. With step-by-step instructions and helpful visuals, you'll be up and running in no time.
+description: Learn how to set up your web dev environment with WSL2 in Windows 11 to run a Next.js example. Follow this step-by-step guide and get started in no time.
 date: 2023-05-13
 image:
 ---

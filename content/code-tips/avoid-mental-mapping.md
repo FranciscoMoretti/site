@@ -2,7 +2,7 @@
 title: Avoid Mental Mapping
 sidebar_position: 1
 date: 2023-05-22
-description: Use explicit names for variables instead of using an alias. A single-letter name is just a placeholder for the reader to map into the actual concept and this is a problem.
+description: Master the technique of avoiding mental mapping in your code. Enhance readability and eliminate confusion with explicit variable naming.
 category: Variables
 slug: avoid-mental-mapping
 ---

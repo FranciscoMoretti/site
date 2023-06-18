@@ -6,7 +6,7 @@ publish: true
 slug: how-to-simplify-your-local-development-with-vercel-env
 
 title: How to Simplify your Local Development with Vercel Env
-description: Simplify your local development with Vercel Env! Learn how this CLI tool can save you time and hassle by managing environment variables in your local development environment. Follow our "Modern web, happy coding" slogan and start improving your workflow today.
+description: Simplify your local development with Vercel Env! Manage environment variables effortlessly and enhance your workflow with this powerful CLI tool.
 date: 2023-05-10
 image:
 ---

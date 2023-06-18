@@ -6,7 +6,7 @@ publish: true
 slug: prettier-the-code-formatter-vs-code-extension-for-modern-web-development
 
 title: Prettier - The Code Formatter VS Code Extension for Modern Web Development
-description: Discover the time-saving wonders of the Prettier Code Formatter VS Code extension and improve your modern web development workflow. Happy coding!
+description: Explore the Prettier Code Formatter VS Code extension for automated code formatting. Save time, boost productivity, and create cleaner code.
 date: 2023-05-16
 image:
 ---

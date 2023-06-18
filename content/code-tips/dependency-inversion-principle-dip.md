@@ -2,7 +2,7 @@
 title: Dependency Inversion Principle (DIP)
 sidebar_position: 16
 date: 2023-05-30
-description: High-level modules should not depend on low-level modules and both should depend on abstractions. Abstractions should not depend upon details, but details should depend on abstractions. Classes shouldn’t have to know implementation details from their dependencies.
+description: Discover how the Dependency Inversion Principle improves code maintainability and modularity by relying on abstractions and inverting control of dependencies.
 category: SOLID
 slug: dependency-inversion-principle-dip
 ---
@@ -104,4 +104,3 @@ SOLID is an acronym for five other class-design principles:
 - **Interface Segregation Principle**: The Dependency Inversion Principle supports the Interface Segregation Principle by advocating for smaller, focused interfaces that clients can depend on. ✂️
 - **Single Responsibility Principle**: The Dependency Inversion Principle contributes to the Single Responsibility Principle by reducing the coupling between modules, ensuring each class has a single responsibility. 🎯
 - **Law of Demeter**: The Dependency Inversion Principle helps adhere to the Law of Demeter by relying on abstractions and avoiding direct knowledge of implementation details in classes. 📏
-- 
