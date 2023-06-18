@@ -5,7 +5,7 @@ alias:
 publish: true
 slug: tailwind-css-intellisense-vs-code-extension-a-web-developers-best-friend
 
-title: Tailwind CSS IntelliSense VS Code Extension - A Web Developer's Best Friend
+title: Boost Productivity with Tailwind CSS VS Code Extension
 description: Boost your web development productivity with the Tailwind CSS IntelliSense VS Code extension. Autocomplete, hover preview, and more for your coding experience.
 date: 2023-05-14
 image:

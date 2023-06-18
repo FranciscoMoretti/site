@@ -5,7 +5,7 @@ alias:
 publish: true
 slug: how-to-simplify-your-local-development-with-vercel-env
 
-title: How to Simplify your Local Development with Vercel Env
+title: Simple Management of Environment Variables with Vercel Env
 description: Simplify your local development with Vercel Env! Manage environment variables effortlessly and enhance your workflow with this powerful CLI tool.
 date: 2023-05-10
 image:

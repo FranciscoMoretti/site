@@ -5,7 +5,7 @@ alias:
 publish: true
 slug: avoiding-common-mistakes-proper-error-handling-in-web-development
 
-title: Avoiding Common Mistakes - Proper Error Handling in Web Development 👨‍💻
+title: Proper Error Handling in Web Development - Best Practices 
 description: Learn the best practices for proper error handling in web development. Avoid common mistakes and build robust and user-friendly applications.
 date: 2023-06-16
 image:

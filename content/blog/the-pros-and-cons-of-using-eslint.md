@@ -5,7 +5,7 @@ alias:
 publish: true
 slug: the-pros-and-cons-of-using-eslint
 
-title: The Pros and Cons of Using ESLint for Web Development
+title: Pros and Cons of Using ESLint for Web Development
 description: Explore the pros and cons of using ESLint for modern web development. Learn how it enhances code consistency, detects errors, and improves maintainability.
 date: 2023-05-18
 image:

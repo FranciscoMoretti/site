@@ -5,8 +5,8 @@ alias:
 publish: true
 slug: letting-go-of-control-embracing-the-prettier-code-formatter
 
-title: Letting Go of Control - Embracing the Prettier Code Formatter 🌟
-description: Discover the wonders of the Prettier code formatter in modern web development. Shift your styling responsibility, reduce configuration burdens, and embrace the flexibility of this powerful tool. Happy coding! 😊
+title: The Magic of Prettier - Enhance Code Quality Effortlessly
+description: Let go of control and unlock the magic of Prettier, the code formatter. Enhance collaboration, and enjoy a consistent code style effortlessly.
 date: 2023-05-16
 image:
 ---

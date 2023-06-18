@@ -5,7 +5,7 @@ alias:
 publish: true
 slug: modern-web-development-best-practices-to-minimize-side-effects
 
-title: Modern Web Development - Best Practices to Minimize Side Effects
+title: Web Development - Best Practices to Minimize Side Effects
 description: Master web development practices to minimize side effects. Explore functional programming, isolating side effects, state management, and immutability benefits.
 date: 2023-06-18
 image:

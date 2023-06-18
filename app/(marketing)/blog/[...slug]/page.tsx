@@ -49,7 +49,9 @@ export async function generateMetadata({
   ogUrl.searchParams.set("mode", "dark")
 
   return {
-    title: post.title,
+    title: {
+      absolute: post.title,
+    },
     description: post.description,
     authors: post.authors.map((author) => ({
       name: author,
