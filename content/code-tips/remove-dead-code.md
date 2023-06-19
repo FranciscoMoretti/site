@@ -2,7 +2,7 @@
 title: Remove dead code
 sidebar_position: 20
 date: 2023-06-06
-description: Discover the benefits of removing dead code: improved maintainability, reduced risk of bugs, enhanced readability, and better performance.
+description: Discover the benefits of removing dead code - improved maintainability, reduced risk of bugs, enhanced readability, and better performance.
 category: General
 slug: remove-dead-code
 ---
