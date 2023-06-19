@@ -1,5 +1,5 @@
 ---
-tag:
+tag: Best Practices, Functional Programming
 alias:
 
 publish: true
