@@ -46,7 +46,7 @@ export default async function IndexPage() {
           <h2 className="text-lg font-semibold tracking-tighter sm:text-2xl md:text-3xl">
             Modern Web, Happy Coding
           </h2>
-          <p className="max-w-[42rem] leading-normal text-slate-700 sm:text-xl sm:leading-8">
+          <p className="text-center leading-normal text-slate-700 sm:text-xl sm:leading-8">
             Learning in public to support your coding journey
           </p>
           <div className="flex gap-4">
