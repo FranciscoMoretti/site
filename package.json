@@ -15,7 +15,8 @@
     "preview": "next build && next start",
     "format": "prettier --write .",
     "postinstall": "prisma generate",
-    "sync": "node scripts/sync.js"
+    "sync": "node scripts/sync.js",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@editorjs/code": "^2.7.0",
@@ -103,7 +104,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-tailwindcss": "^3.11.0",
-    "husky": "^8.0.2",
+    "husky": "^8.0.0",
     "mdast-util-toc": "^6.1.0",
     "postcss": "^8.4.14",
     "prettier": "^2.7.1",
