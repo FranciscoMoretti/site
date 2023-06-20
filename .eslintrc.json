@@ -3,8 +3,8 @@
   "root": true,
   "extends": [
     "next/core-web-vitals",
-    "prettier",
-    "plugin:tailwindcss/recommended"
+    "plugin:tailwindcss/recommended",
+    "prettier"
   ],
   "plugins": ["tailwindcss"],
   "rules": {
