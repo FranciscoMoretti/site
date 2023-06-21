@@ -34,14 +34,14 @@ export function PostCard({
         ))}
       </div>
       {post.description && (
-        <p className="line-clamp-2 text-slate-600">{post.description}</p>
+        <p className="line-clamp-3 text-slate-600">{post.description}</p>
       )}
       <div className="flex space-x-4 text-sm text-slate-600">
         {post.date && (
           <p className="text-sm text-slate-600">{formatDate(post.date)}</p>
         )}
         <Suspense fallback={<span>Loading…</span>}>
-          {/* @ts-expect-error */}
+          {/* @ts-expect-error async function */}
           <PostCardViews slug={post.slug} />
         </Suspense>
       </div>
