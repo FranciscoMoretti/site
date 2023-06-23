@@ -5,8 +5,8 @@ category: General
 publish: true
 slug: avoid-hasty-abstractions-aha
 
-title:
-description:
+title: Avoid Hasty Abstractions (AHA)
+description: Prefer duplication over the wrong abstraction. Avoid rushing into creating abstractions without a clear understanding of the problem domain. It is better to tolerate duplication initially than to create premature or incorrect abstractions.
 date: 2023-06-23
 
 ---
