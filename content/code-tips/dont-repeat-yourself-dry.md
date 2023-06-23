@@ -20,7 +20,7 @@ The DRY principle encourages developers to eliminate code duplication by extract
 
 ### 🛠️ How to Apply
 - **Extract Reusable Functions:** Identify code blocks with similar functionality and extract them into reusable functions. Reuse these functions across your codebase. ✂️
-- **Create Reusable Components**: Modularize your code by creating reusable components or classes that encapsulate common functionality. This allows you to reuse the same code across different parts of your application. 🧩
+- **Create Reusable Classes**: Modularize your code by creating reusable classes that encapsulate common functionality. This allows you to reuse the same code across different parts of your application. 🧩
 - **Refactor Duplicate Code**: Regularly review your codebase and refactor any duplicate code you come across. Consolidate repeated logic into a single location to ensure consistency and reduce maintenance efforts. 🔁
 
 ## Pros and Cons
