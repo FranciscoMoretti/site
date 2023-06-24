@@ -50,4 +50,4 @@ Moreover, finding specific items within the menu becomes a breeze with the Comma
 
 ### Conclusion 🎉
 
-In conclusion, the Command component for React is a powerful tool that adds functionality, elegance, and accessibility to your projects. It has an easy installation process, great visual appearance, and intuitive keyboard navigation,  game-changer for developers. Improve your React projects with little effort. Happy coding! 🚀😀
+In conclusion, the Command component for React is a powerful tool that adds functionality, elegance, and accessibility to your projects. It has an easy installation process, great visual appearance, and intuitive keyboard navigation, a game-changer for developers. Improve your React projects with little effort. Happy coding! 🚀😀

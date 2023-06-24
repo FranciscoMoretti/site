@@ -19,10 +19,10 @@ In the fast-paced world of modern web development, striking a balance between ef
 
 Opinionated code formatters, such as Prettier, have revolutionized the way we approach code styling. By adopting an opinionated code formatter, we relinquish control over individual styling preferences and embrace a standardized approach. This shift of responsibility brings numerous benefits. With Prettier, the burden of styling is no longer on our shoulders, freeing up time and mental capacity to focus on more pressing development tasks. 👨‍💻⚡
 
-Non-opinionated code formatters, while still useful, can sometimes introduce ambiguity, leaving room for confusion and merge conflicts. When each developer has the liberty to choose their own styling conventions, conflicts can arise during collaborative projects. Prettier provides a definitive style guide, eliminating the need for nit picks about code formatting and ensuring smoother collaboration. 😌🤝
+Non-opinionated code formatters, while still useful, can sometimes introduce ambiguity, leaving room for confusion and merge conflicts. When each developer has the liberty to choose their own styling conventions, conflicts can arise during collaborative projects. Prettier provides a definitive style guide, eliminating the need for nitpicks about code formatting and ensuring smoother collaboration. 😌🤝
 
 ## A One-Size-Fits-All Solution for Modern Web Development 💪
-One of the most remarkable aspects of Prettier is its ability to work beutifully with most modern web development languages. Whether you're writing JavaScript, TypeScript, CSS, HTML, or even GraphQL, Prettier has got you covered! This is a huge advantage for developers, as it reduces the need for context switching between different code formatters. With Prettier, you can enjoy a consistent experience across multiple languages, simplifying your workflow and boosting productivity. 🌐🚀
+One of the most remarkable aspects of Prettier is its ability to work beautifully with most modern web development languages. Whether you're writing JavaScript, TypeScript, CSS, HTML, or even GraphQL, Prettier has got you covered! This is a huge advantage for developers, as it reduces the need for context switching between different code formatters. With Prettier, you can enjoy a consistent experience across multiple languages, simplifying your workflow and boosting productivity. 🌐🚀
 
 ## Flexibility in Opinionated Styling with Prettier 🎨
 

@@ -41,7 +41,7 @@ Contrary to the DRY approach, the WET approach **emphasizes explicitness and ind
 
 However, caution must be exercised when using the WET approach. Duplicated code increases maintenance efforts. Furthermore, code updates require modifications in multiple places, leading to potential errors.
 
-An example of duplication being the recommended approach is TailwindCSS classes. They advocate against abstracting groups of classes because they are easier to maintain with the IDE tools. Check out their documentation reusing styles https://tailwindcss.com/docs/reusing-styles.
+An example of duplication being the recommended approach is TailwindCSS classes. They advocate against abstracting groups of classes because they are easier to maintain with the IDE tools. Check out their documentation on reusing styles https://tailwindcss.com/docs/reusing-styles.
 
 ```tsx
 import React from 'react';
