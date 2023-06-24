@@ -1,5 +1,3 @@
-import { Logo } from "@/config/logo"
-import { GithubIcon } from "@/components/github-icon"
 import {
   AlertTriangle,
   ArrowRight,
@@ -27,6 +25,9 @@ import {
   X,
   type Icon as LucideIcon,
 } from "lucide-react"
+
+import { Logo } from "@/config/logo"
+import { GithubIcon } from "@/components/github-icon"
 
 export type Icon = LucideIcon
 

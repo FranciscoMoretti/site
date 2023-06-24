@@ -1,17 +1,17 @@
-import { db } from "@/lib/db"
-import { allAuthors, allPosts } from "contentlayer/generated"
-import { notFound } from "next/navigation"
-
-import { Mdx } from "@/components/mdx"
-import "@/styles/mdx.css"
+import { Suspense } from "react"
 import { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
+import { notFound } from "next/navigation"
+import { allAuthors, allPosts } from "contentlayer/generated"
 
-import { Icons } from "@/components/icons"
+import { db } from "@/lib/db"
 import { absoluteUrl, formatDate } from "@/lib/utils"
-import { Suspense } from "react"
+import { Icons } from "@/components/icons"
+import { Mdx } from "@/components/mdx"
 import { PostPageViews } from "@/components/post-page-views"
+
+import "@/styles/mdx.css"
 
 export const revalidate = 0
 
@@ -142,7 +142,7 @@ export default async function PostPage({ params }: PostPageProps) {
             </time>
           )}
           <Suspense fallback={<span>Loading…</span>}>
-            {/* @ts-expect-error */}
+            {/* @ts-expect-error async component */}
             <PostPageViews slug={post.slug} />
           </Suspense>
         </div>
