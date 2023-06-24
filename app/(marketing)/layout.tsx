@@ -1,15 +1,15 @@
+import { Suspense } from "react"
 import Link from "next/link"
 
 import { marketingConfig } from "@/config/marketing"
-import { cn } from "@/lib/utils"
-import { MainNav } from "@/components/main-nav"
-import { SiteFooter } from "@/components/site-footer"
-import { buttonVariants } from "@/components/ui/button"
 import { siteConfig } from "@/config/site"
+import { cn } from "@/lib/utils"
+import { buttonVariants } from "@/components/ui/button"
 import { CommandMenu } from "@/components/command-menu"
 import { Icons } from "@/components/icons"
-import { Suspense } from "react"
+import { MainNav } from "@/components/main-nav"
 import { NavigationEvents } from "@/components/navigation-events"
+import { SiteFooter } from "@/components/site-footer"
 
 interface MarketingLayoutProps {
   children: React.ReactNode
