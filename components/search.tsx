@@ -1,11 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { toast } from "@/hooks/use-toast"
 
 import { cn } from "@/lib/utils"
+import { toast } from "@/hooks/use-toast"
 
-interface DocsSearchProps extends React.HTMLAttributes<HTMLFormElement> {}
+type DocsSearchProps = React.HTMLAttributes<HTMLFormElement>
 
 export function DocsSearch({ className, ...props }: DocsSearchProps) {
   function onSubmit(event: React.SyntheticEvent) {
