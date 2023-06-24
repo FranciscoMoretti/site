@@ -3,7 +3,6 @@
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "prettier.prettierPath": "./node_modules/prettier",
   "editor.linkedEditing": true,
   "tailwindCSS.emmetCompletions": true,
   "tailwindCSS.experimental.classRegex": [
