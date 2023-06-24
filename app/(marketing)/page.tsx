@@ -1,10 +1,10 @@
 import Link from "next/link"
 
-import BlogSection from "@/components/blog-section"
-import { buttonVariants } from "@/components/ui/button"
-import { UserAvatar } from "@/components/user-avatar"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
+import { buttonVariants } from "@/components/ui/button"
+import BlogSection from "@/components/blog-section"
+import { UserAvatar } from "@/components/user-avatar"
 
 async function getGitHubStars(): Promise<string | null> {
   try {
@@ -39,7 +39,7 @@ export default async function IndexPage() {
   return (
     <>
       <section className="container flex flex-col-reverse items-center justify-center gap-6 pb-8 pt-6 sm:flex-row md:pb-12 md:pt-10 lg:pb-24 lg:pt-16">
-        <div className="flex flex-col items-center gap-4 sm:items-start ">
+        <div className="flex flex-col items-center gap-4  sm:items-start ">
           <h1 className="text-3xl font-bold leading-[1.1] tracking-tighter sm:text-5xl md:text-6xl">
             Francisco Moretti
           </h1>
