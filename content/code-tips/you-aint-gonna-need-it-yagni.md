@@ -12,7 +12,7 @@ date: 2023-06-14
 
 ## Usage
 ### 📝 Guideline
-**You Ain't Gonna Need It** : Only implement features or code that is necessary at the current moment.
+**You Ain't Gonna Need It** : Only implement features or code necessary at the current moment.
 
 YAGNI is a code principle that promotes simplicity and efficiency in software development. It encourages developers to implement only the features and code that are essential for the current project, avoiding unnecessary complexity and future speculation.
 
@@ -78,4 +78,4 @@ class Button {
 - **KISS Principle**: YAGNI complements the KISS principle by emphasizing the importance of simplicity and avoiding unnecessary complexity. 🤫
 - **Don't Repeat Yourself**: YAGNI complements DRY by encouraging developers to avoid duplicating code that is not currently needed. 🔄
 - **SOLID Principles**: The Single Responsibility Principle (SRP) and the Interface Segregation Principle (ISP) align with YAGNI by encouraging focused and minimalistic code design. 🎯
-- **Behavior-Driven Development**: YAGNI aligns with BDD's focus on developing code based on the current required behavior and avoiding speculative features. 🌟
+- **Behavior-Driven Development**: YAGNI aligns with BDD's focus on developing code based on the currently required behavior and avoiding speculative features. 🌟

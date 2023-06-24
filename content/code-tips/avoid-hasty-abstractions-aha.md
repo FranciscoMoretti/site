@@ -21,7 +21,7 @@ Avoid rushing into creating abstractions without a clear understanding of the pr
 ### 🛠️ How to Apply
 - **Prefer duplication**: If you're unsure about the correct abstraction, it's better to have duplicated code temporarily until you fully understand the commonalities and requirements for abstraction. 📊
 - **Identify commonalities**: Look for patterns and similarities in the duplicated code. When you notice parts that can be generalized, you'll be in a better position to provide meaningful abstractions. 🧩
-- **Mindful of future requirements**: Keep in mind that code requirements can change over time. Instead of prematurely optimizing for performance or designing the "perfect" API, focus on code that can easily adapt to future changes. 🔮
+- **Consider future requirements**: Instead of prematurely optimizing for performance or designing the "perfect" API, focus on code that can easily adapt to future changes. 🔮
 - **Avoid premature abstractions**: If you abstract too early, you might end up with complex code that's difficult to maintain. Wait until you have a good understanding of the use cases before creating abstractions. 🚧
 - **Mindful Abstraction**: When the commonalities are clear, it's the right time to create abstractions. Abstract out the shared functionality into functions or modules that accurately capture the essence of the problem. 🌤️
 

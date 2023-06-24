@@ -16,7 +16,7 @@ Removing dead code refers to the process of eliminating any code that is no long
 ### 🛠️ How to Apply
 - **Regular code audits**: Regularly review your codebase and identify unused or redundant code sections. Remove them to keep your codebase clean and efficient. ✂️
 - **Automated tools**: Utilize code analysis tools that can help identify dead code within your project. These tools can save time and provide insights into code sections that can be safely removed. 🛠️
-- **Delete code with confidence**: Once you have identified the unused code, delete it from your codebase. 💥
+- **Delete code with confidence**: Once you have identified the unused code, delete it from your codebase. It will still be in your git history if you need it.💥
 - **Verify functionality**: After deleting the code, run your automated tests and perform manual testing to ensure that the remaining code still functions correctly. 🧪
 
 ## Pros and Cons
@@ -25,11 +25,11 @@ Removing dead code refers to the process of eliminating any code that is no long
 - **Improved maintainability**: Removing dead code reduces the complexity of your codebase, making it easier to understand and maintain. 🚀
 - **Reduced risk of bugs**: Unused code can introduce confusion and potential conflicts. Removing it reduces the risk of bugs and makes your codebase more reliable. 🐛
 - **Enhanced code readability**: Removing dead code improves code clarity and makes it easier for other developers to understand your intentions. 👓
-- **Enhanced performance**: By eliminating unused code, you can reduce the memory footprint and execution time of your application, leading to improved performance. ⚡
+- **Enhanced performance**: By eliminating unused code, you can reduce the memory and execution time of your application, leading to improved performance. ⚡
 
 ### 👎 Cons
-- **Loss of historical context**: Removing dead code means that valuable historical context may be lost. However, the code can still be accessed through the version control system if needed. 📚
-- **Risk of accidental removal**: There is a small risk of accidentally removing code that may be needed in rare scenarios. Proper code review and version control practices can mitigate this risk. ⚠️
+- **Historical context loss**: Removing dead code means that valuable historical context may be lost. However, the code can still be accessed through the version control system if needed. 📚
+- **Accidental removal risk**: There is a small risk of accidentally removing code that is needed in rare scenarios. Proper code review and version control practices can mitigate this risk. ⚠️
 
 ## Examples
 

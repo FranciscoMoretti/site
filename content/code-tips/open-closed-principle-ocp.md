@@ -18,15 +18,15 @@ The Open-Closed Principle dictates that you shouldn't need to change existing co
 
 - **Abstraction**: Abstract classes and interfaces can define a common contract for different implementations, allowing new functionality to be added by implementing these abstractions. 🔑
 - **Inheritance**: Use inheritance to create specialized classes that extend a base class, enabling additional functionality to be added without modifying the existing code. 🧬
-- **Polymorphism**: Utilize polymorphism to enable different implementations of a common interface, promoting extensibility. 🔀
-- **Composition**: Compose objects using composition rather than modifying existing classes directly, allowing new behavior to be added by combining different components. 🔧
+- **Polymorphism**: Utilize polymorphism to accept different implementations of a common interface, promoting extensibility. 🔀
+- **Composition**: Exctend objects using composition rather than modifying existing classes directly, allowing new behavior to be added by combining different components. 🔧
 - **Dependency Injection**: Inject dependencies into classes to allow for flexible component replacement and avoid hard dependencies. 💉
 
 ## Pros and Cons
 
 ### 👍 Pros
 
-- **Enhanced Modularity**: The Open-Closed Principle promotes modularity by isolating changes within specific classes or modules, reducing the ripple effect of modifications. 🧩
+- **Enhanced Modularity**: Promotes modularity by containing changes within specific classes or modules, reducing the impact on other parts of the codebase. 🧩
 - **Maintainability**: The principle promotes a design that minimizes modifications to existing code, making it easier to maintain and reducing the risk of introducing bugs. 🛠️
 - **Reusability**: By following the Open-Closed Principle, code becomes more reusable as new functionality can be added by extending existing classes or implementing abstractions. ♻️
 

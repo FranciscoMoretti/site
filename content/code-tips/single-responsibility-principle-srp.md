@@ -17,7 +17,7 @@ A class should be designed in such a way that it has only one reason to change. 
 
 ### 🛠️ How to Apply
 
-- **Identify clear responsibilities**: Define specific tasks and responsibilities for each class. Use distinct names that reflect their purpose. 🎯
+- **Identify clear responsibilities**: Define specific tasks and responsibilities for each class. Use meaningful names that reflect their purpose. 🎯
 - **Separate concerns**: Avoid mixing unrelated functionalities within a single class. Delegate tasks to other classes to maintain a focused and modular codebase. 🧩
 - **Refactor when necessary**: If a class grows too large or takes on multiple responsibilities, consider splitting it into smaller, more specialized classes. ♻️
 
@@ -26,7 +26,7 @@ A class should be designed in such a way that it has only one reason to change. 
 ### 👍 Pros
 - **Improved readability**: Classes with single responsibilities are easier to understand, as they focus on a specific task or behavior. 👀
 - **Enhanced maintainability**: When a class has a single responsibility, modifications and updates become simpler and less error-prone. 🛠️
-- **Enhanced reusability**: Well-defined responsibilities allow for greater code reuse, promoting modular design and efficient development. 🔁
+- **Enhanced reusability**: Well-defined responsibilities allow for greater code reuse by promoting modular design and efficient development. 🔁
 
 ### 👎 Cons
 
