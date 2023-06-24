@@ -12,8 +12,6 @@ module.exports = {
   ],
   plugins: ["@typescript-eslint", "tailwindcss"],
   rules: {
-    "@next/next/no-html-link-for-pages": "off",
-    "react/jsx-key": "off",
     "tailwindcss/no-custom-classname": "off",
     "tailwindcss/classnames-order": "error",
   },
