@@ -1,15 +1,15 @@
+import { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { allDocs } from "contentlayer/generated"
 
 import { getTableOfContents } from "@/lib/toc"
+import { absoluteUrl } from "@/lib/utils"
 import { Mdx } from "@/components/mdx"
 import { DocsPageHeader } from "@/components/page-header"
 import { DocsPager } from "@/components/pager"
 import { DashboardTableOfContents } from "@/components/toc"
-import "@/styles/mdx.css"
-import { Metadata } from "next"
 
-import { absoluteUrl } from "@/lib/utils"
+import "@/styles/mdx.css"
 
 interface DocPageProps {
   params: {
