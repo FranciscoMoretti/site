@@ -1,4 +1,3 @@
-// @ts-nocheck
 // TODO: Fix this when we turn strict mode on.
 
 import { toc } from "mdast-util-toc"
@@ -8,7 +7,7 @@ import { visit } from "unist-util-visit"
 const textTypes = ["text", "emphasis", "strong", "inlineCode"]
 
 function flattenNode(node) {
-  const p = []
+  const p: unknown[] = []
   visit(node, (node) => {
     if (!textTypes.includes(node.type)) return
     p.push(node.value)
