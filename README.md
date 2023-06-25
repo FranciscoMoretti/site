@@ -40,13 +40,13 @@ The plan is to implement all the features and niceness for a personal blog.
 - ✅ Written in **TypeScript**
 - ✅ Copy code button
 - ✅ Search with **cmdk**
+- ✅ Custom tailwind styles
 
 ## Roadmap
 
-- [ ] Custom tailwind styles
+- [ ] Show views for each page using **Prisma** and **PlanetScale**
 - [ ] Personalized OG Images
 - [ ] Framer motion animations on home screen
-- [ ] Show views for each page using **Prisma** and **PlanetScale**
 - [ ] Dark mode
 - [ ] Unit tests
 
