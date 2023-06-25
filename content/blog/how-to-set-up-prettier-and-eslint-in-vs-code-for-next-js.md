@@ -26,7 +26,7 @@ npm install prettier --save-dev
 To learn more about the benefits of [[letting-go-of-control-embracing-the-prettier-code-formatter|embracing the power of Prettier]].
 
 ### Step 2: Installing the Prettier VS Code Extension
-Next, navigate to the Extensions view in VS Code and search for the "Prettier - Code formatter" extension by Esben Petersen. This is a people's favourite with 33M downloads as of 2023. Click on the "Install" button to add it to your editor. Check out this other post to learn more about the [[prettier-the-code-formatter-vs-code-extension-for-modern-web-development||Prettier formatter VS Code extension]].
+Next, navigate to the Extensions view in VS Code and search for the "Prettier - Code formatter" extension by Esben Petersen. This is a people's favourite with 33M downloads as of 2023. Click on the "Install" button to add it to your editor. Check out this other post to learn more about the [[prettier-the-code-formatter-vs-code-extension-for-modern-web-development|Prettier formatter VS Code extension]].
 
 ### Step 3: Installing ESLint in Your Project
 Similarly, install ESLint as a development dependency by running the following command in the integrated terminal:
