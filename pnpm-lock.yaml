@@ -162,14 +162,14 @@ dependencies:
     specifier: ^0.92.0
     version: 0.92.0(prop-types@15.8.1)(react@18.2.0)
   next:
-    specifier: ^13.4.4
-    version: 13.4.4(@babel/core@7.22.5)(@opentelemetry/api@1.4.1)(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^13.4.7
+    version: 13.4.7(@babel/core@7.22.5)(@opentelemetry/api@1.4.1)(react-dom@18.2.0)(react@18.2.0)
   next-contentlayer:
     specifier: ^0.3.3
-    version: 0.3.3(esbuild@0.18.6)(next@13.4.4)(react-dom@18.2.0)(react@18.2.0)
+    version: 0.3.3(esbuild@0.18.6)(next@13.4.7)(react-dom@18.2.0)(react@18.2.0)
   next-themes:
     specifier: ^0.2.1
-    version: 0.2.1(next@13.4.4)(react-dom@18.2.0)(react@18.2.0)
+    version: 0.2.1(next@13.4.7)(react-dom@18.2.0)(react@18.2.0)
   nodemailer:
     specifier: ^6.8.0
     version: 6.8.0
@@ -248,8 +248,8 @@ devDependencies:
     specifier: ^8.31.0
     version: 8.31.0
   eslint-config-next:
-    specifier: 13.4.4
-    version: 13.4.4(eslint@8.31.0)(typescript@4.7.4)
+    specifier: 13.4.7
+    version: 13.4.7(eslint@8.31.0)(typescript@4.7.4)
   eslint-config-prettier:
     specifier: ^8.8.0
     version: 8.8.0(eslint@8.31.0)
@@ -1425,26 +1425,26 @@ packages:
       - supports-color
     dev: false
 
-  /@next/env@13.4.4:
+  /@next/env@13.4.7:
     resolution:
       {
-        integrity: sha512-q/y7VZj/9YpgzDe64Zi6rY1xPizx80JjlU2BTevlajtaE3w1LqweH1gGgxou2N7hdFosXHjGrI4OUvtFXXhGLg==,
+        integrity: sha512-ZlbiFulnwiFsW9UV1ku1OvX/oyIPLtMk9p/nnvDSwI0s7vSoZdRtxXNsaO+ZXrLv/pMbXVGq4lL8TbY9iuGmVw==,
       }
     dev: false
 
-  /@next/eslint-plugin-next@13.4.4:
+  /@next/eslint-plugin-next@13.4.7:
     resolution:
       {
-        integrity: sha512-5jnh7q6I15efnjR/rR+/TGTc9hn53g3JTbEjAMjmeQiExKqEUgIXqrHI5zlTNlNyzCPkBB860/ctxXheZaF2Vw==,
+        integrity: sha512-ANEPltxzXbyyG7CvqxdY4PmeM5+RyWdAJGufTHnU+LA/i3J6IDV2r8Z4onKwskwKEhwqzz5lMaSYGGXLyHX+mg==,
       }
     dependencies:
       glob: 7.1.7
     dev: true
 
-  /@next/swc-darwin-arm64@13.4.4:
+  /@next/swc-darwin-arm64@13.4.7:
     resolution:
       {
-        integrity: sha512-xfjgXvp4KalNUKZMHmsFxr1Ug+aGmmO6NWP0uoh4G3WFqP/mJ1xxfww0gMOeMeSq/Jyr5k7DvoZ2Pv+XOITTtw==,
+        integrity: sha512-VZTxPv1b59KGiv/pZHTO5Gbsdeoxcj2rU2cqJu03btMhHpn3vwzEK0gUSVC/XW96aeGO67X+cMahhwHzef24/w==,
       }
     engines: { node: ">= 10" }
     cpu: [arm64]
@@ -1453,10 +1453,10 @@ packages:
     dev: false
     optional: true
 
-  /@next/swc-darwin-x64@13.4.4:
+  /@next/swc-darwin-x64@13.4.7:
     resolution:
       {
-        integrity: sha512-ZY9Ti1hkIwJsxGus3nlubIkvYyB0gNOYxKrfsOrLEqD0I2iCX8D7w8v6QQZ2H+dDl6UT29oeEUdDUNGk4UEpfg==,
+        integrity: sha512-gO2bw+2Ymmga+QYujjvDz9955xvYGrWofmxTq7m70b9pDPvl7aDFABJOZ2a8SRCuSNB5mXU8eTOmVVwyp/nAew==,
       }
     engines: { node: ">= 10" }
     cpu: [x64]
@@ -1465,10 +1465,10 @@ packages:
     dev: false
     optional: true
 
-  /@next/swc-linux-arm64-gnu@13.4.4:
+  /@next/swc-linux-arm64-gnu@13.4.7:
     resolution:
       {
-        integrity: sha512-+KZnDeMShYkpkqAvGCEDeqYTRADJXc6SY1jWXz+Uo6qWQO/Jd9CoyhTJwRSxvQA16MoYzvILkGaDqirkRNctyA==,
+        integrity: sha512-6cqp3vf1eHxjIDhEOc7Mh/s8z1cwc/l5B6ZNkOofmZVyu1zsbEM5Hmx64s12Rd9AYgGoiCz4OJ4M/oRnkE16/Q==,
       }
     engines: { node: ">= 10" }
     cpu: [arm64]
@@ -1477,10 +1477,10 @@ packages:
     dev: false
     optional: true
 
-  /@next/swc-linux-arm64-musl@13.4.4:
+  /@next/swc-linux-arm64-musl@13.4.7:
     resolution:
       {
-        integrity: sha512-evC1twrny2XDT4uOftoubZvW3EG0zs0ZxMwEtu/dDGVRO5n5pT48S8qqEIBGBUZYu/Xx4zzpOkIxx1vpWdE+9A==,
+        integrity: sha512-T1kD2FWOEy5WPidOn1si0rYmWORNch4a/NR52Ghyp4q7KyxOCuiOfZzyhVC5tsLIBDH3+cNdB5DkD9afpNDaOw==,
       }
     engines: { node: ">= 10" }
     cpu: [arm64]
@@ -1489,10 +1489,10 @@ packages:
     dev: false
     optional: true
 
-  /@next/swc-linux-x64-gnu@13.4.4:
+  /@next/swc-linux-x64-gnu@13.4.7:
     resolution:
       {
-        integrity: sha512-PX706XcCHr2FfkyhP2lpf+pX/tUvq6/ke7JYnnr0ykNdEMo+sb7cC/o91gnURh4sPYSiZJhsF2gbIqg9rciOHQ==,
+        integrity: sha512-zaEC+iEiAHNdhl6fuwl0H0shnTzQoAoJiDYBUze8QTntE/GNPfTYpYboxF5LRYIjBwETUatvE0T64W6SKDipvg==,
       }
     engines: { node: ">= 10" }
     cpu: [x64]
@@ -1501,10 +1501,10 @@ packages:
     dev: false
     optional: true
 
-  /@next/swc-linux-x64-musl@13.4.4:
+  /@next/swc-linux-x64-musl@13.4.7:
     resolution:
       {
-        integrity: sha512-TKUUx3Ftd95JlHV6XagEnqpT204Y+IsEa3awaYIjayn0MOGjgKZMZibqarK3B1FsMSPaieJf2FEAcu9z0yT5aA==,
+        integrity: sha512-X6r12F8d8SKAtYJqLZBBMIwEqcTRvUdVm+xIq+l6pJqlgT2tNsLLf2i5Cl88xSsIytBICGsCNNHd+siD2fbWBA==,
       }
     engines: { node: ">= 10" }
     cpu: [x64]
@@ -1513,10 +1513,10 @@ packages:
     dev: false
     optional: true
 
-  /@next/swc-win32-arm64-msvc@13.4.4:
+  /@next/swc-win32-arm64-msvc@13.4.7:
     resolution:
       {
-        integrity: sha512-FP8AadgSq4+HPtim7WBkCMGbhr5vh9FePXiWx9+YOdjwdQocwoCK5ZVC3OW8oh3TWth6iJ0AXJ/yQ1q1cwSZ3A==,
+        integrity: sha512-NPnmnV+vEIxnu6SUvjnuaWRglZzw4ox5n/MQTxeUhb5iwVWFedolPFebMNwgrWu4AELwvTdGtWjqof53AiWHcw==,
       }
     engines: { node: ">= 10" }
     cpu: [arm64]
@@ -1525,10 +1525,10 @@ packages:
     dev: false
     optional: true
 
-  /@next/swc-win32-ia32-msvc@13.4.4:
+  /@next/swc-win32-ia32-msvc@13.4.7:
     resolution:
       {
-        integrity: sha512-3WekVmtuA2MCdcAOrgrI+PuFiFURtSyyrN1I3UPtS0ckR2HtLqyqmS334Eulf15g1/bdwMteePdK363X/Y9JMg==,
+        integrity: sha512-6Hxijm6/a8XqLQpOOf/XuwWRhcuc/g4rBB2oxjgCMuV9Xlr2bLs5+lXyh8w9YbAUMYR3iC9mgOlXbHa79elmXw==,
       }
     engines: { node: ">= 10" }
     cpu: [ia32]
@@ -1537,10 +1537,10 @@ packages:
     dev: false
     optional: true
 
-  /@next/swc-win32-x64-msvc@13.4.4:
+  /@next/swc-win32-x64-msvc@13.4.7:
     resolution:
       {
-        integrity: sha512-AHRITu/CrlQ+qzoqQtEMfaTu7GHaQ6bziQln/pVWpOYC1wU+Mq6VQQFlsDtMCnDztPZtppAXdvvbNS7pcfRzlw==,
+        integrity: sha512-sW9Yt36Db1nXJL+mTr2Wo0y+VkPWeYhygvcHj1FF0srVtV+VoDjxleKtny21QHaG05zdeZnw2fCtf2+dEqgwqA==,
       }
     engines: { node: ">= 10" }
     cpu: [x64]
@@ -1971,7 +1971,7 @@ packages:
         integrity: sha512-Ofwh/1HX69ZfJRiRBMTy7rgjAzHmwe4kW9C9Y99HTRUcYLUuVT0KESFj15rPjRgKJs20GPq8Bm5aEDJ8DuA3vA==,
       }
     dependencies:
-      "@babel/runtime": 7.21.0
+      "@babel/runtime": 7.22.5
     dev: false
 
   /@radix-ui/primitive@1.0.0:
@@ -1980,7 +1980,7 @@ packages:
         integrity: sha512-3e7rn8FDMin4CgeL7Z/49smCA3rFYY3Ha2rUQ7HRWFadS5iCRw08ZgVT1LaNTCNqgvrUiyczLflrVrF0SRQtNA==,
       }
     dependencies:
-      "@babel/runtime": 7.21.0
+      "@babel/runtime": 7.22.5
     dev: false
 
   /@radix-ui/react-accessible-icon@1.0.1(react-dom@18.2.0)(react@18.2.0):
@@ -2052,7 +2052,7 @@ packages:
       react: ^16.8 || ^17.0 || ^18.0
       react-dom: ^16.8 || ^17.0 || ^18.0
     dependencies:
-      "@babel/runtime": 7.21.0
+      "@babel/runtime": 7.22.5
       "@radix-ui/react-primitive": 1.0.1(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -2144,7 +2144,7 @@ packages:
       react: ^16.8 || ^17.0 || ^18.0
       react-dom: ^16.8 || ^17.0 || ^18.0
     dependencies:
-      "@babel/runtime": 7.21.0
+      "@babel/runtime": 7.22.5
       "@radix-ui/react-compose-refs": 1.0.0(react@18.2.0)
       "@radix-ui/react-context": 1.0.0(react@18.2.0)
       "@radix-ui/react-primitive": 1.0.1(react-dom@18.2.0)(react@18.2.0)
@@ -2161,7 +2161,7 @@ packages:
     peerDependencies:
       react: ^16.8 || ^17.0 || ^18.0
     dependencies:
-      "@babel/runtime": 7.21.0
+      "@babel/runtime": 7.22.5
       react: 18.2.0
     dev: false
 
@@ -2195,7 +2195,7 @@ packages:
     peerDependencies:
       react: ^16.8 || ^17.0 || ^18.0
     dependencies:
-      "@babel/runtime": 7.21.0
+      "@babel/runtime": 7.22.5
       react: 18.2.0
     dev: false
 
@@ -2267,7 +2267,7 @@ packages:
     peerDependencies:
       react: ^16.8 || ^17.0 || ^18.0
     dependencies:
-      "@babel/runtime": 7.21.0
+      "@babel/runtime": 7.22.5
       react: 18.2.0
     dev: false
 
@@ -2299,7 +2299,7 @@ packages:
       react: ^16.8 || ^17.0 || ^18.0
       react-dom: ^16.8 || ^17.0 || ^18.0
     dependencies:
-      "@babel/runtime": 7.21.0
+      "@babel/runtime": 7.22.5
       "@radix-ui/primitive": 1.0.0
       "@radix-ui/react-compose-refs": 1.0.0(react@18.2.0)
       "@radix-ui/react-primitive": 1.0.1(react-dom@18.2.0)(react@18.2.0)
@@ -2340,7 +2340,7 @@ packages:
     peerDependencies:
       react: ^16.8 || ^17.0 || ^18.0
     dependencies:
-      "@babel/runtime": 7.21.0
+      "@babel/runtime": 7.22.5
       react: 18.2.0
     dev: false
 
@@ -2370,7 +2370,7 @@ packages:
       react: ^16.8 || ^17.0 || ^18.0
       react-dom: ^16.8 || ^17.0 || ^18.0
     dependencies:
-      "@babel/runtime": 7.21.0
+      "@babel/runtime": 7.22.5
       "@radix-ui/react-compose-refs": 1.0.0(react@18.2.0)
       "@radix-ui/react-primitive": 1.0.1(react-dom@18.2.0)(react@18.2.0)
       "@radix-ui/react-use-callback-ref": 1.0.0(react@18.2.0)
@@ -2411,7 +2411,7 @@ packages:
     peerDependencies:
       react: ^16.8 || ^17.0 || ^18.0
     dependencies:
-      "@babel/runtime": 7.21.0
+      "@babel/runtime": 7.22.5
       "@radix-ui/react-use-layout-effect": 1.0.0(react@18.2.0)
       react: 18.2.0
     dev: false
@@ -2440,7 +2440,7 @@ packages:
       react: ^16.8 || ^17.0 || ^18.0
       react-dom: ^16.8 || ^17.0 || ^18.0
     dependencies:
-      "@babel/runtime": 7.21.0
+      "@babel/runtime": 7.22.5
       "@radix-ui/primitive": 1.0.0
       "@radix-ui/react-collection": 1.0.1(react-dom@18.2.0)(react@18.2.0)
       "@radix-ui/react-compose-refs": 1.0.0(react@18.2.0)
@@ -2474,7 +2474,7 @@ packages:
       react: ^16.8 || ^17.0 || ^18.0
       react-dom: ^16.8 || ^17.0 || ^18.0
     dependencies:
-      "@babel/runtime": 7.21.0
+      "@babel/runtime": 7.22.5
       "@radix-ui/primitive": 1.0.0
       "@radix-ui/react-collection": 1.0.1(react-dom@18.2.0)(react@18.2.0)
       "@radix-ui/react-compose-refs": 1.0.0(react@18.2.0)
@@ -2593,7 +2593,7 @@ packages:
       react: ^16.8 || ^17.0 || ^18.0
       react-dom: ^16.8 || ^17.0 || ^18.0
     dependencies:
-      "@babel/runtime": 7.21.0
+      "@babel/runtime": 7.22.5
       "@floating-ui/react-dom": 0.7.2(@types/react@18.2.0)(react-dom@18.2.0)(react@18.2.0)
       "@radix-ui/react-arrow": 1.0.1(react-dom@18.2.0)(react@18.2.0)
       "@radix-ui/react-compose-refs": 1.0.0(react@18.2.0)
@@ -2618,7 +2618,7 @@ packages:
       react: ^16.8 || ^17.0 || ^18.0
       react-dom: ^16.8 || ^17.0 || ^18.0
     dependencies:
-      "@babel/runtime": 7.21.0
+      "@babel/runtime": 7.22.5
       "@floating-ui/react-dom": 0.7.2(@types/react@18.2.0)(react-dom@18.2.0)(react@18.2.0)
       "@radix-ui/react-arrow": 1.0.1(react-dom@18.2.0)(react@18.2.0)
       "@radix-ui/react-compose-refs": 1.0.0(react@18.2.0)
@@ -2659,7 +2659,7 @@ packages:
       react: ^16.8 || ^17.0 || ^18.0
       react-dom: ^16.8 || ^17.0 || ^18.0
     dependencies:
-      "@babel/runtime": 7.21.0
+      "@babel/runtime": 7.22.5
       "@radix-ui/react-primitive": 1.0.1(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -2674,7 +2674,7 @@ packages:
       react: ^16.8 || ^17.0 || ^18.0
       react-dom: ^16.8 || ^17.0 || ^18.0
     dependencies:
-      "@babel/runtime": 7.21.0
+      "@babel/runtime": 7.22.5
       "@radix-ui/react-compose-refs": 1.0.0(react@18.2.0)
       "@radix-ui/react-use-layout-effect": 1.0.0(react@18.2.0)
       react: 18.2.0
@@ -2705,7 +2705,7 @@ packages:
       react: ^16.8 || ^17.0 || ^18.0
       react-dom: ^16.8 || ^17.0 || ^18.0
     dependencies:
-      "@babel/runtime": 7.21.0
+      "@babel/runtime": 7.22.5
       "@radix-ui/react-slot": 1.0.1(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -2760,7 +2760,7 @@ packages:
       react: ^16.8 || ^17.0 || ^18.0
       react-dom: ^16.8 || ^17.0 || ^18.0
     dependencies:
-      "@babel/runtime": 7.21.0
+      "@babel/runtime": 7.22.5
       "@radix-ui/primitive": 1.0.0
       "@radix-ui/react-collection": 1.0.1(react-dom@18.2.0)(react@18.2.0)
       "@radix-ui/react-compose-refs": 1.0.0(react@18.2.0)
@@ -2783,7 +2783,7 @@ packages:
       react: ^16.8 || ^17.0 || ^18.0
       react-dom: ^16.8 || ^17.0 || ^18.0
     dependencies:
-      "@babel/runtime": 7.21.0
+      "@babel/runtime": 7.22.5
       "@radix-ui/primitive": 1.0.0
       "@radix-ui/react-collection": 1.0.1(react-dom@18.2.0)(react@18.2.0)
       "@radix-ui/react-compose-refs": 1.0.0(react@18.2.0)
@@ -3066,7 +3066,7 @@ packages:
     peerDependencies:
       react: ^16.8 || ^17.0 || ^18.0
     dependencies:
-      "@babel/runtime": 7.21.0
+      "@babel/runtime": 7.22.5
       react: 18.2.0
     dev: false
 
@@ -3078,7 +3078,7 @@ packages:
     peerDependencies:
       react: ^16.8 || ^17.0 || ^18.0
     dependencies:
-      "@babel/runtime": 7.21.0
+      "@babel/runtime": 7.22.5
       "@radix-ui/react-use-callback-ref": 1.0.0(react@18.2.0)
       react: 18.2.0
     dev: false
@@ -3104,7 +3104,7 @@ packages:
     peerDependencies:
       react: ^16.8 || ^17.0 || ^18.0
     dependencies:
-      "@babel/runtime": 7.21.0
+      "@babel/runtime": 7.22.5
       "@radix-ui/react-use-callback-ref": 1.0.0(react@18.2.0)
       react: 18.2.0
     dev: false
@@ -3117,7 +3117,7 @@ packages:
     peerDependencies:
       react: ^16.8 || ^17.0 || ^18.0
     dependencies:
-      "@babel/runtime": 7.21.0
+      "@babel/runtime": 7.22.5
       react: 18.2.0
     dev: false
 
@@ -3129,7 +3129,7 @@ packages:
     peerDependencies:
       react: ^16.8 || ^17.0 || ^18.0
     dependencies:
-      "@babel/runtime": 7.21.0
+      "@babel/runtime": 7.22.5
       react: 18.2.0
     dev: false
 
@@ -3141,7 +3141,7 @@ packages:
     peerDependencies:
       react: ^16.8 || ^17.0 || ^18.0
     dependencies:
-      "@babel/runtime": 7.21.0
+      "@babel/runtime": 7.22.5
       "@radix-ui/rect": 1.0.0
       react: 18.2.0
     dev: false
@@ -3154,7 +3154,7 @@ packages:
     peerDependencies:
       react: ^16.8 || ^17.0 || ^18.0
     dependencies:
-      "@babel/runtime": 7.21.0
+      "@babel/runtime": 7.22.5
       "@radix-ui/react-use-layout-effect": 1.0.0(react@18.2.0)
       react: 18.2.0
     dev: false
@@ -3168,7 +3168,7 @@ packages:
       react: ^16.8 || ^17.0 || ^18.0
       react-dom: ^16.8 || ^17.0 || ^18.0
     dependencies:
-      "@babel/runtime": 7.21.0
+      "@babel/runtime": 7.22.5
       "@radix-ui/react-primitive": 1.0.1(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -3180,7 +3180,7 @@ packages:
         integrity: sha512-d0O68AYy/9oeEy1DdC07bz1/ZXX+DqCskRd3i4JzLSTXwefzaepQrKjXC7aNM8lTHjFLDO0pDgaEiQ7jEk+HVg==,
       }
     dependencies:
-      "@babel/runtime": 7.21.0
+      "@babel/runtime": 7.22.5
     dev: false
 
   /@react-editor-js/client@2.1.0(@editorjs/editorjs@2.25.0)(@editorjs/paragraph@2.8.0)(react@18.2.0):
@@ -3816,7 +3816,7 @@ packages:
       call-bind: 1.0.2
       define-properties: 1.2.0
       es-abstract: 1.21.2
-      get-intrinsic: 1.2.0
+      get-intrinsic: 1.2.1
       is-string: 1.0.7
     dev: true
 
@@ -3871,7 +3871,7 @@ packages:
       define-properties: 1.2.0
       es-abstract: 1.21.2
       es-shim-unscopables: 1.0.0
-      get-intrinsic: 1.2.0
+      get-intrinsic: 1.2.1
     dev: true
 
   /arrify@2.0.1:
@@ -4098,7 +4098,7 @@ packages:
       }
     dependencies:
       function-bind: 1.1.1
-      get-intrinsic: 1.2.0
+      get-intrinsic: 1.2.1
 
   /callsites@3.1.0:
     resolution:
@@ -4882,7 +4882,7 @@ packages:
       es-set-tostringtag: 2.0.1
       es-to-primitive: 1.2.1
       function.prototype.name: 1.1.5
-      get-intrinsic: 1.2.0
+      get-intrinsic: 1.2.1
       get-symbol-description: 1.0.0
       globalthis: 1.0.3
       gopd: 1.0.1
@@ -4936,7 +4936,7 @@ packages:
       }
     engines: { node: ">= 0.4" }
     dependencies:
-      get-intrinsic: 1.2.0
+      get-intrinsic: 1.2.1
       has: 1.0.3
       has-tostringtag: 1.0.0
     dev: true
@@ -5024,10 +5024,10 @@ packages:
     engines: { node: ">=12" }
     dev: true
 
-  /eslint-config-next@13.4.4(eslint@8.31.0)(typescript@4.7.4):
+  /eslint-config-next@13.4.7(eslint@8.31.0)(typescript@4.7.4):
     resolution:
       {
-        integrity: sha512-z/PMbm6L0iC/fwISULxe8IVy4DtNqZk2wQY711o35klenq70O6ns82A8yuMVCFjHC0DIyB2lyugesRtuk9u8dQ==,
+        integrity: sha512-+IRAyD0+J1MZaTi9RQMPUfr6Q+GCZ1wOkK6XM52Vokh7VI4R6YFGOFzdkEFHl4ZyIX4FKa5vcwUP2WscSFNjNQ==,
       }
     peerDependencies:
       eslint: ^7.23.0 || ^8.0.0
@@ -5036,7 +5036,7 @@ packages:
       typescript:
         optional: true
     dependencies:
-      "@next/eslint-plugin-next": 13.4.4
+      "@next/eslint-plugin-next": 13.4.7
       "@rushstack/eslint-patch": 1.3.1
       "@typescript-eslint/parser": 5.60.0(eslint@8.31.0)(typescript@4.7.4)
       eslint: 8.31.0
@@ -5830,16 +5830,6 @@ packages:
     engines: { node: 6.* || 8.* || >= 10.* }
     dev: false
 
-  /get-intrinsic@1.2.0:
-    resolution:
-      {
-        integrity: sha512-L049y6nFOuom5wGyRc3/gdTLO94dySVKRACj1RmJZBQXlbTMhtNIgkWkUHq+jYmZvKf14EW1EoJnnjbmoHij0Q==,
-      }
-    dependencies:
-      function-bind: 1.1.1
-      has: 1.0.3
-      has-symbols: 1.0.3
-
   /get-intrinsic@1.2.1:
     resolution:
       {
@@ -5850,7 +5840,6 @@ packages:
       has: 1.0.3
       has-proto: 1.0.1
       has-symbols: 1.0.3
-    dev: true
 
   /get-nonce@1.0.1:
     resolution:
@@ -5885,7 +5874,7 @@ packages:
     engines: { node: ">= 0.4" }
     dependencies:
       call-bind: 1.0.2
-      get-intrinsic: 1.2.0
+      get-intrinsic: 1.2.1
     dev: true
 
   /get-tsconfig@4.6.0:
@@ -5935,6 +5924,13 @@ packages:
     engines: { node: ">=10.13.0" }
     dependencies:
       is-glob: 4.0.3
+
+  /glob-to-regexp@0.4.1:
+    resolution:
+      {
+        integrity: sha512-lkX1HJXwyMcprw/5YUZc2s7DrpAiHB21/V+E1rHUrVNokkvB6bqMzT0VfV6/86ZNabt1k14YOIaT7nDvOX3Iiw==,
+      }
+    dev: false
 
   /glob@7.1.6:
     resolution:
@@ -6039,7 +6035,7 @@ packages:
         integrity: sha512-d65bNlIadxvpb/A2abVdlqKqV563juRnZ1Wtk6s1sIR8uNsXR70xqIzVqxVf1eTqDunwT2MkczEeaezCKTZhwA==,
       }
     dependencies:
-      get-intrinsic: 1.2.0
+      get-intrinsic: 1.2.1
     dev: true
 
   /graceful-fs@4.2.11:
@@ -6104,7 +6100,7 @@ packages:
         integrity: sha512-62DVLZGoiEBDHQyqG4w9xCuZ7eJEwNmJRWw2VY84Oedb7WFcA27fiEVe8oUQx9hAUJ4ekurquucTGwsyO1XGdQ==,
       }
     dependencies:
-      get-intrinsic: 1.2.0
+      get-intrinsic: 1.2.1
     dev: true
 
   /has-proto@1.0.1:
@@ -6113,7 +6109,6 @@ packages:
         integrity: sha512-7qE+iP+O+bgF9clE5+UoBFzE65mlBiVj3tKCrlNQ0Ogwm0BjpT/gK4SlLYDMybDh5I3TCTKnPPa0oMG7JDYrhg==,
       }
     engines: { node: ">= 0.4" }
-    dev: true
 
   /has-symbols@1.0.3:
     resolution:
@@ -6464,7 +6459,7 @@ packages:
       }
     engines: { node: ">= 0.4" }
     dependencies:
-      get-intrinsic: 1.2.0
+      get-intrinsic: 1.2.1
       has: 1.0.3
       side-channel: 1.0.4
     dev: true
@@ -6530,7 +6525,7 @@ packages:
       }
     dependencies:
       call-bind: 1.0.2
-      get-intrinsic: 1.2.0
+      get-intrinsic: 1.2.1
       is-typed-array: 1.1.10
     dev: true
 
@@ -6585,14 +6580,6 @@ packages:
     engines: { node: ">= 0.4" }
     dev: true
 
-  /is-core-module@2.12.0:
-    resolution:
-      {
-        integrity: sha512-RECHCBCd/viahWmwj6enj19sKbHfJrddi/6cBDsNTKbNq0f7VeaUkBo60BqzvPqo/W54ChS62Z5qyun7cfOMqQ==,
-      }
-    dependencies:
-      has: 1.0.3
-
   /is-core-module@2.12.1:
     resolution:
       {
@@ -6600,7 +6587,6 @@ packages:
       }
     dependencies:
       has: 1.0.3
-    dev: true
 
   /is-date-object@1.0.5:
     resolution:
@@ -8434,7 +8420,7 @@ packages:
       }
     dev: true
 
-  /next-contentlayer@0.3.3(esbuild@0.18.6)(next@13.4.4)(react-dom@18.2.0)(react@18.2.0):
+  /next-contentlayer@0.3.3(esbuild@0.18.6)(next@13.4.7)(react-dom@18.2.0)(react@18.2.0):
     resolution:
       {
         integrity: sha512-XYHRtDWBZ6ZI4F5dJ3Zy0wD2VeNLyifXuGihlmInTVLCtMiACZMae9N7nuhSZtlpXW5xec5wOV9pYhjoICV52A==,
@@ -8446,7 +8432,7 @@ packages:
     dependencies:
       "@contentlayer/core": 0.3.3(esbuild@0.18.6)
       "@contentlayer/utils": 0.3.3
-      next: 13.4.4(@babel/core@7.22.5)(@opentelemetry/api@1.4.1)(react-dom@18.2.0)(react@18.2.0)
+      next: 13.4.7(@babel/core@7.22.5)(@opentelemetry/api@1.4.1)(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     transitivePeerDependencies:
@@ -8456,7 +8442,7 @@ packages:
       - supports-color
     dev: false
 
-  /next-themes@0.2.1(next@13.4.4)(react-dom@18.2.0)(react@18.2.0):
+  /next-themes@0.2.1(next@13.4.7)(react-dom@18.2.0)(react@18.2.0):
     resolution:
       {
         integrity: sha512-B+AKNfYNIzh0vqQQKqQItTS8evEouKD7H5Hj3kmuPERwddR2TxvDSFZuTj6T7Jfn1oyeUyJMydPl1Bkxkh0W7A==,
@@ -8466,15 +8452,15 @@ packages:
       react: "*"
       react-dom: "*"
     dependencies:
-      next: 13.4.4(@babel/core@7.22.5)(@opentelemetry/api@1.4.1)(react-dom@18.2.0)(react@18.2.0)
+      next: 13.4.7(@babel/core@7.22.5)(@opentelemetry/api@1.4.1)(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /next@13.4.4(@babel/core@7.22.5)(@opentelemetry/api@1.4.1)(react-dom@18.2.0)(react@18.2.0):
+  /next@13.4.7(@babel/core@7.22.5)(@opentelemetry/api@1.4.1)(react-dom@18.2.0)(react@18.2.0):
     resolution:
       {
-        integrity: sha512-C5S0ysM0Ily9McL4Jb48nOQHT1BukOWI59uC3X/xCMlYIh9rJZCv7nzG92J6e1cOBqQbKovlpgvHWFmz4eKKEA==,
+        integrity: sha512-M8z3k9VmG51SRT6v5uDKdJXcAqLzP3C+vaKfLIAM0Mhx1um1G7MDnO63+m52qPdZfrTFzMZNzfsgvm3ghuVHIQ==,
       }
     engines: { node: ">=16.8.0" }
     hasBin: true
@@ -8492,7 +8478,7 @@ packages:
       sass:
         optional: true
     dependencies:
-      "@next/env": 13.4.4
+      "@next/env": 13.4.7
       "@opentelemetry/api": 1.4.1
       "@swc/helpers": 0.5.1
       busboy: 1.6.0
@@ -8501,17 +8487,18 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       styled-jsx: 5.1.1(@babel/core@7.22.5)(react@18.2.0)
+      watchpack: 2.4.0
       zod: 3.21.4
     optionalDependencies:
-      "@next/swc-darwin-arm64": 13.4.4
-      "@next/swc-darwin-x64": 13.4.4
-      "@next/swc-linux-arm64-gnu": 13.4.4
-      "@next/swc-linux-arm64-musl": 13.4.4
-      "@next/swc-linux-x64-gnu": 13.4.4
-      "@next/swc-linux-x64-musl": 13.4.4
-      "@next/swc-win32-arm64-msvc": 13.4.4
-      "@next/swc-win32-ia32-msvc": 13.4.4
-      "@next/swc-win32-x64-msvc": 13.4.4
+      "@next/swc-darwin-arm64": 13.4.7
+      "@next/swc-darwin-x64": 13.4.7
+      "@next/swc-linux-arm64-gnu": 13.4.7
+      "@next/swc-linux-arm64-musl": 13.4.7
+      "@next/swc-linux-x64-gnu": 13.4.7
+      "@next/swc-linux-x64-musl": 13.4.7
+      "@next/swc-win32-arm64-msvc": 13.4.7
+      "@next/swc-win32-ia32-msvc": 13.4.7
+      "@next/swc-win32-x64-msvc": 13.4.7
     transitivePeerDependencies:
       - "@babel/core"
       - babel-plugin-macros
@@ -9774,7 +9761,7 @@ packages:
       }
     hasBin: true
     dependencies:
-      is-core-module: 2.12.0
+      is-core-module: 2.12.1
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
 
@@ -9785,7 +9772,7 @@ packages:
       }
     hasBin: true
     dependencies:
-      is-core-module: 2.12.0
+      is-core-module: 2.12.1
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
     dev: true
@@ -9882,7 +9869,7 @@ packages:
       }
     dependencies:
       call-bind: 1.0.2
-      get-intrinsic: 1.2.0
+      get-intrinsic: 1.2.1
       is-regex: 1.1.4
     dev: true
 
@@ -10015,7 +10002,7 @@ packages:
       }
     dependencies:
       call-bind: 1.0.2
-      get-intrinsic: 1.2.0
+      get-intrinsic: 1.2.1
       object-inspect: 1.12.3
 
   /signal-exit@3.0.7:
@@ -10222,7 +10209,7 @@ packages:
       call-bind: 1.0.2
       define-properties: 1.2.0
       es-abstract: 1.21.2
-      get-intrinsic: 1.2.0
+      get-intrinsic: 1.2.1
       has-symbols: 1.0.3
       internal-slot: 1.0.5
       regexp.prototype.flags: 1.5.0
@@ -11040,6 +11027,17 @@ packages:
       {
         integrity: sha512-gu73tuZfJgu+mvCSy4UZwd2JXykjK9zAZsfmDeut5dx/1a7FeTk0XwJsSuqQn+cuMCGVbIBfl+s53X4T19DnzQ==,
       }
+
+  /watchpack@2.4.0:
+    resolution:
+      {
+        integrity: sha512-Lcvm7MGST/4fup+ifyKi2hjyIAwcdI4HRgtvTpIUxBRhB+RFtUh8XtDOxUfctVCnhVi+QQj49i91OyvzkJl6cg==,
+      }
+    engines: { node: ">=10.13.0" }
+    dependencies:
+      glob-to-regexp: 0.4.1
+      graceful-fs: 4.2.11
+    dev: false
 
   /web-namespaces@2.0.1:
     resolution:
