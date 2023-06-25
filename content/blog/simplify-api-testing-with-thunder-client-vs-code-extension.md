@@ -19,6 +19,16 @@ Follow one of these options to install it:
 -  Search for `rangav.vscode-thunder-client` in VS Code Extensions panel and hit install.
 - [Install via the Visual Studio Code Marketplace →](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client).
 
+### Keyboard shortcut
+The extension uses `ctrl+shift+r` as the keyboard shortcut, which is the reserved VS Code shortcut for refactor. The extension will override it. To preserve the refactor shortcut, open the shortcut settings by pressing `ctrl+shift+p` and selecting `Open Keyboard Shortcuts (JSON)`. Then add this as a key binding:
+
+```json
+{
+	"key": "ctrl+shift+r",
+	"command": "editor.action.refactor"
+}
+```
+
 ## Thunder Client: A Lightweight Rest API Client Extension
 Thunder Client is a meticulously crafted Rest API Client Extension for Visual Studio Code. Thunder Client offers a simple and clean design that focuses on ease of use and efficiency. 
 
