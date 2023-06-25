@@ -19,7 +19,7 @@ export function DocsPageHeader({
         </h1>
         {text && <p className="text-xl text-slate-600">{text}</p>}
       </div>
-      <hr className="my-4 border-slate-200" />
+      <hr className="my-4 border-secondary" />
     </>
   )
 }

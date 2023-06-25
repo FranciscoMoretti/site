@@ -1,5 +1,6 @@
 import { allPosts } from "contentlayer/generated"
 import { compareDesc } from "date-fns"
+
 import { PostCard } from "@/components/post-card"
 
 export const revalidate = 0
@@ -35,7 +36,7 @@ export default async function BlogPage() {
           <p className="text-xl text-slate-600">Happy Coding! 😄🎉</p>
         </div>
       </div>
-      <hr className="my-8 border-slate-200" />
+      <hr className="my-8 border-secondary" />
       {posts?.length ? (
         <div className="grid gap-10 sm:grid-cols-2">
           {posts.map((post, index) => PostCard({ post, index }))}

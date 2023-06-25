@@ -90,7 +90,7 @@ export default async function PagePage({ params }: PageProps) {
           <p className="text-xl text-slate-600">{page.description}</p>
         )}
       </div>
-      <hr className="my-4 border-slate-200" />
+      <hr className="my-4 border-secondary" />
       <Mdx code={page.body.code} />
     </article>
   )
