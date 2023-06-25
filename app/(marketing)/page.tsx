@@ -7,6 +7,9 @@ import BlogSection from "@/components/blog-section"
 import { UserAvatar } from "@/components/user-avatar"
 
 async function getGitHubStars(): Promise<string | null> {
+  if (Boolean(process.env.DISABLE_DB)) {
+    return null
+  }
   try {
     const response = await fetch(
       "https://api.github.com/repos/franciscomoretti/site",
