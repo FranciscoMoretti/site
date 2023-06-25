@@ -2,7 +2,27 @@
 
 import { db } from "@/lib/db"
 
+export async function upsertPost(slug: string) {
+  if (Boolean(process.env.DISABLE_DB)) {
+    return null
+  }
+  const result = await db.post.upsert({
+    where: {
+      slug,
+    },
+    create: {
+      slug,
+      views: 0,
+    },
+    update: {},
+  })
+  return result
+}
+
 export async function updatePostViews({ slug }: { slug: string }) {
+  if (Boolean(process.env.DISABLE_DB)) {
+    return null
+  }
   const result = await db.post.update({
     where: {
       slug: slug,
@@ -17,6 +37,9 @@ export async function updatePostViews({ slug }: { slug: string }) {
 }
 
 export async function increasePostViews({ slug }: { slug: string }) {
+  if (Boolean(process.env.DISABLE_DB)) {
+    return null
+  }
   const result = await db.post.update({
     where: {
       slug: slug,
@@ -31,6 +54,9 @@ export async function increasePostViews({ slug }: { slug: string }) {
 }
 
 export async function getPostViews({ slug }: { slug: string }) {
+  if (Boolean(process.env.DISABLE_DB)) {
+    return null
+  }
   try {
     const result = await db.post.findUnique({
       select: {
@@ -42,14 +68,15 @@ export async function getPostViews({ slug }: { slug: string }) {
     })
     return result?.views
   } catch (error) {
-    if (process.env.NODE_ENV === "production") {
-      console.error(error)
-    }
+    console.error(error)
     return null
   }
 }
 
 export async function getAllViews() {
+  if (Boolean(process.env.DISABLE_DB)) {
+    return null
+  }
   const postsViews = await db.post.findMany({
     select: {
       slug: true,

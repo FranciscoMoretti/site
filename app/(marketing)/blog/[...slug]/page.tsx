@@ -5,11 +5,11 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { allAuthors, allPosts } from "contentlayer/generated"
 
-import { db } from "@/lib/db"
 import { absoluteUrl, formatDate } from "@/lib/utils"
 import { Icons } from "@/components/icons"
 import { Mdx } from "@/components/mdx"
 import { PostPageViews } from "@/components/post-page-views"
+import { upsertPost } from "@/app/(marketing)/actions"
 
 import "@/styles/mdx.css"
 
@@ -85,17 +85,7 @@ export async function generateStaticParams(): Promise<
   const promises = allPosts.map(async (post) => {
     const { slug } = post
     try {
-      const result = await db.post.upsert({
-        where: {
-          slug,
-        },
-        create: {
-          slug,
-          views: 0,
-        },
-        update: {},
-      })
-      return result
+      return await upsertPost(slug)
     } catch (error) {
       console.log(error)
     }
