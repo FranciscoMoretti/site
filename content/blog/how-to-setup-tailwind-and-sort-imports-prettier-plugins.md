@@ -69,7 +69,7 @@ I've tried many combinations of versions that had different bug fixes. These are
 
 Create a `prettier.config.js` file in the root directory of your project if you don't have one already. Open the file and add the following code:
 
-```tsx
+```ts
 /** @type {import('prettier').Config} */
 module.exports = {
   plugins: [
@@ -87,7 +87,7 @@ If you  use `pnpm` you'll need the `require` and `require.request` from the `pre
 ### My complete prettier config 
 Here is my full prettier conf that you can use as a starting point.
 
-```json
+```js
 /** @type {import('prettier').Config} */
 
 module.exports = {
