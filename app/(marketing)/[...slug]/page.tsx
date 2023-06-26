@@ -3,7 +3,7 @@ import { notFound } from "next/navigation"
 import { allPages } from "contentlayer/generated"
 
 import { siteConfig } from "@/config/site"
-import { routeToSlug } from "@/lib/path"
+import { routepathToSlug } from "@/lib/path"
 import { absoluteUrl } from "@/lib/utils"
 import { Mdx } from "@/components/mdx"
 
@@ -17,7 +17,7 @@ interface PageProps {
 
 async function getPageFromParams(params) {
   const slug = params?.slug?.join("/")
-  const page = allPages.find((page) => routeToSlug(page.routepath) === slug)
+  const page = allPages.find((page) => routepathToSlug(page.routepath) === slug)
 
   if (!page) {
     null
@@ -49,7 +49,7 @@ export async function generateMetadata({
       title: page.title,
       description: page.description,
       type: "article",
-      url: absoluteUrl(page.route),
+      url: absoluteUrl("/" + routepathToSlug(page.routepath)),
       images: [
         {
           url: ogUrl.toString(),
@@ -69,8 +69,12 @@ export async function generateMetadata({
 }
 
 export async function generateStaticParams(): Promise<PageProps["params"][]> {
+  allPages.map((doc) =>
+    console.log("route ", doc.route, " routepath: ", doc.routepath)
+  )
+
   return allPages.map((page) => ({
-    slug: [routeToSlug(page.routepath)],
+    slug: [routepathToSlug(page.routepath)],
   }))
 }
 

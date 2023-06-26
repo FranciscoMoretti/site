@@ -1,19 +1,20 @@
-import { DocsConfig } from "types"
 import { allDocs } from "contentlayer/generated"
+
+import { DocsConfig } from "types"
 import { siteConfig } from "@/config/site"
 
 const simplifiedDocs = allDocs
   .filter((doc) => doc.publish)
   .map((doc) => ({
     title: doc.title,
-    route: doc.route ? doc.route : "error_slug",
+    routepath: doc.routepath ? doc.routepath : "error_slug",
     category: doc.category,
     sidebar_position: doc.sidebar_position ? doc.sidebar_position : 0,
   }))
 
 interface DocPage {
   title: string
-  route: string
+  routepath: string
   category: string
   sidebar_position: number
 }
@@ -41,7 +42,7 @@ function transformDocPagesToConfig(docPages: DocPage[]): DocsConfig {
       title: category,
       items: pages.map((page) => ({
         title: page.title,
-        href: page.route,
+        href: page.routepath,
       })),
     }
     sidebarNav.push(sidebarSection)

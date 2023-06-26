@@ -1,6 +1,7 @@
 import { allDocuments } from "contentlayer/generated"
 import * as z from "zod"
 
+import { routepathToSlug } from "@/lib/path"
 import { absoluteUrl } from "@/lib/utils"
 import { ogImageSchema } from "@/lib/validations/og"
 
@@ -13,7 +14,9 @@ interface MdxHeadProps {
 
 export default function MdxHead({ params, og }: MdxHeadProps) {
   const slug = params?.slug?.join("/") || ""
-  const mdxDoc = allDocuments.find((doc) => doc.slugAsParams === slug)
+  const mdxDoc = allDocuments.find(
+    (doc) => routepathToSlug(doc.routepath) === slug
+  )
 
   if (!mdxDoc) {
     return null
@@ -36,7 +39,7 @@ export default function MdxHead({ params, og }: MdxHeadProps) {
   return (
     <>
       <title>{title}</title>
-      <link rel="canonical" href={absoluteUrl(mdxDoc.route)} />
+      <link rel="canonical" href={absoluteUrl(mdxDoc.routepath)} />
       <meta name="description" content={ogDescription} />
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width" />

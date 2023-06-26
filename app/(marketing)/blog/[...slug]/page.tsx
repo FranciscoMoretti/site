@@ -5,7 +5,7 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { allAuthors, allPosts } from "contentlayer/generated"
 
-import { routeToSlug } from "@/lib/path"
+import { routepathToSlug } from "@/lib/path"
 import { absoluteUrl, formatDate } from "@/lib/utils"
 import { Icons } from "@/components/icons"
 import { Mdx } from "@/components/mdx"
@@ -24,7 +24,7 @@ interface PostPageProps {
 
 async function getPostFromParams(params) {
   const slug = params?.slug?.join("/")
-  const post = allPosts.find((post) => routeToSlug(post.routepath) === slug)
+  const post = allPosts.find((post) => routepathToSlug(post.routepath) === slug)
 
   if (!post) {
     null
@@ -61,7 +61,7 @@ export async function generateMetadata({
       title: post.title,
       description: post.description,
       type: "article",
-      url: absoluteUrl(post.route),
+      url: absoluteUrl(post.routepath),
       images: [
         {
           url: ogUrl.toString(),
@@ -83,6 +83,10 @@ export async function generateMetadata({
 export async function generateStaticParams(): Promise<
   PostPageProps["params"][]
 > {
+  allPosts.map((doc) =>
+    console.log("route ", doc.route, " routepath: ", doc.routepath)
+  )
+
   const promises = allPosts.map(async (post) => {
     const { slug } = post
     try {
@@ -100,8 +104,6 @@ export async function generateStaticParams(): Promise<
       console.log("Error:", error)
     })
 
-  allPosts.map((page) => console.log(routeToSlug(page.routepath)))
-
   return allPosts.map((post) => ({
     slug: [post.slug],
   }))
@@ -115,7 +117,7 @@ export default async function PostPage({ params }: PostPageProps) {
   }
 
   const authors = post.authors.map((author) =>
-    allAuthors.find(({ route }) => route === `/authors/${author}`)
+    allAuthors.find(({ routepath }) => routepath === `/authors/${author}`)
   )
 
   return (

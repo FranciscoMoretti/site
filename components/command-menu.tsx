@@ -1,13 +1,14 @@
 "use client"
 
-import { DialogProps } from "@radix-ui/react-alert-dialog"
-import { Circle, File, Laptop, Moon, SunMedium, BookOpen } from "lucide-react"
-import { useTheme } from "next-themes"
-import { useRouter } from "next/navigation"
 import * as React from "react"
-
+import { useRouter } from "next/navigation"
 import { allPosts } from "@/.contentlayer/generated"
+import { DialogProps } from "@radix-ui/react-alert-dialog"
+import { BookOpen, Circle, File, Laptop, Moon, SunMedium } from "lucide-react"
+import { useTheme } from "next-themes"
 
+import { docsConfig } from "@/config/docs"
+import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import {
   CommandDialog,
@@ -18,8 +19,6 @@ import {
   CommandList,
   CommandSeparator,
 } from "@/components/ui/command"
-import { docsConfig } from "@/config/docs"
-import { cn } from "@/lib/utils"
 
 export function CommandMenu({ ...props }: DialogProps) {
   const router = useRouter()
@@ -108,7 +107,7 @@ export function CommandMenu({ ...props }: DialogProps) {
                   key={post.slug}
                   value={post.title}
                   onSelect={() => {
-                    runCommand(() => router.push(post.route as string))
+                    runCommand(() => router.push(post.routepath as string))
                   }}
                 >
                   <BookOpen className="mr-2 h-4 w-4" />

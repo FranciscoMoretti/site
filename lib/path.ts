@@ -1,7 +1,7 @@
-export function routeToSlug(route: string) {
-  if (route.startsWith("/")) {
+export function routepathToSlug(routepath: string) {
+  if (routepath.startsWith("/")) {
     // remove first /
-    route = route.slice(1)
+    routepath = routepath.slice(1)
   }
-  return route.split("/").slice(1).join("/")
+  return routepath.split("/").slice(1).join("/")
 }

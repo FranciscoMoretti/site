@@ -1,7 +1,6 @@
 ---
 title: About
 sidebar_position: 3
-slug: about
 ---
 
 I teach developers how to create better software and deliver it faster with code tips and productivity tools.

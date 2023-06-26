@@ -2,7 +2,7 @@ import { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { allDocs } from "contentlayer/generated"
 
-import { routeToSlug } from "@/lib/path"
+import { routepathToSlug } from "@/lib/path"
 import { getTableOfContents } from "@/lib/toc"
 import { absoluteUrl } from "@/lib/utils"
 import { Mdx } from "@/components/mdx"
@@ -20,7 +20,7 @@ interface DocPageProps {
 
 async function getDocFromParams(params) {
   const slug = params.slug?.join("/") || ""
-  const doc = allDocs.find((doc) => routeToSlug(doc.routepath) === slug)
+  const doc = allDocs.find((doc) => routepathToSlug(doc.routepath) === slug)
 
   if (!doc) {
     null
@@ -54,7 +54,7 @@ export async function generateMetadata({
       title: doc.title,
       description: doc.description,
       type: "article",
-      url: absoluteUrl(doc.route),
+      url: absoluteUrl(doc.routepath),
       images: [
         {
           url: ogUrl.toString(),
@@ -76,8 +76,11 @@ export async function generateMetadata({
 export async function generateStaticParams(): Promise<
   DocPageProps["params"][]
 > {
+  allDocs.map((doc) =>
+    console.log("route ", doc.route, " routepath: ", doc.routepath)
+  )
   return allDocs.map((doc) => ({
-    slug: [routeToSlug(doc.routepath)],
+    slug: [routepathToSlug(doc.routepath)],
   }))
 }
 

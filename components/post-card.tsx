@@ -1,9 +1,11 @@
-import { Post } from "@/.contentlayer/generated"
+import { Suspense } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { Suspense } from "react"
-import { PostCardViews } from "@/components/post-card-views"
+import { Post } from "@/.contentlayer/generated"
+
 import { formatDate } from "@/lib/utils"
+import { PostCardViews } from "@/components/post-card-views"
+
 import { Badge } from "./ui/badge"
 
 export function PostCard({
@@ -45,7 +47,7 @@ export function PostCard({
           <PostCardViews slug={post.slug} />
         </Suspense>
       </div>
-      <Link href={post.route} className="absolute inset-0">
+      <Link href={post.routepath} className="absolute inset-0">
         <span className="sr-only">View Article</span>
       </Link>
     </article>
