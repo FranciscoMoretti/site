@@ -3,6 +3,7 @@ import { notFound } from "next/navigation"
 import { allPages } from "contentlayer/generated"
 
 import { siteConfig } from "@/config/site"
+import { routeToSlug } from "@/lib/path"
 import { absoluteUrl } from "@/lib/utils"
 import { Mdx } from "@/components/mdx"
 
@@ -16,7 +17,7 @@ interface PageProps {
 
 async function getPageFromParams(params) {
   const slug = params?.slug?.join("/")
-  const page = allPages.find((page) => page.slugAsParams === slug)
+  const page = allPages.find((page) => routeToSlug(page.routepath) === slug)
 
   if (!page) {
     null
@@ -69,7 +70,7 @@ export async function generateMetadata({
 
 export async function generateStaticParams(): Promise<PageProps["params"][]> {
   return allPages.map((page) => ({
-    slug: page.slugAsParams.split("/"),
+    slug: [routeToSlug(page.routepath)],
   }))
 }
 

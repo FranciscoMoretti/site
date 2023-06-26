@@ -5,6 +5,7 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { allAuthors, allPosts } from "contentlayer/generated"
 
+import { routeToSlug } from "@/lib/path"
 import { absoluteUrl, formatDate } from "@/lib/utils"
 import { Icons } from "@/components/icons"
 import { Mdx } from "@/components/mdx"
@@ -23,7 +24,7 @@ interface PostPageProps {
 
 async function getPostFromParams(params) {
   const slug = params?.slug?.join("/")
-  const post = allPosts.find((post) => post.slugAsParams === slug)
+  const post = allPosts.find((post) => routeToSlug(post.routepath) === slug)
 
   if (!post) {
     null
@@ -99,8 +100,10 @@ export async function generateStaticParams(): Promise<
       console.log("Error:", error)
     })
 
+  allPosts.map((page) => console.log(routeToSlug(page.routepath)))
+
   return allPosts.map((post) => ({
-    slug: post.slugAsParams.split("/"),
+    slug: [post.slug],
   }))
 }
 

@@ -1,6 +1,7 @@
 ---
 title: Terms & Conditions
 description: Read our terms and conditions.
+slug: terms
 ---
 
 ## Legal Notices

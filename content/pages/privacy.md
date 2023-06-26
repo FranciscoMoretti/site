@@ -1,6 +1,7 @@
 ---
 title: Privacy
 description: The Privacy Policy for Taxonomy App.
+slug: privacy
 ---
 
 ## Consent

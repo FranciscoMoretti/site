@@ -1,12 +1,13 @@
+import path from "path"
+import { getPermalinks, remarkWikiLink } from "@flowershow/remark-wiki-link"
 import { defineDocumentType, makeSource } from "contentlayer/source-files"
-import remarkGfm from "remark-gfm"
+import rehypeAutolinkHeadings from "rehype-autolink-headings"
 import rehypePrettyCode from "rehype-pretty-code"
 import rehypeSlug from "rehype-slug"
-
-import rehypeAutolinkHeadings from "rehype-autolink-headings"
-import { remarkWikiLink, getPermalinks } from "@flowershow/remark-wiki-link"
-import { siteConfig } from "./config/site"
+import remarkGfm from "remark-gfm"
 import { visit } from "unist-util-visit"
+
+import { siteConfig } from "./config/site"
 
 /** @type {import('contentlayer/source-files').ComputedFields} */
 const computedFields = {
@@ -14,9 +15,12 @@ const computedFields = {
     type: "string",
     resolve: (doc) => `/${doc._raw.flattenedPath}`,
   },
-  slugAsParams: {
+  routepath: {
     type: "string",
-    resolve: (doc) => doc._raw.flattenedPath.split("/").slice(1).join("/"),
+    resolve: (doc) =>
+      doc.slug
+        ? path.join("/", path.dirname(doc._raw.flattenedPath), doc.slug)
+        : path.join("/", doc._raw.flattenedPath),
   },
   tags: {
     type: "list",
@@ -126,6 +130,10 @@ export const Author = defineDocumentType(() => ({
       type: "string",
       required: true,
     },
+    slug: {
+      type: "string",
+      required: true,
+    },
     twitter: {
       type: "string",
       required: true,
@@ -145,6 +153,10 @@ export const Page = defineDocumentType(() => ({
     },
     description: {
       type: "string",
+    },
+    slug: {
+      type: "string",
+      required: true,
     },
     sidebar_position: {
       type: "number",
