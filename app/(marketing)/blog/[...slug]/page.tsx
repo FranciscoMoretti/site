@@ -83,10 +83,6 @@ export async function generateMetadata({
 export async function generateStaticParams(): Promise<
   PostPageProps["params"][]
 > {
-  allPosts.map((doc) =>
-    console.log("route ", doc.route, " routepath: ", doc.routepath)
-  )
-
   const promises = allPosts.map(async (post) => {
     const { slug } = post
     try {

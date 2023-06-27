@@ -69,10 +69,6 @@ export async function generateMetadata({
 }
 
 export async function generateStaticParams(): Promise<PageProps["params"][]> {
-  allPages.map((doc) =>
-    console.log("route ", doc.route, " routepath: ", doc.routepath)
-  )
-
   return allPages.map((page) => ({
     slug: [routepathToSlug(page.routepath)],
   }))
