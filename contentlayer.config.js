@@ -11,10 +11,6 @@ import { siteConfig } from "./config/site"
 
 /** @type {import('contentlayer/source-files').ComputedFields} */
 const computedFields = {
-  route: {
-    type: "string",
-    resolve: (doc) => `/${doc._raw.flattenedPath}`,
-  },
   routepath: {
     type: "string",
     resolve: (doc) =>
