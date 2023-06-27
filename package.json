@@ -28,7 +28,7 @@
     "@editorjs/list": "^1.7.0",
     "@editorjs/paragraph": "^2.8.0",
     "@editorjs/table": "^2.0.4",
-    "@flowershow/remark-wiki-link": "^1.2.0",
+    "@portaljs/remark-wiki-link": "^1.0.4",
     "@hookform/resolvers": "^2.9.10",
     "@prisma/client": "^4.15.0",
     "@radix-ui/react-accessible-icon": "^1.0.1",
