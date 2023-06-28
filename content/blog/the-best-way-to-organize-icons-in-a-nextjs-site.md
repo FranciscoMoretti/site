@@ -1,5 +1,5 @@
 ---
-tag: Next.js, TailwindCS, UI
+tag: Next.js, TailwindCSS, UI
 alias:
 
 publish: true

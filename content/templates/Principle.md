@@ -11,4 +11,3 @@ date: {{date}}
 
 ---
 
-content...

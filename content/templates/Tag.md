@@ -8,4 +8,3 @@ date: {{date}}
 image:
 ---
 
-Content

@@ -1,5 +1,5 @@
 ---
-tag: VSCode
+tag: VS Code
 alias:
 
 publish: true
