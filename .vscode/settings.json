@@ -11,6 +11,9 @@
   },
   // Edit open and close HTML tags together
   "editor.linkedEditing": true,
+  // Don't autofold classes by default. ctrl+alt+a fold/unfolds
+  "tailwind-fold.autoFold": false,
+
   "tailwindCSS.emmetCompletions": true,
   "tailwindCSS.experimental.classRegex": [
     ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
