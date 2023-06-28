@@ -13,6 +13,7 @@ import { PostPageViews } from "@/components/post-page-views"
 import "@/styles/mdx.css"
 
 import { getAllTags } from "@/lib/tags"
+import BlogPostList from "@/components/blog-post-list"
 
 export const revalidate = 0
 
@@ -113,20 +114,17 @@ export default async function PostPage({ params }: PostPageProps) {
   return (
     <article className="container relative max-w-3xl py-6 lg:py-10">
       <div>
-        <h1 className="mt-2 inline-block text-4xl font-extrabold leading-tight text-slate-900 lg:text-5xl">
+        <h1 className="mt-2 inline-block text-4xl font-extrabold leading-tight text-slate-900 lg:text-6xl">
           {tag.title}
         </h1>
       </div>
       <hr className="my-4 border-secondary" />
       <Mdx code={tag.body.code} />
       <hr className="my-4 border-slate-200" />
-      <div className="">
-        <h2 className="mt-10 scroll-m-20 border-b border-b-slate-200 pb-1 text-3xl font-semibold tracking-tight first:mt-0">
-          All posts on {tag.title}
-        </h2>
-      </div>
-      {posts && posts.map((post) => <div key={post.title}>{post.title}</div>)}
-
+      <h2 className="mb-4 scroll-m-20 pb-1 text-3xl font-semibold tracking-tight first:mt-0 md:text-4xl">
+        {`All posts on ${tag.title}`}
+      </h2>
+      <BlogPostList posts={posts} />
       <hr className="my-4 border-secondary" />
       <div className="flex justify-center py-6 lg:py-10">
         <Link
