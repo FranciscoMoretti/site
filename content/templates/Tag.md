@@ -1,5 +1,6 @@
 ---
 slug: {{title}}
+tag:
 
 title:
 description:
