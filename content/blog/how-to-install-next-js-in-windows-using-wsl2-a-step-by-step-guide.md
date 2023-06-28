@@ -1,5 +1,5 @@
 ---
-tag: Next.js, WSL2, Windows, VSCode
+tag: Next.js, Windows, VS Code
 alias:
 
 publish: true

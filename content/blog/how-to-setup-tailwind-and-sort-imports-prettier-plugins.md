@@ -1,5 +1,5 @@
 ---
-tag: Prettier, TailwindCSS, pnpm
+tag: Tools, TailwindCSS
 alias:
 
 publish: true

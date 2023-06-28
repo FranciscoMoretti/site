@@ -1,5 +1,5 @@
 ---
-tag: UI, React.js
+tag: UI, React
 alias:
 
 publish: true

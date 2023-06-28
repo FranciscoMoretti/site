@@ -1,5 +1,5 @@
 ---
-tag: Next.js, Ubuntu, VSCode
+tag: Next.js, Ubuntu, VS Code
 alias:
 
 publish: true

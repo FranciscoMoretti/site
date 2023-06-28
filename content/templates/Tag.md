@@ -1,13 +1,10 @@
 ---
-alias:
-category:
-
-publish: true
 slug: {{title}}
+tag:
 
 title:
 description:
 date: {{date}}
-
+image:
 ---
 

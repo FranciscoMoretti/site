@@ -1,5 +1,5 @@
 ---
-tag: VS Code, Prettier
+tag: VS Code, Tools
 alias:
 
 publish: true

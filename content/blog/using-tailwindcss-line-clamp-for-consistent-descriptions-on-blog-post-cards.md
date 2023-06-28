@@ -1,5 +1,5 @@
 ---
-tag: TailwindCSS
+tag: TailwindCSS, UI
 alias:
 
 publish: true

@@ -1,5 +1,5 @@
 ---
-tag: Next.js, VSCode, Docker
+tag: Next.js, VS Code, Tools
 alias:
 
 publish: true

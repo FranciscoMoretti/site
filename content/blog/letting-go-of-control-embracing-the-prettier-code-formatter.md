@@ -1,5 +1,5 @@
 ---
-tag: Prettier
+tag: Tools, Best Practices
 alias:
 
 publish: true

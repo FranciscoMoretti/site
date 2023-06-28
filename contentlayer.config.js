@@ -1,5 +1,5 @@
 import path from "path"
-import { getPermalinks, remarkWikiLink } from "@flowershow/remark-wiki-link"
+import { getPermalinks, remarkWikiLink } from "@portaljs/remark-wiki-link"
 import { defineDocumentType, makeSource } from "contentlayer/source-files"
 import rehypeAutolinkHeadings from "rehype-autolink-headings"
 import rehypePrettyCode from "rehype-pretty-code"
@@ -11,10 +11,6 @@ import { siteConfig } from "./config/site"
 
 /** @type {import('contentlayer/source-files').ComputedFields} */
 const computedFields = {
-  route: {
-    type: "string",
-    resolve: (doc) => `/${doc._raw.flattenedPath}`,
-  },
   routepath: {
     type: "string",
     resolve: (doc) =>
@@ -114,6 +110,39 @@ export const Post = defineDocumentType(() => ({
   computedFields,
 }))
 
+export const Tag = defineDocumentType(() => ({
+  name: "Tag",
+  filePathPattern: `tag/**/*.md*`,
+  contentType: "mdx",
+  fields: {
+    title: {
+      type: "string",
+      required: true,
+    },
+    description: {
+      type: "string",
+    },
+    date: {
+      type: "date",
+      required: true,
+    },
+    slug: {
+      type: "string",
+      required: true,
+    },
+    image: {
+      type: "string",
+      required: false,
+    },
+    tag: {
+      type: "string",
+      required: true,
+      default: "",
+    },
+  },
+  computedFields,
+}))
+
 export const Author = defineDocumentType(() => ({
   name: "Author",
   filePathPattern: `authors/**/*.md*`,
@@ -188,7 +217,7 @@ export default makeSource(async () => {
       ...siteConfig.contentExclude,
     ]),
     onExtraFieldData: "ignore",
-    documentTypes: [Page, Doc, Post, Author],
+    documentTypes: [Page, Doc, Post, Author, Tag],
     mdx: {
       cwd: process.cwd(),
       remarkPlugins: [

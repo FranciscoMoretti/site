@@ -1,9 +1,12 @@
 import Link from "next/link"
+import { allPosts, allTags } from "contentlayer/generated"
+import { compareDesc } from "date-fns"
 
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
-import BlogSection from "@/components/blog-section"
+import BlogPostList from "@/components/blog-post-list"
+import { getTagsItems, TagGroup } from "@/components/tag-group"
 import { UserAvatar } from "@/components/user-avatar"
 
 async function getGitHubStars(): Promise<string | null> {
@@ -38,6 +41,14 @@ async function getGitHubStars(): Promise<string | null> {
 
 export default async function IndexPage() {
   const stars = await getGitHubStars()
+  const tagsItems = await getTagsItems(allTags)
+
+  const posts = allPosts
+    .filter((post) => post.publish)
+    .sort((a, b) => {
+      return compareDesc(new Date(a.date), new Date(b.date))
+    })
+    .slice(0, 4)
 
   return (
     <>
@@ -68,7 +79,28 @@ export default async function IndexPage() {
       </section>
       <hr className="container border-secondary" />
       <section className="container space-y-8 py-8 md:max-w-4xl md:py-12 lg:py-16">
-        <BlogSection MAX_DISPLAY={3} />
+        <h2 className="mb-4 scroll-m-20 pb-1 text-2xl font-semibold tracking-tight first:mt-0 md:text-5xl">
+          {"Recent Posts"}
+        </h2>
+        <BlogPostList posts={posts} />
+        {allPosts.length > posts.length && (
+          <div className="flex justify-end text-base font-medium leading-6">
+            <Link
+              href="/blog"
+              className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+              aria-label="all posts"
+            >
+              All Posts &rarr;
+            </Link>
+          </div>
+        )}
+      </section>
+      <hr className="container border-secondary" />
+      <section className="container space-y-8 py-8 md:max-w-4xl md:py-12 lg:py-16">
+        <h2 className="mb-4 scroll-m-20 pb-1 text-2xl font-semibold tracking-tight first:mt-0 md:text-5xl">
+          All topics
+        </h2>
+        <TagGroup tagsItems={tagsItems} />
       </section>
       <hr className="container border-secondary" />
       <section className="space-6 container py-8 md:max-w-4xl md:py-12 lg:py-24">
@@ -89,6 +121,7 @@ export default async function IndexPage() {
             </Link>
             .
           </p>
+
           {stars && (
             <Link
               href={siteConfig.links.github}

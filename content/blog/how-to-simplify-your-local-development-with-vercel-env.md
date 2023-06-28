@@ -1,5 +1,5 @@
 ---
-tag: Vercel, CLI, Tool
+tag: Services, CLI, Tools
 alias:
 
 publish: true
