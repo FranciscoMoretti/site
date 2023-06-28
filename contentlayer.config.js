@@ -1,5 +1,5 @@
 import path from "path"
-import { getPermalinks, remarkWikiLink } from "@flowershow/remark-wiki-link"
+import { getPermalinks, remarkWikiLink } from "@portaljs/remark-wiki-link"
 import { defineDocumentType, makeSource } from "contentlayer/source-files"
 import rehypeAutolinkHeadings from "rehype-autolink-headings"
 import rehypePrettyCode from "rehype-pretty-code"
