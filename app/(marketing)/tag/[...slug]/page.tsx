@@ -1,21 +1,17 @@
-import { Suspense } from "react"
 import { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { allPosts, allTags } from "contentlayer/generated"
 
 import { routepathToSlug } from "@/lib/path"
-import { absoluteUrl, formatDate } from "@/lib/utils"
+import { getAllTags } from "@/lib/tags"
+import { absoluteUrl } from "@/lib/utils"
+import BlogPostList from "@/components/blog-post-list"
 import { Icons } from "@/components/icons"
 import { Mdx } from "@/components/mdx"
-import { PostPageViews } from "@/components/post-page-views"
+import { getTagsItems, TagGroup } from "@/components/tag-group"
 
 import "@/styles/mdx.css"
-
-import { getAllTags } from "@/lib/tags"
-import BlogPostList from "@/components/blog-post-list"
-
-export const revalidate = 0
 
 interface PostPageProps {
   params: {
@@ -109,6 +105,7 @@ export default async function PostPage({ params }: PostPageProps) {
     notFound()
   }
 
+  const tagsItems = await getTagsItems(allTags)
   const posts = await getPostsOfTag(tag.tag)
 
   return (
@@ -126,6 +123,11 @@ export default async function PostPage({ params }: PostPageProps) {
       </h2>
       <BlogPostList posts={posts} />
       <hr className="my-4 border-secondary" />
+      <h2 className="mb-4 scroll-m-20 pb-1 text-3xl font-semibold tracking-tight first:mt-0 md:text-4xl">
+        All topics
+      </h2>
+      <TagGroup tagsItems={tagsItems} />
+
       <div className="flex justify-center py-6 lg:py-10">
         <Link
           href="/blog"
