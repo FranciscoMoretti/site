@@ -1,9 +1,11 @@
 import Link from "next/link"
+import { allPosts } from "contentlayer/generated"
+import { compareDesc } from "date-fns"
 
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
-import BlogSection from "@/components/blog-section"
+import BlogPostList from "@/components/blog-section"
 import { UserAvatar } from "@/components/user-avatar"
 
 async function getGitHubStars(): Promise<string | null> {
@@ -39,6 +41,13 @@ async function getGitHubStars(): Promise<string | null> {
 export default async function IndexPage() {
   const stars = await getGitHubStars()
 
+  const posts = allPosts
+    .filter((post) => post.publish)
+    .sort((a, b) => {
+      return compareDesc(new Date(a.date), new Date(b.date))
+    })
+    .slice(0, 4)
+
   return (
     <>
       <section className="container flex flex-col-reverse items-center justify-center gap-6 pb-8 pt-6 sm:flex-row md:pb-12 md:pt-10 lg:pb-24 lg:pt-16">
@@ -68,7 +77,18 @@ export default async function IndexPage() {
       </section>
       <hr className="container border-secondary" />
       <section className="container space-y-8 py-8 md:max-w-4xl md:py-12 lg:py-16">
-        <BlogSection MAX_DISPLAY={3} />
+        <BlogPostList posts={posts} title={"Recent Posts"} />
+        {allPosts.length > posts.length && (
+          <div className="flex justify-end text-base font-medium leading-6">
+            <Link
+              href="/blog"
+              className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+              aria-label="all posts"
+            >
+              All Posts &rarr;
+            </Link>
+          </div>
+        )}
       </section>
       <hr className="container border-secondary" />
       <section className="space-6 container py-8 md:max-w-4xl md:py-12 lg:py-24">
