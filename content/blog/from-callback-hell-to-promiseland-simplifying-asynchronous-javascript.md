@@ -1,5 +1,5 @@
 ---
-tag: JavaScript
+tag: JavaScript, Best Practices
 alias:
 
 publish: true

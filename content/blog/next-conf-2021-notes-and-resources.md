@@ -1,5 +1,5 @@
 ---
-tag: Next.js, Vercel
+tag: Next.js, Services
 alias:
 
 publish: true

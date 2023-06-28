@@ -1,5 +1,5 @@
 ---
-tag: Git, Github
+tag: Git, Ubuntu
 alias:
 
 publish: true

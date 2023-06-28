@@ -1,5 +1,5 @@
 ---
-tag: EsLint
+tag: Tools, Best Practices
 alias:
 
 publish: true

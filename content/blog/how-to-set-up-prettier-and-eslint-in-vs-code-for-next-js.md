@@ -1,5 +1,5 @@
 ---
-tag: Next.js, VS Code, ESLint, Prettier
+tag: Next.js, VS Code, Tools
 alias:
 
 publish: true

@@ -1,5 +1,5 @@
 ---
-tag: Next.js, Performance, TailwindCSS
+tag: Next.js, TailwindCSS, Performance
 alias:
 
 publish: true

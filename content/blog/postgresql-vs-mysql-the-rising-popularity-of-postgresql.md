@@ -1,5 +1,5 @@
 ---
-tag: DB, Trends
+tag: Database
 alias:
 
 publish: true
