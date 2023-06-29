@@ -3,7 +3,7 @@ import { compareDesc } from "date-fns"
 
 import { PostCard } from "@/components/post-card"
 
-export const revalidate = 0
+export const revalidate = 60
 
 export const metadata = {
   title: "Blog",

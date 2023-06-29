@@ -1,4 +1,3 @@
-import { Suspense } from "react"
 import { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
@@ -14,7 +13,7 @@ import { upsertPost } from "@/app/(marketing)/actions"
 
 import "@/styles/mdx.css"
 
-export const revalidate = 0
+export const revalidate = 60
 
 interface PostPageProps {
   params: {
