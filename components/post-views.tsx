@@ -6,7 +6,6 @@ export function PostViews({ slug }: { slug: string }) {
   return (
     <span title="views">
       <Suspense fallback={<>{"..."}</>}>
-        {/* @ts-expect-error async component */}
         <ViewCount slug={slug} />
       </Suspense>{" "}
       views
