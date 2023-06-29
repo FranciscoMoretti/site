@@ -9,7 +9,7 @@ import { routepathToSlug } from "@/lib/path"
 import { absoluteUrl, formatDate } from "@/lib/utils"
 import { Icons } from "@/components/icons"
 import { Mdx } from "@/components/mdx"
-import { PostPageViews } from "@/components/post-page-views"
+import { PostViews } from "@/components/post-views"
 import { upsertPost } from "@/app/(marketing)/actions"
 
 import "@/styles/mdx.css"
@@ -134,7 +134,7 @@ export default async function PostPage({ params }: PostPageProps) {
           )}
           <Suspense fallback={<span>Loading…</span>}>
             {/* @ts-expect-error async component */}
-            <PostPageViews slug={post.slug} />
+            <PostViews slug={post.slug} />
           </Suspense>
         </div>
         <h1 className="mt-2 inline-block text-4xl font-extrabold leading-tight text-slate-900 lg:text-5xl">
