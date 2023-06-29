@@ -4,7 +4,7 @@ import Link from "next/link"
 import { Post } from "@/.contentlayer/generated"
 
 import { formatDate } from "@/lib/utils"
-import { PostCardViews } from "@/components/post-card-views"
+import { PostViews } from "@/components/post-views"
 
 import { Badge } from "./ui/badge"
 
@@ -44,7 +44,7 @@ export function PostCard({
         )}
         <Suspense fallback={<span>Loading…</span>}>
           {/* @ts-expect-error async function */}
-          <PostCardViews slug={post.slug} />
+          <PostViews slug={post.slug} />
         </Suspense>
       </div>
       <Link href={post.routepath} className="absolute inset-0">
