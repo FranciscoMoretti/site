@@ -42,10 +42,7 @@ export function PostCard({
         {post.date && (
           <p className="text-sm text-slate-600">{formatDate(post.date)}</p>
         )}
-        <Suspense fallback={<span>Loading…</span>}>
-          {/* @ts-expect-error async function */}
-          <PostViews slug={post.slug} />
-        </Suspense>
+        <PostViews slug={post.slug} />
       </div>
       <Link href={post.routepath} className="absolute inset-0">
         <span className="sr-only">View Article</span>

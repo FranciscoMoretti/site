@@ -132,10 +132,7 @@ export default async function PostPage({ params }: PostPageProps) {
               Published on {formatDate(post.date)}
             </time>
           )}
-          <Suspense fallback={<span>Loading…</span>}>
-            {/* @ts-expect-error async component */}
-            <PostViews slug={post.slug} />
-          </Suspense>
+          <PostViews slug={post.slug} />
         </div>
         <h1 className="mt-2 inline-block text-4xl font-extrabold leading-tight text-slate-900 lg:text-5xl">
           {post.title}
