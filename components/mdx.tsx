@@ -1,11 +1,13 @@
-import { Callout } from "@/components/callout"
-import { Card } from "@/components/card"
-import { cn } from "@/lib/utils"
-import sizeOf from "image-size"
-import { useMDXComponent } from "next-contentlayer/hooks"
-import Image from "next/image"
 import path from "path"
 import * as React from "react"
+import Image from "next/image"
+import sizeOf from "image-size"
+import { useMDXComponent } from "next-contentlayer/hooks"
+
+import { cn } from "@/lib/utils"
+import { Callout } from "@/components/callout"
+import { Card } from "@/components/card"
+
 import { CopyButton } from "./copy-button"
 
 const components = {
@@ -96,11 +98,7 @@ const components = {
       {...props}
     />
   ),
-  img: ({
-    className,
-    alt,
-    ...props
-  }: React.ImgHTMLAttributes<HTMLImageElement>) => {
+  img: ({ className, alt, ...props }) => {
     if (props.src?.endsWith(".gif") && props.src?.startsWith("/")) {
       const srcAbsPath = path.join(process.cwd(), "public", props.src)
       const dimensions = sizeOf(srcAbsPath)
@@ -109,7 +107,8 @@ const components = {
         console.error(
           `Image [${props.src}] has incomplete dimensions [${dimensions}]`
         )
-        return <></>
+        // eslint-disable-next-line @next/next/no-img-element
+        return <img src={srcAbsPath} alt=""></img>
       }
       return (
         <Image
@@ -217,6 +216,7 @@ export function Mdx({ code }: MdxProps) {
 
   return (
     <div className="mdx">
+      {/* @ts-expect-error MDX assignment type mismatch*/}
       <Component components={components} />
     </div>
   )
