@@ -6,7 +6,7 @@ publish: true
 slug: use-consistent-capitalization
 
 title: Use consistent capitalization
-description:
+description: Choose a capitalization style for variables, functions, and other identifiers, and adhere to it throughout your codebase. Consistency improves code readability.
 date: 2023-06-27
 
 ---
