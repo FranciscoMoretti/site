@@ -6,7 +6,7 @@ publish: true
 slug: write-everything-twice-wet
 
 title: Write Everything Twice (WET)
-description: Code duplication is often frowned upon in software development, as it violates the Don't Repeat Yourself (DRY) principle. However, in certain situations, it can be more beneficial to have duplicated code rather than introducing premature abstraction.
+description: Code duplication is often frowned upon. However, it can be more beneficial to have duplicated code rather than introducing premature abstraction.
 date: 2023-06-22
 
 ---
