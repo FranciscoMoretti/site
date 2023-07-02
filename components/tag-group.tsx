@@ -22,7 +22,7 @@ export function TagGroup({ tagsItems }: { tagsItems: Item[] }) {
     <div className="m-auto mt-4 flex max-w-2xl flex-row flex-wrap items-center justify-center">
       {tagsItems &&
         tagsItems.map((item) => (
-          <Link key={item.title} href={item.url} className="m-0.5">
+          <Link key={item.tag} href={item.url} className="m-0.5">
             <Badge variant="default" className="text-md">
               {item.title}
             </Badge>
