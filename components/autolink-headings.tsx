@@ -1,7 +1,9 @@
 import React, { isValidElement, ReactNode } from "react"
-import { kebabCase } from "lodash"
+import GithubSlugger from "github-slugger"
 
 import { cn } from "@/lib/utils"
+
+const slugger = new GithubSlugger()
 
 interface FirstChildProps {
   children: ReactNode
@@ -20,7 +22,7 @@ export function AutoLinkHeader({
 
   if (isValidElement(firstChild) && /^h[1-6]$/.test(firstChild.type)) {
     const firstGrandChild = React.Children.toArray(firstChild.props.children)[0]
-    const headerSlug = kebabCase(firstGrandChild.toString())
+    const headerSlug = slugger.slug(firstGrandChild.toString())
     return React.cloneElement(firstChild, {
       className: cn(firstChild.props.className, className),
       id: headerSlug,
