@@ -137,7 +137,6 @@ export const Tag = defineDocumentType(() => ({
     tag: {
       type: "string",
       required: true,
-      default: "",
     },
   },
   computedFields,
