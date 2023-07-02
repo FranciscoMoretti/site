@@ -20,10 +20,14 @@ export function AutoLinkHeader({
 }: FirstChildProps): JSX.Element | null {
   const firstChild = React.Children.toArray(children)[0]
 
-  if (isValidElement(firstChild) && /^h[1-6]$/.test(firstChild.type)) {
+  if (
+    isValidElement(firstChild) &&
+    /^h[1-6]$/.test(firstChild.type as string)
+  ) {
     const firstGrandChild = React.Children.toArray(firstChild.props.children)[0]
     const headerSlug = slugger.slug(firstGrandChild.toString())
     return React.cloneElement(firstChild, {
+      // @ts-expect-error className could not be part of element
       className: cn(firstChild.props.className, className),
       id: headerSlug,
       children: (
