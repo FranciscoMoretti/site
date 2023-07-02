@@ -147,16 +147,6 @@ export default async function PostPage({ params }: PostPageProps) {
         All topics
       </h2>
       <TagGroup tagsItems={tagsItems} />
-
-      <div className="flex justify-center py-6 lg:py-10">
-        <Link
-          href="/blog"
-          className="inline-flex items-center justify-center text-sm font-medium text-slate-600 hover:text-slate-900"
-        >
-          <Icons.chevronLeft className="mr-2 h-4 w-4" />
-          See all posts
-        </Link>
-      </div>
     </article>
   )
 }
