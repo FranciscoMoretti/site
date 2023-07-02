@@ -121,7 +121,22 @@ export default async function PostPage({ params }: PostPageProps) {
       <h2 className="mb-4 scroll-m-20 pb-1 text-3xl font-semibold tracking-tight first:mt-0 md:text-4xl">
         {`All posts on ${tag.tag}`}
       </h2>
-      <BlogPostList posts={posts} />
+      {posts?.length ? (
+        <ul className="my-6 ml-6 list-disc">
+          {posts.map((post) => (
+            <li className="mt-2" key={post.routepath}>
+              <Link
+                href={post.routepath}
+                className="font-medium text-slate-900 underline underline-offset-4"
+              >
+                {post.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>No posts published.</p>
+      )}
       <hr className="my-4 border-secondary" />
       <h2 className="mb-4 scroll-m-20 pb-1 text-3xl font-semibold tracking-tight first:mt-0 md:text-4xl">
         All topics
