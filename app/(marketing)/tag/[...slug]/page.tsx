@@ -119,7 +119,7 @@ export default async function PostPage({ params }: PostPageProps) {
       <Mdx code={tag.body.code} />
       <hr className="my-4 border-slate-200" />
       <h2 className="mb-4 scroll-m-20 pb-1 text-3xl font-semibold tracking-tight first:mt-0 md:text-4xl">
-        {`All posts on ${tag.title}`}
+        {`All posts on ${tag.tag}`}
       </h2>
       <BlogPostList posts={posts} />
       <hr className="my-4 border-secondary" />
