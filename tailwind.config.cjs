@@ -8,6 +8,7 @@ module.exports = {
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./ui/**/*.{ts,tsx}",
+    "./styles/**/*.{ts,tsx}",
     "./content/**/*.{md,mdx}",
     "contentlayer.config.js",
   ],
