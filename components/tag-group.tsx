@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge"
 
 interface Item {
   title: string
+  tag: string
   url: string
   items?: Item[]
 }
@@ -13,6 +14,7 @@ export async function getTagsItems(tags: Tag[]): Promise<Item[]> {
   const items: Item[] = tags.map((tag) => ({
     title: tag.title,
     url: tag.routepath,
+    tag: tag.tag,
   }))
   return items
 }
@@ -24,7 +26,7 @@ export function TagGroup({ tagsItems }: { tagsItems: Item[] }) {
         tagsItems.map((item) => (
           <Link key={item.tag} href={item.url} className="m-0.5">
             <Badge variant="default" className="text-md">
-              {item.title}
+              {item.tag}
             </Badge>
           </Link>
         ))}
