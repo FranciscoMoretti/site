@@ -1,16 +1,21 @@
 {
-  "typescript.tsdk": "node_modules/.pnpm/typescript@4.7.4/node_modules/typescript/lib",
+  // Use workspace typescript version
+  "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
+
   // Prettier
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+
   // Eslint
   "eslint.codeActionsOnSave.mode": "all",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
+
   // Edit open and close HTML tags together
   "editor.linkedEditing": true,
+
   // Don't autofold classes by default. ctrl+alt+a fold/unfolds
   "tailwind-fold.autoFold": false,
 
