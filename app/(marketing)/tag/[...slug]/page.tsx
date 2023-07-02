@@ -1,6 +1,20 @@
 import { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
+import {
+  FORMAT_A,
+  FORMAT_H1,
+  FORMAT_H2,
+  FORMAT_H3,
+  FORMAT_H4,
+  FORMAT_H5,
+  FORMAT_H6,
+  FORMAT_HR,
+  FORMAT_LI,
+  FORMAT_OL,
+  FORMAT_P,
+  FORMAT_UL,
+} from "@/styles/format"
 import { allPosts, allTags } from "contentlayer/generated"
 
 import { routepathToSlug } from "@/lib/path"
@@ -109,7 +123,7 @@ export default async function PostPage({ params }: PostPageProps) {
   const posts = await getPostsOfTag(tag.tag)
 
   return (
-    <article className="container relative max-w-3xl py-6 lg:py-10">
+    <article className="prose container relative max-w-3xl py-6 lg:py-10">
       <div>
         <h1 className="mt-2 inline-block text-4xl font-extrabold leading-tight text-slate-900 lg:text-6xl">
           {tag.title}
@@ -117,18 +131,12 @@ export default async function PostPage({ params }: PostPageProps) {
       </div>
       <hr className="my-4 border-secondary" />
       <Mdx code={tag.body.code} />
-      <hr className="my-4 border-slate-200" />
-      <h2 className="mb-4 scroll-m-20 pb-1 text-3xl font-semibold tracking-tight first:mt-0 md:text-4xl">
-        {`All posts on ${tag.tag}`}
-      </h2>
+      <h2 className={FORMAT_H2}>{`All posts on ${tag.tag}`}</h2>
       {posts?.length ? (
-        <ul className="my-6 ml-6 list-disc">
+        <ul className="format-ul">
           {posts.map((post) => (
-            <li className="mt-2" key={post.routepath}>
-              <Link
-                href={post.routepath}
-                className="font-medium text-slate-900 underline underline-offset-4"
-              >
+            <li className={FORMAT_LI} key={post.routepath}>
+              <Link href={post.routepath} className={FORMAT_A}>
                 {post.title}
               </Link>
             </li>

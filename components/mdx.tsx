@@ -1,6 +1,20 @@
 import path from "path"
 import * as React from "react"
 import Image from "next/image"
+import {
+  FORMAT_A,
+  FORMAT_H1,
+  FORMAT_H2,
+  FORMAT_H3,
+  FORMAT_H4,
+  FORMAT_H5,
+  FORMAT_H6,
+  FORMAT_HR,
+  FORMAT_LI,
+  FORMAT_OL,
+  FORMAT_P,
+  FORMAT_UL,
+} from "@/styles/format"
 import sizeOf from "image-size"
 import { useMDXComponent } from "next-contentlayer/hooks"
 
@@ -12,82 +26,37 @@ import { CopyButton } from "./copy-button"
 
 const components = {
   h1: ({ className, ...props }) => (
-    <h1
-      className={cn(
-        "mt-2 scroll-m-20 text-4xl font-bold tracking-tight",
-        className
-      )}
-      {...props}
-    />
+    <h1 className={cn(FORMAT_H1, className)} {...props} />
   ),
   h2: ({ className, ...props }) => (
-    <h2
-      className={cn(
-        "mt-10 scroll-m-20 border-b border-b-slate-200 pb-1 text-3xl font-semibold tracking-tight first:mt-0",
-        className
-      )}
-      {...props}
-    />
+    <h2 className={cn(FORMAT_H2, className)} {...props} />
   ),
   h3: ({ className, ...props }) => (
-    <h3
-      className={cn(
-        "mt-8 scroll-m-20 text-2xl font-semibold tracking-tight",
-        className
-      )}
-      {...props}
-    />
+    <h3 className={cn(FORMAT_H3, className)} {...props} />
   ),
   h4: ({ className, ...props }) => (
-    <h4
-      className={cn(
-        "mt-8 scroll-m-20 text-xl font-semibold tracking-tight",
-        className
-      )}
-      {...props}
-    />
+    <h4 className={cn(FORMAT_H4, className)} {...props} />
   ),
   h5: ({ className, ...props }) => (
-    <h5
-      className={cn(
-        "mt-8 scroll-m-20 text-lg font-semibold tracking-tight",
-        className
-      )}
-      {...props}
-    />
+    <h5 className={cn(FORMAT_H5, className)} {...props} />
   ),
   h6: ({ className, ...props }) => (
-    <h6
-      className={cn(
-        "mt-8 scroll-m-20 text-base font-semibold tracking-tight",
-        className
-      )}
-      {...props}
-    />
+    <h6 className={cn(FORMAT_H6, className)} {...props} />
   ),
   a: ({ className, ...props }) => (
-    <a
-      className={cn(
-        "font-medium text-slate-900 underline underline-offset-4",
-        className
-      )}
-      {...props}
-    />
+    <a className={cn(FORMAT_A, className)} {...props} />
   ),
   p: ({ className, ...props }) => (
-    <p
-      className={cn("leading-7 [&:not(:first-child)]:mt-6", className)}
-      {...props}
-    />
+    <p className={cn(FORMAT_P, className)} {...props} />
   ),
   ul: ({ className, ...props }) => (
-    <ul className={cn("my-6 ml-6 list-disc", className)} {...props} />
+    <ul className={cn(FORMAT_UL, className)} {...props} />
   ),
   ol: ({ className, ...props }) => (
-    <ol className={cn("my-6 ml-6 list-decimal", className)} {...props} />
+    <ol className={cn(FORMAT_OL, className)} {...props} />
   ),
   li: ({ className, ...props }) => (
-    <li className={cn("mt-2", className)} {...props} />
+    <li className={cn(FORMAT_LI, className)} {...props} />
   ),
   blockquote: ({ className, ...props }) => (
     <blockquote
@@ -132,9 +101,7 @@ const components = {
       )
     }
   },
-  hr: ({ ...props }) => (
-    <hr className="my-4 border-slate-200 md:my-8" {...props} />
-  ),
+  hr: ({ ...props }) => <hr className={FORMAT_HR} {...props} />,
   table: ({ className, ...props }: React.HTMLAttributes<HTMLTableElement>) => (
     <div className="my-6 w-full overflow-y-auto">
       <table className={cn("w-full", className)} {...props} />
