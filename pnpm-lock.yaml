@@ -152,6 +152,9 @@ dependencies:
   fs-extra:
     specifier: ^11.1.1
     version: 11.1.1
+  github-slugger:
+    specifier: ^2.0.0
+    version: 2.0.0
   image-size:
     specifier: ^1.0.2
     version: 1.0.2
@@ -5843,7 +5846,6 @@ packages:
       {
         integrity: sha512-IaOQ9puYtjrkq7Y0Ygl9KDZnrf/aiUJYUpVf89y8kyaxbRG7Y1SrX/jaumrv81vc61+kiMempujsM3Yw7w5qcw==,
       }
-    dev: true
 
   /glob-parent@5.1.2:
     resolution:
