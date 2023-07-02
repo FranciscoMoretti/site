@@ -3,16 +3,9 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import {
   FORMAT_A,
-  FORMAT_H1,
   FORMAT_H2,
-  FORMAT_H3,
-  FORMAT_H4,
-  FORMAT_H5,
-  FORMAT_H6,
-  FORMAT_HR,
   FORMAT_LI,
-  FORMAT_OL,
-  FORMAT_P,
+  FORMAT_LINKED_HEADER,
   FORMAT_UL,
 } from "@/styles/format"
 import { allPosts, allTags } from "contentlayer/generated"
@@ -26,6 +19,8 @@ import { Mdx } from "@/components/mdx"
 import { getTagsItems, TagGroup } from "@/components/tag-group"
 
 import "@/styles/mdx.css"
+
+import { AutoLinkHeader } from "@/components/autolink-headings"
 
 interface PostPageProps {
   params: {
@@ -123,7 +118,7 @@ export default async function PostPage({ params }: PostPageProps) {
   const posts = await getPostsOfTag(tag.tag)
 
   return (
-    <article className="prose container relative max-w-3xl py-6 lg:py-10">
+    <article className="container relative max-w-3xl py-6 lg:py-10">
       <div>
         <h1 className="mt-2 inline-block text-4xl font-extrabold leading-tight text-slate-900 lg:text-6xl">
           {tag.title}
@@ -131,9 +126,11 @@ export default async function PostPage({ params }: PostPageProps) {
       </div>
       <hr className="my-4 border-secondary" />
       <Mdx code={tag.body.code} />
-      <h2 className={FORMAT_H2}>{`All posts on ${tag.tag}`}</h2>
+      <AutoLinkHeader className={FORMAT_LINKED_HEADER} linkClassName={FORMAT_A}>
+        <h2 className={FORMAT_H2}>{`All posts on ${tag.tag}`}</h2>
+      </AutoLinkHeader>
       {posts?.length ? (
-        <ul className="format-ul">
+        <ul className={FORMAT_UL}>
           {posts.map((post) => (
             <li className={FORMAT_LI} key={post.routepath}>
               <Link href={post.routepath} className={FORMAT_A}>
