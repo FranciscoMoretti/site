@@ -10,11 +10,12 @@ import { cn } from "@/lib/utils"
 
 const slugger = new GithubSlugger()
 
-interface AutoLinkHeaderProps {
+interface AutoLinkHeadingProps {
   children: ReactNode
   className: string
   linkClassName?: string
   ariaLabel?: string
+  headingId?: string
 }
 
 function isHeadingElement(element: ReactNode): element is ReactElement {
@@ -25,12 +26,13 @@ function isHeadingElement(element: ReactNode): element is ReactElement {
   )
 }
 
-export function AutoLinkHeader({
+export function AutoLinkHeading({
   children,
   className,
   linkClassName = "",
   ariaLabel = "Link to section",
-}: AutoLinkHeaderProps): JSX.Element | null {
+  headingId = "",
+}: AutoLinkHeadingProps): JSX.Element | null {
   const firstChild = React.Children.toArray(children)[0]
 
   if (!isHeadingElement(firstChild)) {
@@ -47,7 +49,9 @@ export function AutoLinkHeader({
     return null
   }
 
-  const headerSlug = slugger.slug(firstGrandChild.toString())
+  const headerSlug = headingId
+    ? headingId
+    : slugger.slug(firstGrandChild.toString())
   const clonedFirstChild = cloneElement(firstChild, {
     className: cn(firstChild.props.className, className),
     id: headerSlug,
