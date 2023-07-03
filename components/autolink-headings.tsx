@@ -1,42 +1,65 @@
-import React, { isValidElement, ReactNode } from "react"
+import React, {
+  cloneElement,
+  isValidElement,
+  ReactElement,
+  ReactNode,
+} from "react"
 import GithubSlugger from "github-slugger"
 
 import { cn } from "@/lib/utils"
 
 const slugger = new GithubSlugger()
 
-interface FirstChildProps {
+interface AutoLinkHeaderProps {
   children: ReactNode
   className: string
   linkClassName?: string
-  label?: string
+  ariaLabel?: string
+}
+
+function isHeadingElement(element: ReactNode): element is ReactElement {
+  return (
+    isValidElement(element) &&
+    typeof element.type === "string" &&
+    /^h[1-6]$/.test(element.type)
+  )
 }
 
 export function AutoLinkHeader({
   children,
   className,
   linkClassName = "",
-  label = "Link to section",
-}: FirstChildProps): JSX.Element | null {
+  ariaLabel = "Link to section",
+}: AutoLinkHeaderProps): JSX.Element | null {
   const firstChild = React.Children.toArray(children)[0]
 
-  if (
-    isValidElement(firstChild) &&
-    /^h[1-6]$/.test(firstChild.type as string)
-  ) {
-    const firstGrandChild = React.Children.toArray(firstChild.props.children)[0]
-    const headerSlug = slugger.slug(firstGrandChild.toString())
-    return React.cloneElement(firstChild, {
-      // @ts-expect-error className could not be part of element
-      className: cn(firstChild.props.className, className),
-      id: headerSlug,
-      children: (
-        <a href={`#${headerSlug}`} className={linkClassName} aria-label={label}>
-          {firstChild.props.children}
-        </a>
-      ),
-    })
+  if (!isHeadingElement(firstChild)) {
+    console.warn("AutoLinkHeader: The first child is not a heading element.")
+    return null
   }
 
-  return null
+  const firstGrandChild = React.Children.toArray(firstChild.props.children)[0]
+
+  if (firstGrandChild === undefined) {
+    console.warn(
+      "AutoLinkHeader: No text content found for the header element."
+    )
+    return null
+  }
+
+  const headerSlug = slugger.slug(firstGrandChild.toString())
+  const clonedFirstChild = cloneElement(firstChild, {
+    className: cn(firstChild.props.className, className),
+    id: headerSlug,
+    children: (
+      <a
+        href={`#${headerSlug}`}
+        className={linkClassName}
+        aria-label={ariaLabel}
+      >
+        {firstChild.props.children}
+      </a>
+    ),
+  })
+  return clonedFirstChild
 }
