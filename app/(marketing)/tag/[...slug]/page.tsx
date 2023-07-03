@@ -13,14 +13,11 @@ import { allPosts, allTags } from "contentlayer/generated"
 import { routepathToSlug } from "@/lib/path"
 import { getAllTags } from "@/lib/tags"
 import { absoluteUrl } from "@/lib/utils"
-import BlogPostList from "@/components/blog-post-list"
-import { Icons } from "@/components/icons"
+import { AutoLinkHeading } from "@/components/autolink-heading"
 import { Mdx } from "@/components/mdx"
 import { getTagsItems, TagGroup } from "@/components/tag-group"
 
 import "@/styles/mdx.css"
-
-import { AutoLinkHeader } from "@/components/autolink-headings"
 
 interface PostPageProps {
   params: {
@@ -126,9 +123,12 @@ export default async function PostPage({ params }: PostPageProps) {
       </div>
       <hr className="my-4 border-secondary" />
       <Mdx code={tag.body.code} />
-      <AutoLinkHeader className={FORMAT_LINKED_HEADER} linkClassName={FORMAT_A}>
+      <AutoLinkHeading
+        className={FORMAT_LINKED_HEADER}
+        linkClassName={FORMAT_A}
+      >
         <h2 className={FORMAT_H2}>{`All posts on ${tag.tag}`}</h2>
-      </AutoLinkHeader>
+      </AutoLinkHeading>
       {posts?.length ? (
         <ul className={FORMAT_UL}>
           {posts.map((post) => (
