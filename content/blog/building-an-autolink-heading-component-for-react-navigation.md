@@ -16,7 +16,7 @@ image:
 In this post, we'll explore how I've created an Autolink Heading component for React Navigation. This component will generate anchor links for section headings automatically. By using this component, you can improve user experience  and make navigation within your React applications more efficient. It also contributes to the site SEO performance. Let's explore how to build this component!
 
 ## Implementing the Autolink Heading Component
-This is how I created the first version of the Autolink Heading component. It's a simple design that get's the job done. However, I'm sure it has a lot of room for improvement.
+This is how I created the first version of the Autolink Heading component to replicate the behavior of [rehype-autolink-headings](https://github.com/rehypejs/rehype-autolink-headings) for React headings. It's a simple design that get's the job done. However, I'm sure it has a lot of room for improvement.
 
 ```tsx
 import React, {
@@ -97,9 +97,12 @@ To use the `AutoLinkHeader` component, follow the example below:
 
 ```tsx
 <AutoLinkHeading className="linked_header" linkClassName="link">
-  <h2 className="header">This section has a clickable title</h2>
+  <h2 className="header">All Posts on Next.js</h2>
 </AutoLinkHeading>
 ```
+
+That transforms the `h2` tag in something like this:
+![[autolink_headings_html.png]]
 
 In the above code snippet, we pass the desired CSS classes to the `className` and `linkClassName` props. The `h2` element is wrapped inside the `AutoLinkHeader` component, and it will automatically generate an anchor link based on the heading's text content.
 
