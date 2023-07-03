@@ -4,11 +4,9 @@ import React, {
   ReactElement,
   ReactNode,
 } from "react"
-import GithubSlugger from "github-slugger"
+import { slug } from "github-slugger"
 
 import { cn } from "@/lib/utils"
-
-const slugger = new GithubSlugger()
 
 interface AutoLinkHeadingProps {
   children: ReactNode
@@ -49,9 +47,7 @@ export function AutoLinkHeading({
     return null
   }
 
-  const headerSlug = headingId
-    ? headingId
-    : slugger.slug(firstGrandChild.toString())
+  const headerSlug = headingId ? headingId : slug(firstGrandChild.toString())
   const clonedFirstChild = cloneElement(firstChild, {
     className: cn(firstChild.props.className, className),
     id: headerSlug,
