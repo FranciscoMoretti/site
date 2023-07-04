@@ -73,6 +73,10 @@ With the Quokka Value Explorer, you gain valuable insights into your code's beha
 
 Quokka's "Time Machine" feature allows you to debug files step by step, providing a powerful tool to pinpoint and resolve issues in your code. Additionally, Quokka enables you to effortlessly share your scratchpad via [codeclip.io](http://codeclip.io/) with just a single button click, promoting collaboration and knowledge sharing among developers.
 
+
+
 ## Conclusion
 
 Quokka is a powerful extension that simplifies code testing and learning in JavaScript and TypeScript development. While it may not be the ultimate solution, it offers a range of features that can significantly improve your coding experience. Give Quokka a try and unlock a more efficient and enjoyable testing journey in Visual Studio Code. Happy coding! 🚀
+
+For more features and details check out the official docs https://quokkajs.com/
