@@ -19,7 +19,7 @@ The Quokka extension provides a seamless testing experience within Visual Studio
 
 Quokka isn't limited to JavaScript; it also supports TypeScript, making it a versatile tool for various web development scenarios.
 
-## Installation
+## Installation 
 Follow one of these options to install it.
 -  Search for `WallabyJs.quokka-vscode` in VS Code Extensions panel and hit install.
 - [Install via the Visual Studio Code Marketplace →](https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode).
@@ -43,7 +43,7 @@ add(2, 3); // Output: 5
 ```
 
 
-## Features at a Glance
+## Features at a Glance 🧩
 
 Quokka comes with a range of features designed to enhance your development workflow.
 
@@ -69,7 +69,7 @@ With the Quokka Value Explorer, you gain valuable insights into your code's beha
 
 ![[Quokka Value Explorer.png]]
 
-### Time Machine: Debugging Made Easier 🐞
+### Time Machine: Debugging Made Easier
 
 Quokka's "Time Machine" feature allows you to debug files step by step, providing a powerful tool to pinpoint and resolve issues in your code. Additionally, Quokka enables you to effortlessly share your scratchpad via [codeclip.io](http://codeclip.io/) with just a single button click, promoting collaboration and knowledge sharing among developers.
 
