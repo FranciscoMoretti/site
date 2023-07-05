@@ -7,26 +7,18 @@ export const config = {
   runtime: "edge",
 }
 
-// Wrapped in a function to reduce edge function size
-const getInterRegular = async () => {
-  const interRegular = fetch(
-    new URL("../../assets/fonts/Inter-Regular.ttf", import.meta.url)
-  ).then((res) => res.arrayBuffer())
-  return interRegular
-}
+const interRegular = fetch(
+  new URL("../../assets/fonts/Inter-Regular.ttf", import.meta.url)
+).then((res) => res.arrayBuffer())
 
-// Wrapped in a function to reduce edge function size
-const getInterBold = async () => {
-  const interBold = fetch(
-    new URL("../../assets/fonts/Inter-Bold.ttf", import.meta.url)
-  ).then((res) => res.arrayBuffer())
-  return interBold
-}
+const interBold = fetch(
+  new URL("../../assets/fonts/Inter-Bold.ttf", import.meta.url)
+).then((res) => res.arrayBuffer())
 
 export default async function handler(req: NextRequest) {
   try {
-    const fontRegular = await getInterRegular()
-    const fontBold = await getInterBold()
+    const fontRegular = await interRegular
+    const fontBold = await interBold
 
     const url = new URL(req.url)
     const values = ogImageSchema.parse(Object.fromEntries(url.searchParams))
