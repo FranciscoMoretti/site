@@ -4,7 +4,7 @@ slug: next-js
 title: The Next.js Guide - Building Modern Web Applications
 tag: Next.js
 description: Learn how to build modern web applications using Next.js. Explore the frontend and backend capabilities of Next.js and other features that make it a popular framework.
-date: 2023-06-27
+date: 2023-07-06
 image:
 ---
 
@@ -19,7 +19,7 @@ Next.js can be considered both frontend and backend. It is primarily a frontend 
 With SSR, Next.js renders React components on the server and sends the fully rendered HTML to the client. This approach improves performance and allows search engines to index the content effectively. Next.js also provides API routes, which enable you to create serverless backend functionality directly within your Next.js application.
 
 In summary, Next.js is a full-stack frameworks that blurs the line between frontend and backend. The framework handles both aspects seamlessly.
-
+**
 ## Why Choose Next.js for Modern Web Apps? ✨
 
 Next.js offers several compelling advantages for building modern web applications:
