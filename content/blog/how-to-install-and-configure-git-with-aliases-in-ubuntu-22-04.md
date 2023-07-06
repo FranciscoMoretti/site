@@ -42,9 +42,13 @@ git config --global alias.last 'log -1 HEAD'
 
    These aliases will be useful when you need to perform common operations such as checking out branches, creating branches, committing changes, checking the status, and viewing the last commit.
 
-2. Additionally, here's a personal favorite alias that I find incredibly useful. It deletes all local branches that have already been merged into the currently checked out branch:
+2. Additionally, here's a personal favorite alias that I find incredibly useful. It deletes all local branches that have already been merged into the currently checked out branch.
+
+Add this to your Git configuration by running `git config -e --global`
+
 ```bash
-git config --global "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 -r git branch -d"
+[alias]
+    cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 -r git branch -d"
 ```
 
    This alias helps keep your local branches clean and tidy, especially when you've been working on a project for a while and have accumulated multiple branches.
