@@ -38,5 +38,5 @@ ESLint is a popular JavaScript linter that helps developers identify and fix cod
 
 
 ## Getting Started with Next.js 🚀
-- [[how-to-install-next-js-in-ubuntu-22-a-step-by-step-guide|Next.js Installation Guide for Ubuntu 22.04 - Step-by-Step]]
-- [[how-to-install-next-js-in-windows-using-wsl2-a-step-by-step-guide|Get Started with Next.js on Windows with WSL2 - Step-by-Step]]
+- [[how-to-install-next-js-in-ubuntu-22-a-step-by-step-guide|How to install Next.js in Ubuntu 22.04]]
+- [[how-to-install-next-js-in-windows-using-wsl2-a-step-by-step-guide|How to install Next.js in Windows with WSL2]]

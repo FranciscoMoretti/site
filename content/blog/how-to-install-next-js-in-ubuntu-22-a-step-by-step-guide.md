@@ -5,9 +5,9 @@ alias:
 publish: true
 slug: how-to-install-next-js-in-ubuntu-22-a-step-by-step-guide
 
-title: Next.js Installation Guide for Ubuntu 22.04 - Step-by-Step
-description: Get started with Next.js on Ubuntu 22.04! Follow our step-by-step guide to install and run Next.js, set up NVM, and use VS Code for seamless development.
-date: 2023-05-13
+title: How to install Next.js in Ubuntu 22.04
+description: How to install Next.js in Ubuntu 22.04! Follow our step-by-step guide to install and run Next.js, set up NVM, and use VS Code for seamless development.
+date: 2023-07-06
 image:
 ---
 
