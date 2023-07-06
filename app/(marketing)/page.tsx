@@ -65,7 +65,7 @@ export default async function IndexPage() {
           </p>
           <div className="flex gap-4">
             <Link href="/blog" className={cn(buttonVariants({ size: "lg" }))}>
-              Visit my blog
+              Visit the blog
             </Link>
           </div>
         </div>
