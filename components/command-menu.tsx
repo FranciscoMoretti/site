@@ -2,9 +2,17 @@
 
 import * as React from "react"
 import { useRouter } from "next/navigation"
-import { allPosts } from "@/.contentlayer/generated"
+import { allPosts, allTags } from "@/.contentlayer/generated"
 import { DialogProps } from "@radix-ui/react-alert-dialog"
-import { BookOpen, Circle, File, Laptop, Moon, SunMedium } from "lucide-react"
+import {
+  BookOpen,
+  Circle,
+  File,
+  Laptop,
+  Moon,
+  Star,
+  SunMedium,
+} from "lucide-react"
 import { useTheme } from "next-themes"
 
 import { docsConfig } from "@/config/docs"
@@ -79,6 +87,20 @@ export function CommandMenu({ ...props }: DialogProps) {
                   {navItem.title}
                 </CommandItem>
               ))}
+          </CommandGroup>
+          <CommandGroup heading="Topics ">
+            {allTags.map((tag) => (
+              <CommandItem
+                key={tag.slug}
+                value={tag.tag}
+                onSelect={() => {
+                  runCommand(() => router.push(tag.routepath as string))
+                }}
+              >
+                <Star className="mr-2 h-4 w-4" />
+                {tag.tag}
+              </CommandItem>
+            ))}
           </CommandGroup>
           {docsConfig.sidebarNav.map((group) => (
             <CommandGroup key={group.title} heading={group.title}>
