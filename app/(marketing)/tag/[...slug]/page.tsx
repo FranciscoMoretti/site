@@ -143,7 +143,7 @@ export default async function PostPage({ params }: PostPageProps) {
         <p>No posts published.</p>
       )}
       <hr className="my-4 border-secondary" />
-      <h2 className="mb-4 scroll-m-20 pb-1 text-3xl font-semibold tracking-tight first:mt-0 md:text-4xl">
+      <h2 className="my-4 scroll-m-20 pb-1 text-center text-3xl font-semibold tracking-tight md:text-4xl">
         All topics
       </h2>
       <TagGroup tagsItems={tagsItems} />
