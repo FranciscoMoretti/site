@@ -1,5 +1,5 @@
 ---
-tag: VS Code, Tools, JavaScript, TypeSript, Testing, Debugging
+tag: VS Code, Tools, JavaScript, TypeScript, Testing, Debugging
 alias:
 
 publish: true
