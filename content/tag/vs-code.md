@@ -10,7 +10,7 @@ image:
 
 ## What is VS Code? 🤔
 
-VS Code, short for Visual Studio Code, is a lightweight yet powerful integrated development environment (IDE) designed for web developers. Created by Microsoft, it has quickly gained popularity among developers due to its extensibility, flexibility, and rich feature set. Whether you're a beginner or an experienced developer, VS Code offers a range of tools and functionalities to make your coding experience more enjoyable and efficient.
+VS Code, short for Visual Studio Code, is a lightweight yet powerful integrated development environment (IDE) designed for web developers. Created by Microsoft, it has quickly gained popularity among developers due to its **extensibility**, **flexibility**, and **features**. Whether you're a beginner or an experienced developer, VS Code offers a range of tools and functionalities to make your coding experience more enjoyable and efficient.
 
 ## Why Choose VS Code for Web Development? 🌟
 
@@ -18,7 +18,7 @@ VS Code offers a range of compelling reasons why it's an excellent choice for we
 
 1. **Lightweight and Fast**: VS Code is designed to be lightweight, allowing it to start quickly and consume fewer system resources compared to other IDEs.
 2. **Cross-Platform Compatibility**: Whether you're using Windows, macOS, or Linux, VS Code provides a consistent development experience across different operating systems.
-3. **Vibrant Extension Ecosystem**: VS Code has an extensive library of extensions that can enhance your productivity and extend the functionality of the IDE. You can customize VS Code to suit your specific development needs.
+3. **Vibrant Extension Ecosystem**: VS Code has an large library of extensions that can enhance your productivity and extend the functionality of the IDE. You can customize VS Code to suit your specific development needs.
 4. **Intuitive User Interface**: The user-friendly interface of VS Code makes it easy to navigate, edit code, and manage projects efficiently. It offers a clean and clutter-free workspace that maximizes your focus on coding.
 5. **Powerful Editing Capabilities**: VS Code provides robust code editing features, including syntax highlighting, IntelliSense (code completion), code refactoring, and built-in Git integration. These features streamline your coding workflow and help catch errors early on.
 6. **Integrated Terminal**: VS Code includes a built-in terminal that allows you to run commands and scripts without switching to external tools. It enables you to interact with your development environment seamlessly.
