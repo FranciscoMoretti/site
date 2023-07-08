@@ -22,7 +22,7 @@ export async function GET(req: Request) {
     const { mode } = values
     const paint = mode === "dark" ? "#fff" : "#000"
 
-    const fontSize = heading.length > 100 ? "35px" : "50px"
+    const fontSize = heading.length > 100 ? "55px" : "80px"
 
     return new ImageResponse(
       (
