@@ -41,10 +41,10 @@ The plan is to implement all the features and niceness for a personal blog.
 - ✅ Copy code button
 - ✅ Search with **cmdk**
 - ✅ Custom tailwind styles
+- ✅ Show views for each post using **Prisma** and **PlanetScale**
 
 ## Roadmap
 
-- [ ] Show views for each page using **Prisma** and **PlanetScale**
 - [ ] Personalized OG Images
 - [ ] Framer motion animations on home screen
 - [ ] Dark mode
@@ -73,6 +73,38 @@ cp .env.example .env.local
 3. Customize the site by using your own info in `config/config.ts`
 
 4. Put your content into the content directory and your assets in content/assets directory.
+
+5. STart the application:
+
+```sh
+pnpm dev
+```
+
+## Setting up PlanetScale DB
+
+1. Create an account in https://planetscale.com/ (free plan available)
+2. Install the pscale CLI https://github.com/planetscale/cli#installation
+3. Follow [this guide](https://planetscale.com/blog/getting-started-with-the-planetscale-cli) to login and create your first pscale database through the CLI. Choose `site` for the DB name.
+
+4. Push the prisma DB
+
+```
+pnpm exec prisma db push
+```
+
+## Running pscale DB
+
+1. Login to pscale with the CLI
+
+```sh
+pscale login
+```
+
+2. Connect with the DB through planetscale CLI
+
+```
+pscale connect site main --port 3306
+```
 
 ## License
 
