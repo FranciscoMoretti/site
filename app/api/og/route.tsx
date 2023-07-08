@@ -1,17 +1,14 @@
-import { NextRequest } from "next/server"
 import { ImageResponse } from "@vercel/og"
 
 import { ogImageSchema } from "@/lib/validations/og"
 
-export const config = {
-  runtime: "edge",
-}
+export const runtime = "edge"
 
 const interBold = fetch(
-  new URL("../../assets/fonts/Inter-Bold.ttf", import.meta.url)
+  new URL("../../../assets/fonts/Inter-Bold.ttf", import.meta.url)
 ).then((res) => res.arrayBuffer())
 
-export default async function handler(req: NextRequest) {
+export async function GET(req: Request) {
   try {
     const fontBold = await interBold
 
