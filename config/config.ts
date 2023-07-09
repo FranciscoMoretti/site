@@ -8,7 +8,6 @@ const config: UserConfig = {
   url: "https://www.franciscomoretti.com/",
   favicon: "",
   profilePicture: "/profile_picture.jpg",
-  ogImage: "https://www.franciscomoretti.com/og.jpg",
 
   links: {
     twitter: "https://twitter.com/franmoretti_",

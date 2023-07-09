@@ -28,7 +28,6 @@ type SiteConfig = {
   url: string
   favicon: string
   profilePicture: string
-  ogImage: string
   links: {
     twitter: string
     github: string

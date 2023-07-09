@@ -70,15 +70,18 @@ pnpm install
 cp .env.example .env.local
 ```
 
-3. Customize the site by using your own info in `config/config.ts`
-
-4. Put your content into the content directory and your assets in content/assets directory.
-
-5. STart the application:
+5. Start the application:
 
 ```sh
 pnpm dev
 ```
+
+## Customization
+
+1. Customize the site by using your own info in `config/config.ts`
+
+2. Put your content into the content directory and your assets in content/assets directory.
+3. Replace the `opengraph-image.jpg` for your own image and `opengraph-image.alt.txt` for its alt text.
 
 ## Setting up PlanetScale DB
 
