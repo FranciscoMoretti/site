@@ -42,10 +42,10 @@ The plan is to implement all the features and niceness for a personal blog.
 - ✅ Search with **cmdk**
 - ✅ Custom tailwind styles
 - ✅ Show views for each post using **Prisma** and **PlanetScale**
+- ✅ Personalized OG Images
 
 ## Roadmap
 
-- [ ] Personalized OG Images
 - [ ] Framer motion animations on home screen
 - [ ] Dark mode
 - [ ] Unit tests
