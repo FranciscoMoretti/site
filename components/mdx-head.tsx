@@ -24,7 +24,7 @@ export default function MdxHead({ params, og }: MdxHeadProps) {
 
   const title = `${mdxDoc.title} - Taxonomy`
   const url = process.env.NEXT_PUBLIC_APP_URL
-  let ogUrl = new URL(`${url}/og.jpg`)
+  let ogUrl = new URL(`${url}og.jpg`)
 
   const ogTitle = og?.heading || mdxDoc.title
   const ogDescription = mdxDoc.description
@@ -32,6 +32,7 @@ export default function MdxHead({ params, og }: MdxHeadProps) {
   if (og?.type) {
     ogUrl = new URL(`${url}/api/og`)
     ogUrl.searchParams.set("heading", ogTitle)
+    ogUrl.searchParams.set("tags", "")
     ogUrl.searchParams.set("type", og.type)
     ogUrl.searchParams.set("mode", og.mode || "dark")
   }

@@ -45,6 +45,7 @@ export async function generateMetadata({
 
   const ogUrl = new URL(`${url}/api/og`)
   ogUrl.searchParams.set("heading", post.title)
+  ogUrl.searchParams.set("tags", post.tags.join("|"))
   ogUrl.searchParams.set("type", "Blog Post")
   ogUrl.searchParams.set("mode", "light")
 
