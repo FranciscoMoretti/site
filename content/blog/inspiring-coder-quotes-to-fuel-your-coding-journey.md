@@ -80,6 +80,10 @@ Let's dive into a collection of inspiring coder quotes from experienced programm
 > _Anonymous_
 
 
+> **"Abstraction is the amplification of the essential and the elimination of the irrelevant."**
+> 
+> _Robert C. Martin (Uncle Bob)_
+
 ## Conclusion ✨
 
 These inspiring coder quotes offer insights, motivation, and wisdom from experienced programmers and industry leaders. Use them as a source of inspiration on your coding journey.
