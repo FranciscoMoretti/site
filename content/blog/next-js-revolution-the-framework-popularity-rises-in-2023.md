@@ -29,9 +29,9 @@ Not only has Next.js captured developers' attention, but it has also earned a hi
 
 ![[StackOverflow Survey desired and admired frameworks.png]]
 
-## Next.js is the Most Popular React Framework
+## Next.js is the Most Popular JS Framework
 
-When it comes to React frameworks, Next.js stands out as the clear winner in terms of popularity. It has far more adoption than other frameworks and it's still growing at a steady pace. Let's take a closer look at the number of NPM downloads of react frameworks to see how Next.js is far ahead.
+When it comes to JS frameworks, Next.js stands out as the clear winner in terms of popularity. It has far more adoption than other frameworks and it's still growing at a steady pace. Let's take a closer look at the number of NPM downloads of react frameworks to see how Next.js is far ahead.
 
 ![[npm trends of react frameworks 2023.png]]
 
