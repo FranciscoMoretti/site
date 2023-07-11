@@ -3,7 +3,7 @@ slug: typescript
 tag: TypeScript
 
 title: The TypeScript Guide - The language for modern web development
-description: Learn all about TypeScript, the language that powers modern web development. Discover how TypeScript improves productivity and code quality, and explore its features.
+description: Learn all about TypeScript, the language that powers modern web development. Discover how TypeScript improves productivity and code quality.
 date: 2023-07-07
 image:
 ---

@@ -3,7 +3,7 @@ slug: next-js
 
 title: The Next.js Guide - Building Modern Web Applications
 tag: Next.js
-description: Learn how to build modern web applications using Next.js. Explore the frontend and backend capabilities of Next.js and other features that make it a popular framework.
+description: Learn how to build modern web applications using Next.js. Explore the frontend and backend capabilities of Next.js and other features of the framework.
 date: 2023-07-06
 image:
 ---

@@ -3,7 +3,7 @@ slug: vs-code
 tag: VS Code
 
 title: The VS Code Guide - Mastering the IDE for Web Development
-description: Learn how to master VS Code, the popular IDE for web development. Discover essential features, shortcuts, and extensions to boost your productivity and coding experience.
+description: Learn how to master VS Code, the popular IDE for web development. Discover essential features, shortcuts, and extensions to boost your productivity.
 date: 2023-07-06
 image:
 ---

@@ -6,7 +6,7 @@ publish: true
 slug: dont-repeat-yourself-dry
 
 title: Don't Repeat Yourself (DRY)
-description: Avoid duplicating the same information in multiple places.The DRY principle encourages developers to eliminate code duplication by extracting common functionality. 
+description: Avoid duplicating the same information in multiple places. The DRY principle encourages developers to eliminate code duplication by abstracting functionality.
 date: 2023-06-21
 
 ---
