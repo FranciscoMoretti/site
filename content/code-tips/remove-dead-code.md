@@ -11,7 +11,7 @@ slug: remove-dead-code
 ### 📝 Guideline
 **Remove Dead Code**: Delete code that isn't executed. It will still be in your git history if you need it.
 
-Removing dead code refers to the process of eliminating any code that is no longer being used or executed within your project. This can include unused functions, variables, classes, or even entire modules. By removing dead code, you can improve the maintainability, readability, and performance of your codebase.
+By removing dead code, you can improve your codebase's maintainability, readability, and performance. This can include unused functions, variables, classes, or even entire modules. By removing dead code, you can improve the maintainability, readability, and performance of your codebase.
 
 ### 🛠️ How to Apply
 - **Regular code audits**: Regularly review your codebase and identify unused or redundant code sections. Remove them to keep your codebase clean and efficient. ✂️

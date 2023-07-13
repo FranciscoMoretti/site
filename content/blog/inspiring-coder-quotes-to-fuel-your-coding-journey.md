@@ -84,6 +84,10 @@ Let's dive into a collection of inspiring coder quotes from experienced programm
 > 
 > _Robert C. Martin (Uncle Bob)_
 
+>**"Programming is the art of telling another human being what one wants the computer to do."**
+>
+>*Donald Ervin Knuth*
+
 ## Conclusion ✨
 
 These inspiring coder quotes offer insights, motivation, and wisdom from experienced programmers and industry leaders. Use them as a source of inspiration on your coding journey.
