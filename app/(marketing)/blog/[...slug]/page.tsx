@@ -180,9 +180,9 @@ export default async function PostPage({ params }: PostPageProps) {
           priority
         />
       )}
-      <hr className="my-4 border-secondary" />
+      <hr className="my-4" />
       <Mdx code={post.body.code} />
-      <hr className="my-4 border-secondary" />
+      <hr className="my-4" />
       <div className="flex justify-center py-6 lg:py-10">
         <Link href="/blog" className={cn(buttonVariants({ variant: "ghost" }))}>
           <Icons.chevronLeft className="mr-2 h-4 w-4" />

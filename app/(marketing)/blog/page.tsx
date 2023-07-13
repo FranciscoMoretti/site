@@ -36,7 +36,7 @@ export default async function BlogPage() {
           <p className="text-xl text-muted-foreground">Happy Coding! 😄🎉</p>
         </div>
       </div>
-      <hr className="my-8 border-secondary" />
+      <hr className="my-8" />
       {posts?.length ? (
         <div className="grid gap-10 sm:grid-cols-2">
           {posts.map((post, index) => PostCard({ post, index }))}

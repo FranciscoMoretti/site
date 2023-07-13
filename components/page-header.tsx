@@ -19,7 +19,7 @@ export function DocsPageHeader({
         </h1>
         {text && <p className="text-xl text-muted-foreground">{text}</p>}
       </div>
-      <hr className="my-4 border-secondary" />
+      <hr className="my-4" />
     </>
   )
 }

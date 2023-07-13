@@ -122,7 +122,7 @@ export default async function PostPage({ params }: PostPageProps) {
           {tag.title}
         </h1>
       </div>
-      <hr className="my-4 border-secondary" />
+      <hr className="my-4" />
       <Mdx code={tag.body.code} />
       <AutoLinkHeading
         className={FORMAT_LINKED_HEADER}
@@ -143,7 +143,7 @@ export default async function PostPage({ params }: PostPageProps) {
       ) : (
         <p>No posts published.</p>
       )}
-      <hr className="my-4 border-secondary" />
+      <hr className="my-4" />
       <h2 className="my-4 scroll-m-20 pb-1 text-center text-3xl font-semibold tracking-tight md:text-4xl">
         All topics
       </h2>

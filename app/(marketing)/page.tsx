@@ -74,7 +74,7 @@ export default async function IndexPage() {
           className="mx-16 h-36 w-36 bg-gradient-to-b from-primary to-blue-200 shadow-lg ring-4 ring-primary/80"
         />
       </section>
-      <hr className="container border-secondary" />
+      <hr className="container" />
       <section className="container space-y-8 py-8 md:max-w-4xl md:py-12 lg:py-16">
         <h2 className="mb-4 scroll-m-20 pb-1 text-2xl font-semibold tracking-tight first:mt-0 md:text-5xl">
           {"Recent Posts"}
@@ -92,14 +92,14 @@ export default async function IndexPage() {
           </div>
         )}
       </section>
-      <hr className="container border-secondary" />
+      <hr className="container" />
       <section className="container space-y-8 py-8 md:max-w-4xl md:py-12 lg:py-16">
         <h2 className="mb-4 scroll-m-20 pb-1 text-2xl font-semibold tracking-tight first:mt-0 md:text-5xl">
           All topics
         </h2>
         <TagGroup tagsItems={tagsItems} />
       </section>
-      <hr className="container border-secondary" />
+      <hr className="container" />
       <section className="space-6 container py-8 md:max-w-4xl md:py-12 lg:py-24">
         <div className="flex flex-col justify-start gap-4">
           <h2 className="text-2xl font-bold leading-[1.1] tracking-tighter sm:text-2xl md:text-5xl">
