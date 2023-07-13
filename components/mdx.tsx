@@ -61,7 +61,7 @@ const components = {
   blockquote: ({ className, ...props }) => (
     <blockquote
       className={cn(
-        "mt-6 border-l-2 border-slate-300 pl-6 italic text-slate-800 [&>*]:text-slate-600",
+        "mt-6 border-l-2 pl-6 italic [&>*]:text-muted-foreground",
         className
       )}
       {...props}
@@ -87,14 +87,14 @@ const components = {
           placeholder="empty"
           width={Number(dimensions.width)}
           height={Number(dimensions.height)}
-          className={cn("rounded-md border border-slate-200", className)}
+          className={cn("rounded-md border", className)}
         />
       )
     } else {
       return (
         // eslint-disable-next-line @next/next/no-img-element
         <img
-          className={cn("rounded-md border border-slate-200", className)}
+          className={cn("rounded-md border", className)}
           alt={alt}
           {...props}
         />
@@ -109,17 +109,14 @@ const components = {
   ),
   tr: ({ className, ...props }: React.HTMLAttributes<HTMLTableRowElement>) => (
     <tr
-      className={cn(
-        "m-0 border-t border-slate-300 p-0 even:bg-slate-100",
-        className
-      )}
+      className={cn("m-0 border-t p-0 even:bg-muted", className)}
       {...props}
     />
   ),
   th: ({ className, ...props }) => (
     <th
       className={cn(
-        "border border-slate-200 px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right",
+        "border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right",
         className
       )}
       {...props}
@@ -128,7 +125,7 @@ const components = {
   td: ({ className, ...props }) => (
     <td
       className={cn(
-        "border border-slate-200 px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right",
+        "border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right",
         className
       )}
       {...props}

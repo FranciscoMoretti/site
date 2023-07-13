@@ -5,13 +5,15 @@ import { notFound } from "next/navigation"
 import { allAuthors, allPosts } from "contentlayer/generated"
 
 import { routepathToSlug } from "@/lib/path"
-import { absoluteUrl, formatDate } from "@/lib/utils"
+import { absoluteUrl, cn, formatDate } from "@/lib/utils"
 import { Icons } from "@/components/icons"
 import { Mdx } from "@/components/mdx"
 import { PostViews } from "@/components/post-views"
 import { upsertPost } from "@/app/(marketing)/actions"
 
 import "@/styles/mdx.css"
+
+import { buttonVariants } from "@/components/ui/button"
 
 export const revalidate = 60
 
@@ -120,13 +122,16 @@ export default async function PostPage({ params }: PostPageProps) {
     <article className="container relative max-w-3xl py-6 lg:py-10">
       <Link
         href="/blog"
-        className="absolute left-[-200px] top-14 hidden items-center justify-center text-sm font-medium text-slate-600 hover:text-slate-900 xl:inline-flex"
+        className={cn(
+          buttonVariants({ variant: "ghost" }),
+          "absolute left-[-200px] top-14 hidden xl:inline-flex"
+        )}
       >
         <Icons.chevronLeft className="mr-2 h-4 w-4" />
         See all posts
       </Link>
       <div>
-        <div className="flex space-x-4 text-sm text-slate-600">
+        <div className="flex space-x-4 text-sm text-muted-foreground">
           {post.date && (
             <time dateTime={post.date} className="block">
               Published on {formatDate(post.date)}
@@ -134,7 +139,7 @@ export default async function PostPage({ params }: PostPageProps) {
           )}
           <PostViews slug={post.slug} />
         </div>
-        <h1 className="mt-2 inline-block text-4xl font-extrabold leading-tight text-slate-900 lg:text-5xl">
+        <h1 className="mt-2 inline-block text-4xl font-extrabold leading-tight lg:text-5xl">
           {post.title}
         </h1>
         {authors?.length ? (
@@ -154,8 +159,8 @@ export default async function PostPage({ params }: PostPageProps) {
                     className="rounded-full"
                   />
                   <div className="flex-1 text-left leading-tight">
-                    <p className="font-medium text-slate-900">{author.title}</p>
-                    <p className="text-[12px] text-slate-600">
+                    <p className="font-medium">{author.title}</p>
+                    <p className="text-[12px] text-muted-foreground">
                       @{author.twitter}
                     </p>
                   </div>
@@ -171,7 +176,7 @@ export default async function PostPage({ params }: PostPageProps) {
           alt={post.title}
           width={720}
           height={405}
-          className="my-8 rounded-md border border-slate-200 bg-slate-200 transition-colors group-hover:border-slate-900"
+          className="my-8 rounded-md border bg-muted transition-colors"
           priority
         />
       )}
@@ -179,10 +184,7 @@ export default async function PostPage({ params }: PostPageProps) {
       <Mdx code={post.body.code} />
       <hr className="my-4 border-secondary" />
       <div className="flex justify-center py-6 lg:py-10">
-        <Link
-          href="/blog"
-          className="inline-flex items-center justify-center text-sm font-medium text-slate-600 hover:text-slate-900"
-        >
+        <Link href="/blog" className={cn(buttonVariants({ variant: "ghost" }))}>
           <Icons.chevronLeft className="mr-2 h-4 w-4" />
           See all posts
         </Link>

@@ -22,7 +22,7 @@ export function PostCard({
           alt={post.title}
           width={804}
           height={452}
-          className="rounded-md border border-slate-200 bg-slate-200 transition-colors group-hover:border-slate-900"
+          className="rounded-md border bg-muted transition-colors"
           priority={index <= 1}
         />
       )}
@@ -35,12 +35,10 @@ export function PostCard({
         ))}
       </div>
       {post.description && (
-        <p className="line-clamp-3 text-slate-600">{post.description}</p>
+        <p className="line-clamp-3 text-muted-foreground">{post.description}</p>
       )}
-      <div className="flex space-x-4 text-sm text-slate-600">
-        {post.date && (
-          <p className="text-sm text-slate-600">{formatDate(post.date)}</p>
-        )}
+      <div className="flex space-x-4 text-sm text-muted-foreground">
+        {post.date && <p className="text-sm">{formatDate(post.date)}</p>}
         <PostViews slug={post.slug} />
       </div>
       <Link href={post.routepath} className="absolute inset-0">

@@ -118,7 +118,7 @@ export default async function PostPage({ params }: PostPageProps) {
   return (
     <article className="container relative max-w-3xl py-6 lg:py-10">
       <div>
-        <h1 className="mt-2 inline-block text-4xl font-extrabold leading-tight text-slate-900 lg:text-5xl">
+        <h1 className="mt-2 inline-block text-4xl font-extrabold leading-tight lg:text-5xl">
           {tag.title}
         </h1>
       </div>

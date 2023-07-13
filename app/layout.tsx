@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils"
 import { Toaster } from "@/components/ui/toaster"
 import { Analytics } from "@/components/analytics"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
+import { ThemeProvider } from "@/components/theme-provider"
 
 import "@/styles/globals.css"
 
@@ -77,19 +78,20 @@ export const metadata = {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html
-      lang="en"
-      className={cn(
-        "bg-white font-sans text-slate-900 antialiased ",
-        fontSans.variable
-      )}
-    >
+    <html lang="en">
       <head />
-      <body className="min-h-screen">
-        {children}
-        <Analytics />
-        <Toaster />
-        <TailwindIndicator />
+      <body
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased",
+          fontSans.variable
+        )}
+      >
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+          <Analytics />
+          <Toaster />
+          <TailwindIndicator />
+        </ThemeProvider>
       </body>
     </html>
   )
