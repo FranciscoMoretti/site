@@ -43,11 +43,12 @@ The plan is to implement all the features and niceness for a personal blog.
 - ✅ Custom tailwind styles
 - ✅ Show views for each post using **Prisma** and **PlanetScale**
 - ✅ Personalized OG Images
+- ✅ Dark mode
 
 ## Roadmap
 
 - [ ] Framer motion animations on home screen
-- [ ] Dark mode
+- [ ] Dark Code Blocks
 - [ ] Unit tests
 
 ## Inspiration
