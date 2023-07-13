@@ -1,7 +1,6 @@
 import { Suspense } from "react"
 import Link from "next/link"
 
-import { marketingConfig } from "@/config/marketing"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
@@ -31,14 +30,23 @@ export default async function MarketingLayout({
             <div className="flex-1 sm:grow-0">
               <CommandMenu />
             </div>
-            <nav className="flex space-x-4">
+            <nav className="flex items-center">
               <Link
                 href={siteConfig.links.github}
                 target="_blank"
                 rel="noreferrer"
               >
-                <Icons.gitHub className="h-7 w-7" />
-                <span className="sr-only">GitHub</span>
+                <div
+                  className={cn(
+                    buttonVariants({
+                      variant: "ghost",
+                    }),
+                    "w-9 px-0"
+                  )}
+                >
+                  <Icons.gitHub className="h-4 w-4" />
+                  <span className="sr-only">GitHub</span>
+                </div>
               </Link>
               <ModeToggle />
             </nav>
