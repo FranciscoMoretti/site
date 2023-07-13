@@ -8,6 +8,7 @@ import { buttonVariants } from "@/components/ui/button"
 import { CommandMenu } from "@/components/command-menu"
 import { Icons } from "@/components/icons"
 import { MainNav } from "@/components/main-nav"
+import { ModeToggle } from "@/components/mode-toggle"
 import { NavigationEvents } from "@/components/navigation-events"
 import { SiteFooter } from "@/components/site-footer"
 
@@ -39,6 +40,7 @@ export default async function MarketingLayout({
                 <Icons.gitHub className="h-7 w-7" />
                 <span className="sr-only">GitHub</span>
               </Link>
+              <ModeToggle />
             </nav>
             {/* <nav>
             <Link

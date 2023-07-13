@@ -5,6 +5,7 @@ import { siteConfig } from "@/config/site"
 import { CommandMenu } from "@/components/command-menu"
 import { Icons } from "@/components/icons"
 import { MainNav } from "@/components/main-nav"
+import { ModeToggle } from "@/components/mode-toggle"
 import { DocsSidebarNav } from "@/components/sidebar-nav"
 import { SiteFooter } from "@/components/site-footer"
 
@@ -33,6 +34,7 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
                 <Icons.gitHub className="h-7 w-7" />
                 <span className="sr-only">GitHub</span>
               </Link>
+              <ModeToggle />
             </nav>
           </div>
         </div>
