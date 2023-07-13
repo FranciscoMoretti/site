@@ -50,14 +50,14 @@ export default async function IndexPage() {
   return (
     <>
       <section className="container flex flex-col-reverse items-center justify-center gap-6 pb-8 pt-6 sm:flex-row md:pb-12 md:pt-10 lg:pb-24 lg:pt-16">
-        <div className="flex flex-col items-center gap-4  sm:items-start ">
+        <div className="flex flex-col items-center gap-4 sm:items-start">
           <h1 className="text-3xl font-bold leading-[1.1] tracking-tighter sm:text-5xl md:text-6xl">
             Francisco Moretti
           </h1>
           <h2 className="text-lg font-semibold tracking-tighter sm:text-2xl md:text-3xl">
             Modern Web, Happy Coding
           </h2>
-          <p className="text-center leading-normal text-muted-foreground sm:text-xl sm:leading-8">
+          <p className=" text-center leading-normal text-muted-foreground sm:text-start sm:text-xl sm:leading-8">
             I learn in public to support your coding journey
           </p>
           <div className="flex gap-4">
