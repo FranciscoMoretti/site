@@ -41,7 +41,7 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
                     "w-9 px-0"
                   )}
                 >
-                  <Icons.gitHub className="h-4 w-4" />
+                  <Icons.gitHub className="h-5 w-5" />
                   <span className="sr-only">GitHub</span>
                 </div>
               </Link>
