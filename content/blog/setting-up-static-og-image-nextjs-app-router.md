@@ -68,13 +68,12 @@ Place the text file in the same route segment as the respective image.
 
 Here's an example of the `opengraph-image.alt.txt` file content:
 
-```
+```txt
 Happy Coding
 ```
-
 And here's an example of the `twitter-image.alt.txt` file content:
 
-```
+```txt
 Happy Coding
 ```
 
@@ -89,7 +88,7 @@ The alt text will be included in the `<head>` output for both the Open Graph and
 
 Here's an example of how the file structure for the OG and Twitter images might look:
 
-```
+```txt
 ├── app
 │   ├── page.tsx
 │   ├── ...
