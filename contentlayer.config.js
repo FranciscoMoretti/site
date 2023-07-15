@@ -241,10 +241,7 @@ export default makeSource(async () => {
         [
           rehypePrettyCode,
           {
-            theme: {
-              dark: "dark-plus",
-              light: "light-plus",
-            },
+            theme: "dark-plus",
             keepBackground: false,
 
             onVisitLine(node) {

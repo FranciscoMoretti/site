@@ -3,8 +3,9 @@
 import * as React from "react"
 
 import { cn } from "@/lib/utils"
-
 import { Icons } from "@/components/icons"
+
+import { Button } from "./ui/button"
 
 interface CopyButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   value: string
@@ -30,9 +31,11 @@ export function CopyButton({
   }, [hasCopied])
 
   return (
-    <button
+    <Button
+      size="icon"
+      variant="ghost"
       className={cn(
-        "relative z-20 inline-flex h-6 w-6 items-center justify-center rounded-md border bg-background text-sm font-medium transition-all hover:bg-muted focus:outline-none",
+        "relative z-10 h-7 w-7 text-neutral-50 hover:bg-neutral-700 hover:text-neutral-50",
         className
       )}
       onClick={() => {
@@ -43,10 +46,10 @@ export function CopyButton({
     >
       <span className="sr-only">Copy</span>
       {hasCopied ? (
-        <Icons.check className="h-3 w-3" />
+        <Icons.check className="h-4 w-4" />
       ) : (
-        <Icons.copy className="h-3 w-3" />
+        <Icons.copy className="h-4 w-4" />
       )}
-    </button>
+    </Button>
   )
 }
