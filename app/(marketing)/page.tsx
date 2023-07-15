@@ -150,7 +150,7 @@ export default async function IndexPage() {
       <section className="space-6 container py-8 md:max-w-4xl md:py-12 lg:py-24">
         <div className="flex w-full flex-col items-center justify-center gap-4 text-center">
           <h2 className="text-2xl font-bold leading-[1.1] tracking-tighter sm:text-2xl md:text-5xl">
-            Proudly Open Source
+            Open Source
           </h2>
           <p className="max-w-[85%] leading-normal text-muted-foreground  sm:text-lg sm:leading-7">
             Site is open source and powered by open source software. The code is
@@ -161,7 +161,7 @@ export default async function IndexPage() {
               rel="noreferrer"
               className="underline underline-offset-4"
             >
-              GitHub
+              GitHub. Feel free to copy it for your own site.
             </Link>
             .
           </p>
