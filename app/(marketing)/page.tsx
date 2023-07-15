@@ -139,14 +139,6 @@ export default async function IndexPage() {
         )}
       </section>
       <hr className="container" />
-      <section className="container space-y-8 py-8 md:max-w-4xl md:py-12 lg:py-16">
-        <h2 className="mb-4 scroll-m-20 pb-1 text-center text-2xl font-semibold tracking-tight first:mt-0 md:text-5xl">
-          All topics
-        </h2>
-        <TagGroup tagsItems={tagsItems} />
-      </section>
-      <hr className="container" />
-
       <section className="space-6 container py-8 md:max-w-4xl md:py-12 lg:py-24">
         <div className="flex w-full flex-col items-center justify-center gap-4 text-center">
           <h2 className="text-2xl font-bold leading-[1.1] tracking-tighter sm:text-2xl md:text-5xl">
@@ -161,11 +153,10 @@ export default async function IndexPage() {
               rel="noreferrer"
               className="underline underline-offset-4"
             >
-              GitHub. Feel free to copy it for your own site.
+              GitHub
             </Link>
-            .
+            . Start here and create your own site.
           </p>
-
           {stars && (
             <Link
               href={siteConfig.links.github}
@@ -193,6 +184,13 @@ export default async function IndexPage() {
           )}
         </div>
       </section>
+      <hr className="container" />
+      <section className="container space-y-8 py-8 md:max-w-4xl md:py-12 lg:py-16">
+        <h2 className="mb-4 scroll-m-20 pb-1 text-center text-2xl font-semibold tracking-tight first:mt-0 md:text-5xl">
+          All topics
+        </h2>
+        <TagGroup tagsItems={tagsItems} />
+      </section>
     </>
   )
 }
@@ -208,13 +206,17 @@ function TechCard({
 }) {
   return (
     <Link href={link}>
-      <div className="relative overflow-hidden rounded-lg border p-2 hover:bg-accent">
-        <div className="flex h-44 flex-col justify-between rounded-md p-6">
-          <div className="space-y-2">
-            <h3 className={cn(FORMAT_H3, "mt-0")}>{name}</h3>
-            <p className="text-sm text-muted-foreground">{description}</p>
+      <div className="relative animate-border overflow-hidden rounded-lg bg-gradient-to-r from-primary via-background to-secondary bg-[length:400%_400%] p-[1px] ">
+        <span className="block rounded-md bg-background px-5 py-3 font-bold hover:bg-accent">
+          <div className="flex h-44 flex-col justify-between rounded-md p-6">
+            <div className="space-y-2">
+              <h3 className={cn(FORMAT_H3, "mt-0")}>{name}</h3>
+              <p className="text-muted-foregroun line-clamp-4 text-sm">
+                {description}
+              </p>
+            </div>
           </div>
-        </div>
+        </span>
       </div>
     </Link>
   )
