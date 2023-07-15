@@ -48,7 +48,6 @@ The plan is to implement all the features and niceness for a personal blog.
 ## Roadmap
 
 - [ ] Framer motion animations on home screen
-- [ ] Dark Code Blocks
 - [ ] Unit tests
 
 ## Inspiration
