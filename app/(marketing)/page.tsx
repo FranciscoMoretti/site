@@ -1,5 +1,6 @@
 import Link from "next/link"
-import { allPosts, allTags } from "contentlayer/generated"
+import { FORMAT_H3 } from "@/styles/format"
+import { allPosts, allTags, Tag } from "contentlayer/generated"
 import { compareDesc } from "date-fns"
 
 import { siteConfig } from "@/config/site"
@@ -9,7 +10,20 @@ import BlogPostList from "@/components/blog-post-list"
 import { getTagsItems, TagGroup } from "@/components/tag-group"
 import { UserAvatar } from "@/components/user-avatar"
 
+const TECHNOLOGIES = [
+  "next-js",
+  "vs-code",
+  "javascript",
+  "typescript",
+  "tailwind-css",
+  "react",
+]
+
 async function getGitHubStars(): Promise<string | null> {
+  if (process.env.DISABLE_APIS) {
+    return "0"
+  }
+
   try {
     const response = await fetch(
       "https://api.github.com/repos/franciscomoretti/site",
@@ -39,6 +53,12 @@ async function getGitHubStars(): Promise<string | null> {
 export default async function IndexPage() {
   const stars = await getGitHubStars()
   const tagsItems = await getTagsItems(allTags)
+
+  const technologiesTags = TECHNOLOGIES.map(function (value) {
+    return allTags.find(function (obj) {
+      return obj.slug === value
+    })
+  }) as Tag[]
 
   const posts = allPosts
     .filter((post) => post.publish)
@@ -75,6 +95,32 @@ export default async function IndexPage() {
         />
       </section>
       <hr className="container" />
+      <section
+        id="features"
+        className="container space-y-6 py-8 md:py-12 lg:py-24"
+      >
+        <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
+          <h2 className="text-3xl font-semibold sm:text-3xl md:text-6xl">
+            Technologies
+          </h2>
+          <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
+            {
+              "I write about these technologies I work with. I've used all  of them to create this site."
+            }
+          </p>
+        </div>
+        <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3">
+          {technologiesTags.map((tag) => (
+            <TechCard
+              key={tag.slug}
+              name={tag.tag}
+              description={tag.description || ""}
+              link={tag.routepath}
+            />
+          ))}
+        </div>
+      </section>
+      <hr className="container" />
       <section className="container space-y-8 py-8 md:max-w-4xl md:py-12 lg:py-16">
         <h2 className="mb-4 scroll-m-20 pb-1 text-2xl font-semibold tracking-tight first:mt-0 md:text-5xl">
           {"Recent Posts"}
@@ -100,6 +146,7 @@ export default async function IndexPage() {
         <TagGroup tagsItems={tagsItems} />
       </section>
       <hr className="container" />
+
       <section className="space-6 container py-8 md:max-w-4xl md:py-12 lg:py-24">
         <div className="flex flex-col justify-start gap-4">
           <h2 className="text-2xl font-bold leading-[1.1] tracking-tighter sm:text-2xl md:text-5xl">
@@ -147,5 +194,28 @@ export default async function IndexPage() {
         </div>
       </section>
     </>
+  )
+}
+
+function TechCard({
+  name,
+  description,
+  link,
+}: {
+  name: string
+  description: string
+  link: string
+}) {
+  return (
+    <Link href={link}>
+      <div className="relative overflow-hidden rounded-lg border p-2 hover:bg-accent">
+        <div className="flex h-44 flex-col justify-between rounded-md p-6">
+          <div className="space-y-2">
+            <h3 className={cn(FORMAT_H3, "mt-0")}>{name}</h3>
+            <p className="text-sm text-muted-foreground">{description}</p>
+          </div>
+        </div>
+      </div>
+    </Link>
   )
 }
