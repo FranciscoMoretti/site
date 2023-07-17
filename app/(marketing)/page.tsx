@@ -206,7 +206,7 @@ function TechCard({
 }) {
   return (
     <Link href={link}>
-      <div className="relative animate-border overflow-hidden rounded-lg bg-gradient-to-r from-primary via-background to-secondary bg-[length:400%_400%] p-[1px] ">
+      <div className="relative animate-border overflow-hidden rounded-lg bg-gradient-to-r from-border via-secondary to-border bg-[length:400%_400%] p-[1px] ">
         <span className="block rounded-md bg-background px-5 py-3 font-bold hover:bg-accent">
           <div className="flex h-44 flex-col justify-between rounded-md p-6">
             <div className="space-y-2">
