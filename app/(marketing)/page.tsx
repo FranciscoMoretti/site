@@ -1,5 +1,4 @@
 import Link from "next/link"
-import { FORMAT_H3 } from "@/styles/format"
 import { allPosts, allTags, Tag } from "contentlayer/generated"
 import { compareDesc } from "date-fns"
 
@@ -8,6 +7,7 @@ import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 import BlogPostList from "@/components/blog-post-list"
 import { getTagsItems, TagGroup } from "@/components/tag-group"
+import { TechCard } from "@/components/tech-card"
 import { UserAvatar } from "@/components/user-avatar"
 
 const TECHNOLOGIES = [
@@ -192,32 +192,5 @@ export default async function IndexPage() {
         <TagGroup tagsItems={tagsItems} />
       </section>
     </>
-  )
-}
-
-function TechCard({
-  name,
-  description,
-  link,
-}: {
-  name: string
-  description: string
-  link: string
-}) {
-  return (
-    <Link href={link}>
-      <div className="relative animate-border overflow-hidden rounded-lg bg-gradient-to-r from-border via-secondary to-border bg-[length:400%_400%] p-[1px] ">
-        <span className="block rounded-md bg-background px-5 py-3 font-bold hover:bg-accent">
-          <div className="flex h-44 flex-col justify-between rounded-md p-6">
-            <div className="space-y-2">
-              <h3 className={cn(FORMAT_H3, "mt-0")}>{name}</h3>
-              <p className="text-muted-foregroun line-clamp-4 text-sm">
-                {description}
-              </p>
-            </div>
-          </div>
-        </span>
-      </div>
-    </Link>
   )
 }
