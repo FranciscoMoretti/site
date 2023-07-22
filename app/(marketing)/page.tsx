@@ -110,7 +110,7 @@ export default async function IndexPage() {
       </section>
       <hr className="container" />
       <section className="space-6 container py-8 md:max-w-4xl md:py-12 lg:py-24">
-        <div className="flex w-full flex-col items-center justify-center gap-4 text-center">
+        <div className="flex w-full flex-col items-center justify-center gap-6 text-center">
           <h2 className="text-2xl font-bold leading-[1.1] tracking-tighter sm:text-2xl md:text-5xl">
             Open Source
           </h2>
