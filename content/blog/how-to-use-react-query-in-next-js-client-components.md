@@ -184,7 +184,6 @@ export default DataDisplay;
 React Query offers the option to manually trigger data refetching. You can use the `refetch` function to refresh the data.
 
 ```tsx
-// Step 7: Customizing Query Behavior with onError and onSuccess
 function YetAnotherComponent() {
   const { data, isLoading, isError, refetch } = useQuery('data', fetchData, {
     // Define the onError and onSuccess functions
