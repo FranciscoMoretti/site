@@ -128,7 +128,8 @@ To do this you can create a `queryFn`  with a well defined return type.
 ```tsx
 const fetchGroups = (): Promise<Group[]> =>  axios.get('/groups').then((response) => response.data)
 
-const { data } = useQuery({ queryKey: ['groups'], queryFn: fetchGroups })//      ^? const data: Group[] | undefined
+const { data } = useQuery({ queryKey: ['groups'], queryFn: fetchGroups })
+//      ^? const data: Group[] | undefined
 ```
 
 
