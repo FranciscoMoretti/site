@@ -48,6 +48,12 @@ In Next.js 13, by default, all components are rendered on the server side. Howev
 
 The provider needs to be run in the client, that's why we use `"use client"` at the top. This configuration also includes [React Query Devtools](https://tanstack.com/query/latest/docs/react/devtools).
 
+Install with
+```sh
+npm i @tanstack/react-query-devtools
+```
+
+
 ```tsx title="app/react-query-provider"
 "use client";
 
@@ -61,6 +67,7 @@ export function ReactQueryProvider({ children }: React.PropsWithChildren) {
 
   return (
     <QueryClientProvider client={client}>
+      {children}
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );
