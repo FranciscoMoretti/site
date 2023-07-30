@@ -110,13 +110,10 @@ export async function generateStaticParams(): Promise<
 
     const thumbnailPromises = allPosts
       .filter((post) => {
-        console.log("thumbnail", post.thumbnail)
-
         return Boolean(post.thumbnail)
       })
       .map(async (post) => {
         const { slug, thumbnail } = post
-        console.log("thumbnail", thumbnail)
         const imageUrl = new URL(`${url}/api/thumbnail`)
         if (!thumbnail) {
           throw Error(`Unexpected empty thumbnail in [${slug}]`)
