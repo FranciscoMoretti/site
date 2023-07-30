@@ -3,6 +3,8 @@ import { ImageResponse } from "@vercel/og"
 
 import { thumbnailImageSchema } from "@/lib/validations/thumbnail"
 
+// Draft https://play.tailwindcss.com/VX1V9h8bhT
+
 export const runtime = "edge"
 
 const interBold = fetch(
