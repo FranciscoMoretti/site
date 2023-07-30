@@ -32,7 +32,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".contentlayer/generated",
-    "scripts/sync.mjs"
+    "scripts/sync.mjs",
+    "scripts/imageDownloader.mss"
   ],
   "exclude": ["node_modules"]
 }

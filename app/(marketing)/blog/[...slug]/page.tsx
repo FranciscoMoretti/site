@@ -1,3 +1,4 @@
+import path from "path"
 import { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
@@ -13,6 +14,7 @@ import { upsertPost } from "@/app/(marketing)/actions"
 
 import "@/styles/mdx.css"
 
+import { downloadImage } from "@/lib/image-downloader"
 import { buttonVariants } from "@/components/ui/button"
 
 export const revalidate = 60
@@ -94,13 +96,56 @@ export async function generateStaticParams(): Promise<
     }
   })
 
-  await Promise.all(promises)
-    .then(() => {
-      console.log("All promises completed")
-    })
-    .catch((error) => {
-      console.log("Error:", error)
-    })
+  if (process.env.NODE_ENV !== "production") {
+    await Promise.all(promises)
+      .then(() => {
+        console.log("All DB completed")
+      })
+      .catch((error) => {
+        console.log("Error:", error)
+      })
+
+    const projectFolderPath = path.join(process.cwd(), "public", "thumbnails")
+    const url = process.env.NEXT_PUBLIC_APP_URL
+
+    const thumbnailPromises = allPosts
+      .filter((post) => {
+        console.log("thumbnail", post.thumbnail)
+
+        return Boolean(post.thumbnail)
+      })
+      .map(async (post) => {
+        const { slug, thumbnail } = post
+        console.log("thumbnail", thumbnail)
+        const imageUrl = new URL(`${url}/api/thumbnail`)
+        if (!thumbnail) {
+          throw Error(`Unexpected empty thumbnail in [${slug}]`)
+        } else if (thumbnail.length < 3) {
+          throw Error(`Thumbnail has few arguments in [${slug}]`)
+        }
+        imageUrl.searchParams.set("line1", thumbnail[0])
+        imageUrl.searchParams.set("line2", thumbnail[1])
+        imageUrl.searchParams.set("line3", thumbnail[2])
+        try {
+          thumbnail
+          const imagePath = path.join(projectFolderPath, `${slug}.png`)
+          return downloadImage({
+            outputPath: imagePath,
+            imageUrl: imageUrl.toString(),
+          })
+        } catch (error) {
+          console.log(error)
+        }
+      })
+
+    await Promise.all(thumbnailPromises)
+      .then(() => {
+        console.log("All thumbnail promises completed")
+      })
+      .catch((error) => {
+        console.log("Error:", error)
+      })
+  }
 
   return allPosts.map((post) => ({
     slug: [post.slug],

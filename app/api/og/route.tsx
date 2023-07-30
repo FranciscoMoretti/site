@@ -143,7 +143,7 @@ export async function GET(req: Request) {
             >
               {tags.map((tag) => (
                 <div
-                  tw="inline-flex border-2 border-black rounded-full m-1 px-3 py-1 text-3xl font-bold text-black"
+                  tw="border-2 border-black rounded-full m-1 px-3 py-1 text-3xl font-bold text-black"
                   key={tag}
                 >
                   {tag}
