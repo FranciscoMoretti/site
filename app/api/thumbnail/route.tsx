@@ -14,13 +14,11 @@ export async function GET(req: Request) {
     const fontBold = await interBold
 
     const url = new URL(req.url)
-    console.log(url.searchParams)
 
     const values = thumbnailImageSchema.parse(
       Object.fromEntries(url.searchParams)
     )
 
-    console.log(Object.fromEntries(url.searchParams))
     const headingLines = [values.line1, values.line2, values.line3]
 
     const paint = "#fff"
