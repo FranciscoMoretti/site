@@ -34,16 +34,16 @@ export async function GET(req: Request) {
             background: "#020D1C",
           }}
         >
-          <div tw="flex flex-col h-full justify-center items-center text-white uppercase">
+          <div tw="flex flex-col h-full border-4  border-[#005B8C] justify-center items-center text-white uppercase">
             {headingLines.map((headingRow, index) => (
               <span
                 key={headingRow}
-                tw={index == 1 ? "px-6 bg-[#005B8C] rounded-2xl" : ""}
+                tw={index == 1 ? "px-6 bg-[#005B8C]  my-2" : ""}
               >
                 <div
                   tw={`text-[${
                     index == 1 ? "120px" : "100px"
-                  }] font-extrabold `}
+                  }] font-extrabold leading-[110px]`}
                   style={{
                     fontFamily: "SansSerif",
                     fontWeight: "extrabold",
