@@ -8,7 +8,11 @@ slug: how-to-create-consistent-styles-with-tailwind-mdx-and-html
 title: How to Create Consistent Styles with Tailwind, MDX, and HTML
 description: Learn how to create consistent styles using Tailwind, MDX, and HTML. This tutorial provides instructions for using the same styles in MDX and HTML content.
 date: 2023-07-03
-image:
+image: /thumbnails/how-to-create-consistent-styles-with-tailwind-mdx-and-html.png
+thumbnail:
+  - tailwind
+  - MDX and JSX
+  - styles
 ---
 
 ## Introduction

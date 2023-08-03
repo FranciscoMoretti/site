@@ -8,7 +8,11 @@ slug: using-tailwindcss-line-clamp-for-consistent-descriptions-on-blog-post-card
 title: Consistent Descriptions with TailwindCSS Line Clamp
 description: Learn how to use TailwindCSS Line Clamp plugin to create consistent descriptions for blog post cards. Upgrade to Tailwind 3.3 for this useful utility.
 date: 2023-05-09
-image:
+image: /thumbnails/using-tailwindcss-line-clamp-for-consistent-descriptions-on-blog-post-cards.png
+thumbnail:
+  - Tailwind
+  - Line Clamp
+  - Utility
 ---
 
 If you're creating a blog, you probably want to show a preview of your blog posts on your homepage. One of the most important parts of the preview is the post description. However, you may have noticed that descriptions of different lengths can break the layout, making the homepage look inconsistent. But worry not, there's a solution to this problem - the TailwindCSS Line Clamp plugin.

@@ -8,7 +8,11 @@ slug: avoiding-mistakes-in-nextjs-using-the-typescript-plugin
 title: Avoiding Mistakes in Next.js using the TypeScript Plugin
 description: Learn how to avoid common mistakes in Next.js development by leveraging the power of the TypeScript plugin. Discover the benefits and how to enable it.
 date: 2023-07-15
-image:
+image: /thumbnails/avoiding-mistakes-in-nextjs-using-the-typescript-plugin.png
+thumbnail:
+  - Next.js
+  - TypeScript
+  - Plugin
 ---
 
 ## What is the TypeScript Plugin? 🧩

@@ -8,7 +8,11 @@ slug: postgresql-vs-mysql-the-rising-popularity-of-postgresql
 title: PostgreSQL vs MySQL - The Rising Popularity of PostgreSQL
 description: Explore the growing popularity of PostgreSQL compared to MySQL and understand the factors behind this trend in the web development industry.
 date: 2023-06-28
-image:
+image: /thumbnails/postgresql-vs-mysql-the-rising-popularity-of-postgresql.png
+thumbnail:
+  - Why
+  - PostgreSQL
+  - wins?
 ---
 
 ## Introduction

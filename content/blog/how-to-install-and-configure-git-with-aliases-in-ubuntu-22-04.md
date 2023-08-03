@@ -8,7 +8,11 @@ slug: how-to-install-and-configure-git-with-aliases-in-ubuntu-22-04
 title: How to Install and Configure Git with Aliases in Ubuntu 22
 description: Enhance your Git experience with useful aliases for basic configuration in Ubuntu 22.04. A handy guide for Git users. Happy coding!
 date: 2023-05-17
-image:
+image: /thumbnails/how-to-install-and-configure-git-with-aliases-in-ubuntu-22-04.png
+thumbnail:
+  - Install
+  - Git
+  - Ubuntu
 ---
 
 This guide will guide you through the process of installing and configuring [Git](https://git-scm.com/) with aliases in Ubuntu 22.04. Git is an essential tool for version control, and aliases can greatly enhance your workflow by providing shorthand commands for common Git operations. Let's get started! 😄

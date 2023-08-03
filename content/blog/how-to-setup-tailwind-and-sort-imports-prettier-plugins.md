@@ -8,7 +8,11 @@ slug: how-to-setup-tailwind-and-sort-imports-prettier-plugins
 title: How to Setup Tailwind and Sort Imports Prettier Plugins
 description: Learn how to set up Tailwind CSS and sort imports using Prettier plugins in your projects. Improve your code formatting and maintain a consistent import order.
 date: 2023-06-26
-image:
+image: /thumbnails/how-to-setup-tailwind-and-sort-imports-prettier-plugins.png
+thumbnail:
+  - Setup
+  - Prettier
+  - Plugins
 ---
 
 ## Introduction

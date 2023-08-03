@@ -21,7 +21,17 @@ export async function GET(req: Request) {
       Object.fromEntries(url.searchParams)
     )
 
-    const headingLines = [values.line1, values.line2, values.line3]
+    const headingLines = [
+      {
+        text: values.line1,
+        size: "90px",
+      },
+      {
+        text: values.line2,
+        size: values.line2.length < 12 ? "120px" : "100px",
+      },
+      { text: values.line3, size: "90px" },
+    ]
 
     const paint = "#fff"
 
@@ -37,20 +47,18 @@ export async function GET(req: Request) {
           <div tw="flex flex-col h-full border-4  border-[#005B8C] justify-center items-center text-white uppercase">
             {headingLines.map((headingRow, index) => (
               <span
-                key={headingRow}
+                key={headingRow.text}
                 tw={index == 1 ? "px-6 bg-[#005B8C]  my-2" : ""}
               >
                 <div
-                  tw={`text-[${
-                    index == 1 ? "120px" : "90px"
-                  }] font-extrabold leading-[110px]`}
+                  tw={`text-[${headingRow.size}] font-extrabold leading-[110px]`}
                   style={{
                     fontFamily: "SansSerif",
                     fontWeight: "extrabold",
                     marginLeft: "-3px",
                   }}
                 >
-                  {headingRow}
+                  {headingRow.text}
                 </div>
               </span>
             ))}

@@ -8,7 +8,11 @@ slug: quokka-playground-run-javascript-and-typescript-in-vs-code
 title: Quokka Playground - Run JavaScript and TypeScript in VS Code
 description: Discover the Quokka extension for Visual Studio Code, a valuable tool that simplifies code testing and learning in JavaScript and TypeScript development.
 date: 2023-07-04
-image:
+image: /thumbnails/quokka-playground-run-javascript-and-typescript-in-vs-code.png
+thumbnail:
+  - VS Code
+  - Quokka
+  - Playground
 ---
 
 ## Introduction

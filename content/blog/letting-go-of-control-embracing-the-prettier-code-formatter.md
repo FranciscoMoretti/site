@@ -8,7 +8,11 @@ slug: letting-go-of-control-embracing-the-prettier-code-formatter
 title: The Magic of Prettier - Enhance Code Quality Effortlessly
 description: Let go of control and unlock the magic of Prettier, the code formatter. Enhance collaboration, and enjoy a consistent code style effortlessly.
 date: 2023-05-16
-image:
+image: /thumbnails/letting-go-of-control-embracing-the-prettier-code-formatter.png
+thumbnail:
+  - Embrace
+  - Prettier
+  - Formatter
 ---
 
 ## Embracing the Power of the Prettier Code Formatter 🚀

@@ -8,7 +8,11 @@ slug: how-to-set-up-prettier-and-eslint-in-vs-code-for-next-js
 title: How to Set Up Prettier and ESLint in VS Code for Next.js
 description: Supercharge your development experience by setting up Prettier and ESLint in VS Code for your Next.js projects. Improve code formatting and catch errors early.
 date: 2023-06-25
-image:
+image: /thumbnails/how-to-set-up-prettier-and-eslint-in-vs-code-for-next-js.png
+thumbnail:
+  - Setup
+  - ESlint Prettier
+  - VS Code
 ---
 
 ## Introduction

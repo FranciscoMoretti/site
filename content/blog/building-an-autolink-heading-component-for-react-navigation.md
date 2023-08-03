@@ -9,7 +9,11 @@ title: Building an Autolink Heading Component for React Navigation
 description: Learn how I built an Autolink Heading component for React Navigation that automatically generates anchor links for section headings to improve navigation.
 
 date: 2023-07-03
-image:
+image: /thumbnails/building-an-autolink-heading-component-for-react-navigation.png
+thumbnail:
+  - Navigation
+  - Autolink
+  - Headings
 ---
 
 ## Introduction

@@ -8,7 +8,11 @@ slug: nextjs-in-a-vs-code-development-container
 title: Next.js in a VS Code development container
 description: A simple and minimalistic template to develop your Next.js application in a VS Code development container.
 date: 2021-06-11
-image:
+image: /thumbnails/nextjs-in-a-vs-code-development-container.png
+thumbnail:
+  - VS Code
+  - Dev Container
+  - Next.js
 ---
 
 A simple and minimalistic template to develop your Next.js application in a VS Code development container. Use Next.js with the portability of docker and the comfort of VS Code in just a few steps.

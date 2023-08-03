@@ -8,7 +8,11 @@ slug: next-js-suspense-how-to-use-suspense-with-a-component
 title: Next.js Suspense - How to Use Suspense with a Component
 description: Learn how to use Next.js Suspense and make your app more responsive. Explore the process of setting up and using Suspense with an async component in Next.js.
 date: 2023-06-30
-image:
+image: /thumbnails/next-js-suspense-how-to-use-suspense-with-a-component.png
+thumbnail:
+  - Suspense
+  - Component
+  - Next.js
 ---
 
 ## Introduction

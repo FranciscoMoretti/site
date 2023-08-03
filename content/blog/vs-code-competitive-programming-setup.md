@@ -8,7 +8,11 @@ slug: vs-code-competitive-programming-setup
 title: VS Code Competitive programming setup
 description: Discover the power of VS Code for competitive programming. How to configure your environment, connect with CodeForces, and solve coding challenges efficiently.
 date: 2021-10-21
-image:
+image: /thumbnails/vs-code-competitive-programming-setup.png
+thumbnail:
+  - VS Code
+  - Competitive
+  - Programming
 ---
 
 ## Use the power of VS Code to solve coding challenges
