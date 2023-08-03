@@ -42,7 +42,7 @@ export async function GET(req: Request) {
               >
                 <div
                   tw={`text-[${
-                    index == 1 ? "120px" : "100px"
+                    index == 1 ? "120px" : "90px"
                   }] font-extrabold leading-[110px]`}
                   style={{
                     fontFamily: "SansSerif",
