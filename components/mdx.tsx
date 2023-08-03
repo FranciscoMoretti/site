@@ -71,7 +71,6 @@ const components = {
     if (props.src?.endsWith(".gif") && props.src?.startsWith("/")) {
       const srcAbsPath = path.join(process.cwd(), "public", props.src)
       const dimensions = sizeOf(srcAbsPath)
-      console.info("srcAbsPath:", srcAbsPath)
       if (!dimensions.width || !dimensions.height) {
         console.error(
           `Image [${props.src}] has incomplete dimensions [${dimensions}]`
