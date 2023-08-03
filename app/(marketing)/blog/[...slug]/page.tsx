@@ -97,13 +97,9 @@ export async function generateStaticParams(): Promise<
   })
 
   if (process.env.NODE_ENV !== "production") {
-    await Promise.all(promises)
-      .then(() => {
-        console.log("All DB completed")
-      })
-      .catch((error) => {
-        console.log("Error:", error)
-      })
+    await Promise.all(promises).catch((error) => {
+      console.log("Error:", error)
+    })
 
     const projectFolderPath = path.join(process.cwd(), "public", "thumbnails")
     const url = process.env.NEXT_PUBLIC_APP_URL
@@ -135,13 +131,9 @@ export async function generateStaticParams(): Promise<
         }
       })
 
-    await Promise.all(thumbnailPromises)
-      .then(() => {
-        console.log("All thumbnail promises completed")
-      })
-      .catch((error) => {
-        console.log("Error:", error)
-      })
+    await Promise.all(thumbnailPromises).catch((error) => {
+      console.log("Error:", error)
+    })
   }
 
   return allPosts.map((post) => ({
