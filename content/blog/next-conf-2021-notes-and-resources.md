@@ -8,7 +8,7 @@ slug: next-conf-2021-notes-and-resources
 title: Next Conf 2021 Notes and Resources
 description: Explore the key insights and resources from Next Conf 2021 and Next.js 12. Discover Next.js SDK, web performance strategies, ES Modules support, and more.
 date: 2021-11-13
-image: /thumbnails/next  -conf-2021-notes-and-resources.png
+image: /thumbnails/next-conf-2021-notes-and-resources.png
 thumbnail:
   - Notes
   - Next Conf
