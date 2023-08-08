@@ -44,7 +44,7 @@ A simple and minimalistic template to develop your Next.js application in a VS C
 
 4. Run the development server
 
-   ```npm
+   ```bash
    npm run dev
    ```
 
