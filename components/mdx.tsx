@@ -1,6 +1,7 @@
 import path from "path"
 import * as React from "react"
 import Image from "next/image"
+import Link from "next/link"
 import {
   FORMAT_A,
   FORMAT_H1,
@@ -24,6 +25,35 @@ import { Card } from "@/components/card"
 
 import { CopyButton } from "./copy-button"
 
+const CustomLink = (className, props) => {
+  let href = props.href
+
+  // Some markdown links can start with relative paths from root folder without /
+  // TODO: Better way of normalizing markdown links
+  if (href.startsWith("#")) {
+    return <a className={cn(FORMAT_A, className)} {...props} />
+  } else if (!(href.startsWith("www") || href.startsWith("http"))) {
+    href = "/" + href
+  }
+
+  if (href.startsWith("/")) {
+    return (
+      <Link href={href} className={cn(FORMAT_A, className)} {...props}>
+        {props.children}
+      </Link>
+    )
+  }
+
+  return (
+    <a
+      target="_blank"
+      rel="noopener noreferrer"
+      className={cn(FORMAT_A, className)}
+      {...props}
+    />
+  )
+}
+
 const components = {
   h1: ({ className, ...props }) => (
     <h1 className={cn(FORMAT_H1, className)} {...props} />
@@ -43,9 +73,9 @@ const components = {
   h6: ({ className, ...props }) => (
     <h6 className={cn(FORMAT_H6, className)} {...props} />
   ),
-  a: ({ className, ...props }) => (
-    <a className={cn(FORMAT_A, className)} {...props} />
-  ),
+  a: ({ className, ...props }) =>
+    // TODO: convert to next/link Link and sanitize by adding `/` if not existent before. Copy from other repo.
+    CustomLink(className, props),
   p: ({ className, ...props }) => (
     <p className={cn(FORMAT_P, className)} {...props} />
   ),
