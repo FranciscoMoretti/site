@@ -25,31 +25,15 @@ import { Card } from "@/components/card"
 
 import { CopyButton } from "./copy-button"
 
-function normalizeObsidianAbsolutePath(path: string): string {
-  if (
-    !path.startsWith("/") &&
-    !(path.startsWith("www") || path.startsWith("http"))
-  ) {
-    return "/" + path
-  }
-  return path
-}
-
-function removeExtension(filepath: string): string {
-  return path.parse(filepath).name
-}
-
 const CustomLink = (className, props) => {
-  let href = props.href
+  const href = props.href
 
   // Obsidian absolute path links can start with relative paths from root folder without /. This adds a leading slash.
   // TODO: Better way of normalizing markdown links
   if (href.startsWith("#")) {
     return <a className={cn(FORMAT_A, className)} {...props} />
   }
-  href = normalizeObsidianAbsolutePath(href)
   if (href.startsWith("/")) {
-    props.href = removeExtension(href)
     return (
       <Link className={cn(FORMAT_A, className)} {...props}>
         {props.children}
@@ -109,7 +93,6 @@ const components = {
     />
   ),
   img: ({ className, alt, ...props }) => {
-    props.src = normalizeObsidianAbsolutePath(props.src)
     if (props.src.endsWith(".gif") && props.src.startsWith("/")) {
       const srcAbsPath = path.join(
         process.cwd(),

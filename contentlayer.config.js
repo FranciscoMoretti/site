@@ -9,6 +9,23 @@ import { visit } from "unist-util-visit"
 
 import { siteConfig } from "./config/site"
 
+function normalizeObsidianAbsolutePath(path) {
+  if (
+    !path.startsWith("/") &&
+    !(path.startsWith("www") || path.startsWith("http") || path.startsWith("#"))
+  ) {
+    return "/" + path
+  }
+  return path
+}
+
+function removeFileExtension(filePath) {
+  const lastDotIndex = filePath.lastIndexOf(".")
+  const fileNameWithoutExtension =
+    lastDotIndex !== -1 ? filePath.slice(0, lastDotIndex) : filePath
+  return fileNameWithoutExtension
+}
+
 /** @type {import('contentlayer/source-files').ComputedFields} */
 const computedFields = {
   routepath: {
@@ -226,6 +243,22 @@ export default makeSource(async () => {
       remarkPlugins: [
         remarkGfm,
         [remarkWikiLink, { permalinks, pathFormat: "obsidian-short" }],
+        () => (tree) => {
+          // TODO: Extract into a npm package
+          visit(tree, (node) => {
+            if (node.type === "link") {
+              let url = node.url
+              url = normalizeObsidianAbsolutePath(url)
+              if (url.startsWith("/")) {
+                url = removeFileExtension(url)
+              }
+              node.url = url
+            }
+            if (node.type === "image") {
+              node.url = normalizeObsidianAbsolutePath(node.url)
+            }
+          })
+        },
       ],
       rehypePlugins: [
         rehypeSlug,
