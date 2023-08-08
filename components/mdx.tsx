@@ -25,20 +25,33 @@ import { Card } from "@/components/card"
 
 import { CopyButton } from "./copy-button"
 
+function normalizeObsidianAbsolutePath(path: string): string {
+  if (
+    !path.startsWith("/") &&
+    !(path.startsWith("www") || path.startsWith("http"))
+  ) {
+    return "/" + path
+  }
+  return path
+}
+
+function removeExtension(filepath: string): string {
+  return path.parse(filepath).name
+}
+
 const CustomLink = (className, props) => {
   let href = props.href
 
-  // Some markdown links can start with relative paths from root folder without /
+  // Obsidian absolute path links can start with relative paths from root folder without /. This adds a leading slash.
   // TODO: Better way of normalizing markdown links
   if (href.startsWith("#")) {
     return <a className={cn(FORMAT_A, className)} {...props} />
-  } else if (!(href.startsWith("www") || href.startsWith("http"))) {
-    href = "/" + href
   }
-
+  href = normalizeObsidianAbsolutePath(href)
   if (href.startsWith("/")) {
+    props.href = removeExtension(href)
     return (
-      <Link href={href} className={cn(FORMAT_A, className)} {...props}>
+      <Link className={cn(FORMAT_A, className)} {...props}>
         {props.children}
       </Link>
     )
@@ -73,9 +86,7 @@ const components = {
   h6: ({ className, ...props }) => (
     <h6 className={cn(FORMAT_H6, className)} {...props} />
   ),
-  a: ({ className, ...props }) =>
-    // TODO: convert to next/link Link and sanitize by adding `/` if not existent before. Copy from other repo.
-    CustomLink(className, props),
+  a: ({ className, ...props }) => CustomLink(className, props),
   p: ({ className, ...props }) => (
     <p className={cn(FORMAT_P, className)} {...props} />
   ),
@@ -98,8 +109,13 @@ const components = {
     />
   ),
   img: ({ className, alt, ...props }) => {
-    if (props.src?.endsWith(".gif") && props.src?.startsWith("/")) {
-      const srcAbsPath = path.join(process.cwd(), "public", props.src)
+    props.src = normalizeObsidianAbsolutePath(props.src)
+    if (props.src.endsWith(".gif") && props.src.startsWith("/")) {
+      const srcAbsPath = path.join(
+        process.cwd(),
+        "public",
+        props.src.replace(/^\//, "") // Remove leading slash if exists
+      )
       const dimensions = sizeOf(srcAbsPath)
       if (!dimensions.width || !dimensions.height) {
         console.error(
