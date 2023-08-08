@@ -63,7 +63,7 @@ Now that you've learned about the wonders of the Prettier Code Formatter VS Code
 
 If you're new to Prettier, don't worry! Installing and setting it up is a breeze. Simply head over to the official Prettier documentation and follow the step-by-step instructions provided [here](https://prettier.io/docs/en/install.html). Before you know it, you'll be doing code formatting effortlessly. ⛱️
 
-In the meantime, if you want to learn more about the benefits of Prettier Code Formatter, check out my previous blog post titled [**"Letting Go of Control - Embracing the Prettier Code Formatter"**](letting-go-of-control-embracing-the-prettier-code-formatter). It explores the benefits of using Prettier in your development workflow. 🌈🔗
+In the meantime, if you want to learn more about the benefits of Prettier Code Formatter, check out my previous blog post titled [Letting Go of Control - Embracing the Prettier Code Formatter](/blog/letting-go-of-control-embracing-the-prettier-code-formatter.md). It explores the benefits of using Prettier in your development workflow. 🌈🔗
 
 ## Conclusion 🎉
 
