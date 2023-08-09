@@ -59,19 +59,19 @@ Quokka provides real-time execution feedback within the editor. You can open a n
 
 The execution output is displayed in the Quokka Console, accessible through the "Show Output" command or the status bar indicator.
 
-![[Quokka Squares Indicators.png]]
+![Quokka Squares Indicators](assets/Quokka%20Squares%20Indicators.png)
 
 ### Live Logging and Comparison
 
 With Quokka, you can utilize `console.log` or identifier expressions to log and compare values. Sequence expressions allow you to perform comparisons on objects, making it easier to examine and validate your code's behavior.
 
-![[Quokka Logging Example.png]]
+![Quokka Logging Example](assets/Quokka%20Logging%20Example.png)
 
 ### Value Explorer
 
 With the Quokka Value Explorer, you gain valuable insights into your code's behavior. The Value Explorer displays the values of logged variables, making it easy to track their changes as you modify your code.
 
-![[Quokka Value Explorer.png]]
+![Quokka Value Explorer](assets/Quokka%20Value%20Explorer.png)
 
 ### Time Machine: Debugging Made Easier
 

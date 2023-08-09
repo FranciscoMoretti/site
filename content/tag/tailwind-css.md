@@ -23,9 +23,9 @@ TailwindCSS offers several advantages that make it a preferred choice for modern
 
 ## Tailwind and React: A Perfect Match 🤝
 
-[[react|React]] is a widely adopted JavaScript library for building user interfaces. When combined with TailwindCSS, React becomes even more powerful. The simplicity and flexibility of Tailwind align perfectly with React's component-based approach. By leveraging Tailwind classes in your React components, you can rapidly create visually appealing user interfaces while keeping your codebase clean and maintainable.
+[React](tag/react.md) is a widely adopted JavaScript library for building user interfaces. When combined with TailwindCSS, React becomes even more powerful. The simplicity and flexibility of Tailwind align perfectly with React's component-based approach. By leveraging Tailwind classes in your React components, you can rapidly create visually appealing user interfaces while keeping your codebase clean and maintainable.
 
 
 ## Tailwind and Next.js: Boosting Development Efficiency ⚡
 
-[[next-js|Next.js]] is a popular framework for building applications. When combined with TailwindCSS, Next.js empowers web developers to create high-performance websites with ease. The seamless integration between Next.js and TailwindCSS allows you to optimize your development workflow and achieve exceptional results.
+[Next.js](tag/next-js.md) is a popular framework for building applications. When combined with TailwindCSS, Next.js empowers web developers to create high-performance websites with ease. The seamless integration between Next.js and TailwindCSS allows you to optimize your development workflow and achieve exceptional results.

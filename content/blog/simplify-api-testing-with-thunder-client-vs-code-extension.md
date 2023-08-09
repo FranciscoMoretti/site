@@ -44,7 +44,7 @@ Thunder Client provides a user-friendly interface that simplifies API testing. I
 
 In only 2 minutes I installed the extension and tested one of the endpoints from this site.
 
-![[thunder client api testing.png]]
+![thunder client api testing](assets/thunder%20client%20api%20testing.png)
 
 ### Collections and Environment Variables
 Managing multiple API requests can be challenging, but Thunder Client makes it easier with its support for collections and environment variables. Organize your requests efficiently and leverage environment variables to streamline your testing workflow.

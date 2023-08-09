@@ -27,7 +27,7 @@ Moreover, VS Code users will know that the program has a lot of features to sear
 
 For reference, this is the code repository I’ve created for that purpose [](https://github.com/FranciscoMoretti/coding-challenges)[https://github.com/FranciscoMoretti/coding-challenges](https://github.com/FranciscoMoretti/coding-challenges).
 
-![[20230425114940.png]]
+![20230425114940](assets/20230425114940.png)
 
 VS Code repository with coding challenges
 
@@ -37,7 +37,7 @@ It has many sub-folders with different websites to get problems from. That’s u
 
 A thorough google search on the subject indicated that at this point in time, **[CodeForces](https://codeforces.com/)** is the site that has the **widest range of problems and difficulty** and the **largest community**. They also have competitions frequently. You do need an account to submit answers so, if you don’t have one already, now is a good moment to create it.
 
-![[20230425115000.png]]
+![20230425115000](assets/20230425115000.png)
 
 Codeforces page navigation bar
 
@@ -49,7 +49,7 @@ To set up all the features of the extensions you need to follow a couple of step
 
 After this step, **with a single click** the [problem page](https://codeforces.com/problemset/problem/1594/E1) will used to create a **new file** and to set all the **test cases** stated in the problem.
 
-![[20230425115017.png]]
+![20230425115017](assets/20230425115017.png)
 
 Input from Competitive Companion
 
@@ -73,7 +73,7 @@ To fully integrate it with the setup you can add this lines to the `VS Code Work
 
 After doing this and using the `Competitive Companion` extension with a new problem, the **new file** should be **created with a template**.
 
-![[20230425115039.png]]
+![20230425115039](assets/20230425115039.png)
 
 ## Usage
 

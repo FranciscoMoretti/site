@@ -106,12 +106,12 @@ To use the `AutoLinkHeader` component, follow the example below:
 ```
 
 That transforms the `h2` tag in something like this:
-![[autolink_headings_html.png]]
+![autolink_headings_html](assets/autolink_headings_html.png)
 
 In the above code snippet, we pass the desired CSS classes to the `className` and `linkClassName` props. The `h2` element is wrapped inside the `AutoLinkHeader` component, and it will automatically generate an anchor link based on the heading's text content.
 
 The result looks like this:
-![[autolink-headings-example.png]]
+![autolink-headings-example](assets/autolink-headings-example.png)
 
 ## Benefits of Converting Section Headings to Link Targets
 

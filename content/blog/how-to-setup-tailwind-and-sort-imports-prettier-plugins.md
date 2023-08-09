@@ -40,7 +40,7 @@ The `prettier-plugin-tailwindcss` plugin is specifically designed to work with T
 
 By incorporating the `prettier-plugin-tailwindcss` plugin into your development workflow, you can ensure that your Tailwind CSS classes are formatted consistently, saving you time and effort in manually organizing your styles.
 
-If you are using VS Code, you should also learn how to [[tailwind-css-intellisense-vs-code-extension-a-web-developers-best-friend|Boost Productivity with Tailwind CSS VS Code Extension]].
+If you are using VS Code, you should also learn how to [Boost Productivity with Tailwind CSS VS Code Extension](blog/tailwind-css-intellisense-vs-code-extension-a-web-developers-best-friend.md).
 
 ## Step 1: Install the required packages
 
@@ -138,5 +138,5 @@ module.exports = {
 
 With the packages installed and the configuration set up, you're ready to enjoy the benefits of Tailwind CSS and Sort Imports Prettier plugins. The Tailwind CSS plugin provides automatic formatting for your Tailwind CSS classes, making your stylesheets more consistent and readable. The Sort Imports plugin organizes your import statements according to the specified order, keeping your codebase clean and maintainable.
 
-If you are a VS Code user working, other nice additions to this workflow would be formatting on save and linting. Here is an article that shows how to do that for Next.js projects: [[how-to-set-up-prettier-and-eslint-in-vs-code-for-next-js|How to Set Up Prettier and ESLint in VS Code for Next.js]]
+If you are a VS Code user working, other nice additions to this workflow would be formatting on save and linting. Here is an article that shows how to do that for Next.js projects: [How to Set Up Prettier and ESLint in VS Code for Next.js](blog/how-to-set-up-prettier-and-eslint-in-vs-code-for-next-js.md)
 

@@ -26,7 +26,7 @@ VS Code offers a range of compelling reasons why it's an excellent choice for we
 8. **Version Control with Git:** VS Code comes with built-in Git integration, making it seamless to manage your codebase with version control.
 
 ## The best VS Code Extensions for Web Development🧩
-- [[eslint-vs-code-extension|ESLint Extension for VS Code - Error Detection and Fixing]]
-- [[prettier-the-code-formatter-vs-code-extension-for-modern-web-development|Prettier VS Code Extension - Perfect Code Formatting]]
-- [[tailwind-css-intellisense-vs-code-extension-a-web-developers-best-friend|Boost Productivity with Tailwind CSS VS Code Extension]]
-- [[simplify-api-testing-with-thunder-client-vs-code-extension|Simplify API Testing with Thunder Client VS Code Extension]]
+- [ESLint Extension for VS Code - Error Detection and Fixing](blog/eslint-vs-code-extension.md)
+- [Prettier VS Code Extension - Perfect Code Formatting](blog/prettier-the-code-formatter-vs-code-extension-for-modern-web-development.md)
+- [Boost Productivity with Tailwind CSS VS Code Extension](blog/tailwind-css-intellisense-vs-code-extension-a-web-developers-best-friend.md)
+- [Simplify API Testing with Thunder Client VS Code Extension](blog/simplify-api-testing-with-thunder-client-vs-code-extension.md)

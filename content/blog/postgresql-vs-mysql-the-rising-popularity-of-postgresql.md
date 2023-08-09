@@ -22,7 +22,7 @@ In recent years, the database landscape has witnessed an interesting shift in po
 ## PostgreSQL's Triumph in the StackOverflow Developer Survey 2023
 PostgreSQL has emerged as a strong contender in the database market, challenging MySQL's long-standing dominance. According to the StackOverflow Developer Survey 2023, PostgreSQL has claimed the top spot with a remarkable 45% adoption rate among developers. In contrast, MySQL stands at 41%, reflecting a noticeable shift in the preferences of web developers.
 
-![[DB popularity Stack Overflow survey 2023.png]]
+![DB popularity Stack Overflow survey 2023](assets/DB%20popularity%20Stack%20Overflow%20survey%202023.png)
 
 ## A brief comparison of PostgreSQL and MySQL
 When comparing PostgreSQL and MySQL, developers have different reasons for choosing one over the other. PostgreSQL is often praised for its feature-rich nature, while MySQL's simplicity and ease of use make it valuable for certain use cases. Here are some key features that developers consider when selecting between the two:

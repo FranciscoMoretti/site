@@ -16,10 +16,10 @@ thumbnail:
 ---
 
 ## Introduction
-In this tutorial, we'll explore how you can create consistent styles using Tailwind, MDX, and HTML. Learn how to render with the same style content that comes from MDX files (static) and content expressed in [[html|HTML]] code (dynamic). Let's get started!
+In this tutorial, we'll explore how you can create consistent styles using Tailwind, MDX, and HTML. Learn how to render with the same style content that comes from MDX files (static) and content expressed in [HTML](tag/html.md) code (dynamic). Let's get started!
 
 ## What is Tailwind? 🎨
-[[tailwind-css|Tailwind]] is a utility-first CSS framework that allows you to quickly build custom user interfaces. It provides a set of pre-defined utility classes that you can use to style your HTML elements. With Tailwind, you don't have to write custom CSS for every element; instead, you can compose styles by combining multiple utility classes.
+[Tailwind](tag/tailwind-css.md) is a utility-first CSS framework that allows you to quickly build custom user interfaces. It provides a set of pre-defined utility classes that you can use to style your HTML elements. With Tailwind, you don't have to write custom CSS for every element; instead, you can compose styles by combining multiple utility classes.
 
 ## What is MDX? 📝
 MDX is an extension of Markdown that allows you to write JSX in Markdown documents. It enables you to embed React components directly in your Markdown files, making it easy to create dynamic and interactive content. MDX is commonly used in documentation sites, blogs, and other content-driven websites.

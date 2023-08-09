@@ -27,7 +27,7 @@ To get started, head over to the official installation instructions provided by 
 
 Before we delve into the functionalities of the Command component, let me show you how it looks in action. Take a look at this awesome gif below:
 
-![[command_key_demo.gif]]
+![command_key_demo](assets/command_key_demo.gif)
 
 Cool, isn't it? The Command component not only brings functionality but also adds a touch of elegance to your user interface. 🎩
 

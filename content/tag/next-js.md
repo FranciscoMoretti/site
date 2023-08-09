@@ -14,7 +14,7 @@ Next.js is a popular JavaScript framework for building modern web applications. 
 
 ## Is Next.js Frontend or Backend? 🤔
 
-Next.js can be considered both frontend and backend. It is primarily a frontend framework based on React, allowing developers to build user interfaces and components using familiar JavaScript syntax. However, Next.js also includes a backend features in the form of server-side rendering (SSR) and API routes.
+Next.js can be considered both frontend and backend. It is primarily a frontend framework based on [React](tag/react.md), allowing developers to build user interfaces and components using familiar JavaScript syntax. However, Next.js also includes a backend features in the form of server-side rendering (SSR) and API routes.
 
 With SSR, Next.js renders React components on the server and sends the fully rendered HTML to the client. This approach improves performance and allows search engines to index the content effectively. Next.js also provides API routes, which enable you to create serverless backend functionality directly within your Next.js application.
 
@@ -34,9 +34,9 @@ Next.js offers several compelling advantages for building modern web application
 
 ESLint is a popular JavaScript linter that helps developers identify and fix code quality issues. It enforces coding standards and detects potential errors, ensuring that your codebase remains clean and maintainable. In Next.js projects, ESLint is included out of the box. ESLint can be configured to catch common mistakes, enforce best practices, and improve code consistency.
 
-- [[how-to-set-up-prettier-and-eslint-in-vs-code-for-next-js|How to Set Up Prettier and ESLint in VS Code for Next.js]]
+- [How to Set Up Prettier and ESLint in VS Code for Next.js](blog/how-to-set-up-prettier-and-eslint-in-vs-code-for-next-js.md)
 
 
 ## Getting Started with Next.js 🚀
-- [[how-to-install-next-js-in-ubuntu-22-a-step-by-step-guide|How to install Next.js in Ubuntu 22.04]]
-- [[how-to-install-next-js-in-windows-using-wsl2-a-step-by-step-guide|How to install Next.js in Windows with WSL2]]
+- [How to install Next.js in Ubuntu 22.04](blog/how-to-install-next-js-in-ubuntu-22-a-step-by-step-guide.md)
+- [How to install Next.js in Windows with WSL2](blog/how-to-install-next-js-in-windows-using-wsl2-a-step-by-step-guide.md)

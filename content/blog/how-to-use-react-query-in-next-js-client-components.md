@@ -18,14 +18,14 @@ thumbnail:
 
 ## What is React Query?
 
-[React Query](https://tanstack.com/query/latest/docs/react/overview) is a powerful data fetching and caching library for [[react|React]]  applications. It simplifies the process of fetching and managing data from various sources, like APIs, databases, or serverless functions. By leveraging React Query, you can optimize your application's data fetching, reduce unnecessary network requests, and handle caching.
+[React Query](https://tanstack.com/query/latest/docs/react/overview) is a powerful data fetching and caching library for [React](tag/react.md)  applications. It simplifies the process of fetching and managing data from various sources, like APIs, databases, or serverless functions. By leveraging React Query, you can optimize your application's data fetching, reduce unnecessary network requests, and handle caching.
 
 
 ## Setting Up React Query in Next.js
 
 ### Installing the package
 
-To start using React Query in your [[next-js|Next.js]] application, you first need to install the package. React Query can be easily installed via NPM:
+To start using React Query in your [Next.js](tag/next-js.md) application, you first need to install the package. React Query can be easily installed via NPM:
 ```sh
 npm i @tanstack/react-query
 ```

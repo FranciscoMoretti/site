@@ -27,6 +27,6 @@ As a web developer, understanding HTML is essential for several reasons:
 
 ## HTML and React: A Powerful Combination ⚛️
 
-HTML plays a significant role in React applications. In [[react|React]], you write components using JavaScript, but those components ultimately render HTML elements to the browser. React leverages a syntax called JSX (JavaScript XML) that allows you to write HTML-like code within JavaScript.
+HTML plays a significant role in React applications. In [React](tag/react.md), you write components using JavaScript, but those components ultimately render HTML elements to the browser. React leverages a syntax called JSX (JavaScript XML) that allows you to write HTML-like code within JavaScript.
 
 JSX combines the best of both worlds by providing a familiar HTML structure while seamlessly integrating with JavaScript logic. It allows you to define components, compose them together, and pass data between them.

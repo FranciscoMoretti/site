@@ -27,10 +27,10 @@ To begin, open your Next.js project in VS Code and open the integrated terminal.
 npm install prettier --save-dev
 ```
 
-To learn more about the benefits of [[letting-go-of-control-embracing-the-prettier-code-formatter|embracing the power of Prettier]].
+To learn more about the benefits of [embracing the power of Prettier](blog/letting-go-of-control-embracing-the-prettier-code-formatter.md).
 
 ### Step 2: Installing the Prettier VS Code Extension
-Next, navigate to the Extensions view in VS Code and search for the "Prettier - Code formatter" extension by Esben Petersen. This is a people's favourite with 33M downloads as of 2023. Click on the "Install" button to add it to your editor. Check out this other post to learn more about the [[prettier-the-code-formatter-vs-code-extension-for-modern-web-development|Prettier formatter VS Code extension]].
+Next, navigate to the Extensions view in VS Code and search for the "Prettier - Code formatter" extension by Esben Petersen. This is a people's favourite with 33M downloads as of 2023. Click on the "Install" button to add it to your editor. Check out this other post to learn more about the [Prettier formatter VS Code extension](blog/prettier-the-code-formatter-vs-code-extension-for-modern-web-development.md).
 
 ### Step 3: Installing ESLint in Your Project
 Similarly, install ESLint as a development dependency by running the following command in the integrated terminal:
@@ -39,10 +39,10 @@ Similarly, install ESLint as a development dependency by running the following c
 npm install eslint --save-dev
 ```
 
-Unsure about ESLint? Next.js has integrated ESLint support and it's what `next lint` uses under the hood! I use ESLint in all my projects but you should make your own choice. Here is an analysis of [[the-pros-and-cons-of-using-eslint|the pros and cons of using ESLint]].
+Unsure about ESLint? Next.js has integrated ESLint support and it's what `next lint` uses under the hood! I use ESLint in all my projects but you should make your own choice. Here is an analysis of [the pros and cons of using ESLint](blog/the-pros-and-cons-of-using-eslint.md).
 
 ### Step 4: Installing the ESLint VS Code Extension
-Head over to the Extensions view again and search for the "ESLint" extension by Dirk Baeumer. This is another popular extension with more than 27M downloads at the moment. Install this extension to enable ESLint integration in VS Code. To learn some of the useful stuff it can do have a look at [[eslint-vs-code-extension|error detection and fixing with ESLint VS Code extenison]].
+Head over to the Extensions view again and search for the "ESLint" extension by Dirk Baeumer. This is another popular extension with more than 27M downloads at the moment. Install this extension to enable ESLint integration in VS Code. To learn some of the useful stuff it can do have a look at [error detection and fixing with ESLint VS Code extenison](blog/eslint-vs-code-extension.md).
 
 
 ### Step 5: Integrating ESLint and Prettier

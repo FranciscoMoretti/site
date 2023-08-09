@@ -20,12 +20,12 @@ Now that you understand the significance of web development tools, let's explore
 
 ### 1. Integrated Development Environments (IDEs)
 
-IDEs are powerful software applications that provide a nice development environments for coding. They offer a set of features such as code editors, syntax highlighting, code completion, debugging capabilities, and integrations with version control systems. The most popular one is [[vs-code|Visual Studio Code (VS Code)]].
+IDEs are powerful software applications that provide a nice development environments for coding. They offer a set of features such as code editors, syntax highlighting, code completion, debugging capabilities, and integrations with version control systems. The most popular one is [Visual Studio Code (VS Code)](tag/vs-code.md).
 
 
 ### 2. Version Control Systems
 
-Version control systems (VCS) are essential for managing source code and collaborating with other developers. They allow you to track changes, revert to previous versions, and merge code changes seamlessly. The most widely used VCS is [[git|Git]].
+Version control systems (VCS) are essential for managing source code and collaborating with other developers. They allow you to track changes, revert to previous versions, and merge code changes seamlessly. The most widely used VCS is [Git](tag/git.md).
 
 
 ### 3. Browser Developer Tools

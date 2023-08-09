@@ -17,7 +17,7 @@ thumbnail:
 
 ## What is the TypeScript Plugin? 🧩
 
-The [[typescript|TypeScript]]  plugin is a powerful tool included in [[next-js|Next.js]] that provides advanced type-checking and auto-completion for your TypeScript code. It integrates seamlessly with code editors like [[vs-code|Visual Studio Code]] (VS Code), making it easier to catch errors and write more reliable code.
+The [TypeScript](tag/typescript.md)  plugin is a powerful tool included in [Next.js](tag/next-js.md) that provides advanced type-checking and auto-completion for your TypeScript code. It integrates seamlessly with code editors like [Visual Studio Code](tag/vs-code.md) (VS Code), making it easier to catch errors and write more reliable code.
 
 ## Enabling the TypeScript Plugin in VS Code ⚙️
 

@@ -57,7 +57,7 @@ And here's an example for the Twitter image:
 
 Here is an example of a `png` image of `1200x630` pixels, which is the recommended size.
 
-![[Static OG Image Example.png]]
+![Static OG Image Example](assets/Static%20OG%20Image%20Example.png)
 
 ## Alternative text for OG and Twitter images
 
