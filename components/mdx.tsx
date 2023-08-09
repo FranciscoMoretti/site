@@ -93,11 +93,16 @@ const components = {
     />
   ),
   img: ({ className, alt, ...props }) => {
-    if (props.src.endsWith(".gif") && props.src.startsWith("/")) {
-      const srcAbsPath = path.join(
-        process.cwd(),
-        "public",
-        props.src.replace(/^\//, "") // Remove leading slash if exists
+    // TODO: Extract into a package that does auto size for local next/images
+    if (props.src.startsWith("/")) {
+      const srcAbsPath = decodeURI(
+        path
+          .join(
+            process.cwd(),
+            "public",
+            props.src.replace(/^\//, "") // Remove leading slash if exists
+          )
+          .toString()
       )
       const dimensions = sizeOf(srcAbsPath)
       if (!dimensions.width || !dimensions.height) {
