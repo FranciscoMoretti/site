@@ -29,12 +29,12 @@ The Liskov Substitution Principle states that if S is a subtype of T, then objec
 ### 👎 Cons
 - **Increased complexity**: Designing and maintaining a hierarchy of classes that adhere to the Liskov Substitution Principle may introduce additional complexity, especially in larger codebases. 🤯
 - **Requires careful design**: Applying LSP effectively requires thoughtful design and planning to create a hierarchy that allows for substitutability without breaking the system's behavior. 🎨
-- **Potential violation of encapsulation**: In certain cases, adhering strictly to the Liskov Substitution Principle may require exposing more implementation details of the child class, potentially compromising encapsulation. 🔓
 
 
 ## Examples
 
 ### ❌ Bad
+
 ```typescript
 class Bird {
   fly() {}
@@ -46,6 +46,7 @@ class Ostrich extends Bird {} // Ostriches also have a `fly` method, but ostrich
 ```
 
 ### ✅ Good
+
 ```typescript
 class Bird {}
 

@@ -285,7 +285,7 @@ export default UserProfile;
 
 When it comes to handling mutations, such as creating, updating, or deleting data, you can use the `useMutation` hook. It works similarly to `useQuery` but requires a mutation function instead of a query function.
 
-### ### Initializing useMutation
+### Initializing useMutation
 
 To start using `useMutation`, first, import it from React Query and define your mutation function. The mutation function handles the logic for creating, updating, or deleting data on the server.
 ```tsx
