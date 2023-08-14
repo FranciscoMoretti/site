@@ -97,4 +97,4 @@ With this setup, any changes you make to files in the content/assets folder will
 
 In the `build` script, we first run the `sync` script to sync the latest files to the `public/assets` folder. After that, we run the `next build` command to build the Next.js application.
 
-That's it! With this setup, you can easily sync files from a source directory to a public directory in a React or Next.js project using `c[]()hokidar` and `fs-extra`.
+That's it! With this setup, you can easily sync files from a source directory to a public directory in a React or Next.js project using `chokidar` and `fs-extra`.

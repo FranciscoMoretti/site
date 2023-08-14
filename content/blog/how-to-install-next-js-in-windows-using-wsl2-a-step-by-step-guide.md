@@ -16,7 +16,7 @@ thumbnail:
 
 Are you interested in setting up a development environment to run a Next.js example on your Windows computer? In this tutorial, I'll show you how to install the necessary tools and software to get started.  By the end of this tutorial, you will have a Next.js example running on your Windows 11 machine.
 
-Note: If you already have an Ubuntu distribution, you can skip the previous steps and go straight to the tutorial [How to Install Next.js in Ubuntu 22](how-to-install-next-js-in-ubuntu-22-a-step-by-step-guide).
+Note: If you already have an Ubuntu distribution, you can skip the previous steps and go straight to the tutorial [How to Install Next.js in Ubuntu 22](blog/how-to-install-next-js-in-ubuntu-22-a-step-by-step-guide).
 
 ## Step 1: Download and Install VS Code
 
@@ -93,7 +93,7 @@ After following these steps, you should be able to open your Ubuntu distribution
 
 ## Step 6: Installing and Running Next.js in Your WSL Ubuntu Distribution
 
-After setting up VS Code, Remote-WSL extension, Windows Terminal, and an Ubuntu distribution with WSL2, you can now continue in your WSL Ubuntu distribution to install and run Next.js. Simply follow the instructions in [How to Install Next.js in Ubuntu 22](how-to-install-next-js-in-ubuntu-22-a-step-by-step-guide).
+After setting up VS Code, Remote-WSL extension, Windows Terminal, and an Ubuntu distribution with WSL2, you can now continue in your WSL Ubuntu distribution to install and run Next.js. Simply follow the instructions in [How to Install Next.js in Ubuntu 22](blog/how-to-install-next-js-in-ubuntu-22-a-step-by-step-guide).
 
 ## Conclusion
 

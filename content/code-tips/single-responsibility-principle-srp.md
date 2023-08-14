@@ -96,11 +96,11 @@ class EmailService {
 
 SOLID is an acronym for five other class-design principles:
 
-- [Single Responsibility Principle (SRP)](single-responsibility-principle-srp)
-- [Open-Closed Principle (OCP)](open-closed-principle-ocp)
-- [Liskov Substitution Principle (LSP)](liskov-substitution-principle-lsp)
-- [Interface Segregation Principle (ISP)](interface-segregation-principle-isp)
-- [Dependency Inversion Principle (DIP)](dependency-inversion-principle-dip)
+- [Single Responsibility Principle (SRP)](blog/single-responsibility-principle-srp)
+- [Open-Closed Principle (OCP)](blog/open-closed-principle-ocp)
+- [Liskov Substitution Principle (LSP)](blog/liskov-substitution-principle-lsp)
+- [Interface Segregation Principle (ISP)](blog/interface-segregation-principle-isp)
+- [Dependency Inversion Principle (DIP)](blog/dependency-inversion-principle-dip)
 
 ### 🔀 Related principles
 
