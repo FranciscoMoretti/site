@@ -9,11 +9,11 @@ import {
   FORMAT_UL,
 } from "@/styles/format"
 import { allPosts, allTags } from "contentlayer/generated"
+import { AutolinkHeading } from "react-autolink-heading"
 
 import { routepathToSlug } from "@/lib/path"
 import { getAllTags } from "@/lib/tags"
 import { absoluteUrl } from "@/lib/utils"
-import { AutoLinkHeading } from "@/components/autolink-heading"
 import { Mdx } from "@/components/mdx"
 import { getTagsItems, TagGroup } from "@/components/tag-group"
 
@@ -124,12 +124,12 @@ export default async function PostPage({ params }: PostPageProps) {
       </div>
       <hr className="my-4" />
       <Mdx code={tag.body.code} />
-      <AutoLinkHeading
+      <AutolinkHeading
         className={FORMAT_LINKED_HEADER}
         linkClassName={FORMAT_A}
       >
         <h2 className={FORMAT_H2}>{`All posts on ${tag.tag}`}</h2>
-      </AutoLinkHeading>
+      </AutolinkHeading>
       {posts?.length ? (
         <ul className={FORMAT_UL}>
           {posts.map((post) => (
