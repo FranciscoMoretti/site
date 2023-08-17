@@ -15,13 +15,13 @@ date: 2023-06-29
 
 ## Usage
 ### 📝 Guideline
-**Command Query**: Methods should either be commands that perform actions or queries that return data to the caller, but not both.
+**Command Query Separation**: Methods should either be commands that perform actions or queries that return data to the caller, but not both.
 
 Methods should be designed to either change the state of an object or retrieve information from it, but not both at the same time. This separation ensures clarity and avoids unexpected side effects.
 
 ### 🛠️ How to Apply
 
-- **Separate commands and queries**: Identify methods that change the state of the system and methods that only retrieve data. Split them into separate functions or classes. 🔄
+- **Separate commands and queries**: Identify methods that change the state of the system and that retrieve data. Split them into separate functions or classes. 🔄
 - **Avoid side effects in queries**: Ensure that query methods do not modify the state of the system. They should only retrieve and return data. 🔍
 - **Use descriptive names**: Clearly indicate whether a method is a command or a query in its name. This helps other developers understand the purpose and behavior of the method. 📝
 - **Consider immutability**: When designing query methods, favor immutability to avoid unintended side effects. Immutable data structures can be safely shared across multiple queries. 🚫
@@ -35,7 +35,7 @@ Methods should be designed to either change the state of an object or retrieve i
 
 ### 👎 Cons
 - **Potential performance overhead**: Depending on the implementation, separating commands and queries may introduce additional overhead due to the need for separate method invocations. 🐌
-- **Code Duplication**: Separating actions and queries may result in code duplication if similar logic is required for both. However, this can be mitigated through appropriate abstractions and code reuse techniques. 🔁
+- **Code Duplication**: Separating actions and queries may result in code duplication if similar logic is required for both. However, this can be handled with good abstractions and code reuse techniques. 🔁
 
 ## Examples
 
