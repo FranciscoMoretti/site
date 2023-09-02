@@ -18,7 +18,7 @@ This principle emphasizes that interfaces should be tailored to the specific nee
 - **Identify client-specific requirements**: Understand the distinct needs of each client or consumer of an interface. 🔍
 - **Design cohesive interfaces**: Create interfaces that contain only the methods and properties required by the clients using them. 🧩
 - **Create fine-grained interfaces**: Design interfaces that are small and focused, catering to specific client needs. 📦
-- **Avoid "fat" interfaces**: Refrain from creating interfaces with excessive methods that might not be relevant to all clients. 🦣
+- **Avoid "fat" interfaces**: Don't create interfaces with excessive methods that might not be relevant to all clients. 🦣
 - **Use composition**: Instead of relying on a single monolithic interface, consider composing interfaces to fulfill specific requirements. 🎯
 
 ## Pros and Cons
@@ -26,7 +26,7 @@ This principle emphasizes that interfaces should be tailored to the specific nee
 ### 👍 Pros
 - **Flexible and adaptable**: Smaller interfaces provide flexibility by allowing clients to depend only on the functionality they require. 🧘‍♂️
 - **Enhances maintainability**: Breaking down large interfaces into smaller ones simplifies maintenance and reduces the impact of changes. 🧹
-- **Promotes reusability**: Fine-grained interfaces enable reusing code across different client contexts, improving productivity. 🔄
+- **Promotes reusability**: Fine-grained interfaces enable reusing code across different client contexts. 🔄
 
 ### 👎 Cons
 - **Increased complexity**: Managing multiple smaller interfaces may introduce some complexity compared to a single interface. 🤔

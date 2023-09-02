@@ -16,10 +16,9 @@ The Dependency Inversion Principle states that classes should not rely on the im
 
 ### 🛠️ How to Apply
 
-- **Abstraction over implementation**: Depend on abstractions or interfaces rather than concrete implementations. This allows for interchangeable dependencies. ⚙️
+- **Interfaces over implementation**: Depend on Interfaces rather than concrete implementations. This allows for interchangeable dependencies⚙️
 - **Dependency Injection**: Instead of directly creating and managing dependencies within a class, inject them from external sources. 🧩
 - **Use Interfaces or Abstract Classes**: Define abstractions for dependencies, and have classes depend on these interfaces or abstract classes rather than concrete implementations. 🎛️
-- **Invert Control**: Invert the control of creating and managing objects by relying on a higher-level component or framework to provide the necessary dependencies. 🔄
 
 ## Pros and Cons
 
@@ -32,7 +31,7 @@ The Dependency Inversion Principle states that classes should not rely on the im
 ### 👎 Cons
 - **Additional complexity**: Implementing the Dependency Inversion Principle can introduce additional layers of abstraction, which may increase complexity and require a deeper understanding of the codebase. 🤔
 - **Overuse of interfaces**: Overusing interfaces may result in unnecessary abstractions and bloated code, leading to reduced readability and maintainability. 📚
-- **Complexity**: The use of interfaces or abstract classes to define abstractions can introduce additional complexity to the codebase. 🤯
+
 
 ## Examples
 
