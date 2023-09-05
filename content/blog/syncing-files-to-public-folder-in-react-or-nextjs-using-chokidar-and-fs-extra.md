@@ -15,7 +15,7 @@ thumbnail:
   - Next.js
 ---
 
-When building a website with React or Next.js, you may have some assets (e.g. images, videos, or other static files) that need to be accessible on the server. These assets can be stored in a dedicated folder, but they won't be automatically included in the build process. In this tutorial, we'll learn how to use Chokidar and fs-extra to automatically sync files to the public folder, making them available to your website.
+When building a website with React or Next.js, you may have some assets (e.g. images, videos, or other static files) that need to be accessible on the server. These assets can be stored in a folder of your choice, but they won't be automatically included in the build process. In this tutorial, we'll learn how to use Chokidar and fs-extra to automatically sync files to the public folder, making them available to your website.
 
 ## Prerequisites
 
