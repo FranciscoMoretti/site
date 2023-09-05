@@ -213,7 +213,6 @@ export function Mdx({ code }: MdxProps) {
 
   return (
     <div className="mdx">
-      {/* @ts-expect-error MDX assignment type mismatch*/}
       <Component components={components} />
     </div>
   )
