@@ -26,7 +26,7 @@ Conditional functions that use negative statements can make the code harder to r
 - **Reduced cognitive load**: Avoiding negative conditionals helps reduce mental strain and makes it easier to reason about code. 🧠
 
 ### 👎 Cons
-- **Increased verbosity**: Positive conditionals may require additional code or conditions to handle negative cases, potentially leading to increased verbosity. 🔍
+- **Increased verbosity**: Positive conditionals may require additional code or conditions to handle negative cases, potentially leading to increased verbosity. 💬
 - **Risk of error**: If the positive conditionals are not written accurately, there is a possibility of introducing logic errors. ❌
 
 ## Examples

@@ -65,11 +65,11 @@ class Ostrich extends Bird {} // Ostrich can't fly, but they are still birds
 
 SOLID is an acronym for five other class-design principles:
 
-- [Single Responsibility Principle (SRP)](blog/single-responsibility-principle-srp)
-- [Open-Closed Principle (OCP)](blog/open-closed-principle-ocp)
-- [Liskov Substitution Principle (LSP)](blog/liskov-substitution-principle-lsp)
-- [Interface Segregation Principle (ISP)](blog/interface-segregation-principle-isp)
-- [Dependency Inversion Principle (DIP)](blog/dependency-inversion-principle-dip)
+- [Single Responsibility Principle (SRP)](code-tips/single-responsibility-principle-srp)
+- [Open-Closed Principle (OCP)](code-tips/open-closed-principle-ocp)
+- [Liskov Substitution Principle (LSP)](code-tips/liskov-substitution-principle-lsp)
+- [Interface Segregation Principle (ISP)](code-tips/interface-segregation-principle-isp)
+- [Dependency Inversion Principle (DIP)](code-tips/dependency-inversion-principle-dip)
 
 ### 🔀 Related principles
 
