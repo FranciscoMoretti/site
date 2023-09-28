@@ -1,5 +1,5 @@
 ---
-tag: Next.js, SEO
+tag: Next.js
 alias:
 
 publish: true
