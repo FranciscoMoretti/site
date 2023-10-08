@@ -15,10 +15,11 @@ slug: function-names-should-say-what-they-do
 Functions play a crucial role in clean code. One of the key aspects of writing clean code is ensuring that your function names clearly express their intended functionality. A function's name should provide a clear and concise description of what the function does, as well as indicate the expected inputs.
 
 ### 🛠️ How to Apply
-- Use clear and concise names that accurately describe the function's purpose. 🏷️
-- Include action verbs that indicate what the function does. 🏃‍♂️
-- Include relevant information in the function name, such as the expected inputs or the type of output. 🔖
-- Avoid using generic or ambiguous names that can cause confusion. ❌
+- **Name Clarity**: Use clear and concise names that accurately describe the function's purpose. 🏷️
+- **Action Verbs**: Include action verbs that indicate what the function does. 🏃‍♂️
+- **Relevant Details**: Include relevant information in the function name, such as the expected inputs or the type of output. 🔖
+- **Avoid Ambiguity**: Avoid using generic or ambiguous names that can cause confusion. ❌
+
 
 ## Pros and Cons
 

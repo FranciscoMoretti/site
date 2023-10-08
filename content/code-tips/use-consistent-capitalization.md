@@ -13,7 +13,7 @@ date: 2023-06-27
 
 ## Usage
 ### 📝 Guideline
-**Use consistent capitalization**: Choose a capitalization style for variables, functions, and other identifiers, and adhere to it throughout your codebase.
+**Use consistent casing**: Choose a capitalization style for variables, functions, and other identifiers, and adhere to it throughout your codebase.
 
 Capitalization rules in JavaScript are subjective. However, it's crucial to establish a consistent capitalization style within your team or project. Consistency improves code readability and reduces confusion.
 
