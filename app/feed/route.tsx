@@ -1,10 +1,12 @@
 import { allPosts } from "contentlayer/generated"
 import Rss from "rss"
 
+import { siteConfig } from "@/config/site"
+
 export async function GET() {
   const feed = new Rss({
-    title: "Example blog",
-    description: "Lorem ipsum dolor sit amet.",
+    title: `${siteConfig.name}`,
+    description: `${siteConfig.description}`,
     feed_url: `${process.env.NEXT_PUBLIC_APP_URL}/rss.xml`,
     site_url: process.env.NEXT_PUBLIC_APP_URL || "",
     language: "en",
@@ -15,7 +17,7 @@ export async function GET() {
       title: article.title,
       description: article.description || "",
       url: `${process.env.NEXT_PUBLIC_APP_URL}/blog/${article.slug}`,
-      author: article.authors.join(", "),
+      author: `${siteConfig.name}`,
       date: article.date,
       categories: article.tags || [],
     })
