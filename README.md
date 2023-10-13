@@ -30,6 +30,7 @@ The plan is to implement all the features and niceness for a personal blog.
 - ✅ TOC (Table of contents)
 - ✅ Documentation-like layout
 - ✅ Blog-like layout
+- ✅ Automatic Sitemap and RSS Feed
 - ✅ Loading UI
 - ✅ Server and Client Components
 - ✅ OG Image per post generated at the edge
@@ -64,6 +65,12 @@ The plan is to implement all the features and niceness for a personal blog.
 pnpm install
 ```
 
+or
+
+```sh
+npm install
+```
+
 2. Copy `.env.example` to `.env.local` and update the variables.
 
 ```sh
@@ -74,6 +81,12 @@ cp .env.example .env.local
 
 ```sh
 pnpm dev
+```
+
+or
+
+```sh
+npm run dev
 ```
 
 ## Customization
@@ -91,8 +104,14 @@ pnpm dev
 
 4. Push the prisma DB
 
-```
+```sh
 pnpm exec prisma db push
+```
+
+or
+
+```sh
+npx prisma db push
 ```
 
 ## Running pscale DB
