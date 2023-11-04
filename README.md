@@ -65,11 +65,7 @@ The plan is to implement all the features and niceness for a personal blog.
 pnpm install
 ```
 
-or
-
-```sh
-npm install
-```
+Note: If you don't have pnpm, here is the [installation guide](https://pnpm.io/installation).
 
 2. Copy `.env.example` to `.env.local` and update the variables.
 
@@ -81,12 +77,6 @@ cp .env.example .env.local
 
 ```sh
 pnpm dev
-```
-
-or
-
-```sh
-npm run dev
 ```
 
 ## Customization
