@@ -17,7 +17,7 @@ thumbnail:
 ---
 
 ## Introduction
-In this post, we'll explore how I've created an Autolink Heading component for React Navigation. This component will generate anchor links for section headings automatically. By using this component, you can improve user experience  and make navigation within your React applications more efficient. It also contributes to the site SEO performance. Let's explore how to build this component!
+In this post, we'll explore how I've created an [Autolink Heading component](https://github.com/FranciscoMoretti/react-autolink-heading) for React Navigation. This component will generate anchor links for section headings automatically. By using this component, you can improve user experience  and make navigation within your React applications more efficient. It also contributes to the site SEO performance. Let's explore how to build this component!
 
 ## Implementing the Autolink Heading Component
 This is how I created the first version of the Autolink Heading component to replicate the behavior of [rehype-autolink-headings](https://github.com/rehypejs/rehype-autolink-headings) for React headings. It's a simple design that get's the job done. However, I'm sure it has a lot of room for improvement.
@@ -123,6 +123,9 @@ Converting section headings to link targets using the `#` symbol offers several 
 4. **SEO Benefits**: Anchor links help search engines understand content structure, improving visibility in search results.
 
 By converting section headings to link targets, you can enhance user experience, accessibility, simplify content sharing, and gain SEO benefits.
+
+
+Check out the [React AutoLink Heading](https://github.com/FranciscoMoretti/react-autolink-heading) repo.
 
 ## Conclusion
 Autolink Heading component for React Navigation that automatically generates anchor links for section headings. By converting section headings to link targets, we can improve user experience, accessibility, content sharing, and gain SEO benefits. By implementing this component in your React applications, you can enhance navigation and make it easier for users to find the information they need. Happy coding! 🌟
