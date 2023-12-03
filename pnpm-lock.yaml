@@ -176,6 +176,9 @@ dependencies:
   nodemailer:
     specifier: ^6.9.4
     version: 6.9.4
+  posthog-js:
+    specifier: ^1.93.3
+    version: 1.93.3
   postmark:
     specifier: ^3.0.19
     version: 3.0.19
@@ -5977,6 +5980,13 @@ packages:
       web-streams-polyfill: 3.2.1
     dev: false
 
+  /fflate@0.4.8:
+    resolution:
+      {
+        integrity: sha512-FJqqoDBR00Mdj9ppamLa/Y7vxm+PRmNWA67N846RvsoYVMKB4q3y/de5PA7gUmRMYK/8CMz2GDZQmCRN1wBcWA==,
+      }
+    dev: false
+
   /fflate@0.7.4:
     resolution:
       {
@@ -9136,6 +9146,15 @@ packages:
       nanoid: 3.3.6
       picocolors: 1.0.0
       source-map-js: 1.0.2
+
+  /posthog-js@1.93.3:
+    resolution:
+      {
+        integrity: sha512-jEOWwaQpTRbqLPrDLY6eZr7t95h+LyXqN7Yq1/K6u3V0Y1C9xHtYhpuGzYamirVnCDTbVq22RM++OBUaIpp9Wg==,
+      }
+    dependencies:
+      fflate: 0.4.8
+    dev: false
 
   /postmark@3.0.19:
     resolution:
