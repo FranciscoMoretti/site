@@ -3,15 +3,15 @@ import { Inter as FontSans } from "next/font/google"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { Toaster } from "@/components/ui/toaster"
-import { Analytics } from "@/components/analytics"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
-import { ThemeProvider } from "@/components/theme-provider"
 
 import "@/styles/globals.css"
 
 import { Suspense } from "react"
 
 import { PHProvider, PostHogPageview } from "@/components/posthog-provider"
+
+import { Providers } from "./providers"
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -84,13 +84,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
           fontSans.variable
         )}
       >
-        <PHProvider>
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            {children}
-            <Toaster />
-            <TailwindIndicator />
-          </ThemeProvider>
-        </PHProvider>
+        <Providers>
+          {children}
+          <Toaster />
+          <TailwindIndicator />
+        </Providers>
       </body>
     </html>
   )
