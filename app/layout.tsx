@@ -9,6 +9,10 @@ import { ThemeProvider } from "@/components/theme-provider"
 
 import "@/styles/globals.css"
 
+import { Suspense } from "react"
+
+import { PHProvider, PostHogPageview } from "@/components/posthog-provider"
+
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -69,18 +73,24 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <head />
+      {process.env.NEXT_PUBLIC_POSTHOG_KEY ? (
+        <Suspense>
+          <PostHogPageview />
+        </Suspense>
+      ) : null}
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
           fontSans.variable
         )}
       >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {children}
-          <Analytics />
-          <Toaster />
-          <TailwindIndicator />
-        </ThemeProvider>
+        <PHProvider>
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            {children}
+            <Toaster />
+            <TailwindIndicator />
+          </ThemeProvider>
+        </PHProvider>
       </body>
     </html>
   )
