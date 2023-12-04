@@ -104,6 +104,19 @@ or
 npx prisma db push
 ```
 
+## Analytics
+
+Analytics are provided automatically by Vercel and their free tier is a great way to start. As an alternative, Posthog is integrated as well.
+
+### Posthog
+
+To use Posthog you need to create an account and set the keys in the `.env` file
+
+```
+NEXT_PUBLIC_POSTHOG_KEY=<ph_project_api_key>
+NEXT_PUBLIC_POSTHOG_HOST=<ph_instance_address>
+```
+
 ## Running pscale DB
 
 1. Login to pscale with the CLI
