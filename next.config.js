@@ -15,6 +15,11 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: "/ingest/:path*",
+        destination: "https://app.posthog.com/:path*",
+        permanent: true,
+      },
+      {
         source: "/blog-posts",
         destination: "/blog",
         permanent: true,
