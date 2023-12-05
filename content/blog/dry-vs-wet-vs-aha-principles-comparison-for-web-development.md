@@ -62,7 +62,7 @@ export default Greeting;
 In this example, the `name` variable is hardcoded within the component. While it simplifies the code, it limits the flexibility to change the name dynamically. If the name needs to be modified in multiple instances, it becomes tedious and error-prone.
 
 ## AHA (Avoid Hasty Abstractions) Approach 🤔
-The AHA approach encourages coders to **strike a balance between the DRY and WET approaches**. It promotes caution when abstracting code too early because **premature abstractions can lead to unnecessary complexity and decreased readability**. The AHA approach encourages developers to evaluate the context and prioritize simplicity and clarity.
+The AHA approach encourages coders to **strike a balance between the DRY and WET approaches**. It promotes caution when abstracting code too early because **premature abstractions can lead to unnecessary complexity and decreased readability**. The AHA approach encourages developers to evaluate the context and prioritize simplicity and clarity. Kudos to Kent C. Dodds for [coming up with this](https://kentcdodds.com/blog/aha-programming).
 
 By avoiding hasty abstractions, developers can focus on solving the immediate problem effectively.
 
