@@ -10,7 +10,7 @@
   // Eslint
   "eslint.codeActionsOnSave.mode": "all",
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
 
   // Pretty TS Errors - Run in different process until perf issues are solved by extension maintainers

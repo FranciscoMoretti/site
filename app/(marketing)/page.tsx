@@ -48,7 +48,7 @@ export default async function IndexPage() {
             Modern Web, Happy Coding
           </h2>
           <p className=" text-center leading-normal text-muted-foreground sm:text-start sm:text-xl sm:leading-8">
-            I learn in public to support your coding journey
+            Software engineer specializing in Web Development and AI
           </p>
           <div className="flex gap-4">
             <Link href="/blog" className={cn(buttonVariants({ size: "lg" }))}>
@@ -75,7 +75,7 @@ export default async function IndexPage() {
           </h2>
           <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
             {
-              "I write about these technologies I work with. I've used all  of them to create this site."
+              "I write about these technologies I work with. Here are some of them..."
             }
           </p>
         </div>
