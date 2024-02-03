@@ -36,6 +36,7 @@ const config: UserConfig = {
   navLinks: [
     { href: "/code-tips", title: "Code Tips" },
     { href: "/blog", title: "Blog" },
+    { href: "/about", title: "About" },
   ],
   social: [
     { label: "github", href: "https://github.com/flowershow/flowershow" },
