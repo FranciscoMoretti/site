@@ -3,18 +3,18 @@ title: About
 sidebar_position: 3
 ---
 
-I teach developers how to create better software and deliver it faster with code tips and productivity tools.
+Software engineer specializing in **Web Development** and **AI**, dedicated to leveraging technology to create high-quality software efficiently. Proficient in **Next.js**, **React**, **JavaScript**, **TypeScript**, **Tailwind CSS**, and **Python**.
 
-In 2017, I graduated from college with an Electronics Engineering degree. That year I created my first software project and I liked it more than all the circuits I ever built.
+- 🚀 **Mission**: Committed to empowering developers with modern web development practices to accelerate software delivery.
 
-A few months later, I was doing software development full-time. I solved problems but every pull request took a long time because I wasn't fast and I didn't know how to write clean code.
+- 💡 **Interests**: Currently exploring good programming practices, productivity tools, and AI for the web.
 
-Then I discovered the world of productivity and good programming practices. I quickly became one of the most prolific contributors at my company.
+- 📝 **Blog**: Dive into articles on modern web development that share my learning and solutions in the [blog](https://www.franciscomoretti.com/blog).
 
-With these techniques, I enhanced our codebase design for an agile development experience. And even better, I helped my teammates improve their coding skills.
+- 🤝 **Connect**: If you share a passion for modern web development and AI, let's connect! Together, we can create something exceptional.
 
-Today, I help people (just like you!) grow their programming skills with code clarity and development efficiency.
+Open to exciting opportunities in web development and AI. Let's innovate and build extraordinary solutions together!
 
-“Lowering quality lengthens development time.” - First Law of Programming
+Want to talk? Reach out on [LinkedIn](https://www.linkedin.com/in/franciscomoretti/) or [Twitter](https://twitter.com/franmoretti_).
 
-At the moment, I'm working with TypeScript, React, Next.js, and Tailwind CSS. I use JavaScript to illustrate some examples.
+Happy Coding!
