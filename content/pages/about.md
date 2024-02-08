@@ -15,6 +15,6 @@ Software engineer specializing in **Web Development** and **AI**, dedicated to l
 
 Open to exciting opportunities in web development and AI. Let's innovate and build extraordinary solutions together!
 
-Want to talk? Reach out on [LinkedIn](https://www.linkedin.com/in/franciscomoretti/) or [Twitter](https://twitter.com/franmoretti_).
+You can find me on [LinkedIn](https://www.linkedin.com/in/franciscomoretti/) or [Twitter](https://twitter.com/franmoretti_).
 
 Happy Coding!
