@@ -17,7 +17,7 @@ thumbnail:
 
 ## What is Pragmatic Programming?
 
-Pragmatic Programmers are known for getting the job done efficiently and effectively. These are some of the characteristics of a pragmatic programmer mentioned in the book The Pragmatic Progrmamer, your journey to mastery by Andy Hunt and Dave Thomas and how to apply them to web development.
+Pragmatic Programmers are known for getting the job done efficiently and effectively. These are some of the characteristics of a pragmatic programmer mentioned in the book The Pragmatic Programmer, your journey to mastery by Andy Hunt and Dave Thomas and how to apply them to web development.
 
 ### Early Adopter/Fast Adapter
 
@@ -37,7 +37,7 @@ Pragmatic Programmers are not afraid to ask questions and seek deeper understand
 
 **Trait**: Asking questions
 
-**Example**: Explore libraries, ask yourself how things work, look at the implmentations. Find out how other people solved their issues.
+**Example**: Explore libraries, ask yourself how things work, look at the implementations. Find out how other people solved their issues.
 
 ### Critical Thinker
 
