@@ -17,7 +17,7 @@ thumbnail:
 
 ## What is Pragmatic Programming?
 
-Pragmatic Programmers are known for getting the job done efficiently and effectively. Let's delve into the key traits that define a Pragmatic Programmer.
+Pragmatic Programmers are known for getting the job done efficiently and effectively. These are some of the characteristics of a pragmatic programmer mentioned in the book The Pragmatic Progrmamer, your journey to mastery by Andy Hunt and Dave Thomas and how to apply them to web development.
 
 ### Early Adopter/Fast Adapter
 
