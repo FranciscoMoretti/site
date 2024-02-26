@@ -7,7 +7,7 @@ slug: react-js-vs-react-native-similarities-and-differences
 
 title: React.js vs React Native - Similarities and Differences
 description: Explore the distinctions between React.js and React Native, understanding their commonalities, differences, and guidance for developers. Dive into their shared core, component reusability, and divergent styling and navigation approaches. Discover strategies for code sharing between React Native and React JS, making informed decisions for web and mobile development projects.
-date: 2025-02-20
+date: 2024-02-20
 image: /thumbnails/react-js-vs-react-native-similarities-and-differences.png
 thumbnail:
   - React JS
