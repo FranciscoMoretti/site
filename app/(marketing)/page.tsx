@@ -54,6 +54,12 @@ export default async function IndexPage() {
             <Link href="/blog" className={cn(buttonVariants({ size: "lg" }))}>
               Visit the blog
             </Link>
+            <Link
+              href="https://github.com/FranciscoMoretti/"
+              className={cn(buttonVariants({ size: "lg", variant: "outline" }))}
+            >
+              Github
+            </Link>
           </div>
         </div>
         <UserAvatar
