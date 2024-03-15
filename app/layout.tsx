@@ -8,6 +8,7 @@ import { TailwindIndicator } from "@/components/tailwind-indicator"
 import "@/styles/globals.css"
 
 import { Suspense } from "react"
+import { Metadata, Viewport } from "next"
 
 import { PHProvider, PostHogPageview } from "@/components/posthog-provider"
 
@@ -22,7 +23,14 @@ interface RootLayoutProps {
   children: React.ReactNode
 }
 
-export const metadata = {
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
+}
+
+export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
     default: siteConfig.name,
@@ -43,10 +51,6 @@ export const metadata = {
     },
   ],
   creator: `${siteConfig.name}`,
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
   openGraph: {
     type: "website",
     locale: "en_US",
