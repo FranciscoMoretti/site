@@ -1,5 +1,5 @@
 import React from "react"
-import { ImageResponse } from "@vercel/og"
+import { ImageResponse } from "next/og"
 
 import { thumbnailImageSchema } from "@/lib/validations/thumbnail"
 
