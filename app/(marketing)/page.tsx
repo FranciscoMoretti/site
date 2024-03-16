@@ -85,7 +85,7 @@ export default async function IndexPage() {
             }
           </p>
         </div>
-        <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3">
+        <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-5xl md:grid-cols-3">
           {technologiesTags.map((tag) => (
             <TechCard
               key={tag.slug}
@@ -151,7 +151,7 @@ export default async function IndexPage() {
             </div>
             <div className="flex items-center">
               <div className="h-4 w-4 border-y-8 border-l-0 border-r-8 border-solid border-muted border-y-transparent"></div>
-              <div className="flex h-10 items-center rounded-md border border-muted bg-muted px-4 font-medium">
+              <div className="flex h-10 items-center gap-2 rounded-md border border-muted bg-muted px-4 font-medium">
                 <div title="stars" className="w-4">
                   <Suspense fallback={<>{"..."}</>}>
                     {" "}
