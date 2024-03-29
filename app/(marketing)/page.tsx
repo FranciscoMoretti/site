@@ -1,4 +1,5 @@
 import { Suspense } from "react"
+import Image from "next/image"
 import Link from "next/link"
 import { allPosts, allTags, Tag } from "contentlayer/generated"
 import { compareDesc } from "date-fns"
@@ -10,7 +11,6 @@ import BlogPostList from "@/components/blog-post-list"
 import { GitHubStars } from "@/components/github-stars"
 import { getTagsItems, TagGroup } from "@/components/tag-group"
 import { TechCard } from "@/components/tech-card"
-import { UserAvatar } from "@/components/user-avatar"
 
 const TECHNOLOGIES = [
   "next-js",
@@ -62,13 +62,15 @@ export default async function IndexPage() {
             </Link>
           </div>
         </div>
-        <UserAvatar
-          user={{
-            name: siteConfig.name || "",
-            image: siteConfig.profilePicture,
-          }}
-          className="mx-16 h-36 w-36 bg-gradient-to-b from-primary to-blue-200 shadow-lg ring-4 ring-primary/80"
-        />
+        <div className="relative mx-16 flex h-36 w-36 shrink-0 overflow-hidden rounded-full bg-gradient-to-b from-primary to-blue-200 shadow-lg ring-4 ring-primary/80">
+          <Image
+            src="/profile_picture.jpg"
+            alt={`${siteConfig.name}'s Picture`}
+            className="w-ful aspect-square h-full"
+            width={460}
+            height={460}
+          />
+        </div>
       </section>
       <hr className="container" />
       <section
