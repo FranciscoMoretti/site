@@ -42,7 +42,7 @@ The plan is to implement all the features and niceness for a personal blog.
 - ✅ Copy code button
 - ✅ Search with **cmdk**
 - ✅ Custom tailwind styles
-- ✅ Show views for each post using **Prisma** and **PlanetScale**
+- ✅ Show views for each post using **Prisma** and **Turso**
 - ✅ Personalized OG Images
 - ✅ Dark mode
 
@@ -86,11 +86,9 @@ pnpm dev
 2. Put your content into the content directory and your assets in content/assets directory.
 3. Replace the `opengraph-image.jpg` for your own image and `opengraph-image.alt.txt` for its alt text.
 
-## Setting up PlanetScale DB
+## Setting up Turso DB
 
-1. Create an account in https://planetscale.com/ (free plan available)
-2. Install the pscale CLI https://github.com/planetscale/cli#installation
-3. Follow [this guide](https://planetscale.com/blog/getting-started-with-the-planetscale-cli) to login and create your first pscale database through the CLI. Choose `site` for the DB name.
+Check out the [setup guide](https://docs.turso.tech/sdk/ts/orm/prisma)
 
 4. Push the prisma DB
 
@@ -116,10 +114,6 @@ To use Posthog you need to create an account and set the keys in the `.env` file
 NEXT_PUBLIC_POSTHOG_KEY=<ph_project_api_key>
 NEXT_PUBLIC_POSTHOG_HOST=<ph_instance_address>
 ```
-
-## Running turso DB
-
-Check out the [setup guide](https://docs.turso.tech/sdk/ts/orm/prisma)
 
 ## License
 
