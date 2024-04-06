@@ -117,19 +117,9 @@ NEXT_PUBLIC_POSTHOG_KEY=<ph_project_api_key>
 NEXT_PUBLIC_POSTHOG_HOST=<ph_instance_address>
 ```
 
-## Running pscale DB
+## Running turso DB
 
-1. Login to pscale with the CLI
-
-```sh
-pscale login
-```
-
-2. Connect with the DB through planetscale CLI
-
-```
-pscale connect site main --port 3306
-```
+Check out the [setup guide](https://docs.turso.tech/sdk/ts/orm/prisma)
 
 ## License
 
