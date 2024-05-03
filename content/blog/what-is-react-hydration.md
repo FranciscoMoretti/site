@@ -5,7 +5,7 @@ alias:
 publish: true
 slug: what-is-react-hydration
 
-title: What is React Hydration
+title: What is React Hydration?
 description: Discover the process of React hydration and how it connects server-rendered HTML with client-side JavaScript to enhance web interactivity.
 date: 2024-04-30
 image: /thumbnails/what-is-react-hydration.png
