@@ -156,6 +156,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/blog/single-responsibility-principle-srp",
+        destination: "/code-tips/single-responsibility-principle-srp",
+        permanent: true,
+      },
+      {
         source: "/single-responsibility-principle-srp--solid",
         destination: "/code-tips/single-responsibility-principle-srp",
         permanent: true,
