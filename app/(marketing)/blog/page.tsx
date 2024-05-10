@@ -8,7 +8,7 @@ export const revalidate = 60
 export const metadata = {
   title: "Blog",
   description:
-    "Welcome to the Happy Coding Blog! Enter the world of modern web development and discover tools, tips, and tutorials. Happy Coding!",
+    "Welcome to the Happy Coding Blog! Exploring modern web dev tools like VS Code, Next.js, React, Tailwind, and TypeScript.",
 }
 
 export default async function BlogPage() {
@@ -30,7 +30,7 @@ export default async function BlogPage() {
           </h2>
           <p className="text-xl text-muted-foreground">
             {
-              "In this blog, we use modern tools like VS Code, Next.js, React, TailwindCSS, and Typescript to make development easier and coding more enjoyable. These tools are user-friendly, perform well, and have strong community support. They help you effortlessly create awesome websites and web apps. Say goodbye to tedious workflows and hello to efficient coding that sparks joy!"
+              "Exploring modern web dev tools like VS Code, Next.js, React, Tailwind, and TypeScript. Making coding more enjoyable with user-friendly, performant tech that has great community support. Simplifying the process of building awesome sites and apps, so you can focus on the fun parts!"
             }
           </p>
           <p className="text-xl text-muted-foreground">Happy Coding! 😄🎉</p>
