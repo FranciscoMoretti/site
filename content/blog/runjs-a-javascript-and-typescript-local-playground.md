@@ -66,7 +66,7 @@ Super helpful for small problems like this one.
 
 ![alt text](assets/runjs_power_of_two.png)
 
-Showing another small one that fits in the screen, but it's also helpful for complex problems.
+Showing another small one that fits in the screen, but it's also helpful for complex problems.1
 
 ![alt text](assets/runjs_move_zeroes.png)
 
