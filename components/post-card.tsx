@@ -20,9 +20,9 @@ export function PostCard({
         <Image
           src={post.image}
           alt={post.title}
-          width={804}
-          height={452}
-          className="rounded-md border bg-muted transition-colors"
+          width={1200}
+          height={630}
+          className="aspect-[1200/630] rounded-md border bg-muted object-cover transition-colors"
           priority={index <= 1}
         />
       )}
