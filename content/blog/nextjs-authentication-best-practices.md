@@ -177,5 +177,5 @@ Next.js authentication best practices involve a combination of techniques:
 
 ## References
 
-- [Next.js Authentication - Avoid these 4 mistakes (Don't do auth in layout!)](https://www.youtube.com/watch?v=kbCzZzXTjuw&t=23s)
+- [Next.js Authentication - Avoid these 4 mistakes (Don't do auth in layout!)](https://www.youtube.com/watch?v=kbCzZzXTjuw)
 - [Authentication - Next.js](https://nextjs.org/docs/app/building-your-application/authentication)
