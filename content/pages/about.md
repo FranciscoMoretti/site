@@ -3,7 +3,7 @@ title: About
 sidebar_position: 3
 ---
 
-Skilled engineer specializing in **Web Development** and **AI**with 6 years of experience in **Next.js**, **React**, **JavaScript**, **TypeScript**, **Tailwind CSS**, and **Python**.
+Skilled engineer specializing in **Web Development** and **AI**. Talk about **Next.js**, **React**, **JavaScript**, **TypeScript**, **Tailwind CSS**, and **Python**.
 
 - 🚀 **Mission**: Committed to empowering companies and developers with effective tools and proven best practices for accelerating software delivery. Here are some examples from my work at iRobot:
 
