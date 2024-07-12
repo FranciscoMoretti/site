@@ -3,7 +3,7 @@
 import { db } from "@/lib/db"
 
 export async function upsertPost(slug: string) {
-  if (Boolean(process.env.DISABLE_DB)) {
+  if (!db) {
     return null
   }
   const result = await db.post.upsert({
@@ -20,7 +20,7 @@ export async function upsertPost(slug: string) {
 }
 
 export async function updatePostViews({ slug }: { slug: string }) {
-  if (Boolean(process.env.DISABLE_DB)) {
+  if (!db) {
     return null
   }
   const result = await db.post.update({
@@ -37,7 +37,7 @@ export async function updatePostViews({ slug }: { slug: string }) {
 }
 
 export async function increasePostViews({ slug }: { slug: string }) {
-  if (Boolean(process.env.DISABLE_DB)) {
+  if (!db) {
     return null
   }
   const result = await db.post.update({
@@ -54,7 +54,7 @@ export async function increasePostViews({ slug }: { slug: string }) {
 }
 
 export async function getPostViews({ slug }: { slug: string }) {
-  if (Boolean(process.env.DISABLE_DB)) {
+  if (!db) {
     return null
   }
   try {
@@ -74,7 +74,7 @@ export async function getPostViews({ slug }: { slug: string }) {
 }
 
 export async function getAllViews() {
-  if (Boolean(process.env.DISABLE_DB)) {
+  if (!db) {
     return null
   }
   const postsViews = await db.post.findMany({
