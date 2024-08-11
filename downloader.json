@@ -7,5 +7,6 @@
   "imgPrefixInMarkdown": "assets",
   "markdownOutputPath": "./content",
   "logLevel": "debug",
-  "pageLinkHasExtension": false
+  "pageLinkHasExtension": false,
+  "revalidatePeriod": 180
 }
