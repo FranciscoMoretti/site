@@ -43,3 +43,6 @@ content/.obsidian
 
 # Public assets synced with script
 public/assets
+
+# Downloader
+.downloader
