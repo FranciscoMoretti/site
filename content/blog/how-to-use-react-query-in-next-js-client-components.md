@@ -9,7 +9,7 @@ title: How to Use React Query in Next.js Client Components
 description: Learn how to integrate React Query in Next.js client components to improve your apps. Use React Query to handle data fetching, mutations, and revalidation.
 
 date: 2023-07-23
-image: /thumbnails/how-to-use-react-query-in-next-js-client-components.png
+cover: /thumbnails/how-to-use-react-query-in-next-js-client-components.png
 thumbnail:
   - React
   - Query

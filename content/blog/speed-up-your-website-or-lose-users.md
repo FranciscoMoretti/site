@@ -9,7 +9,7 @@ title: Speed Up Your Website or Lose Users
 description: Learn why fast-loading websites matter and how to improve yours. Real-life examples and insights from a Google study on mobile page speed.
 
 date: 2024-02-26
-image: /thumbnails/speed-up-your-website-or-lose-users.png
+cover: /thumbnails/speed-up-your-website-or-lose-users.png
 thumbnail:
   - Load
   - Fast

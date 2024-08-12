@@ -9,7 +9,7 @@ title: Next.js Revolution - The framework popularity rises in 2023
 description: Discover the rising popularity of Next.js in 2023 and its impact on web development. Learn why Next.js is becoming a popular choice among web developers.
 
 date: 2023-07-11
-image: /thumbnails/next-js-revolution-the-framework-popularity-rises-in-2023.png
+cover: /thumbnails/next-js-revolution-the-framework-popularity-rises-in-2023.png
 thumbnail:
   - Exploring
   - Next.js

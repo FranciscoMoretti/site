@@ -8,7 +8,7 @@ slug: usestate-vs-useref
 title: useState vs useRef - When to use state and when to use ref
 description: Learn the differences between useState and useRef in React for state management and persisting values without re-renders.
 date: 2024-05-21
-image: /thumbnails/usestate-vs-useref.png
+cover: /thumbnails/usestate-vs-useref.png
 thumbnail:
   - use State
   - vs

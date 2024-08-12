@@ -8,7 +8,7 @@ slug: the-psychology-of-code
 title: The Psychology of Code - Decoding the Impact on Development 🧠
 description: Explore the psychological effects on coding, understand the impact of broken windows on culture, and discover defensive programming complexities.
 date: 2024-02-10
-image: /thumbnails/the-psychology-of-code.png
+cover: /thumbnails/the-psychology-of-code.png
 thumbnail:
   - The
   - Psychology

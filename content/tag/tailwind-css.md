@@ -5,7 +5,7 @@ tag: TailwindCSS
 title: The Tailwind Guide - The CSS Framework for Modern Web Design
 description: Discover TailwindCSS, the popular CSS framework that changed web design. Learn how to leverage TailwindCSS with React and Next.js to create stunning websites.
 date: 2023-07-06
-image:
+cover:
 ---
 
 ## What is TailwindCSS? 🎨

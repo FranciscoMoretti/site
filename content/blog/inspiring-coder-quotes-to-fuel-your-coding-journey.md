@@ -8,7 +8,7 @@ slug: inspiring-coder-quotes-to-fuel-your-coding-journey
 title: Inspiring Coder Quotes to Fuel Your Coding Journey
 description: Coder quotes from programmers to programmers. Be inspired and fuel your passion for coding! Learn from the wisdom of great programmers and share the knowledge.
 date: 2023-07-10
-image: /thumbnails/inspiring-coder-quotes-to-fuel-your-coding-journey.png
+cover: /thumbnails/inspiring-coder-quotes-to-fuel-your-coding-journey.png
 thumbnail:
   - Coder
   - Quotes

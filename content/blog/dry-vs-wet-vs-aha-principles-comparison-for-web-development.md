@@ -8,7 +8,7 @@ slug: dry-vs-wet-vs-aha-principles-comparison-for-web-development
 title: DRY vs WET vs AHA Principles Comparison for Web Development
 description: Explore the comparison of the DRY (Don't Repeat Yourself), WET (Write Everything Twice), and AHA (Avoid Hasty Abstractions) principles in web development.
 date: 2023-06-24
-image: /thumbnails/dry-vs-wet-vs-aha-principles-comparison-for-web-development.png
+cover: /thumbnails/dry-vs-wet-vs-aha-principles-comparison-for-web-development.png
 thumbnail:
   - Comparing
   - DRY vs WET vs AHA

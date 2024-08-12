@@ -5,7 +5,7 @@ tag: Tools
 title: The Tools Guide - Tools Every Web Developer Should Know
 description: Discover the essential web development tools every web developer should know. Learn about popular tools for coding, debugging, and productivity.
 date: 2023-07-18
-image:
+cover:
 ---
 
 ## What Are Tools?

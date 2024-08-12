@@ -8,7 +8,7 @@ slug: setting-up-static-og-image-nextjs-app-router
 title: Setting up a static OG Image in Next.js with App Router
 description: Learn how to set up a static Open Graph (OG) image for Next.js using the App Router. Improve your site's appearance when shared on social networks.
 date: 2023-07-09
-image: /thumbnails/setting-up-static-og-image-nextjs-app-router.png
+cover: /thumbnails/setting-up-static-og-image-nextjs-app-router.png
 thumbnail:
   - Static
   - OG Image

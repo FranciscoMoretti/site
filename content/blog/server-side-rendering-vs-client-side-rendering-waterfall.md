@@ -8,7 +8,7 @@ slug: server-side-rendering-vs-client-side-rendering-waterfall
 title: Server Side Rendering Vs Client Side Rendering Waterfall
 description: Explore the impact of server-side rendering (SSR) and client-side rendering (CSR) on performance, focusing on the waterfall effect in React applications.
 date: 2024-06-20
-image: /thumbnails/server-side-rendering-vs-client-side-rendering-waterfall.png
+cover: /thumbnails/server-side-rendering-vs-client-side-rendering-waterfall.png
 thumbnail:
   - React
   - SSR vs CSR

@@ -8,7 +8,7 @@ slug: from-callback-hell-to-promiseland-simplifying-asynchronous-javascript
 title: From Callback Hell to Promiseland - Asynchronous JavaScript
 description: Learn how Promises can rescue you from Callback Hell in asynchronous JavaScript. Simplify your code, enhance maintainability, and boost development efficiency.
 date: 2023-06-15
-image: /thumbnails/from-callback-hell-to-promiseland-simplifying-asynchronous-javascript.png
+cover: /thumbnails/from-callback-hell-to-promiseland-simplifying-asynchronous-javascript.png
 thumbnail:
   - Callback Hell
   - Async JS

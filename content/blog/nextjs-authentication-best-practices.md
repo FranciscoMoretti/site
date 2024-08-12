@@ -8,7 +8,7 @@ slug: nextjs-authentication-best-practices
 title: Next.js Authentication Best Practices
 description: Explore key Next.js authentication best practices, including middleware vs. page component auth, preserving static rendering, and implementing multi-layered protection.
 date: 2024-06-26
-image: /thumbnails/nextjs_authentication_best_practices.png
+cover: /thumbnails/nextjs_authentication_best_practices.png
 thumbnail:
   - Next.js
   - Authentication

@@ -5,7 +5,7 @@ tag: Git
 title: The Git Guide - Version Control and Collaborative Development
 description: Learn Git, a powerful version control system, and how it facilitates collaborative development. Discover how it improves your workflow and team collaboration.
 date: 2023-07-09
-image:
+cover:
 ---
 
 ## What is Git? 🌱

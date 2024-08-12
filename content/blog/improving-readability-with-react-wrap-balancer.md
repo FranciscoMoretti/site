@@ -8,7 +8,7 @@ slug: improving-readability-with-react-wrap-balancer
 title: React Wrap Balancer, An Easy Way to Improve Text Wrapping
 description: Improve text wrapping in React and Next.js apps using React Wrap Balancer. Optimize readability and learn how to us this lightweight tool on your web pages.
 date: 2023-05-11
-image: /thumbnails/improving-readability-with-react-wrap-balancer.png
+cover: /thumbnails/improving-readability-with-react-wrap-balancer.png
 thumbnail:
   - React
   - Wrap

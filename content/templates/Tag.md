@@ -5,6 +5,6 @@ tag:
 title:
 description:
 date: {{date}}
-image:
+cover:
 ---
 

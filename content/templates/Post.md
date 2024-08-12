@@ -8,7 +8,7 @@ slug: {{title}}
 title:
 description:
 date: {{date}}
-image: /thumbnails/{{title}}.png
+cover: /thumbnails/{{title}}.png
 thumbnail:
   - line1
   - line2

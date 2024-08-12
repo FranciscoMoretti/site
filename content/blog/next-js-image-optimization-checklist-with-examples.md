@@ -8,7 +8,7 @@ slug: next-js-image-optimization-checklist-with-examples
 title: Next.js Image Optimization Checklist With Examples
 description: Learn how to optimize images in Next.js for better performance and user experience. Follow this checklist to handle images efficiently in your Next.js projects.
 date: 2023-06-20
-image: /thumbnails/next-js-image-optimization-checklist-with-examples.png
+cover: /thumbnails/next-js-image-optimization-checklist-with-examples.png
 thumbnail:
   - Image
   - Optimization

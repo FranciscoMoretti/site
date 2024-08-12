@@ -8,7 +8,7 @@ slug: simplify-api-testing-with-thunder-client-vs-code-extension
 title: Simplify API Testing with Thunder Client VS Code Extension
 description: Thunder Client is a lightweight Rest API Client Extension for Visual Studio Code to simplify your API testing process. Discover its features and ease of use.
 date: 2023-06-19
-image: /thumbnails/simplify-api-testing-with-thunder-client-vs-code-extension.png
+cover: /thumbnails/simplify-api-testing-with-thunder-client-vs-code-extension.png
 thumbnail:
   - VS Code
   - Thunder

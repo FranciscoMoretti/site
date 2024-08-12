@@ -5,7 +5,7 @@ tag: React
 title: The React Guide - The Framework for Modern Web Development
 description: Learn how to use React.js for modern web development. This comprehensive guide covers fundamentals, best practices,  and tips to build efficient web apps.
 date: 2023-07-06
-image:
+cover:
 ---
 
 

@@ -5,7 +5,7 @@ tag: HTML
 title: The HTML Guide - Learning the foundations of Web Development
 description: Learn the fundamentals of HTML and master web development with this comprehensive guide. Explore the power of HTML in creating web pages.
 date: 2023-07-08
-image:
+cover:
 ---
 ## What is HTML?
 

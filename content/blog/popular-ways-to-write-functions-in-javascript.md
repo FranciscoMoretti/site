@@ -8,7 +8,7 @@ slug: popular-ways-to-write-javascript-functions
 title: Popular Ways To Write JavaScript Functions
 description: Learn about the popular ways to define functions in JavaScript, including Function Declaration, Function Expression, and Arrow Function.
 date: 2024-04-23
-image: /thumbnails/popular-ways-to-write-javascript-functions.png
+cover: /thumbnails/popular-ways-to-write-javascript-functions.png
 thumbnail:
   - JavaScript
   - Function

@@ -8,7 +8,7 @@ slug: 22-useful-console-log-methods-every-web-developer-should-know
 title: 22 Useful Console Methods Every Web Developer Should Know
 description: Discover 22 useful console.log methods every web developer should know. Improve your debugging skills and enhance your coding experience.
 date: 2023-06-17
-image: /thumbnails/22-useful-console-log-methods-every-web-developer-should-know.png
+cover: /thumbnails/22-useful-console-log-methods-every-web-developer-should-know.png
 thumbnail:
   - 22 console
   - logging

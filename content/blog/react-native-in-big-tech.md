@@ -8,7 +8,7 @@ slug: react-native-in-big-tech
 title: React Native in Big Tech
 description: Learn how React Native powers big tech giants like Microsoft and Meta, accelerating development. Open-source, and bridging mobile-web gap.
 date: 2024-02-29
-image: /thumbnails/react-native-in-big-tech.png
+cover: /thumbnails/react-native-in-big-tech.png
 thumbnail:
   - Big Tech
   - React Native

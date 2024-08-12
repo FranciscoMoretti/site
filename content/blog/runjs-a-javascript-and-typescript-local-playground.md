@@ -8,7 +8,7 @@ slug: runjs-a-javascript-and-typescript-local-playground
 title: RunJS - A JavaScript and TypeScript Local Playground
 description: RunJS, a local playground for JavaScript and TypeScript. Exploring its features and use cases with code examples.
 date: 2024-06-06
-image: /thumbnails/runjs-a-javascript-and-typescript-local-playground.png
+cover: /thumbnails/runjs-a-javascript-and-typescript-local-playground.png
 thumbnail:
   - Exploring
   - RunJS

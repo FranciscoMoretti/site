@@ -8,7 +8,7 @@ slug: elevate-your-react-projects-with-the-command-component
 title: Elevate Your React Projects with the Command Component
 description: Elevate your React projects with the Command Component from shadcn/ui. Enhance functionality and accessibility. Try it now!
 date: 2023-06-13
-image: /thumbnails/elevate-your-react-projects-with-the-command-component.png
+cover: /thumbnails/elevate-your-react-projects-with-the-command-component.png
 thumbnail:
   - Ctrl + K
   - Command
