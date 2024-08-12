@@ -105,7 +105,7 @@ export const Post = defineDocumentType(() => ({
       type: "boolean",
       default: true,
     },
-    image: {
+    cover: {
       type: "string",
       required: false,
     },
@@ -152,7 +152,7 @@ export const Tag = defineDocumentType(() => ({
       type: "string",
       required: true,
     },
-    image: {
+    cover: {
       type: "string",
       required: false,
     },

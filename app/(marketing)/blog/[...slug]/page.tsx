@@ -204,9 +204,9 @@ export default async function PostPage({ params }: PostPageProps) {
           </div>
         ) : null}
       </div>
-      {post.image && (
+      {post.cover && (
         <Image
-          src={post.image}
+          src={post.cover}
           alt={post.title}
           width={720}
           height={405}

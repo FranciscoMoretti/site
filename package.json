@@ -7,6 +7,7 @@
     "url": "https://github.com/franciscomoretti/"
   },
   "scripts": {
+    "dev:next": "next dev",
     "dev": "pnpm run sync --watch & next dev",
     "turbo": "next dev --turbo",
     "build": "pnpm run sync && next build",
@@ -15,7 +16,7 @@
     "preview": "next build && next start",
     "format": "prettier --write .",
     "postinstall": "prisma generate",
-    "sync": "node scripts/sync.mjs",
+    "sync": "pnpm exec notion-downloader-cli pull & node scripts/sync.mjs",
     "prepare": "husky install"
   },
   "dependencies": {

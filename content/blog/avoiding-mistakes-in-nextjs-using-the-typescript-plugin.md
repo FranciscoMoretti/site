@@ -1,25 +1,28 @@
 ---
-tag: Next.js, TypeScript, VS Code
-alias:
-
 publish: true
-slug: avoiding-mistakes-in-nextjs-using-the-typescript-plugin
-
-title: Avoiding Mistakes in Next.js using the TypeScript Plugin
 description: Learn how to avoid common mistakes in Next.js development by leveraging the power of the TypeScript plugin. Discover the benefits and how to enable it.
+slug: avoiding-mistakes-in-nextjs-using-the-typescript-plugin
 date: 2023-07-15
-image: /thumbnails/avoiding-mistakes-in-nextjs-using-the-typescript-plugin.png
-thumbnail:
-  - Next.js
-  - TypeScript
-  - Plugin
+tag: Next.js, TypeScript, VS Code
+Status: Publish
+Created time: 2024-08-05T07:52:00.000Z
+title: Avoiding Mistakes in Next.js using the TypeScript Plugin
+id: 57701aab-8b5c-4798-9e6d-5b3f9603520b
+cover: /assets/57701aab-8b5c-4798-9e6d-5b3f9603520b.png
+created_time: 2024-08-05T07:52:00.000Z
+last_edited_time: 2024-08-12T08:07:00.000Z
 ---
 
-## What is the TypeScript Plugin? 🧩
 
-The [TypeScript](tag/typescript.md)  plugin is a powerful tool included in [Next.js](tag/next-js.md) that provides advanced type-checking and auto-completion for your TypeScript code. It integrates seamlessly with code editors like [Visual Studio Code](tag/vs-code.md) (VS Code), making it easier to catch errors and write more reliable code.
+
+## What is the Next.js TypeScript Plugin? 🧩
+
+
+The [TypeScript](https://www.franciscomoretti.com/tag/typescript)  plugin is a powerful tool included in [Next.js](https://www.franciscomoretti.com/tag/next-js) that provides advanced type-checking and auto-completion for your TypeScript code. It integrates seamlessly with code editors like [Visual Studio Code](https://www.franciscomoretti.com/tag/vs-code) (VS Code), making it easier to catch errors and write more reliable code.
+
 
 ## Enabling the TypeScript Plugin in VS Code ⚙️
+
 
 To take advantage of the TypeScript plugin in VS Code in your Next.js project, follow these simple steps:
 
@@ -29,7 +32,9 @@ To take advantage of the TypeScript plugin in VS Code in your Next.js project, f
 
 This enables the plugin when editing files and also when building with `next build`.
 
+
 ## Benefits of the TypeScript Plugin ✨
+
 
 The TypeScript plugin in Next.js offers several key benefits:
 
@@ -40,6 +45,9 @@ The TypeScript plugin in Next.js offers several key benefits:
 
 By leveraging the TypeScript plugin, you improve code quality, catch errors early, and enjoy a smoother development process.
 
-More info in the [official documentation](https://nextjs.org/docs/app/building-your-application/configuring/typescript#typescript-plugin). 
+
+More info in the [official documentation](https://nextjs.org/docs/app/building-your-application/configuring/typescript#typescript-plugin).
+
 
 🚀 Happy coding
+

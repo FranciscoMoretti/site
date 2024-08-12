@@ -16,9 +16,9 @@ export function PostCard({
 }): JSX.Element {
   return (
     <article key={post._id} className="group relative flex flex-col space-y-2">
-      {post.image && (
+      {post.cover && (
         <Image
-          src={post.image}
+          src={post.cover}
           alt={post.title}
           width={1200}
           height={630}
