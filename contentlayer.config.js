@@ -31,7 +31,7 @@ const computedFields = {
   routepath: {
     type: "string",
     resolve: (doc) =>
-      doc.slug.trim()
+      doc.slug
         ? path.join("/", path.dirname(doc._raw.flattenedPath), doc.slug)
         : path.join("/", doc._raw.flattenedPath),
   },
@@ -96,7 +96,6 @@ export const Post = defineDocumentType(() => ({
       type: "date",
       required: true,
     },
-    // TODO: Fix, an empty slug causes a crash
     slug: {
       type: "string",
       required: true,
