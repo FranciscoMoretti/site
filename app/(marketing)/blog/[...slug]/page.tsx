@@ -47,11 +47,16 @@ export async function generateMetadata({
 
   const url = process.env.NEXT_PUBLIC_APP_URL
 
-  const ogUrl = new URL(`${url}/api/og`)
-  ogUrl.searchParams.set("heading", post.title)
-  ogUrl.searchParams.set("tags", post.tags.join("|"))
-  ogUrl.searchParams.set("type", "Blog Post")
-  ogUrl.searchParams.set("mode", "light")
+  let ogUrl
+  if (post.cover) {
+    ogUrl = post.cover
+  } else {
+    ogUrl = new URL(`${url}/api/og`)
+    ogUrl.searchParams.set("heading", post.title)
+    ogUrl.searchParams.set("tags", post.tags.join("|"))
+    ogUrl.searchParams.set("type", "Blog Post")
+    ogUrl.searchParams.set("mode", "light")
+  }
 
   return {
     title: {
@@ -88,9 +93,9 @@ export async function generateStaticParams(): Promise<
   PostPageProps["params"][]
 > {
   const promises = allPosts.map(async (post) => {
-    const { slug } = post
+    const { routepath } = post
     try {
-      return await upsertPost(slug)
+      return await upsertPost(routepath)
     } catch (error) {
       console.log(error)
     }
@@ -106,22 +111,21 @@ export async function generateStaticParams(): Promise<
 
     const thumbnailPromises = allPosts
       .filter((post) => {
-        return Boolean(post.thumbnail)
+        return Boolean(post.thumbnail && !post.cover)
       })
       .map(async (post) => {
-        const { slug, thumbnail } = post
+        const { routepath, thumbnail } = post
         const imageUrl = new URL(`${url}/api/thumbnail`)
         if (!thumbnail) {
-          throw Error(`Unexpected empty thumbnail in [${slug}]`)
+          throw Error(`Unexpected empty thumbnail in [${routepath}]`)
         } else if (thumbnail.length < 3) {
-          throw Error(`Thumbnail has few arguments in [${slug}]`)
+          throw Error(`Thumbnail has few arguments in [${routepath}]`)
         }
         imageUrl.searchParams.set("line1", thumbnail[0])
         imageUrl.searchParams.set("line2", thumbnail[1])
         imageUrl.searchParams.set("line3", thumbnail[2])
         try {
-          thumbnail
-          const imagePath = path.join(projectFolderPath, `${slug}.png`)
+          const imagePath = path.join(projectFolderPath, `${routepath}.png`)
           return downloadImage({
             outputPath: imagePath,
             imageUrl: imageUrl.toString(),
@@ -137,7 +141,7 @@ export async function generateStaticParams(): Promise<
   }
 
   return allPosts.map((post) => ({
-    slug: [post.slug],
+    slug: [routepathToSlug(post.routepath)],
   }))
 }
 

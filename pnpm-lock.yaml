@@ -182,8 +182,8 @@ importers:
         specifier: ^6.9.4
         version: 6.9.4
       notion-downloader-cli:
-        specifier: ^0.0.3
-        version: 0.0.3(typescript@5.4.2)
+        specifier: ^0.0.7
+        version: 0.0.7(typescript@5.4.2)
       posthog-js:
         specifier: ^1.93.3
         version: 1.93.3
@@ -394,10 +394,10 @@ packages:
       }
     engines: { node: ">=6.9.0" }
 
-  "@babel/generator@7.25.0":
+  "@babel/generator@7.25.6":
     resolution:
       {
-        integrity: sha512-3LEEcj3PVW8pW2R1SR1M89g/qrYk/m/mB/tLqn7dn4sbBUQyTqnlod+II2U4dqiGtUmkcnAmkMDralTFZttRiw==,
+        integrity: sha512-VPC82gr1seXOpkjAAKoLhP50vx4vGNlF4msF64dSFq1P8RfB+QAuJWGHPXXPc8QyfVWwwB/TNNU4+ayZmHNbZw==,
       }
     engines: { node: ">=6.9.0" }
 
@@ -415,10 +415,10 @@ packages:
       }
     engines: { node: ">=6.9.0" }
 
-  "@babel/helper-create-class-features-plugin@7.25.0":
+  "@babel/helper-create-class-features-plugin@7.25.4":
     resolution:
       {
-        integrity: sha512-GYM6BxeQsETc9mnct+nIIpf63SAyzvyYN7UB/IlTyd+MBg06afFGp0mIeUqGyWgS2mxad6vqbMrHVlaL3m70sQ==,
+        integrity: sha512-ro/bFs3/84MDgDmMwbcHgDa8/E6J3QKNTk4xJJnVeFtGE+tL0K26E3pNxhYz2b67fJpt7Aphw5XcploKXuCvCQ==,
       }
     engines: { node: ">=6.9.0" }
     peerDependencies:
@@ -576,18 +576,18 @@ packages:
     engines: { node: ">=6.0.0" }
     hasBin: true
 
-  "@babel/parser@7.25.3":
+  "@babel/parser@7.25.6":
     resolution:
       {
-        integrity: sha512-iLTJKDbJ4hMvFPgQwwsVoxtHyWpKKPBrxkANrSYewDPaPpT5py5yeVkgPIJ7XYXhndxJpaA3PyALSXQ7u8e/Dw==,
+        integrity: sha512-trGdfBdbD0l1ZPmcJ83eNxB9rbEax4ALFTF7fN386TMYbeCQbyme5cOEXQhbGXKebwGaB/J52w1mrklMcbgy6Q==,
       }
     engines: { node: ">=6.0.0" }
     hasBin: true
 
-  "@babel/plugin-syntax-typescript@7.24.7":
+  "@babel/plugin-syntax-typescript@7.25.4":
     resolution:
       {
-        integrity: sha512-c/+fVeJBB0FeKsFvwytYiUD+LBvhHjGSI0g446PRGdSVGZLRNArBUno2PETbAly3tpiNAQR5XaZ+JslxkotsbA==,
+        integrity: sha512-uMOCoHVU52BsSWxPOMVv5qKRdeSlPuImUCB2dlPuBSU+W2/ROE7/Zg8F2Kepbk+8yBa68LlRKxO+xgEVWorsDg==,
       }
     engines: { node: ">=6.9.0" }
     peerDependencies:
@@ -637,10 +637,10 @@ packages:
       }
     engines: { node: ">=6.9.0" }
 
-  "@babel/traverse@7.25.3":
+  "@babel/traverse@7.25.6":
     resolution:
       {
-        integrity: sha512-HefgyP1x754oGCsKmV5reSmtV7IXj/kpaE1XYY+D9G5PvKKoFfSbiS4M77MdjuwlZKDIKFCffq9rPU+H/s3ZdQ==,
+        integrity: sha512-9Vrcx5ZW6UwK5tvqsj0nGpp/XzqthkT0dqIc9g1AdtygFToNtTF67XzYS//dm+SAK9cp3B9R4ZO/46p63SCjlQ==,
       }
     engines: { node: ">=6.9.0" }
 
@@ -651,10 +651,10 @@ packages:
       }
     engines: { node: ">=6.9.0" }
 
-  "@babel/types@7.25.2":
+  "@babel/types@7.25.6":
     resolution:
       {
-        integrity: sha512-YTnYtra7W9e6/oAZEHj0bJehPRUlLH9/fbpT5LfB0NhQXyALCRkRs3zH9v07IYhkgpqX6Z78FnuccZr/l4Fs4Q==,
+        integrity: sha512-/l42B1qxpG6RdfYf343Uw1vmDjeNhneUXtzhojE7pDgfpEypmRhI6j1kr17XCVv4Cgl9HdAiQY2x0GwKm7rWCw==,
       }
     engines: { node: ">=6.9.0" }
 
@@ -3360,10 +3360,10 @@ packages:
         integrity: sha512-D4DdjDo5CY50Qms0qGQTTw6Q44jl7zRwY7bthds06pUGfChBCTcQs+N743eFWGEd6pRTMd6A+I87aWyFV5wiZQ==,
       }
 
-  axios@1.7.3:
+  axios@1.7.7:
     resolution:
       {
-        integrity: sha512-Ar7ND9pU99eJ9GpoGQKhKf58GpUOgnzuaB7ueNQ5BMi0p+LZ5oaEnfF999fAArcTIBwXTCHAmGcHOZJaWPq9Nw==,
+        integrity: sha512-S4kL7XrjgBmvdGut0sN3yJxqYzrDOnivkBiN0OFs6hLiUam3UPvswUo0kqGyhqUZGEOytHyumEdXsAkgCOUf3Q==,
       }
 
   axobject-query@3.2.1:
@@ -6690,10 +6690,10 @@ packages:
       }
     engines: { node: ">=10" }
 
-  notion-cache-client@0.0.2:
+  notion-cache-client@0.0.5:
     resolution:
       {
-        integrity: sha512-F8RYPk7Iew/xo6+DGyBD6NSPsHmk0GoS7ELC95W3SiarS7Uh2XPDPMIB+LM1WZPb17pcar9WSBAW+/ohBXk7eA==,
+        integrity: sha512-7OlmD5xlbaTnplazZ079iXbFDmNEp9vq9VWMC/ru8xype/FBt4a1v4kyW5F0yHnSRHPNgILOC/H0jFTCLr4aoQ==,
       }
     hasBin: true
 
@@ -6704,17 +6704,17 @@ packages:
       }
     engines: { node: ">=12" }
 
-  notion-downloader-cli@0.0.3:
+  notion-downloader-cli@0.0.7:
     resolution:
       {
-        integrity: sha512-mP9Qo/OjUf+zcATT1XFhOk1CcGk0v6YKu3feeSPlLQc1Rs0bxUR0+3pMZ2FaqIdRzD8uNAZ7woJvj/w0prlxDg==,
+        integrity: sha512-qfLssYvih0zVUrMh55CE1vRK/80b12bBziUB5Z3Q/ZjgfQ1z5ggsgni6n81W0bRQFiOypjEKXg9tFaB1kVOehw==,
       }
     hasBin: true
 
-  notion-downloader@0.0.2:
+  notion-downloader@0.0.5:
     resolution:
       {
-        integrity: sha512-UCWvLreYwuabKggKcoeyS0n7KeFwtEJcmiJVbTZysVxu4Yte9w949GRRaQz5qVCFTWUKdlW/myC3+qszfvWCdA==,
+        integrity: sha512-VoHFht85gKGrkfSeewvHIMpgebQ9rTM5TfPNv+zj+KXB+B+UyuksmJXGlcmMLSjr9+GGd9Iw5CSR8u/+Ii8VQQ==,
       }
     hasBin: true
 
@@ -8970,16 +8970,16 @@ snapshots:
       "@jridgewell/trace-mapping": 0.3.19
       jsesc: 2.5.2
 
-  "@babel/generator@7.25.0":
+  "@babel/generator@7.25.6":
     dependencies:
-      "@babel/types": 7.25.2
+      "@babel/types": 7.25.6
       "@jridgewell/gen-mapping": 0.3.5
       "@jridgewell/trace-mapping": 0.3.25
       jsesc: 2.5.2
 
   "@babel/helper-annotate-as-pure@7.24.7":
     dependencies:
-      "@babel/types": 7.25.2
+      "@babel/types": 7.25.6
 
   "@babel/helper-compilation-targets@7.22.15":
     dependencies:
@@ -8989,7 +8989,7 @@ snapshots:
       lru-cache: 5.1.1
       semver: 6.3.1
 
-  "@babel/helper-create-class-features-plugin@7.25.0(@babel/core@7.22.15)":
+  "@babel/helper-create-class-features-plugin@7.25.4(@babel/core@7.22.15)":
     dependencies:
       "@babel/core": 7.22.15
       "@babel/helper-annotate-as-pure": 7.24.7
@@ -8997,7 +8997,7 @@ snapshots:
       "@babel/helper-optimise-call-expression": 7.24.7
       "@babel/helper-replace-supers": 7.25.0(@babel/core@7.22.15)
       "@babel/helper-skip-transparent-expression-wrappers": 7.24.7
-      "@babel/traverse": 7.25.3
+      "@babel/traverse": 7.25.6
       semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
@@ -9015,8 +9015,8 @@ snapshots:
 
   "@babel/helper-member-expression-to-functions@7.24.8":
     dependencies:
-      "@babel/traverse": 7.25.3
-      "@babel/types": 7.25.2
+      "@babel/traverse": 7.25.6
+      "@babel/types": 7.25.6
     transitivePeerDependencies:
       - supports-color
 
@@ -9035,7 +9035,7 @@ snapshots:
 
   "@babel/helper-optimise-call-expression@7.24.7":
     dependencies:
-      "@babel/types": 7.25.2
+      "@babel/types": 7.25.6
 
   "@babel/helper-plugin-utils@7.24.8": {}
 
@@ -9044,7 +9044,7 @@ snapshots:
       "@babel/core": 7.22.15
       "@babel/helper-member-expression-to-functions": 7.24.8
       "@babel/helper-optimise-call-expression": 7.24.7
-      "@babel/traverse": 7.25.3
+      "@babel/traverse": 7.25.6
     transitivePeerDependencies:
       - supports-color
 
@@ -9054,8 +9054,8 @@ snapshots:
 
   "@babel/helper-skip-transparent-expression-wrappers@7.24.7":
     dependencies:
-      "@babel/traverse": 7.25.3
-      "@babel/types": 7.25.2
+      "@babel/traverse": 7.25.6
+      "@babel/types": 7.25.6
     transitivePeerDependencies:
       - supports-color
 
@@ -9098,11 +9098,11 @@ snapshots:
     dependencies:
       "@babel/types": 7.22.15
 
-  "@babel/parser@7.25.3":
+  "@babel/parser@7.25.6":
     dependencies:
-      "@babel/types": 7.25.2
+      "@babel/types": 7.25.6
 
-  "@babel/plugin-syntax-typescript@7.24.7(@babel/core@7.22.15)":
+  "@babel/plugin-syntax-typescript@7.25.4(@babel/core@7.22.15)":
     dependencies:
       "@babel/core": 7.22.15
       "@babel/helper-plugin-utils": 7.24.8
@@ -9111,10 +9111,10 @@ snapshots:
     dependencies:
       "@babel/core": 7.22.15
       "@babel/helper-annotate-as-pure": 7.24.7
-      "@babel/helper-create-class-features-plugin": 7.25.0(@babel/core@7.22.15)
+      "@babel/helper-create-class-features-plugin": 7.25.4(@babel/core@7.22.15)
       "@babel/helper-plugin-utils": 7.24.8
       "@babel/helper-skip-transparent-expression-wrappers": 7.24.7
-      "@babel/plugin-syntax-typescript": 7.24.7(@babel/core@7.22.15)
+      "@babel/plugin-syntax-typescript": 7.25.4(@babel/core@7.22.15)
     transitivePeerDependencies:
       - supports-color
 
@@ -9135,8 +9135,8 @@ snapshots:
   "@babel/template@7.25.0":
     dependencies:
       "@babel/code-frame": 7.24.7
-      "@babel/parser": 7.25.3
-      "@babel/types": 7.25.2
+      "@babel/parser": 7.25.6
+      "@babel/types": 7.25.6
 
   "@babel/traverse@7.22.15":
     dependencies:
@@ -9153,13 +9153,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  "@babel/traverse@7.25.3":
+  "@babel/traverse@7.25.6":
     dependencies:
       "@babel/code-frame": 7.24.7
-      "@babel/generator": 7.25.0
-      "@babel/parser": 7.25.3
+      "@babel/generator": 7.25.6
+      "@babel/parser": 7.25.6
       "@babel/template": 7.25.0
-      "@babel/types": 7.25.2
+      "@babel/types": 7.25.6
       debug: 4.3.4
       globals: 11.12.0
     transitivePeerDependencies:
@@ -9171,7 +9171,7 @@ snapshots:
       "@babel/helper-validator-identifier": 7.22.15
       to-fast-properties: 2.0.0
 
-  "@babel/types@7.25.2":
+  "@babel/types@7.25.6":
     dependencies:
       "@babel/helper-string-parser": 7.24.8
       "@babel/helper-validator-identifier": 7.24.7
@@ -11175,7 +11175,7 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
-  axios@1.7.3:
+  axios@1.7.7:
     dependencies:
       follow-redirects: 1.15.6
       form-data: 4.0.0
@@ -13530,7 +13530,7 @@ snapshots:
 
   normalize-url@6.1.0: {}
 
-  notion-cache-client@0.0.2:
+  notion-cache-client@0.0.5:
     dependencies:
       "@notionhq/client": 2.2.15
       chalk: 5.2.0
@@ -13546,14 +13546,14 @@ snapshots:
       notion-utils: 4.19.8
       p-map: 4.0.0
 
-  notion-downloader-cli@0.0.3(typescript@5.4.2):
+  notion-downloader-cli@0.0.7(typescript@5.4.2):
     dependencies:
       "@antfu/ni": 0.21.12
       "@babel/core": 7.22.15
       "@babel/parser": 7.22.15
       "@babel/plugin-transform-typescript": 7.25.2(@babel/core@7.22.15)
       "@notionhq/client": 2.2.15
-      axios: 1.7.3
+      axios: 1.7.7
       chalk: 5.2.0
       commander: 10.0.1
       cosmiconfig: 8.3.6(typescript@5.4.2)
@@ -13569,9 +13569,9 @@ snapshots:
       lodash.template: 4.5.0
       markdown-table: 2.0.0
       node-fetch: 3.3.2
-      notion-cache-client: 0.0.2
+      notion-cache-client: 0.0.5
       notion-client: 4.19.8
-      notion-downloader: 0.0.2
+      notion-downloader: 0.0.5
       notion-to-md: 3.1.1
       ora: 6.3.1
       path: 0.12.7
@@ -13587,11 +13587,12 @@ snapshots:
       - supports-color
       - typescript
 
-  notion-downloader@0.0.2:
+  notion-downloader@0.0.5:
     dependencies:
       "@notionhq/client": 2.2.15
       chalk: 5.2.0
-      notion-cache-client: 0.0.2
+      notion-cache-client: 0.0.5
+      zod: 3.22.2
     transitivePeerDependencies:
       - encoding
 
