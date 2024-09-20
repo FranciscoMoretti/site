@@ -1,15 +1,23 @@
-/** @type {import('notion-downloader-cli').Config} */
-module.exports = {
+import { Config } from "notion-downloader-cli"
+
+const config: Config = {
   conversion: {
     outputPaths: {
       markdown: "content/",
-      images: "public/assets/",
+      assets: "public/assets/",
     },
     markdownPrefixes: {
-      images: "/assets",
+      markdown: "",
+      assets: "/assets",
+    },
+    layoutStrategy: {
+      markdown: "hierarchical",
+      assets: "flat",
     },
     pageLinkHasExtension: false,
     slugProperty: "slug",
+    statusPropertyName: "Status",
+    statusPropertyValue: "Publish",
   },
   rootDbAsFolder: true,
   rootObjectType: "database",
@@ -21,3 +29,5 @@ module.exports = {
   logLevel: "debug",
   revalidatePeriod: 180,
 }
+
+export default config
