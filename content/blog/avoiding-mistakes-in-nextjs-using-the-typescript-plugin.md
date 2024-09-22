@@ -4,6 +4,7 @@ description: Learn how to avoid common mistakes in Next.js development by levera
 slug: avoiding-mistakes-in-nextjs-using-the-typescript-plugin
 date: 2023-07-15
 tag: Next.js, TypeScript, VS Code
+Last edited time: undefined
 Status: Publish
 Created time: 2024-08-05T07:52:00.000Z
 title: Avoiding Mistakes in Next.js using the TypeScript Plugin
