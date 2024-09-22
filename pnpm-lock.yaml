@@ -151,6 +151,9 @@ importers:
       cmdk:
         specifier: ^0.1.22
         version: 0.1.22(@types/react@18.2.66)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      concurrently:
+        specifier: ^9.0.1
+        version: 9.0.1
       contentlayer:
         specifier: ^0.3.4
         version: 0.3.4(esbuild@0.20.2)
@@ -3503,6 +3506,14 @@ packages:
         integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==,
       }
 
+  concurrently@9.0.1:
+    resolution:
+      {
+        integrity: sha512-wYKvCd/f54sTXJMSfV6Ln/B8UrfLBKOYa+lzc6CHay3Qek+LorVSBdMVfyewFhRbH0Rbabsk4D+3PL/VjQ5gzg==,
+      }
+    engines: { node: ">=18" }
+    hasBin: true
+
   contentlayer@0.3.4:
     resolution:
       {
@@ -5421,6 +5432,12 @@ packages:
         integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==,
       }
 
+  lodash@4.17.21:
+    resolution:
+      {
+        integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==,
+      }
+
   log-update@5.0.1:
     resolution:
       {
@@ -7036,6 +7053,12 @@ packages:
         integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==,
       }
 
+  rxjs@7.8.1:
+    resolution:
+      {
+        integrity: sha512-AA3TVj+0A2iuIoQkWEK/tqFjBq2j+6PO6Y0zJcvzLAFhEFIO3HL0vls9hWLncZbAAbK0mar7oZ4V079I/qPMxg==,
+      }
+
   sade@1.8.1:
     resolution:
       {
@@ -7165,6 +7188,12 @@ packages:
         integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==,
       }
     engines: { node: ">=8" }
+
+  shell-quote@1.8.1:
+    resolution:
+      {
+        integrity: sha512-6j1W9l1iAs/4xYBI1SYOVZyFcCis9b4KCLQ8fgAGG07QvzaRLVVRQvAy85yNmmZSjYjg4MWh4gNvlPujU/5LpA==,
+      }
 
   shiki@0.11.1:
     resolution:
@@ -7467,6 +7496,13 @@ packages:
       }
     engines: { node: ">=8" }
 
+  supports-color@8.1.1:
+    resolution:
+      {
+        integrity: sha512-MpUEN2OodtUzxvKQl72cUF7RQ5EiHsGvSsVG0ia9c5RbWGL2CI4C7EpPS8UTBIplnlzZiNuV56w+FuNxy3ty2Q==,
+      }
+    engines: { node: ">=10" }
+
   supports-preserve-symlinks-flag@1.0.0:
     resolution:
       {
@@ -7561,6 +7597,13 @@ packages:
       {
         integrity: sha512-y/mWCZinnvxjTKYhJ+pYxwD0mRLVvOtdS2Awbgxln6iEnt4rk0yBxeSBHkGJcPucRiG0e55mwWp+g/05rsrd6w==,
       }
+
+  tree-kill@1.2.2:
+    resolution:
+      {
+        integrity: sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==,
+      }
+    hasBin: true
 
   trim-lines@3.0.1:
     resolution:
@@ -10389,6 +10432,16 @@ snapshots:
 
   concat-map@0.0.1: {}
 
+  concurrently@9.0.1:
+    dependencies:
+      chalk: 4.1.2
+      lodash: 4.17.21
+      rxjs: 7.8.1
+      shell-quote: 1.8.1
+      supports-color: 8.1.1
+      tree-kill: 1.2.2
+      yargs: 17.7.2
+
   contentlayer@0.3.4(esbuild@0.20.2):
     dependencies:
       "@contentlayer/cli": 0.3.4(esbuild@0.20.2)
@@ -11707,6 +11760,8 @@ snapshots:
 
   lodash.merge@4.6.2: {}
 
+  lodash@4.17.21: {}
+
   log-update@5.0.1:
     dependencies:
       ansi-escapes: 5.0.0
@@ -12975,6 +13030,10 @@ snapshots:
     dependencies:
       queue-microtask: 1.2.3
 
+  rxjs@7.8.1:
+    dependencies:
+      tslib: 2.6.2
+
   sade@1.8.1:
     dependencies:
       mri: 1.2.0
@@ -13072,6 +13131,8 @@ snapshots:
       shebang-regex: 3.0.0
 
   shebang-regex@3.0.0: {}
+
+  shell-quote@1.8.1: {}
 
   shiki@0.11.1:
     dependencies:
@@ -13255,6 +13316,10 @@ snapshots:
     dependencies:
       has-flag: 4.0.0
 
+  supports-color@8.1.1:
+    dependencies:
+      has-flag: 4.0.0
+
   supports-preserve-symlinks-flag@1.0.0: {}
 
   tailwind-merge@1.14.0: {}
@@ -13326,6 +13391,8 @@ snapshots:
   toidentifier@1.0.1: {}
 
   toml@3.0.0: {}
+
+  tree-kill@1.2.2: {}
 
   trim-lines@3.0.1: {}
 
