@@ -71,6 +71,7 @@
     "concurrently": "^9.0.1",
     "contentlayer": "^0.3.4",
     "date-fns": "^2.30.0",
+    "dotenv": "^16.4.5",
     "fs-extra": "^11.1.1",
     "image-size": "^1.0.2",
     "lint-staged": "^13.3.0",

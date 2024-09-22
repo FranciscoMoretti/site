@@ -1,6 +1,7 @@
 import path from "path"
 import { getPermalinks, remarkWikiLink } from "@portaljs/remark-wiki-link"
 import { defineDocumentType, makeSource } from "contentlayer/source-files"
+import dotenv from "dotenv"
 import rehypeAutolinkHeadings from "rehype-autolink-headings"
 import rehypePrettyCode from "rehype-pretty-code"
 import rehypeSlug from "rehype-slug"
@@ -8,6 +9,11 @@ import remarkGfm from "remark-gfm"
 import { visit } from "unist-util-visit"
 
 import { siteConfig } from "./config/site"
+import { absoluteUrl } from "./lib/utils"
+
+// Load environment variables
+dotenv.config({ path: ".env.local" })
+dotenv.config({ path: ".env" })
 
 function normalizeObsidianAbsolutePath(path) {
   if (
@@ -225,12 +231,31 @@ const contentLayerExcludeDefaults = [
   "tsconfig.json",
 ]
 
+let lastAllDocuments = []
+
 export default makeSource(async () => {
   const permalinks = await getPermalinks(siteConfig.content).filter(
     (link) => !link.startsWith("/.obsidian/")
   )
 
+  // Use clousure to keep last documents here, then compare with new on success anmd revalidate paths.
+
   return {
+    onSuccess: async (importData) => {
+      const { allDocuments } = await importData()
+      console.log("allDocuments", allDocuments.length)
+      // Call here the @/api/cache/route.ts
+      if (lastAllDocuments.length > 0) {
+        try {
+          const url = absoluteUrl("/api/cache")
+          console.log("Revalidating cache", url)
+          await fetch(url, { method: "POST" })
+        } catch (error) {
+          console.error("Couldn't revalidate cache", error)
+        }
+      }
+      lastAllDocuments = allDocuments
+    },
     contentDirPath: siteConfig.content,
     contentDirExclude: contentLayerExcludeDefaults.concat([
       ".obsidian",

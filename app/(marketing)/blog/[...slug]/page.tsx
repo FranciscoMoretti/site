@@ -14,10 +14,24 @@ import { upsertPost } from "@/app/(marketing)/actions"
 
 import "@/styles/mdx.css"
 
+import fs from "fs/promises"
+import { unstable_cache } from "next/cache"
+
 import { downloadImage } from "@/lib/image-downloader"
 import { buttonVariants } from "@/components/ui/button"
 
-export const revalidate = 60
+async function getAllPosts() {
+  // TODO: GEt the address to read automatically from schema definition
+  const indexPath = path.join(
+    process.cwd(),
+    ".contentlayer/generated/Post/_index.json"
+  )
+  const content = await fs.readFile(indexPath, "utf-8")
+  const allPosts = JSON.parse(content)
+  // TODO: Parse with ZOD
+
+  return allPosts
+}
 
 interface PostPageProps {
   params: {
@@ -27,6 +41,7 @@ interface PostPageProps {
 
 async function getPostFromParams(params) {
   const slug = params?.slug?.join("/")
+  const allPosts = await getAllPosts()
   const post = allPosts.find((post) => routepathToSlug(post.routepath) === slug)
 
   if (!post) {
@@ -92,6 +107,7 @@ export async function generateMetadata({
 export async function generateStaticParams(): Promise<
   PostPageProps["params"][]
 > {
+  const allPosts = await getAllPosts()
   const promises = allPosts.map(async (post) => {
     const { routepath } = post
     try {
@@ -146,7 +162,16 @@ export async function generateStaticParams(): Promise<
 }
 
 export default async function PostPage({ params }: PostPageProps) {
-  const post = await getPostFromParams(params)
+  const getCachedPost = await unstable_cache(
+    async (params) => {
+      console.log("Post tags", "posts", params?.slug?.[0])
+      return await getPostFromParams(params)
+    },
+    undefined,
+    { revalidate: 86400, tags: ["posts", params?.slug?.[0]] }
+  )
+
+  const post = await getCachedPost(params)
 
   if (!post) {
     notFound()
