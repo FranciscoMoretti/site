@@ -17,3 +17,15 @@ export function formatDate(input: string | number): string {
 export function absoluteUrl(path: string) {
   return `${process.env.NEXT_PUBLIC_APP_URL}${path}`
 }
+export function contentParamsToKey(contentParams: {
+  slug: string
+  type: string
+}) {
+  const sortedParams = Object.keys(contentParams)
+    .sort()
+    .reduce((obj, key) => {
+      obj[key] = contentParams[key]
+      return obj
+    }, {} as { [key: string]: string })
+  return JSON.stringify(sortedParams)
+}

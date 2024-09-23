@@ -3,7 +3,6 @@ import { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { allAuthors, allPosts } from "contentlayer/generated"
 
 import { routepathToSlug } from "@/lib/path"
 import { absoluteUrl, cn, formatDate } from "@/lib/utils"
@@ -12,13 +11,27 @@ import { Mdx } from "@/components/mdx"
 import { PostViews } from "@/components/post-views"
 import { upsertPost } from "@/app/(marketing)/actions"
 
+import { allAuthors, allPosts, Post } from ".contentlayer/generated"
+
 import "@/styles/mdx.css"
 
 import fs from "fs/promises"
 import { unstable_cache } from "next/cache"
 
+import { ContentParams } from "@/types/contentParams"
 import { downloadImage } from "@/lib/image-downloader"
+import { contentParamsToKey } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
+
+export const revalidate = 86400
+// TODO: This can be obtained dynamically from the allPosts import, any element.type
+const contentType = "Post"
+
+interface PostPageProps {
+  params: {
+    slug: string[]
+  }
+}
 
 async function getAllPosts() {
   // TODO: GEt the address to read automatically from schema definition
@@ -27,22 +40,53 @@ async function getAllPosts() {
     ".contentlayer/generated/Post/_index.json"
   )
   const content = await fs.readFile(indexPath, "utf-8")
-  const allPosts = JSON.parse(content)
   // TODO: Parse with ZOD
-
+  const allPosts = JSON.parse(content)
   return allPosts
 }
 
-interface PostPageProps {
-  params: {
-    slug: string[]
-  }
+// TODO: Create a return type automatically
+async function getAllPostsMetadata() {
+  const allPosts = await getAllPosts()
+  // Returns everything but the body
+  return allPosts.map((post) => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const { body, ...rest } = post
+    return rest
+  })
 }
 
-async function getPostFromParams(params) {
-  const slug = params?.slug?.join("/")
+async function getPostMetadataFromParams(
+  params: ContentParams
+): Promise<Omit<Post, "body"> | null> {
+  // TODO: Here rename to `Get all of Type` to make more generic
+  const getAllPostsMetadataCached = await buildAllPostMetadataCache()
+
+  const allPosts = await getAllPostsMetadataCached()
+  const post = allPosts.find((post) => post.slug === params.slug)
+
+  if (!post) {
+    null
+  }
+
+  return post
+}
+
+async function buildAllPostMetadataCache() {
+  return await unstable_cache(
+    async () => {
+      console.log("Getting all posts metadata")
+      return await getAllPostsMetadata()
+    },
+    ["allPosts"],
+    { tags: ["allPosts"] }
+  )
+}
+
+async function getPostFromParams(params: ContentParams): Promise<Post | null> {
+  const slug = params.slug
   const allPosts = await getAllPosts()
-  const post = allPosts.find((post) => routepathToSlug(post.routepath) === slug)
+  const post = allPosts.find((post) => post.slug === slug)
 
   if (!post) {
     null
@@ -54,7 +98,11 @@ async function getPostFromParams(params) {
 export async function generateMetadata({
   params,
 }: PostPageProps): Promise<Metadata> {
-  const post = await getPostFromParams(params)
+  console.log("Generating metadata for:", params.slug)
+  const post = await getPostMetadataFromParams({
+    type: contentType,
+    slug: params.slug[0],
+  })
 
   if (!post) {
     return {}
@@ -107,7 +155,9 @@ export async function generateMetadata({
 export async function generateStaticParams(): Promise<
   PostPageProps["params"][]
 > {
-  const allPosts = await getAllPosts()
+  console.log("Generating static params")
+  const getAllPostsMetadataCached = await buildAllPostMetadataCache()
+  const allPosts = await getAllPostsMetadataCached()
   const promises = allPosts.map(async (post) => {
     const { routepath } = post
     try {
@@ -162,16 +212,23 @@ export async function generateStaticParams(): Promise<
 }
 
 export default async function PostPage({ params }: PostPageProps) {
+  const contentParams = {
+    slug: params.slug[0],
+    type: contentType,
+  }
+  // TODO: Create a contentParamsToKey function that saves the keys alphabetically
+  const pageKey = contentParamsToKey(contentParams)
+  console.log("Page key:", pageKey)
   const getCachedPost = await unstable_cache(
-    async (params) => {
-      console.log("Post tags", "posts", params?.slug?.[0])
-      return await getPostFromParams(params)
+    async () => {
+      console.log("Generating page:", pageKey)
+      return await getPostFromParams(contentParams)
     },
-    undefined,
-    { revalidate: 86400, tags: ["posts", params?.slug?.[0]] }
+    [pageKey],
+    { tags: [pageKey] }
   )
 
-  const post = await getCachedPost(params)
+  const post = await getCachedPost()
 
   if (!post) {
     notFound()

@@ -2,6 +2,7 @@ import path from "path"
 import { getPermalinks, remarkWikiLink } from "@portaljs/remark-wiki-link"
 import { defineDocumentType, makeSource } from "contentlayer/source-files"
 import dotenv from "dotenv"
+import isEqual from "lodash.isequal"
 import rehypeAutolinkHeadings from "rehype-autolink-headings"
 import rehypePrettyCode from "rehype-pretty-code"
 import rehypeSlug from "rehype-slug"
@@ -10,10 +11,6 @@ import { visit } from "unist-util-visit"
 
 import { siteConfig } from "./config/site"
 import { absoluteUrl } from "./lib/utils"
-
-// Load environment variables
-dotenv.config({ path: ".env.local" })
-dotenv.config({ path: ".env" })
 
 function normalizeObsidianAbsolutePath(path) {
   if (
@@ -231,8 +228,6 @@ const contentLayerExcludeDefaults = [
   "tsconfig.json",
 ]
 
-let lastAllDocuments = []
-
 export default makeSource(async () => {
   const permalinks = await getPermalinks(siteConfig.content).filter(
     (link) => !link.startsWith("/.obsidian/")
@@ -242,19 +237,59 @@ export default makeSource(async () => {
 
   return {
     onSuccess: async (importData) => {
+      return
+      // TODO: REmove all this once it works in the alternative method
+      const lastAllDocuments = await readLastDocuments()
+      const lastAllDcoumentsMap = lastAllDocuments
+        ? lastAllDocuments.reduce((acc, doc) => {
+            acc[doc._id] = doc
+            return acc
+          }, {})
+        : {}
+
       const { allDocuments } = await importData()
       console.log("allDocuments", allDocuments.length)
-      // Call here the @/api/cache/route.ts
-      if (lastAllDocuments.length > 0) {
+      console.log("lastAllDocuments", lastAllDocuments?.length)
+      console.log(
+        "last avoid mistakes: ",
+        lastAllDcoumentsMap[
+          "blog/avoiding-mistakes-in-nextjs-using-the-typescript-plugin.md"
+        ]?.title
+      )
+      console.log(
+        "new avoid mistakes: ",
+        allDocuments.find(
+          (doc) =>
+            doc._id ===
+            "blog/avoiding-mistakes-in-nextjs-using-the-typescript-plugin.md"
+        )?.title
+      )
+
+      const changedDocs = allDocuments.filter(
+        (doc) => !isEqual(doc, lastAllDcoumentsMap[doc._id])
+      )
+
+      const tagsToRevalidate = changedDocs.map((doc) => doc.routepath)
+
+      const isFirstRun = lastAllDocuments === undefined
+      if (!isFirstRun && tagsToRevalidate.length > 0) {
         try {
           const url = absoluteUrl("/api/cache")
-          console.log("Revalidating cache", url)
-          await fetch(url, { method: "POST" })
+          console.log("Revalidating cache for tags:", tagsToRevalidate)
+          await fetch(url, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ tags: tagsToRevalidate }),
+          })
         } catch (error) {
           console.error("Couldn't revalidate cache", error)
         }
       }
-      lastAllDocuments = allDocuments
+
+      // Write to file
+      await writeLastDocuments(allDocuments)
     },
     contentDirPath: siteConfig.content,
     contentDirExclude: contentLayerExcludeDefaults.concat([
