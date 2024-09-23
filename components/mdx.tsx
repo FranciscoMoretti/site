@@ -17,7 +17,7 @@ import {
   FORMAT_UL,
 } from "@/styles/format"
 import sizeOf from "image-size"
-import { useMDXComponent } from "next-contentlayer/hooks"
+import { useMDXComponent } from "next-contentlayer2/hooks"
 
 import { cn } from "@/lib/utils"
 import { Callout } from "@/components/callout"

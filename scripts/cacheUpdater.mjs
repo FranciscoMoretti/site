@@ -1,5 +1,6 @@
-import { watch } from "chokidar"
+import chokidar from "chokidar"
 import dotenv from "dotenv"
+import debounce from "lodash.debounce"
 import fetch from "node-fetch"
 
 function absoluteUrl(path) {
@@ -11,13 +12,10 @@ const indexFile = ".contentlayer/generated/Post/_index.json"
 dotenv.config({ path: ".env.local" })
 dotenv.config({ path: ".env" })
 
-const indexWatcher = watch(indexFile, {
-  persistent: true,
-  usePolling: true,
-})
+console.log("Watching for changes in", indexFile)
 
-indexWatcher.on("change", async (filePath) => {
-  console.log(`Change detected in ${filePath}`)
+const updateCache = debounce(async (filePath) => {
+  console.log(`Updating cache for ${filePath}`)
   try {
     const response = await fetch(absoluteUrl("/api/cache"), {
       method: "POST",
@@ -30,4 +28,25 @@ indexWatcher.on("change", async (filePath) => {
   } catch (error) {
     console.error("Error updating cache:", error)
   }
+}, 300)
+
+const watcher = chokidar.watch(indexFile, {
+  persistent: true,
+  ignoreInitial: true,
 })
+
+watcher
+  .on("add", (path) => {
+    console.log(`File ${path} has been added`)
+    updateCache(path)
+  })
+  .on("change", (path) => {
+    console.log(`File ${path} has been changed`)
+    updateCache(path)
+  })
+  .on("unlink", (path) => {
+    console.log(`File ${path} has been removed`)
+  })
+
+// Keep the script running
+process.stdin.resume()

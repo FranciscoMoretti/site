@@ -1,7 +1,6 @@
 import path from "path"
 import { getPermalinks, remarkWikiLink } from "@portaljs/remark-wiki-link"
-import { defineDocumentType, makeSource } from "contentlayer/source-files"
-import dotenv from "dotenv"
+import { defineDocumentType, makeSource } from "contentlayer2/source-files"
 import isEqual from "lodash.isequal"
 import rehypeAutolinkHeadings from "rehype-autolink-headings"
 import rehypePrettyCode from "rehype-pretty-code"

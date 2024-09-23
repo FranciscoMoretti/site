@@ -216,7 +216,6 @@ export default async function PostPage({ params }: PostPageProps) {
     slug: params.slug[0],
     type: contentType,
   }
-  // TODO: Create a contentParamsToKey function that saves the keys alphabetically
   const pageKey = contentParamsToKey(contentParams)
   console.log("Page key:", pageKey)
   const getCachedPost = await unstable_cache(
