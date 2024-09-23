@@ -14,6 +14,10 @@ const config: Config = {
       markdown: "hierarchical",
       assets: "flat",
     },
+    namingStrategy: {
+      markdown: "githubSlug",
+      assets: "default",
+    },
     pageLinkHasExtension: false,
     slugProperty: "slug",
     statusPropertyName: "Status",
@@ -24,10 +28,11 @@ const config: Config = {
   rootId: "c974ccd9c70c4abd8a5bd4f5a294e5dd",
   cache: {
     cleanCache: false,
-    cacheStrategy: "cache",
+    cacheStrategy: "force-cache",
   },
   logLevel: "debug",
-  revalidatePeriod: 180,
+  // TODO: Can revalidate but has to run only once in "build" script
+  revalidatePeriod: -1,
 }
 
 export default config

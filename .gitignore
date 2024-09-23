@@ -46,3 +46,6 @@ public/assets
 
 # Downloader
 .downloader
+
+# Cache for ISR
+.cache
