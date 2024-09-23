@@ -7,11 +7,11 @@ tag: Next.js, TypeScript, VS Code
 Last edited time: undefined
 Status: Publish
 Created time: 2024-08-05T07:52:00.000Z
-title: Avoiding Mistakes in Next.js using the TypeScript Plugin!
+title: Avoiding Mistakes in Next.js using the TypeScript Plugin
 id: 57701aab-8b5c-4798-9e6d-5b3f9603520b
 cover: /assets/avoiding-mistakes-in-nextjs-using-the-typescript-plugin.57701aab-8b5c-4798-9e6d-5b3f9603520b.png
 created_time: 2024-08-05T07:52:00.000Z
-last_edited_time: 2024-08-12T08:07:00.000Z
+last_edited_time: 2024-09-23T21:11:00.000Z
 ---
 
 

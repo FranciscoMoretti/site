@@ -28,11 +28,11 @@ const config: Config = {
   rootId: "c974ccd9c70c4abd8a5bd4f5a294e5dd",
   cache: {
     cleanCache: false,
-    cacheStrategy: "force-cache",
+    cacheStrategy: "cache",
   },
   logLevel: "debug",
   // TODO: Can revalidate but has to run only once in "build" script
-  revalidatePeriod: -1,
+  revalidatePeriod: 300,
 }
 
 export default config
