@@ -31,7 +31,6 @@ const config: Config = {
     cacheStrategy: "cache",
   },
   logLevel: "debug",
-  // TODO: Can revalidate but has to run only once in "build" script
   revalidatePeriod: 300,
 }
 
