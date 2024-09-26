@@ -17,7 +17,7 @@ import "@/styles/mdx.css"
 import { downloadImage } from "@/lib/image-downloader"
 import { buttonVariants } from "@/components/ui/button"
 
-export const revalidate = 60
+export const revalidate = 86400 // 1 day
 
 interface PostPageProps {
   params: {
