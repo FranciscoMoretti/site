@@ -16,7 +16,7 @@ const siteMetadata = {
   siteLogo: `${process.env.BASE_PATH || ''}/static/logo.svg`,
   socialBanner: `${process.env.BASE_PATH || ''}/static/images/app/opengraph-image.jpg`,
   // mastodon: 'https://mastodon.social/@mastodonuser',
-  // email: 'your@email.com',
+  email: 'franciscoemoretti@gmail.com',
   github: 'https://github.com/franciscomoretti',
   x: 'https://x.com/franmoretti_',
   // twitter: 'https://twitter.com/Twitter',
