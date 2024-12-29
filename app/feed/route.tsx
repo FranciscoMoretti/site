@@ -7,7 +7,7 @@ export async function GET() {
   const feed = new Rss({
     title: `${siteConfig.name}`,
     description: `${siteConfig.description}`,
-    feed_url: `${process.env.NEXT_PUBLIC_APP_URL}/rss.xml`,
+    feed_url: `${process.env.NEXT_PUBLIC_APP_URL}/feed`,
     site_url: process.env.NEXT_PUBLIC_APP_URL || "",
     language: "en",
   })
