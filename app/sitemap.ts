@@ -1,26 +1,23 @@
-import { allDocs, allPosts, allTags } from "contentlayer/generated"
+import { MetadataRoute } from 'next'
+import { allBlogs } from 'contentlayer/generated'
+import siteMetadata from '@/data/siteMetadata'
 
-export default async function sitemap() {
-  const posts = allPosts.map((post) => ({
-    url: `https://www.franciscomoretti.com${post.routepath}`,
-    lastModified: post.date,
+export const dynamic = 'force-static'
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const siteUrl = siteMetadata.siteUrl
+
+  const blogRoutes = allBlogs
+    .filter((post) => !post.draft)
+    .map((post) => ({
+      url: `${siteUrl}/${post.path}`,
+      lastModified: post.lastmod || post.date,
+    }))
+
+  const routes = ['', 'blog', 'projects'].map((route) => ({
+    url: `${siteUrl}/${route}`,
+    lastModified: new Date().toISOString().split('T')[0],
   }))
 
-  const docs = allDocs.map((doc) => ({
-    url: `https://www.franciscomoretti.com${doc.routepath}`,
-    lastModified: doc.date,
-  }))
-
-  const tags = allTags.map((doc) => ({
-    url: `https://www.franciscomoretti.com${doc.routepath}`,
-    lastModified: doc.date,
-  }))
-
-  // const routes = ["", "/about", "/blog", "/guestbook", "/uses"].map(
-  const routes = ["", "/blog"].map((routepath) => ({
-    url: `https://www.franciscomoretti.com${routepath}`,
-    lastModified: new Date().toISOString().split("T")[0],
-  }))
-
-  return [...routes, ...posts, ...docs, ...tags]
+  return [...routes, ...blogRoutes]
 }

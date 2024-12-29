@@ -1,23 +1,12 @@
-"use client"
+'use client'
 
-import * as React from "react"
-import { useRouter } from "next/navigation"
-import { allPosts, allTags } from "@/.contentlayer/generated"
-import { DialogProps } from "@radix-ui/react-alert-dialog"
-import {
-  BookOpen,
-  Circle,
-  File,
-  Laptop,
-  Moon,
-  Star,
-  SunMedium,
-} from "lucide-react"
-import { useTheme } from "next-themes"
+import * as React from 'react'
+import { useRouter } from 'next/navigation'
+import { BookOpen, Circle, File, Laptop, Moon, Star, SunMedium } from 'lucide-react'
+import { useTheme } from 'next-themes'
+import searchIndex from '../public/search.json'
 
-import { docsConfig } from "@/config/docs"
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
+import { Button } from '@/components/ui/button'
 import {
   CommandDialog,
   CommandEmpty,
@@ -26,23 +15,25 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-} from "@/components/ui/command"
+} from '@/components/ui/command'
+import { cn } from './lib/utils'
+import headerNavLinks from '@/data/headerNavLinks'
 
-export function CommandMenu({ ...props }: DialogProps) {
+export function CommandMenu({ ...props }: React.ComponentPropsWithoutRef<typeof CommandDialog>) {
   const router = useRouter()
   const [open, setOpen] = React.useState(false)
   const { setTheme } = useTheme()
 
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
-      if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
+      if (e.key === 'k' && (e.metaKey || e.ctrlKey)) {
         e.preventDefault()
         setOpen((open) => !open)
       }
     }
 
-    document.addEventListener("keydown", down)
-    return () => document.removeEventListener("keydown", down)
+    document.addEventListener('keydown', down)
+    return () => document.removeEventListener('keydown', down)
   }, [])
 
   const runCommand = React.useCallback((command: () => unknown) => {
@@ -55,7 +46,7 @@ export function CommandMenu({ ...props }: DialogProps) {
       <Button
         variant="outline"
         className={cn(
-          "relative h-9 w-full justify-start rounded-[0.5rem] text-sm text-muted-foreground sm:pr-12 md:w-40 lg:w-64"
+          'relative h-9 w-full justify-start rounded-[0.5rem] text-sm text-muted-foreground sm:pr-12 md:w-40 lg:w-64'
         )}
         onClick={() => setOpen(true)}
         {...props}
@@ -73,7 +64,7 @@ export function CommandMenu({ ...props }: DialogProps) {
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
           <CommandGroup heading="Links">
-            {docsConfig.mainNav
+            {headerNavLinks
               //   .filter((navitem) => !navitem.external)
               .map((navItem) => (
                 <CommandItem
@@ -88,48 +79,31 @@ export function CommandMenu({ ...props }: DialogProps) {
                 </CommandItem>
               ))}
           </CommandGroup>
-          <CommandGroup heading="Topics ">
-            {allTags.map((tag) => (
-              <CommandItem
-                key={tag.slug}
-                value={tag.tag}
-                onSelect={() => {
-                  runCommand(() => router.push(tag.routepath as string))
-                }}
-              >
-                <Star className="mr-2 h-4 w-4" />
-                {tag.tag}
-              </CommandItem>
-            ))}
-          </CommandGroup>
-          {docsConfig.sidebarNav.map((group) => (
-            <CommandGroup key={group.title} heading={group.title}>
-              {group.items.map((navItem) => (
+          {/* <CommandGroup heading="Topics ">
+              {allTags.map((tag) => (
                 <CommandItem
-                  key={navItem.href}
-                  value={navItem.title}
+                  key={tag.slug}
+                  value={tag.tag}
                   onSelect={() => {
-                    runCommand(() => router.push(navItem.href as string))
+                    runCommand(() => router.push(tag.routepath as string))
                   }}
                 >
-                  <div className="mr-2 flex h-4 w-4 items-center justify-center">
-                    <Circle className="h-3 w-3" />
-                  </div>
-                  {navItem.title}
+                  <Star className="mr-2 h-4 w-4" />
+                  {tag.tag}
                 </CommandItem>
               ))}
-            </CommandGroup>
-          ))}
+            </CommandGroup> */}
+
           <CommandSeparator />
           <CommandGroup heading="Blog">
-            {allPosts
+            {searchIndex
               //   .filter((navitem) => !navitem.external)
               .map((post) => (
                 <CommandItem
                   key={post.slug}
                   value={post.title}
                   onSelect={() => {
-                    runCommand(() => router.push(post.routepath as string))
+                    runCommand(() => router.push('/blog/' + post.path))
                   }}
                 >
                   <BookOpen className="mr-2 h-4 w-4" />
@@ -140,15 +114,15 @@ export function CommandMenu({ ...props }: DialogProps) {
           {/* TODO: Add themes */}
           <CommandSeparator />
           <CommandGroup heading="Theme">
-            <CommandItem onSelect={() => runCommand(() => setTheme("light"))}>
+            <CommandItem onSelect={() => runCommand(() => setTheme('light'))}>
               <SunMedium className="mr-2 h-4 w-4" />
               Light
             </CommandItem>
-            <CommandItem onSelect={() => runCommand(() => setTheme("dark"))}>
+            <CommandItem onSelect={() => runCommand(() => setTheme('dark'))}>
               <Moon className="mr-2 h-4 w-4" />
               Dark
             </CommandItem>
-            <CommandItem onSelect={() => runCommand(() => setTheme("system"))}>
+            <CommandItem onSelect={() => runCommand(() => setTheme('system'))}>
               <Laptop className="mr-2 h-4 w-4" />
               System
             </CommandItem>

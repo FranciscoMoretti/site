@@ -1,21 +1,19 @@
 // app/providers.tsx
-"use client"
+'use client'
 
-import { useEffect } from "react"
-import { usePathname, useSearchParams } from "next/navigation"
-import posthog from "posthog-js"
-import { PostHogProvider } from "posthog-js/react"
+import { Suspense, useEffect } from 'react'
+import { usePathname, useSearchParams } from 'next/navigation'
+import posthog from 'posthog-js'
+import { PostHogProvider } from 'posthog-js/react'
 
-if (typeof window !== "undefined") {
-  posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY || "", {
-    api_host:
-      process.env.NEXT_PUBLIC_POSTHOG_HOST ||
-      `${process.env.NEXT_PUBLIC_APP_URL}/ingest`,
+if (typeof window !== 'undefined') {
+  posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY || '', {
+    api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST || `${process.env.NEXT_PUBLIC_APP_URL}/ingest`,
     capture_pageview: false, // Disable automatic pageview capture, as we capture manually
   })
 }
 
-export function PostHogPageview(): JSX.Element {
+function PostHogPageView(): JSX.Element {
   const pathname = usePathname()
   const searchParams = useSearchParams()
 
@@ -25,7 +23,7 @@ export function PostHogPageview(): JSX.Element {
       if (searchParams && searchParams.toString()) {
         url = url + `?${searchParams.toString()}`
       }
-      posthog.capture("$pageview", {
+      posthog.capture('$pageview', {
         $current_url: url,
       })
     }
@@ -36,4 +34,15 @@ export function PostHogPageview(): JSX.Element {
 
 export function PHProvider({ children }: { children: React.ReactNode }) {
   return <PostHogProvider client={posthog}>{children}</PostHogProvider>
+}
+
+// Wrap this in Suspense to avoid the `useSearchParams` usage above
+// from de-opting the whole app into client-side rendering
+// See: https://nextjs.org/docs/messages/deopted-into-client-rendering
+export default function SuspendedPostHogPageView() {
+  return (
+    <Suspense fallback={null}>
+      <PostHogPageView />
+    </Suspense>
+  )
 }

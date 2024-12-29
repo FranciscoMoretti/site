@@ -1,10 +1,15 @@
-export default function robots() {
+import { MetadataRoute } from 'next'
+import siteMetadata from '@/data/siteMetadata'
+
+export const dynamic = 'force-static'
+
+export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
-      userAgent: "*",
-      allow: "/",
+      userAgent: '*',
+      allow: '/',
     },
-    sitemap: "https://franciscomoretti.com/sitemap.xml",
-    host: "https://franciscomoretti.com",
+    sitemap: `${siteMetadata.siteUrl}/sitemap.xml`,
+    host: siteMetadata.siteUrl,
   }
 }
