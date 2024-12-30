@@ -50,7 +50,10 @@ export async function generateMetadata(props: {
   })
 
   return {
-    title: post.title,
+    title: {
+      absolute: post.title,
+      template: '%s',
+    },
     description: post.summary,
     openGraph: {
       title: post.title,
@@ -64,11 +67,22 @@ export async function generateMetadata(props: {
       images: ogImages,
       authors: authors.length > 0 ? authors : [siteMetadata.author],
     },
+    keywords: post.tags,
+    authors:
+      authors.length > 0
+        ? authors.map((author) => ({ name: author, url: siteMetadata.siteUrl }))
+        : [
+            {
+              name: siteMetadata.author,
+              url: siteMetadata.siteUrl,
+            },
+          ],
     twitter: {
       card: 'summary_large_image',
       title: post.title,
       description: post.summary,
       images: imageList,
+      creator: siteMetadata.twitter,
     },
   }
 }

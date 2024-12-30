@@ -27,13 +27,21 @@ export const metadata: Metadata = {
     template: `%s | ${siteMetadata.title}`,
   },
   description: siteMetadata.description,
+  keywords: siteMetadata.keywords,
+  authors: [
+    {
+      name: `${siteMetadata.author}`,
+      url: `${siteMetadata.siteUrl}`,
+    },
+  ],
+  creator: `${siteMetadata.author}`,
   openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: siteMetadata.siteUrl,
     title: siteMetadata.title,
     description: siteMetadata.description,
-    url: './',
     siteName: siteMetadata.title,
-    locale: 'en_US',
-    type: 'website',
   },
   alternates: {
     canonical: './',
@@ -53,9 +61,11 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: siteMetadata.title,
     card: 'summary_large_image',
+    title: siteMetadata.title,
     images: [siteMetadata.socialBanner],
+    description: siteMetadata.description,
+    creator: siteMetadata.twitter,
   },
 }
 
@@ -75,11 +85,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${fontSans.variable} scroll-smooth`}
       suppressHydrationWarning
     >
-      <link rel="alternate" type="application/rss+xml" href={`${basePath}/feed.xml`} />
+      <Suspense fallback={null}>
+        <NavigationEvents />
+      </Suspense>
       <body className="min-h-screen bg-background pl-[calc(100vw-100%)] text-foreground antialiased">
-        <Suspense fallback={null}>
-          <NavigationEvents />
-        </Suspense>
         <Providers>
           <SectionContainer>
             <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>

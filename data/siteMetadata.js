@@ -11,9 +11,10 @@ const siteMetadata = {
 
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://franciscomoretti.com',
+  siteUrl: `${process.env.NEXT_PUBLIC_APP_URL}`,
   siteRepo: 'https://github.com/franciscomoretti/site',
   siteLogo: `${process.env.BASE_PATH || ''}/static/logo.svg`,
+  keywords: ['Next.js', 'React', 'Tailwind CSS', 'Server Components', 'Radix UI'],
   socialBanner: `${process.env.BASE_PATH || ''}/static/images/app/opengraph-image.jpg`,
   // mastodon: 'https://mastodon.social/@mastodonuser',
   email: 'franciscoemoretti@gmail.com',
