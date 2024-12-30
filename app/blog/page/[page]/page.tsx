@@ -6,7 +6,9 @@ import { getAllViews } from '@/app/actions'
 const POSTS_PER_PAGE = 5
 
 export const generateStaticParams = async () => {
-  const totalPages = Math.ceil(allBlogs.length / POSTS_PER_PAGE)
+  const totalPages = Math.ceil(
+    allBlogs.filter((blog) => blog.draft !== true).length / POSTS_PER_PAGE
+  )
   const paths = Array.from({ length: totalPages }, (_, i) => ({ page: (i + 1).toString() }))
 
   return paths
@@ -14,7 +16,7 @@ export const generateStaticParams = async () => {
 
 export default async function Page(props: { params: Promise<{ page: string }> }) {
   const params = await props.params
-  const posts = allCoreContent(sortPosts(allBlogs))
+  const posts = allCoreContent(sortPosts(allBlogs.filter((blog) => blog.draft !== true)))
 
   const views = await getAllViews()
   const viewsBySlug =

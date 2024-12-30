@@ -4,7 +4,7 @@ import Main from './Main'
 import { getAllViews } from './actions'
 
 export default async function Page() {
-  const sortedPosts = sortPosts(allBlogs)
+  const sortedPosts = sortPosts(allBlogs.filter((blog) => blog.draft !== true))
   const posts = allCoreContent(sortedPosts)
 
   const views = await getAllViews()

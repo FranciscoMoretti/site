@@ -100,7 +100,7 @@ export default function ListLayoutWithTags({
                   return (
                     <li key={t} className="my-3">
                       {decodeURI(pathname.split('/tags/')[1]) === slug(t) ? (
-                        <h3 className="inline px-3 py-2 text-sm font-bold uppercase text-primary/80">
+                        <h3 className="inline px-3 py-2 text-sm font-bold uppercase text-primary">
                           {`${t} (${tagCounts[t]})`}
                         </h3>
                       ) : (

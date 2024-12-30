@@ -69,7 +69,7 @@ export default function Home({ posts }: { posts: (CoreContent<Blog> & { viewCoun
                         <div className="text-base font-medium leading-6">
                           <Link
                             href={`/blog/${slug}`}
-                            className="text-primary/80 hover:text-primary"
+                            className="text-primary hover:text-primary/90"
                             aria-label={`Read more: "${title}"`}
                           >
                             Read more &rarr;
@@ -86,7 +86,7 @@ export default function Home({ posts }: { posts: (CoreContent<Blog> & { viewCoun
       </div>
       {posts.length > MAX_DISPLAY && (
         <div className="flex justify-end text-base font-medium leading-6">
-          <Link href="/blog" className="text-primary/80 hover:text-primary" aria-label="All posts">
+          <Link href="/blog" className="text-primary hover:text-primary/90" aria-label="All posts">
             All Posts &rarr;
           </Link>
         </div>

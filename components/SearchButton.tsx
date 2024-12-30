@@ -16,7 +16,7 @@ const SearchButton = () => {
       <SearchButtonWrapper
         className={cn(
           buttonVariants({ variant: 'outline' }),
-          'relative h-9 w-32 justify-start rounded-[0.5rem] text-sm text-muted-foreground lg:w-40'
+          'relative h-9 w-24 justify-start rounded-[0.5rem] text-sm text-muted-foreground sm:w-32 lg:w-40'
         )}
         aria-label="Search"
       >

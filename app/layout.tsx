@@ -80,11 +80,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const basePath = process.env.BASE_PATH || ''
 
   return (
-    <html
-      lang={siteMetadata.language}
-      className={`${fontSans.variable} scroll-smooth`}
-      suppressHydrationWarning
-    >
+    <html lang={siteMetadata.language} className={`${fontSans.variable} scroll-smooth`}>
       <Suspense fallback={null}>
         <NavigationEvents />
       </Suspense>

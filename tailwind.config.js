@@ -91,11 +91,10 @@ module.exports = {
         DEFAULT: {
           css: {
             a: {
-              color: 'hsl(var(--primary) / 0.8)',
+              color: 'hsl(var(--primary))',
               '&:hover': {
-                color: 'hsl(var(--primary))',
+                color: 'hsl(var(--primary)/ 0.9)',
               },
-              code: { color: 'hsl(var(--primary) / 0.8)' },
             },
             'h1,h2': {
               fontWeight: '700',
@@ -104,22 +103,22 @@ module.exports = {
             h3: {
               fontWeight: '600',
             },
-            code: {
-              color: 'hsl(var(--secondary)/80)',
-            },
           },
         },
         invert: {
           css: {
             a: {
-              color: 'hsl(var(--primary) / 0.8)',
+              color: 'hsl(var(--primary))',
               '&:hover': {
-                color: 'hsl(var(--primary))',
+                color: 'hsl(var(--primary)/ 0.9)',
               },
             },
-            code: { color: 'hsl(var(--secondary)/80)' },
-            'h1,h2,h3,h4,h5,h6': {
-              color: 'hsl(var(--foreground))',
+            'h1,h2': {
+              fontWeight: '700',
+              letterSpacing: theme('letterSpacing.tight'),
+            },
+            h3: {
+              fontWeight: '600',
             },
           },
         },

@@ -86,7 +86,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                           {author.twitter && (
                             <Link
                               href={author.twitter}
-                              className="text-primary/80 hover:text-primary"
+                              className="text-primary hover:text-primary/90"
                             >
                               {author.twitter
                                 .replace('https://twitter.com/', '@')
@@ -135,7 +135,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                         <h2 className="text-xs uppercase tracking-wide text-muted-foreground">
                           Previous Article
                         </h2>
-                        <div className="text-primary/60 hover:text-primary">
+                        <div className="text-primary hover:text-primary/90">
                           <Link href={`/${prev.path}`}>{prev.title}</Link>
                         </div>
                       </div>
@@ -145,7 +145,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                         <h2 className="text-xs uppercase tracking-wide text-muted-foreground">
                           Next Article
                         </h2>
-                        <div className="text-primary/60 hover:text-primary">
+                        <div className="text-primary hover:text-primary/90">
                           <Link href={`/${next.path}`}>{next.title}</Link>
                         </div>
                       </div>
@@ -156,7 +156,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
               <div className="pt-4 xl:pt-8">
                 <Link
                   href={`/${basePath}`}
-                  className="text-primary/60 hover:text-primary"
+                  className="text-primary hover:text-primary/90"
                   aria-label="Back to the blog"
                 >
                   &larr; Back to the blog

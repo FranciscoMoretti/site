@@ -90,7 +90,7 @@ function createSearchIndex(allBlogs) {
   ) {
     writeFileSync(
       `public/${path.basename(siteMetadata.search.kbarConfig.searchDocumentsPath)}`,
-      JSON.stringify(allCoreContent(sortPosts(allBlogs)))
+      JSON.stringify(allCoreContent(sortPosts(allBlogs.filter((blog) => blog.draft !== true))))
     )
     console.log('Local search index generated...')
   }
@@ -223,8 +223,10 @@ export function transformerCustonCopyButton(): ShikiTransformer {
   return {
     name: '@plugin/add-raw-code-for-copy-button',
 
-    code(node) {
-      if (node.type === 'element' && node.tagName === 'code') {
+    pre(node) {
+      // If children is code, then include the source in the pre
+      const firstChild = node.children[0]
+      if (firstChild.type === 'element' && firstChild.tagName === 'code') {
         node.properties['__rawcode__'] = this.source
       }
     },

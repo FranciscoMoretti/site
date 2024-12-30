@@ -13,17 +13,28 @@ export const components: MDXComponents = {
   a: CustomLink,
   table: TableWrapper,
   BlogNewsletterForm,
-  pre: ({ className, ...props }: React.HTMLAttributes<HTMLPreElement>) => {
+  pre: ({
+    className,
+    __rawcode__,
+    __withMeta__,
+    ...props
+  }: React.HTMLAttributes<HTMLPreElement> & { __rawcode__?: string; __withMeta__?: string }) => {
     return (
-      <>
+      <div className="relative">
         <pre
           className={cn(
-            'relative mb-4 mt-6 max-h-[650px] overflow-x-auto rounded-lg border bg-[#262626] p-0',
+            'relative mb-4 mt-6 max-h-[650px] overflow-x-auto rounded-lg bg-[#262626] p-0',
             className
           )}
           {...props}
         />
-      </>
+        {__rawcode__ && (
+          <CopyButton
+            value={__rawcode__}
+            className={cn('absolute right-4 top-4', __withMeta__ && 'top-16', '')}
+          />
+        )}
+      </div>
     )
   },
   code: ({
@@ -40,6 +51,7 @@ export const components: MDXComponents = {
       <code
         className={cn(
           'relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm before:hidden after:hidden',
+          // When pre is parent, these are non-inline code blocks
           '[pre_&]:bg-transparent [pre_&]:p-4 ',
           className
         )}
@@ -47,12 +59,6 @@ export const components: MDXComponents = {
       >
         {children}
       </code>
-      {__rawcode__ && (
-        <CopyButton
-          value={__rawcode__}
-          className={cn('absolute right-4 top-4', __withMeta__ && 'top-16', 'hidden [pre_&]:block')}
-        />
-      )}
     </>
   ),
 }
