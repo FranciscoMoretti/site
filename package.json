@@ -3,7 +3,7 @@
   "version": "2.3.0",
   "private": true,
   "scripts": {
-    "start": "next dev",
+    "start": "next start",
     "dev": "cross-env INIT_CWD=$PWD next dev",
     "build": "cross-env INIT_CWD=$PWD next build && cross-env NODE_OPTIONS='--experimental-json-modules' node ./scripts/postbuild.mjs",
     "serve": "next start",

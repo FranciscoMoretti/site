@@ -1,5 +1,7 @@
 'use server'
 
+import { unstable_cache } from 'next/cache'
+
 import { db } from '@/lib/db'
 
 export async function upsertPost(slug: string) {
@@ -62,22 +64,20 @@ export async function getPostViews({ slug }: { slug: string }) {
     return null
   }
   try {
-    const result = await db.post.findUnique({
-      select: {
-        views: true,
-      },
-      where: {
-        slug: slug,
-      },
-    })
-    return result?.views
+    const views = await getAllViews()
+    return views?.find((view) => view.slug === slug)?.views
   } catch (error) {
     console.error(error)
     return null
   }
 }
 
-export async function getAllViews() {
+export const getAllViews = unstable_cache(getAllViewsInternal, ['post-views'], {
+  tags: ['post-views'],
+  revalidate: 3600, // TODO: Fine tune views revalidation time for a better user experience
+})
+
+async function getAllViewsInternal() {
   if (!db) {
     return null
   }
