@@ -13,21 +13,12 @@ export const components: MDXComponents = {
   a: CustomLink,
   table: TableWrapper,
   BlogNewsletterForm,
-  pre: ({
-    className,
-    __rawstring__,
-    __withMeta__,
-    ...props
-  }: React.HTMLAttributes<HTMLPreElement> & {
-    __rawstring__?: string
-    __src__?: string
-    __withMeta__?: string
-  }) => {
+  pre: ({ className, ...props }: React.HTMLAttributes<HTMLPreElement>) => {
     return (
       <>
         <pre
           className={cn(
-            'mb-4 mt-6 max-h-[650px] overflow-x-auto rounded-lg border bg-[#262626] p-0',
+            'relative mb-4 mt-6 max-h-[650px] overflow-x-auto rounded-lg border bg-[#262626] p-0',
             className
           )}
           {...props}
@@ -38,21 +29,30 @@ export const components: MDXComponents = {
   code: ({
     className,
     children,
-    __rawstring__,
+    __rawcode__,
     __withMeta__,
     ...props
   }: React.HTMLAttributes<HTMLElement> & {
-    __rawstring__?: string
+    __rawcode__?: string
     __withMeta__?: string
   }) => (
-    <code className={cn('relative rounded p-4 font-mono text-sm', className)} {...props}>
-      {children}
-      {__rawstring__ && (
+    <>
+      <code
+        className={cn(
+          'relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm before:hidden after:hidden',
+          '[pre_&]:bg-transparent [pre_&]:p-4 ',
+          className
+        )}
+        {...props}
+      >
+        {children}
+      </code>
+      {__rawcode__ && (
         <CopyButton
-          value={__rawstring__}
-          className={cn('absolute right-4 top-4 ', __withMeta__ && 'top-16')}
+          value={__rawcode__}
+          className={cn('absolute right-4 top-4', __withMeta__ && 'top-16', 'hidden [pre_&]:block')}
         />
       )}
-    </code>
+    </>
   ),
 }

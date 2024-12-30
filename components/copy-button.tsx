@@ -30,7 +30,7 @@ export function CopyButton({ value, className, src, ...props }: CopyButtonProps)
       size="icon"
       variant="ghost"
       className={cn(
-        'z-10 h-7 w-7 text-neutral-50 hover:bg-neutral-700 hover:text-neutral-50',
+        'z-10 m-auto h-7 w-7 p-1.5 text-neutral-50 hover:bg-neutral-700 hover:text-neutral-50',
         className
       )}
       onClick={() => {
@@ -40,7 +40,11 @@ export function CopyButton({ value, className, src, ...props }: CopyButtonProps)
       {...props}
     >
       <span className="sr-only">Copy</span>
-      {hasCopied ? <Icons.check className="h-4 w-4" /> : <Icons.copy className="h-4 w-4" />}
+      {hasCopied ? (
+        <Icons.check className="m-auto h-4 w-4" />
+      ) : (
+        <Icons.copy className="m-auto h-4 w-4" />
+      )}
     </Button>
   )
 }

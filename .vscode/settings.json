@@ -19,5 +19,10 @@
     ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
     ["[clsx|cn]\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
   ],
-  "color-highlight.matchHslWithNoFunction": true
+  "color-highlight.matchHslWithNoFunction": true,
+
+  // Markdown preview for MDX
+  "files.associations": {
+    "*.mdx": "markdown"
+  }
 }

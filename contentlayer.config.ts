@@ -184,7 +184,10 @@ export default makeSource({
         {
           theme: 'dark-plus',
           keepBackground: false,
-
+          defaultLang: {
+            block: 'js',
+            inline: 'plaintext',
+          },
           onVisitLine(node) {
             // Prevent lines from collapsing in `display: grid` mode, and allow empty
             // lines to be copy/pasted
@@ -205,18 +208,11 @@ export default makeSource({
     ],
   },
   onSuccess: async (importData) => {
-    const { allBlogs } = await importData()
-    createTagCount(allBlogs)
-    createSearchIndex(allBlogs)
+    const { allDocuments } = await importData()
+    createTagCount(allDocuments)
+    createSearchIndex(allDocuments)
   },
 })
-
-interface CopyButtonOptions {
-  feedbackDuration?: number
-  copyIcon?: string
-  successIcon?: string
-  visibility?: 'hover' | 'always'
-}
 
 /**
  * A transformer that adds a property to be used in the copy button component
@@ -226,8 +222,11 @@ interface CopyButtonOptions {
 export function transformerCustonCopyButton(): ShikiTransformer {
   return {
     name: '@plugin/add-raw-code-for-copy-button',
+
     code(node) {
-      node.properties['__rawString__'] = this.source
+      if (node.type === 'element' && node.tagName === 'code') {
+        node.properties['__rawcode__'] = this.source
+      }
     },
   }
 }

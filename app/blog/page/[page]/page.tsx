@@ -36,7 +36,10 @@ export default async function Page(props: { params: Promise<{ page: string }> })
   return (
     <ListLayout
       posts={posts.map((post) => ({ ...post, viewCount: viewsBySlug[post.slug] }))}
-      initialDisplayPosts={initialDisplayPosts}
+      initialDisplayPosts={initialDisplayPosts.map((post) => ({
+        ...post,
+        viewCount: viewsBySlug[post.slug],
+      }))}
       pagination={pagination}
       title="All Posts"
     />
