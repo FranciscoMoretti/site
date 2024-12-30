@@ -6,8 +6,6 @@ This is a [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com
 
 Currently acting as my personal blog.
 
----
-
 ## Demo
 
 - https://www.franciscomoretti.com/
@@ -80,7 +78,7 @@ First, run the development server:
 bun dev
 ```
 
-#### Extend / Customize
+## Extend / Customize
 
 `data/siteMetadata.js` - contains most of the site related information which should be modified for a user's need.
 
@@ -125,12 +123,6 @@ Push the prisma DB
 npm run db:push
 ```
 
-or
-
-```sh
-npx prisma db push
-```
-
 ## Analytics
 
 Analytics are provided automatically by Vercel and their free tier is a great way to start. As an alternative, Posthog is integrated as well.
@@ -144,7 +136,7 @@ NEXT_PUBLIC_POSTHOG_KEY=<ph_project_api_key>
 NEXT_PUBLIC_POSTHOG_HOST=<ph_instance_address>
 ```
 
-## Post
+## Post model
 
 Content is modelled using [Contentlayer](https://www.contentlayer.dev/), which allows you to define your own content schema and use it to generate typed content objects. See [Contentlayer documentation](https://www.contentlayer.dev/docs/getting-started) for more information.
 

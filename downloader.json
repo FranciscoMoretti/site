@@ -1,0 +1,12 @@
+{
+  "titleProperty": "title",
+  "slugProperty": "slug",
+  "rootDbAsFolder": true,
+  "cleanCache": true,
+  "imgOutputPath": "public/assets/",
+  "imgPrefixInMarkdown": "assets",
+  "markdownOutputPath": "./content",
+  "logLevel": "debug",
+  "pageLinkHasExtension": false,
+  "revalidatePeriod": 180
+}
