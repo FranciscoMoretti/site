@@ -134,7 +134,7 @@ module.exports = () => {
           permanent: true,
         },
         {
-          source: '/tags/nextjs',
+          source: '/tags/next-js',
           destination: '/tags/nextjs',
           permanent: true,
         },
@@ -144,7 +144,7 @@ module.exports = () => {
           permanent: true,
         },
         {
-          source: '/tags/tailwindcss',
+          source: '/tags/tailwind-css',
           destination: '/tags/tailwindcss',
           permanent: true,
         },
