@@ -78,6 +78,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html
       lang={siteMetadata.language}
       className={`${fontSans.variable} scroll-smooth`}
+      //  Hydration warning Needed for https://github.com/pacocoursey/next-themes
       suppressHydrationWarning
     >
       <body className="min-h-screen bg-background pl-[calc(100vw-100%)] text-foreground antialiased">

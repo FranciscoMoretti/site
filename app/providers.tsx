@@ -2,13 +2,11 @@
 
 import dynamic from 'next/dynamic'
 import siteMetadata from '@/data/siteMetadata'
-import SuspendedPostHogPageView from '@/components/PostHogPageView'
+import { PostHogPostHogPageView } from '@/components/PostHogPageView'
 import { TailwindIndicator } from '@/components/tailwind-indicator'
-
-//  Needed for https://github.com/pacocoursey/next-themes
-const ThemeProvider = dynamic(() => import('next-themes').then((mod) => mod.ThemeProvider), {
-  ssr: false,
-})
+import { ThemeProvider as NextThemesProvider } from 'next-themes'
+import { Suspense } from 'react'
+import { NavigationEvents } from '@/components/navigation-events'
 
 const PHProvider = dynamic(
   () => import('@/components/posthog-provider').then((mod) => mod.PHProvider),
@@ -19,12 +17,25 @@ const PHProvider = dynamic(
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
-    <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme} enableSystem>
-      <PHProvider>
-        {children}
-        {process.env.NEXT_PUBLIC_POSTHOG_KEY && <SuspendedPostHogPageView />}
-        <TailwindIndicator />
-      </PHProvider>
-    </ThemeProvider>
+    <NextThemesProvider
+      attribute="class"
+      defaultTheme={siteMetadata.theme}
+      enableSystem
+      disableTransitionOnChange
+    >
+      {/* Render children immediately */}
+      {children}
+
+      {/* Defer analytics initialization */}
+      <Suspense fallback={null}>
+        {process.env.NEXT_PUBLIC_POSTHOG_KEY && (
+          <PHProvider>
+            <PostHogPostHogPageView />
+          </PHProvider>
+        )}
+        <NavigationEvents />
+      </Suspense>
+      <TailwindIndicator />
+    </NextThemesProvider>
   )
 }

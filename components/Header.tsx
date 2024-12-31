@@ -3,10 +3,9 @@ import headerNavLinks from '@/data/headerNavLinks'
 import Link from './Link'
 import MobileNav from './MobileNav'
 import { ThemeSwitch } from './ThemeSwitch'
-// import dynamic from 'next/dynamic'
 import Image from 'next/image'
-
-// const SearchButton = dynamic(() => import('./SearchButton'), { ssr: true })
+import { Suspense } from 'react'
+import SearchButton from './SearchButton'
 
 const Header = () => {
   let headerClass = 'flex items-center w-full bg-background justify-between py-10'
@@ -42,7 +41,9 @@ const Header = () => {
               </Link>
             ))}
         </div>
-        {/* <SearchButton /> */}
+        <Suspense fallback={null}>
+          <SearchButton />
+        </Suspense>
         <ThemeSwitch />
         <MobileNav />
       </div>
