@@ -6,10 +6,11 @@
     "start": "next start",
     "format": "prettier --write .",
     "dev": "cross-env INIT_CWD=$PWD next dev",
-    "build": "cross-env INIT_CWD=$PWD next build && cross-env NODE_OPTIONS='--experimental-json-modules' node ./scripts/postbuild.mjs",
+    "build": "cross-env INIT_CWD=$PWD next build",
     "serve": "next start",
     "analyze": "cross-env ANALYZE=true next build",
     "postinstall": "prisma generate",
+    "postbuild": "cross-env NODE_OPTIONS='--experimental-json-modules' node ./scripts/postbuild.mjs",
     "lint": "next lint --fix --dir pages --dir app --dir components --dir lib --dir layouts --dir scripts",
     "prepare": "husky",
     "db:push": "prisma db push"
@@ -91,5 +92,6 @@
     "*.+(js|jsx|ts|tsx|json|css|md|mdx)": [
       "prettier --write"
     ]
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }

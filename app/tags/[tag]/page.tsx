@@ -14,9 +14,13 @@ export async function generateMetadata(props: {
 }): Promise<Metadata> {
   const params = await props.params
   const tag = decodeURI(params.tag)
+  const naturalTagName = Object.keys(tagData).find((key) => slug(key) === tag)
+  if (!naturalTagName) {
+    return notFound()
+  }
   return genPageMetadata({
-    title: tag,
-    description: `${siteMetadata.title} ${tag} tagged content - All articles related to ${tag}`,
+    title: naturalTagName,
+    description: `${siteMetadata.title} ${naturalTagName} tagged content - All articles related to ${naturalTagName}`,
     alternates: {
       canonical: './',
       types: {
@@ -30,7 +34,7 @@ export const generateStaticParams = async () => {
   const tagCounts = tagData as Record<string, number>
   const tagKeys = Object.keys(tagCounts)
   const paths = tagKeys.map((tag) => ({
-    tag: encodeURI(tag),
+    tag: encodeURI(slug(tag)),
   }))
   return paths
 }

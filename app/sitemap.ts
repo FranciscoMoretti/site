@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next'
 import { allBlogs } from 'contentlayer/generated'
 import siteMetadata from '@/data/siteMetadata'
 import tagData from 'app/tag-data.json'
+import { slug } from 'github-slugger'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = siteMetadata.siteUrl
@@ -14,7 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
 
   const tagRoutes = Object.keys(tagData).map((tag) => ({
-    url: `${siteUrl}/tags/${tag}`,
+    url: `${siteUrl}/tags/${slug(tag)}`,
     lastModified: new Date().toISOString().split('T')[0],
   }))
 
