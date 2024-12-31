@@ -11,7 +11,7 @@ export function NavigationEvents() {
     const slug = pathname?.split('/blog/').slice(1).join('/')
 
     if (slug && process.env.NODE_ENV === 'production') {
-      const response = fetch('/api/posts/' + slug, {
+      fetch('/api/posts/' + slug, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -20,8 +20,6 @@ export function NavigationEvents() {
       })
         .then((response) => response)
         .catch((error) => console.error(error))
-
-      console.log('response: ', response)
     }
   }, [pathname])
 

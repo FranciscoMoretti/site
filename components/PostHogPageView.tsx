@@ -2,11 +2,11 @@
 'use client'
 
 import { usePathname, useSearchParams } from 'next/navigation'
-import { useEffect, Suspense } from 'react'
+import { useEffect } from 'react'
 import dynamic from 'next/dynamic'
 
 // Dynamically import the PostHog hook
-const PostHogComponent = dynamic(
+export const PostHogPostHogPageView = dynamic(
   () =>
     import('posthog-js/react').then((mod) => {
       const PostHogPageViewInner = () => {
@@ -30,11 +30,3 @@ const PostHogComponent = dynamic(
     }),
   { ssr: false }
 )
-
-export default function SuspendedPostHogPageView() {
-  return (
-    <Suspense fallback={null}>
-      <PostHogComponent />
-    </Suspense>
-  )
-}

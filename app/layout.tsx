@@ -9,10 +9,8 @@ import Header from '@/components/Header'
 import SectionContainer from '@/components/SectionContainer'
 import Footer from '@/components/Footer'
 import siteMetadata from '@/data/siteMetadata'
-// import { Providers } from './providers'
+import { Providers } from './providers'
 import { Metadata, Viewport } from 'next'
-// import { Suspense } from 'react'
-// import { NavigationEvents } from '@/components/navigation-events'
 
 const fontSans = Inter({
   subsets: ['latin'],
@@ -76,21 +74,20 @@ export const viewport: Viewport = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const basePath = process.env.BASE_PATH || ''
-
   return (
-    <html lang={siteMetadata.language} className={`${fontSans.variable} scroll-smooth`}>
-      {/* <Suspense fallback={null}>
-        <NavigationEvents />
-      </Suspense> */}
+    <html
+      lang={siteMetadata.language}
+      className={`${fontSans.variable} scroll-smooth`}
+      suppressHydrationWarning
+    >
       <body className="min-h-screen bg-background pl-[calc(100vw-100%)] text-foreground antialiased">
-        {/* <Providers> */}
-        <SectionContainer>
-          <Header />
-          <main className="mb-auto">{children}</main>
-          <Footer />
-        </SectionContainer>
-        {/* </Providers> */}
+        <Providers>
+          <SectionContainer>
+            <Header />
+            <main className="mb-auto">{children}</main>
+            <Footer />
+          </SectionContainer>
+        </Providers>
       </body>
     </html>
   )
