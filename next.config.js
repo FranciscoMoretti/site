@@ -129,6 +129,16 @@ module.exports = () => {
           permanent: true,
         },
         {
+          source: '/tag/next-js',
+          destination: '/tags/nextjs',
+          permanent: true,
+        },
+        {
+          source: '/tags/nextjs',
+          destination: '/tags/nextjs',
+          permanent: true,
+        },
+        {
           source: '/use-a-lite-youtube-embedded-player-in-nextjs',
           destination: '/blog/use-a-lite-youtube-embedded-player-in-nextjs',
           permanent: true,
