@@ -71,6 +71,7 @@ module.exports = () => {
     eslint: {
       dirs: ['app', 'components', 'layouts', 'scripts'],
     },
+    experimental: {},
     images: {
       remotePatterns: [
         {

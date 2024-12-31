@@ -9,7 +9,7 @@ import { Blog } from 'contentlayer/generated'
 
 const MAX_DISPLAY = 5
 
-export default function Home({ posts }: { posts: (CoreContent<Blog> & { viewCount?: number })[] }) {
+export function Home({ posts }: { posts: (CoreContent<Blog> & { viewCount?: number })[] }) {
   return (
     <>
       <div className="">

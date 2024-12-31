@@ -1,6 +1,6 @@
 import { sortPosts, allCoreContent } from 'pliny/utils/contentlayer'
 import { allBlogs } from 'contentlayer/generated'
-import Main from './Main'
+import { Home } from './Home'
 import { getAllViews } from './actions'
 
 export default async function Page() {
@@ -14,5 +14,5 @@ export default async function Page() {
       return acc
     }, {}) || {}
 
-  return <Main posts={posts.map((post) => ({ ...post, viewCount: viewsBySlug[post.slug] }))} />
+  return <Home posts={posts.map((post) => ({ ...post, viewCount: viewsBySlug[post.slug] }))} />
 }
