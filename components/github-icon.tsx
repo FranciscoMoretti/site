@@ -1,4 +1,4 @@
-import { LucideProps } from "lucide-react"
+import { LucideProps } from 'lucide-react'
 
 export function GithubIcon({ ...props }: LucideProps) {
   return (

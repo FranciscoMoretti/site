@@ -1,11 +1,9 @@
-import { increasePostViews } from "@/app/(marketing)/actions"
+import { upsertIncreasePostViews } from '@/app/actions'
 
-export async function POST(
-  request: Request,
-  { params }: { params: { slug: string } }
-) {
+export async function POST(request: Request, { params }: { params: Promise<{ slug: string }> }) {
   try {
-    const result = await increasePostViews({ slug: params.slug })
+    const { slug } = await params
+    const result = await upsertIncreasePostViews({ slug })
     return new Response(JSON.stringify({ views: result }))
   } catch (error) {
     return new Response(null, { status: 500 })

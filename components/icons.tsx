@@ -27,15 +27,13 @@ import {
   User,
   X,
   type Icon as LucideIcon,
-} from "lucide-react"
+} from 'lucide-react'
 
-import { Logo } from "@/config/logo"
-import { GithubIcon } from "@/components/github-icon"
+import { GithubIcon } from '@/components/github-icon'
 
-export type Icon = LucideIcon
+export type Icon = typeof LucideIcon
 
 export const Icons = {
-  logo: Logo,
   close: X,
   copy: Copy,
   copyDone: ClipboardCheck,

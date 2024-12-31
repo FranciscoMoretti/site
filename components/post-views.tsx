@@ -1,13 +1,13 @@
-import { Suspense } from "react"
+import { Suspense } from 'react'
 
-import { getPostViews } from "@/app/(marketing)/actions"
+import { getPostViews } from '@/app/actions'
 
 export function PostViews({ slug }: { slug: string }) {
   return (
     <span title="views">
-      <Suspense fallback={<>{"..."}</>}>
+      <Suspense fallback={<>{'...'}</>}>
         <ViewCount slug={slug} />
-      </Suspense>{" "}
+      </Suspense>{' '}
       views
     </span>
   )
@@ -15,5 +15,5 @@ export function PostViews({ slug }: { slug: string }) {
 
 export async function ViewCount({ slug }: { slug: string }) {
   const count = await getPostViews({ slug })
-  return <>{count != null ? count : "-"}</>
+  return <>{count != null ? count : '-'}</>
 }
