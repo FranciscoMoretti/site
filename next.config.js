@@ -139,6 +139,16 @@ module.exports = () => {
           permanent: true,
         },
         {
+          source: '/tag/tailwind-css',
+          destination: '/tags/tailwindcss',
+          permanent: true,
+        },
+        {
+          source: '/tags/tailwindcss',
+          destination: '/tags/tailwindcss',
+          permanent: true,
+        },
+        {
           source: '/use-a-lite-youtube-embedded-player-in-nextjs',
           destination: '/blog/use-a-lite-youtube-embedded-player-in-nextjs',
           permanent: true,

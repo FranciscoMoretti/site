@@ -11,11 +11,11 @@ images: ['/thumbnails/how-to-create-consistent-styles-with-tailwind-mdx-and-html
 
 ## Introduction
 
-In this tutorial, we'll explore how you can create consistent styles using Tailwind, MDX, and HTML. Learn how to render with the same style content that comes from MDX files (static) and content expressed in [HTML](/tags/html code (dynamic). Let's get started!
+In this tutorial, we'll explore how you can create consistent styles using Tailwind, MDX, and HTML. Learn how to render with the same style content that comes from MDX files (static) and content expressed in [HTML](/tags/html) code (dynamic). Let's get started!
 
 ## What is Tailwind? 🎨
 
-[Tailwind](/tags/tailwind-css is a utility-first CSS framework that allows you to quickly build custom user interfaces. It provides a set of pre-defined utility classes that you can use to style your HTML elements. With Tailwind, you don't have to write custom CSS for every element; instead, you can compose styles by combining multiple utility classes.
+[Tailwind](/tags/tailwindcss) is a utility-first CSS framework that allows you to quickly build custom user interfaces. It provides a set of pre-defined utility classes that you can use to style your HTML elements. With Tailwind, you don't have to write custom CSS for every element; instead, you can compose styles by combining multiple utility classes.
 
 ## What is MDX? 📝
 

@@ -12,7 +12,7 @@ images: ['/thumbnails/next-js-revolution-the-framework-popularity-rises-in-2023.
 
 ## The Rise of Next.js
 
-In recent years, [Next.js](/tags/next-js has gained significant traction and emerged as one of the most popular frameworks for web development. 📈
+In recent years, [Next.js](/tags/nextjs) has gained significant traction and emerged as one of the most popular frameworks for web development. 📈
 
 ## Adoption Across the Web Development Community 🌐
 
@@ -36,4 +36,4 @@ Inspired by [this tweet](https://twitter.com/jonkkillian/status/1678183196628865
 
 ## Embrace the Future with Next.js 🚀
 
-As one of the fastest-growing frameworks in 2023, Next.js is leading the charge in modern web development. Whether you're a junior web developer or an industry expert, exploring Next.js can unlock exciting opportunities and push your projects to new heights. Check out more articles about [Next.js](/tags/next-js. Happy Coding!
+As one of the fastest-growing frameworks in 2023, Next.js is leading the charge in modern web development. Whether you're a junior web developer or an industry expert, exploring Next.js can unlock exciting opportunities and push your projects to new heights. Check out more articles about [Next.js](/tags/nextjs). Happy Coding!
