@@ -1,7 +1,7 @@
 import { AlgoliaButton } from 'pliny/search/AlgoliaButton'
 import { KBarButton } from 'pliny/search/KBarButton'
 import siteMetadata from '@/data/siteMetadata'
-import { Button, buttonVariants } from './ui/button'
+import { buttonVariants } from './ui/button'
 import { cn } from './lib/utils'
 
 const SearchButton = () => {

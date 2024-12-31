@@ -1,7 +1,3 @@
-// @ts-check
-const { fontFamily } = require('tailwindcss/defaultTheme')
-const colors = require('tailwindcss/colors')
-
 /** @type {import("tailwindcss/types").Config } */
 module.exports = {
   content: [
@@ -22,10 +18,9 @@ module.exports = {
         14: '3.5rem',
       },
       fontFamily: {
-        sans: ['var(--font-inter)', ...fontFamily.sans],
+        sans: ['var(--font-inter)'],
       },
       colors: {
-        gray: colors.gray,
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           50: 'hsl(var(--primary)/0.5)',
@@ -125,5 +120,5 @@ module.exports = {
       }),
     },
   },
-  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+  plugins: [require('@tailwindcss/typography')],
 }

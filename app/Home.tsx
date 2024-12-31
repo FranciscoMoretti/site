@@ -3,13 +3,18 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
 import NewsletterForm from 'pliny/ui/NewsletterForm'
-import { getAllViews } from './actions'
 import { CoreContent } from 'pliny/utils/contentlayer'
 import { Blog } from 'contentlayer/generated'
 
-const MAX_DISPLAY = 5
-
-export function Home({ posts }: { posts: (CoreContent<Blog> & { viewCount?: number })[] }) {
+export function Home({
+  posts,
+  hasMorePosts,
+}: {
+  posts: (CoreContent<Pick<Blog, 'slug' | 'date' | 'title' | 'summary' | 'tags'>> & {
+    viewCount?: number
+  })[]
+  hasMorePosts: boolean
+}) {
   return (
     <>
       <div className="">
@@ -25,7 +30,7 @@ export function Home({ posts }: { posts: (CoreContent<Blog> & { viewCount?: numb
           </h2>
           <ul className="divide-y divide-border">
             {!posts.length && 'No posts found.'}
-            {posts.slice(0, MAX_DISPLAY).map((post) => {
+            {posts.map((post) => {
               const { slug, date, title, summary, tags, viewCount } = post
               return (
                 <li key={slug} className="py-12">
@@ -62,9 +67,7 @@ export function Home({ posts }: { posts: (CoreContent<Blog> & { viewCount?: numb
                               ))}
                             </div>
                           </div>
-                          <div className="prose max-w-none text-muted-foreground dark:prose-invert">
-                            {summary}
-                          </div>
+                          <div className="max-w-none text-muted-foreground">{summary}</div>
                         </div>
                         <div className="text-base font-medium leading-6">
                           <Link
@@ -84,7 +87,7 @@ export function Home({ posts }: { posts: (CoreContent<Blog> & { viewCount?: numb
           </ul>
         </div>
       </div>
-      {posts.length > MAX_DISPLAY && (
+      {hasMorePosts && (
         <div className="flex justify-end text-base font-medium leading-6">
           <Link href="/blog" className="text-primary hover:text-primary/90" aria-label="All posts">
             All Posts &rarr;
