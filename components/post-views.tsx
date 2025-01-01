@@ -15,8 +15,6 @@ function ViewCount({ slug, prev }: { slug: string; prev: number }) {
   const { data } = useQuery({
     queryKey: ['postViews', slug],
     queryFn: async () => {
-      // Add artificial delay for smoother UI transition when switching between posts
-      await new Promise((resolve) => setTimeout(resolve, 500))
       return getPostViews({ slug })
     },
   })
