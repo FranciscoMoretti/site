@@ -1,23 +1,33 @@
-import { Suspense } from 'react'
+'use client'
+
+import { useEffect, useState } from 'react'
 
 import { getPostViews } from '@/app/actions'
-import { unstable_noStore } from 'next/cache'
 
 export function PostViews({ slug, prev }: { slug: string; prev: number }) {
   return (
     <span>
-      <Suspense fallback={<>{prev}</>}>
-        <ViewCount slug={slug} />
-      </Suspense>{' '}
-      views
+      <ViewCount slug={slug} prev={prev} /> views
     </span>
   )
 }
 
-async function ViewCount({ slug }: { slug: string }) {
-  unstable_noStore()
-  // 1 sec delay to not switch abruptly on load
-  await new Promise((resolve) => setTimeout(resolve, 1000))
-  const count = await getPostViews({ slug })
-  return <>{count != null ? count : '-'}</>
+function ViewCount({ slug, prev }: { slug: string; prev: number }) {
+  const [views, setViews] = useState(prev)
+
+  useEffect(() => {
+    // Fetch updated view count
+    console.log('fetching views')
+    async function fetchViews() {
+      // Wait 1 second to view to be added to db
+      await new Promise((resolve) => setTimeout(resolve, 1000))
+      getPostViews({ slug }).then((count) => {
+        console.log('fetched', count)
+        if (count != null) setViews(count)
+      })
+    }
+    fetchViews()
+  }, [slug])
+
+  return <>{views ?? '-'}</>
 }

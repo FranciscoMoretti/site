@@ -13,8 +13,6 @@ import siteMetadata from '@/data/siteMetadata'
 import { notFound } from 'next/navigation'
 import { getPostViews } from '@/app/actions'
 
-export const experimental_ppr = true
-
 const defaultLayout = 'PostLayout'
 const layouts = {
   PostSimple,
