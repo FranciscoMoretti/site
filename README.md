@@ -51,7 +51,7 @@ Currently acting as my personal blog.
 1. Clone the repo
 
 ```bash
-npx degit 'timlrx/tailwind-nextjs-starter-blog'
+npx degit 'FranciscoMoretti/site'
 ```
 
 2. Personalize `siteMetadata.js` (site related information)
