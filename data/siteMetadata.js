@@ -11,7 +11,7 @@ const siteMetadata = {
 
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
+  siteUrl: process.env.NEXT_PUBLIC_APP_URL,
   siteRepo: 'https://github.com/franciscomoretti/site',
   siteLogo: `${process.env.BASE_PATH || ''}/static/logo.svg`,
   keywords: ['Next.js', 'React', 'Tailwind CSS', 'Server Components', 'Radix UI'],

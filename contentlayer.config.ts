@@ -60,7 +60,40 @@ const computedFields: ComputedFields = {
     type: 'string',
     resolve: (doc) => doc._raw.sourceFilePath,
   },
+  images: {
+    type: 'json',
+    resolve: (doc) => {
+      const images = doc.images || []
+      return doc.cover ? [doc.cover, ...images] : images
+    },
+  },
   toc: { type: 'json', resolve: (doc) => extractTocHeadings(doc.body.raw) },
+  date: {
+    type: 'date',
+    resolve: (doc) => {
+      if (!doc.date) {
+        return null
+      }
+      return normalizeDate(doc.date)
+    },
+  },
+  lastmod: {
+    type: 'date',
+    resolve: (doc) => {
+      if (!doc.lastmod) {
+        return null
+      }
+      return normalizeDate(doc.lastmod)
+    },
+  },
+}
+
+function normalizeDate(rawDate: string) {
+  // Converts both of these formats to a date object
+  // 2024-10-27T10-55-00.000Z
+  // 2023-05-11
+  const date = rawDate.replace(/T(.*)$/, (match) => match.replace(/-/g, ':'))
+  return new Date(date)
 }
 
 /**
@@ -101,12 +134,13 @@ export const Blog = defineDocumentType(() => ({
   contentType: 'mdx',
   fields: {
     title: { type: 'string', required: true },
-    date: { type: 'date', required: true },
+    date: { type: 'string', required: true },
     tags: { type: 'list', of: { type: 'string' }, default: [] },
-    lastmod: { type: 'date' },
+    lastmod: { type: 'string' },
     draft: { type: 'boolean' },
     summary: { type: 'string' },
     images: { type: 'json' },
+    cover: { type: 'string' },
     authors: { type: 'list', of: { type: 'string' } },
     layout: { type: 'string' },
     bibliography: { type: 'string' },
@@ -152,6 +186,7 @@ export const Authors = defineDocumentType(() => ({
 export default makeSource({
   contentDirPath: 'data',
   documentTypes: [Blog, Authors],
+  onExtraFieldData: 'ignore',
   mdx: {
     cwd: process.cwd(),
     remarkPlugins: [

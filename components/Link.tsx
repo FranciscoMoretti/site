@@ -2,8 +2,13 @@
 import Link from 'next/link'
 import type { LinkProps } from 'next/link'
 import { AnchorHTMLAttributes } from 'react'
+import siteMetadata from '@/data/siteMetadata'
 
 const CustomLink = ({ href, ...rest }: LinkProps & AnchorHTMLAttributes<HTMLAnchorElement>) => {
+  if (href && href.startsWith(siteMetadata.siteUrl)) {
+    href = href.replace(siteMetadata.siteUrl, '')
+  }
+
   const isInternalLink = href && href.startsWith('/')
   const isAnchorLink = href && href.startsWith('#')
 
