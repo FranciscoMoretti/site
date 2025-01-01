@@ -16,11 +16,12 @@ export const components: MDXComponents = {
   pre: ({
     className,
     __rawcode__,
-    __withMeta__,
+    __withmeta__,
     ...props
-  }: React.HTMLAttributes<HTMLPreElement> & { __rawcode__?: string; __withMeta__?: string }) => {
+  }: React.HTMLAttributes<HTMLPreElement> & { __rawcode__?: string; __withmeta__?: string }) => {
+    console.log('__withmeta__', __withmeta__)
     return (
-      <div className="relative">
+      <>
         <pre
           className={cn(
             'relative mb-4 mt-6 max-h-[650px] overflow-x-auto rounded-lg bg-[#262626] p-0',
@@ -31,21 +32,25 @@ export const components: MDXComponents = {
         {__rawcode__ && (
           <CopyButton
             value={__rawcode__}
-            className={cn('absolute right-4 top-4', __withMeta__ && 'top-16', '')}
+            className={cn(
+              'absolute right-4 top-4',
+              // Place the copy button lower if there is metadata in figcaption (e.g. filename)
+              '[figure:has(figcaption)_&]:top-16'
+            )}
           />
         )}
-      </div>
+      </>
     )
   },
   code: ({
     className,
     children,
     __rawcode__,
-    __withMeta__,
+    __withmeta__,
     ...props
   }: React.HTMLAttributes<HTMLElement> & {
     __rawcode__?: string
-    __withMeta__?: string
+    __withmeta__?: string
   }) => (
     <>
       <code
