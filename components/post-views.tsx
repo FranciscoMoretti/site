@@ -17,12 +17,10 @@ function ViewCount({ slug, prev }: { slug: string; prev: number }) {
 
   useEffect(() => {
     // Fetch updated view count
-    console.log('fetching views')
     async function fetchViews() {
       // Wait 1 second to view to be added to db
       await new Promise((resolve) => setTimeout(resolve, 1000))
       getPostViews({ slug }).then((count) => {
-        console.log('fetched', count)
         if (count != null) setViews(count)
       })
     }
