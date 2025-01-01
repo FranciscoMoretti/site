@@ -8,6 +8,7 @@ import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
 import siteMetadata from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
+import { PostViews } from '@/components/post-views'
 
 interface LayoutProps {
   content: CoreContent<Blog> & { viewCount?: number }
@@ -26,7 +27,7 @@ export default function PostSimple({ content, next, prev, children }: LayoutProp
         <div>
           <header>
             <div className="space-y-1 border-b border-border pb-10 text-center">
-              <dl className="flex flex-row items-center justify-start gap-4">
+              <dl className="flex flex-row items-center justify-start gap-4 font-mono">
                 <div className="">
                   <dt className="sr-only">Published on</dt>
                   <dd className="text-sm font-medium text-muted-foreground">
@@ -37,7 +38,7 @@ export default function PostSimple({ content, next, prev, children }: LayoutProp
                   <div className="">
                     <dt className="sr-only ">View count</dt>
                     <dd className="flex flex-row items-center gap-1 text-sm font-medium text-muted-foreground">
-                      {viewCount} views
+                      <PostViews slug={slug} prev={viewCount} />
                     </dd>
                   </div>
                 )}

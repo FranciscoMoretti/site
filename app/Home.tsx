@@ -5,6 +5,7 @@ import { formatDate } from 'pliny/utils/formatDate'
 import NewsletterForm from 'pliny/ui/NewsletterForm'
 import { CoreContent } from 'pliny/utils/contentlayer'
 import { Blog } from 'contentlayer/generated'
+import { PostViews } from '@/components/post-views'
 
 export function Home({
   posts,
@@ -36,7 +37,7 @@ export function Home({
                 <li key={slug} className="py-12">
                   <article>
                     <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-x-6 xl:space-y-0">
-                      <dl className="flex flex-row items-center justify-start gap-4 xl:flex-col xl:items-end xl:gap-3">
+                      <dl className="flex flex-row items-center justify-start gap-4 font-mono xl:flex-col xl:items-end xl:gap-3">
                         <div className="">
                           <dt className="sr-only">Published on</dt>
                           <dd className="text-base font-medium text-muted-foreground">
@@ -47,7 +48,7 @@ export function Home({
                           <div className="">
                             <dt className="sr-only ">View count</dt>
                             <dd className="flex flex-row items-center gap-1 text-base font-medium text-muted-foreground">
-                              {viewCount} views
+                              <PostViews slug={slug} prev={viewCount} />
                             </dd>
                           </div>
                         )}

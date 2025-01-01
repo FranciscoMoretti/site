@@ -117,7 +117,7 @@ export default function ListLayout({
             return (
               <li key={path} className="py-4">
                 <article className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
-                  <dl className=" flex flex-row items-center justify-start gap-4">
+                  <dl className="flex flex-row items-center justify-start gap-4 font-mono">
                     <dt className="sr-only">Published on</dt>
                     <dd className="text-sm font-medium text-muted-foreground">
                       <time dateTime={date} suppressHydrationWarning>

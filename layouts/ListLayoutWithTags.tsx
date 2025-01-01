@@ -125,7 +125,7 @@ export default function ListLayoutWithTags({
                 return (
                   <li key={path} className="py-5">
                     <article className="flex flex-col space-y-2">
-                      <dl className=" flex flex-row items-center justify-start gap-4">
+                      <dl className="flex flex-row items-center justify-start gap-4 font-mono">
                         <dt className="sr-only">Published on</dt>
                         <dd className="text-sm font-medium text-muted-foreground">
                           <time dateTime={date} suppressHydrationWarning>

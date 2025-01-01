@@ -68,7 +68,9 @@ const config: NextConfig = {
   eslint: {
     dirs: ['app', 'components', 'layouts', 'scripts'],
   },
-  experimental: {},
+  experimental: {
+    ppr: 'incremental',
+  },
   images: {
     remotePatterns: [
       {

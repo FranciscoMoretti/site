@@ -8,7 +8,7 @@ export function NavigationEvents() {
 
   useEffect(() => {
     // TODO: create simpler logic
-    const slug = pathname?.split('/blog/').slice(1).join('/')
+    const slug = pathname?.split('/blog/').slice(1).join('/').split('#')[0]
 
     if (slug && process.env.NODE_ENV === 'production') {
       fetch('/api/posts/' + slug, {

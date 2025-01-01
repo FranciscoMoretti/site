@@ -9,8 +9,8 @@ import Image from '@/components/Image'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
-import { Eye } from 'lucide-react'
 import { formatDate } from 'pliny/utils/formatDate'
+import { PostViews } from '@/components/post-views'
 
 const editUrl = (path) => `${siteMetadata.siteRepo}/blob/main/data/${path}`
 const discussUrl = (path) =>
@@ -41,7 +41,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
         <div className="xl:divide-y xl:divide-border">
           <header className="pt-6 xl:pb-6">
             <div className="space-y-1 text-center">
-              <dl className="mb-1 flex flex-row items-center justify-start gap-4">
+              <dl className="mb-1 flex flex-row items-center justify-start gap-4 font-mono">
                 <div className="">
                   <dt className="sr-only">Published on</dt>
                   <dd className="text-sm font-medium text-muted-foreground">
@@ -52,7 +52,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                   <div className="">
                     <dt className="sr-only ">View count</dt>
                     <dd className="flex flex-row items-center gap-1 text-sm font-medium text-muted-foreground">
-                      {viewCount} views
+                      <PostViews slug={slug} prev={viewCount} />
                     </dd>
                   </div>
                 )}
