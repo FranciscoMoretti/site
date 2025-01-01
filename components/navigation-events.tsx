@@ -12,7 +12,7 @@ export function NavigationEvents() {
     // TODO: create simpler logic
     const slug = pathname?.split('/blog/').slice(1).join('/').split('#')[0]
 
-    if (slug) {
+    if (slug && process.env.NODE_ENV === 'production') {
       fetch('/api/posts/' + slug, {
         method: 'POST',
         headers: {
