@@ -1,22 +1,22 @@
-[data-rehype-pretty-code-figure] {
+figure[data-rehype-pretty-code-fragment] {
   @apply relative;
 }
 
-[data-rehype-pretty-code-figure] code {
+[data-rehype-pretty-code-fragment] code {
   @apply grid min-w-full break-words rounded-none border-0 bg-transparent p-0;
   counter-reset: line;
   box-decoration-break: clone;
 }
 
-[data-rehype-pretty-code-figure] .line {
+[data-rehype-pretty-code-fragment] .line {
   @apply inline-block min-h-[1rem] w-full px-4 py-0.5;
 }
 
-[data-rehype-pretty-code-figure] [data-line-numbers] .line {
+[data-rehype-pretty-code-fragment] [data-line-numbers] .line {
   @apply px-2;
 }
 
-[data-rehype-pretty-code-figure] [data-line-numbers] > .line::before {
+[data-rehype-pretty-code-fragment] [data-line-numbers] > .line::before {
   @apply text-xs text-muted-foreground/40;
   counter-increment: line;
   content: counter(line);
@@ -26,19 +26,19 @@
   text-align: right;
 }
 
-[data-rehype-pretty-code-figure] .line--highlighted {
+[data-rehype-pretty-code-fragment] .line--highlighted {
   @apply bg-muted;
 }
 
-[data-rehype-pretty-code-figure] .line-highlighted span {
+[data-rehype-pretty-code-fragment] .line-highlighted span {
   @apply relative;
 }
 
-[data-rehype-pretty-code-figure] .word--highlighted {
+[data-rehype-pretty-code-fragment] .word--highlighted {
   @apply rounded-md border border-muted bg-muted p-1;
 }
 
-.dark [data-rehype-pretty-code-figure] .word--highlighted {
+.dark [data-rehype-pretty-code-fragment] .word--highlighted {
   @apply bg-zinc-900;
 }
 
