@@ -19,7 +19,6 @@ export const components: MDXComponents = {
     __withmeta__,
     ...props
   }: React.HTMLAttributes<HTMLPreElement> & { __rawcode__?: string; __withmeta__?: string }) => {
-    console.log('__withmeta__', __withmeta__)
     return (
       <>
         <pre
