@@ -9,6 +9,7 @@ import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import tagData from 'app/tag-data.json'
+import { PostViews } from '@/components/post-views'
 
 interface PaginationProps {
   totalPages: number
@@ -121,7 +122,7 @@ export default function ListLayoutWithTags({
           <div>
             <ul>
               {displayPosts.map((post) => {
-                const { path, date, title, summary, tags, viewCount } = post
+                const { path, date, title, summary, tags, viewCount, slug } = post
                 return (
                   <li key={path} className="py-5">
                     <article className="flex flex-col space-y-2">
@@ -136,7 +137,7 @@ export default function ListLayoutWithTags({
                           <div className="">
                             <dt className="sr-only ">View count</dt>
                             <dd className="flex flex-row items-center gap-1 text-sm font-medium text-muted-foreground">
-                              {viewCount} views
+                              <PostViews slug={slug} prev={viewCount} />
                             </dd>
                           </div>
                         )}

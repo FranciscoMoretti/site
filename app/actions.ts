@@ -1,6 +1,6 @@
 'use server'
 
-import { revalidateTag, unstable_cache, unstable_noStore } from 'next/cache'
+import { revalidateTag, unstable_cache } from 'next/cache'
 
 import { db } from '@/lib/db'
 
@@ -23,6 +23,8 @@ export async function upsertIncreasePostViews({ slug }: { slug: string }) {
     },
   })
   revalidateTag('post-views')
+
+  const newRes = await getAllViews()
   return result
 }
 

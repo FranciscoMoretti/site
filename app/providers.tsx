@@ -7,6 +7,7 @@ import { TailwindIndicator } from '@/components/tailwind-indicator'
 import { ThemeProvider as NextThemesProvider } from 'next-themes'
 import { Suspense } from 'react'
 import { NavigationEvents } from '@/components/navigation-events'
+import { ReactQueryProvider } from './react-query-provider'
 
 const PHProvider = dynamic(
   () => import('@/components/posthog-provider').then((mod) => mod.PHProvider),
@@ -23,18 +24,20 @@ export function Providers({ children }: { children: React.ReactNode }) {
       enableSystem
       disableTransitionOnChange
     >
-      {/* Render children immediately */}
-      {children}
+      <ReactQueryProvider>
+        {/* Render children immediately */}
+        {children}
 
-      {/* Defer analytics initialization */}
-      <Suspense fallback={null}>
-        {process.env.NEXT_PUBLIC_POSTHOG_KEY && (
-          <PHProvider>
-            <PostHogPostHogPageView />
-          </PHProvider>
-        )}
-        <NavigationEvents />
-      </Suspense>
+        {/* Defer analytics initialization */}
+        <Suspense fallback={null}>
+          {process.env.NEXT_PUBLIC_POSTHOG_KEY && (
+            <PHProvider>
+              <PostHogPostHogPageView />
+            </PHProvider>
+          )}
+          <NavigationEvents />
+        </Suspense>
+      </ReactQueryProvider>
       <TailwindIndicator />
     </NextThemesProvider>
   )

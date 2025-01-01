@@ -8,6 +8,7 @@ import type { Blog } from 'contentlayer/generated'
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
+import { PostViews } from '@/components/post-views'
 
 interface PaginationProps {
   totalPages: number
@@ -113,7 +114,7 @@ export default function ListLayout({
         <ul>
           {!filteredBlogPosts.length && 'No posts found.'}
           {displayPosts.map((post) => {
-            const { path, date, title, summary, tags, viewCount } = post
+            const { path, date, title, summary, tags, viewCount, slug } = post
             return (
               <li key={path} className="py-4">
                 <article className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
@@ -128,7 +129,7 @@ export default function ListLayout({
                       <div className="">
                         <dt className="sr-only ">View count</dt>
                         <dd className="flex flex-row items-center gap-1 text-sm font-medium text-muted-foreground">
-                          {viewCount} views
+                          <PostViews slug={slug} prev={viewCount} />
                         </dd>
                       </div>
                     )}

@@ -1,31 +1,24 @@
 'use client'
 
-import { useEffect, useState } from 'react'
-
 import { getPostViews } from '@/app/actions'
+import { useQuery } from '@tanstack/react-query'
 
 export function PostViews({ slug, prev }: { slug: string; prev: number }) {
   return (
-    <span>
+    <span title="views">
       <ViewCount slug={slug} prev={prev} /> views
     </span>
   )
 }
 
 function ViewCount({ slug, prev }: { slug: string; prev: number }) {
-  const [views, setViews] = useState(prev)
-
-  useEffect(() => {
-    // Fetch updated view count
-    async function fetchViews() {
-      // Wait 1 second to view to be added to db
-      await new Promise((resolve) => setTimeout(resolve, 1000))
-      getPostViews({ slug }).then((count) => {
-        if (count != null) setViews(count)
-      })
-    }
-    fetchViews()
-  }, [slug])
-
-  return <>{views ?? '-'}</>
+  const { data } = useQuery({
+    queryKey: ['postViews', slug],
+    queryFn: async () => {
+      // Add artificial delay for smoother UI transition when switching between posts
+      await new Promise((resolve) => setTimeout(resolve, 500))
+      return getPostViews({ slug })
+    },
+  })
+  return <>{data != null ? data : prev}</>
 }
