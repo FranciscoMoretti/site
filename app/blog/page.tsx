@@ -3,10 +3,18 @@ import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer'
 import { allBlogs } from 'contentlayer/generated'
 import { genPageMetadata } from 'app/seo'
 import { getAllViews } from '../actions'
+import { getOgImageUrl } from '@/lib/getOgImageUrl'
 
 const POSTS_PER_PAGE = 5
 
-export const metadata = genPageMetadata({ title: 'Blog' })
+export const metadata = genPageMetadata({
+  title: 'Blog',
+  image: getOgImageUrl({
+    heading: 'Blog',
+    type: 'Page',
+    mode: 'dark',
+  }),
+})
 
 export default async function BlogPage() {
   const posts = allCoreContent(sortPosts(allBlogs.filter((blog) => blog.draft !== true)))

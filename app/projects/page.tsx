@@ -1,8 +1,16 @@
 import projectsData from '@/data/projectsData'
 import Card from '@/components/Card'
 import { genPageMetadata } from 'app/seo'
+import { getOgImageUrl } from '@/lib/getOgImageUrl'
 
-export const metadata = genPageMetadata({ title: 'Projects' })
+export const metadata = genPageMetadata({
+  title: 'Projects',
+  image: getOgImageUrl({
+    heading: 'Projects',
+    type: 'Page',
+    mode: 'dark',
+  }),
+})
 
 export default function Projects() {
   return (

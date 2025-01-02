@@ -8,6 +8,7 @@ import { genPageMetadata } from 'app/seo'
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getAllViews } from '@/app/actions'
+import { getOgImageUrl } from '@/lib/getOgImageUrl'
 
 export async function generateMetadata(props: {
   params: Promise<{ tag: string }>
@@ -27,6 +28,11 @@ export async function generateMetadata(props: {
         'application/rss+xml': `${siteMetadata.siteUrl}/tags/${tag}/feed.xml`,
       },
     },
+    image: getOgImageUrl({
+      heading: naturalTagName,
+      type: 'Page',
+      mode: 'dark',
+    }),
   })
 }
 

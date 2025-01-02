@@ -12,6 +12,7 @@ import { Metadata } from 'next'
 import siteMetadata from '@/data/siteMetadata'
 import { notFound } from 'next/navigation'
 import { getPostViews } from '@/app/actions'
+import { getOgImageUrl } from '@/lib/getOgImageUrl'
 
 const defaultLayout = 'PostLayout'
 const layouts = {
@@ -38,7 +39,13 @@ export async function generateMetadata(props: {
   const publishedAt = new Date(post.date).toISOString()
   const modifiedAt = new Date(post.lastmod || post.date).toISOString()
   const authors = authorDetails.map((author) => author.name)
-  let imageList = [siteMetadata.socialBanner]
+
+  const ogImageUrl = getOgImageUrl({
+    heading: post.title,
+    type: 'Blog Post',
+    mode: 'dark',
+  })
+  let imageList = [ogImageUrl]
   if (post.images.length > 0) {
     imageList = post.images
   }
