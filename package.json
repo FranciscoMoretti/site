@@ -30,7 +30,7 @@
     "@tailwindcss/typography": "^0.5.15",
     "@tanstack/react-query": "^5.62.11",
     "@tanstack/react-query-devtools": "^5.62.11",
-    "@vercel/og": "^0.6.4",
+    "@vercel/og": "0.5.18",
     "autoprefixer": "^10.4.13",
     "body-scroll-lock": "^4.0.0-beta.0",
     "class-variance-authority": "^0.7.1",
