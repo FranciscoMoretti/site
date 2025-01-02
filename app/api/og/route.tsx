@@ -9,14 +9,15 @@ const interRegular = fetch(
   new URL('../../../assets/fonts/Inter-Regular.ttf', import.meta.url)
 ).then((res) => res.arrayBuffer())
 
-const interBold = fetch(
-  new URL('../../../assets/fonts/OpenSans-ExtraBold.ttf', import.meta.url)
-).then((res) => res.arrayBuffer())
+// const interBold = fetch(
+//   new URL('../../../assets/fonts/OpenSans-ExtraBold.ttf', import.meta.url)
+// ).then((res) => res.arrayBuffer())
 
 export async function GET(req: Request) {
   try {
     const fontRegular = await interRegular
-    const fontBold = await interBold
+    const fontBold = await interRegular
+    // const fontBold = await interBold
 
     const url = new URL(req.url)
     const values = ogImageSchema.parse(Object.fromEntries(url.searchParams))
