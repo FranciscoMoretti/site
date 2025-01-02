@@ -9,13 +9,13 @@ const interRegular = fetch(
   new URL('../../../assets/fonts/Inter-Regular.ttf', import.meta.url)
 ).then((res) => res.arrayBuffer())
 
-const interBold = fetch(new URL('../../../assets/fonts/Inter-Bold.ttf', import.meta.url)).then(
-  (res) => res.arrayBuffer()
-)
+// const interBold = fetch(new URL('../../../assets/fonts/Inter-Bold.ttf', import.meta.url)).then(
+//   (res) => res.arrayBuffer()
+// )
 
-// const interBold = fetch(
-//   new URL('../../../assets/fonts/OpenSans-ExtraBold.ttf', import.meta.url)
-// ).then((res) => res.arrayBuffer())
+const interBold = fetch(
+  new URL('../../../assets/fonts/OpenSans-ExtraBold.ttf', import.meta.url)
+).then((res) => res.arrayBuffer())
 
 export async function GET(req: Request) {
   try {
