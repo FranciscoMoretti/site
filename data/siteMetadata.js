@@ -15,7 +15,7 @@ const siteMetadata = {
   siteRepo: 'https://github.com/franciscomoretti/site',
   siteLogo: `${process.env.BASE_PATH || ''}/static/logo.svg`,
   keywords: ['Next.js', 'React', 'Tailwind CSS', 'TypeScript', 'JavaScript', 'AI'],
-  socialBanner: `${process.env.BASE_PATH || ''}/static/images/opengraph-image.jpg`,
+  socialBanner: `${process.env.BASE_PATH || ''}/static/images/opengraph-image.png`,
   // mastodon: 'https://mastodon.social/@mastodonuser',
   email: 'franciscoemoretti@gmail.com',
   github: 'https://github.com/franciscomoretti',
