@@ -119,7 +119,12 @@ const config: NextConfig = {
       },
       {
         source: '/code-tips/:path*',
-        destination: '/',
+        destination: '/blog/:path',
+        permanent: true,
+      },
+      {
+        source: '/code-tips/',
+        destination: '/tags/code-tips',
         permanent: true,
       },
       {
@@ -201,52 +206,52 @@ const config: NextConfig = {
       },
       {
         source: '/composition-vs-inheritance-which-is-better-for-your-code',
-        destination: '/',
-        permanent: false, // Temporarily redirect to home until I create a better page
+        destination: '/blog/composition-vs-inheritance-which-is-better-for-your-code',
+        permanent: true,
       },
       {
         source: '/code-tips/composition-vs-inheritance-which-is-better-for-your-code',
-        destination: '/',
-        permanent: false, // Temporarily redirect to home until I create a better page
+        destination: '/blog/composition-vs-inheritance-which-is-better-for-your-code',
+        permanent: true,
       },
       {
         source: '/dont-add-unneeded-context',
-        destination: '/code-tips/dont-add-unneeded-context',
+        destination: '/blog/composition-vs-inheritance-which-is-better-for-your-code',
         permanent: true,
       },
       {
         source: '/dont-over-optimize',
-        destination: '/code-tips/dont-over-optimize',
+        destination: '/blog/dont-over-optimize',
         permanent: true,
       },
       {
         source: '/use-pronounceable-and-meaningful-variable-names',
-        destination: '/code-tips/use-pronounceable-and-meaningful-variable-names',
+        destination: '/blog/use-pronounceable-and-meaningful-variable-names',
         permanent: true,
       },
       {
         source: '/dont-use-flags-as-function-parameters',
-        destination: '/code-tips/dont-use-flags-as-function-parameters',
+        destination: '/blog/dont-use-flags-as-function-parameters',
         permanent: true,
       },
       {
         source: '/dont-use-magic-numbers',
-        destination: '/code-tips/dont-use-magic-numbers',
+        destination: '/blog/dont-use-magic-numbers',
         permanent: true,
       },
       {
         source: '/avoid-mental-mapping',
-        destination: '/code-tips/avoid-mental-mapping',
+        destination: '/blog/avoid-mental-mapping',
         permanent: true,
       },
       {
         source: '/few-function-arguments',
-        destination: '/code-tips/few-function-arguments',
+        destination: '/blog/few-function-arguments',
         permanent: true,
       },
       {
         source: '/function-names-should-say-what-they-do',
-        destination: '/code-tips/function-names-should-say-what-they-do',
+        destination: '/blog/function-names-should-say-what-they-do',
         permanent: true,
       },
       {
@@ -256,107 +261,102 @@ const config: NextConfig = {
       },
       {
         source: '/code-tips/prefer-es6-classes-over-es5-functions',
-        destination: '/',
+        destination: '/blog/prefer-es6-classes-over-es5-functions',
         permanent: true, // Temporarily redirect to home until I create a better page
       },
       {
         source: '/functions-should-do-one-thing',
-        destination: '/code-tips/functions-should-do-one-thing',
+        destination: '/blog/functions-should-do-one-thing',
         permanent: true,
       },
       {
         source: '/kiss-keep-it-short-and-simple',
-        destination: '/code-tips/kiss-keep-it-short-and-simple',
-        permanent: true,
-      },
-      {
-        source: '/blog/single-responsibility-principle-srp',
-        destination: '/code-tips/single-responsibility-principle-srp',
+        destination: '/blog/kiss-keep-it-short-and-simple',
         permanent: true,
       },
       {
         source: '/single-responsibility-principle-srp--solid',
-        destination: '/code-tips/single-responsibility-principle-srp',
+        destination: '/blog/single-responsibility-principle-srp',
         permanent: true,
       },
       {
         source: '/interface-segregation-principle-isp--solid',
-        destination: '/code-tips/interface-segregation-principle-isp',
+        destination: '/blog/interface-segregation-principle-isp',
         permanent: true,
       },
       {
         source: '/liskov-substitution-principle-lsp--solid',
-        destination: '/code-tips/liskov-substitution-principle-lsp',
+        destination: '/blog/liskov-substitution-principle-lsp',
         permanent: true,
       },
       {
         source: '/open-closed-principle-ocp--solid',
-        destination: '/code-tips/open-closed-principle-ocp',
+        destination: '/blog/open-closed-principle-ocp',
         permanent: true,
       },
       {
         source: '/dependency-inversion-principle-dip--solid',
-        destination: '/code-tips/dependency-inversion-principle-dip',
+        destination: '/blog/dependency-inversion-principle-dip',
         permanent: true,
       },
       {
         source: '/avoid-negative-conditionals',
-        destination: '/code-tips/avoid-negative-conditionals',
+        destination: '/blog/avoid-negative-conditionals',
         permanent: true,
       },
       {
         source: '/one-concept-per-test',
-        destination: '/code-tips/one-concept-per-test',
+        destination: '/blog/one-concept-per-test',
         permanent: true,
       },
       {
-        source: '/code-tips/avoid-side-effects-in-functions',
-        destination: '/code-tips/avoid-side-effects',
+        source: '/blog/avoid-side-effects-in-functions',
+        destination: '/blog/avoid-side-effects',
         permanent: true,
       },
       {
         source: '/use-explanatory-variables',
-        destination: '/code-tips/use-explanatory-variables',
+        destination: '/blog/use-explanatory-variables',
         permanent: true,
       },
       {
         source: '/encapsulate-conditionals',
-        destination: '/code-tips/encapsulate-conditionals',
+        destination: '/blog/encapsulate-conditionals',
         permanent: true,
       },
       {
         source: '/avoid-negative-conditionals',
-        destination: '/code-tips/avoid-negative-conditionals',
+        destination: '/blog/avoid-negative-conditionals',
         permanent: true,
       },
       {
         source: '/code-tips/use-pronounceable-and-meaningful-variable-names',
-        destination: '/code-tips/use-pronounceable-names',
+        destination: '/blog/use-pronounceable-names',
         permanent: true,
       },
       {
         source: '/use-the-same-vocabulary-for-the-same-concept',
-        destination: '/code-tips/use-the-same-vocabulary-for-the-same-concept',
+        destination: '/blog/use-the-same-vocabulary-for-the-same-concept',
         permanent: true,
       },
       {
         source: '/dont-ignore-caught-errors',
-        destination: '/code-tips/dont-ignore-caught-errors',
+        destination: '/blog/dont-ignore-caught-errors',
         permanent: true,
       },
       {
         source: '/use-getters-and-setters',
-        destination: '/code-tips/use-getters-and-setters',
+        destination: '/blog/use-getters-and-setters',
         permanent: true,
       },
       {
         source: '/remove-dead-code',
-        destination: '/code-tips/remove-dead-code',
+        destination: '/blog/remove-dead-code',
         permanent: true,
       },
       {
         source: '/clean-code-tips',
-        destination: '/code-tips',
+        destination: '/blog',
         permanent: true,
       },
     ]
