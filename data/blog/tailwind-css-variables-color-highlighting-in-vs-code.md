@@ -4,7 +4,7 @@ summary: Learn how to enable color highlighting for Tailwind CSS variables in VS
 tags: ['TailwindCSS', 'VS Code', 'Tools', 'Shadcn UI']
 lastmod: 2025-01-02T19-16-00.000Z
 date: 2025-01-02T19-11-00.000Z
-title: How to Enable Color Highlighting for Tailwind CSS Variables in VS Code
+title: Color Highlighting for Tailwind CSS Variables in VS Code
 ---
 
 When working with Tailwind CSS variables in VS Code, having visual color indicators can significantly improve your development workflow. This is particularly useful when working with Shadcn UI components, which heavily rely on CSS variables for theming.
