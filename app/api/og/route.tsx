@@ -1,6 +1,5 @@
 import { ImageResponse } from '@vercel/og'
 
-import { ogImageSchema } from '@/lib/validations/og'
 import siteMetadata from '@/data/siteMetadata'
 
 export const runtime = 'edge'
@@ -24,7 +23,7 @@ export async function GET(req: Request) {
     // const fontBold = await interBold
 
     const url = new URL(req.url)
-    const values = ogImageSchema.parse(Object.fromEntries(url.searchParams))
+    const values = Object.fromEntries(url.searchParams)
     const heading =
       values.heading.length > 140 ? `${values.heading.substring(0, 140)}...` : values.heading
 
@@ -33,10 +32,10 @@ export async function GET(req: Request) {
 
     // Dynamic font size calculation
     const getFontSize = (length: number) => {
-      if (length < 40) return 'text-[100px]'
-      if (length < 80) return 'text-[80px]'
-      if (length < 120) return 'text-[60px]'
-      return 'text-[50px]'
+      if (length < 40) return 'text-[90px]'
+      if (length < 80) return 'text-[70px]'
+      if (length < 120) return 'text-[50px]'
+      return 'text-[40px]'
     }
 
     return new ImageResponse(
