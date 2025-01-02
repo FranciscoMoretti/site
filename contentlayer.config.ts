@@ -61,8 +61,8 @@ const computedFields: ComputedFields = {
     resolve: (doc) => doc._raw.sourceFilePath,
   },
   images: {
-    type: 'json',
-    resolve: (doc) => {
+    type: 'list',
+    resolve: (doc): string[] => {
       const images = doc.images || []
       return doc.cover ? [doc.cover, ...images] : images
     },
@@ -139,7 +139,7 @@ export const Blog = defineDocumentType(() => ({
     lastmod: { type: 'string' },
     draft: { type: 'boolean' },
     summary: { type: 'string' },
-    images: { type: 'json' },
+    images: { type: 'list', of: { type: 'string' }, default: [] },
     cover: { type: 'string' },
     authors: { type: 'list', of: { type: 'string' } },
     layout: { type: 'string' },
