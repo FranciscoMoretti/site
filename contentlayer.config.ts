@@ -195,6 +195,7 @@ export default makeSource({
       remarkCodeTitles,
       remarkMath,
       remarkImgToJsx,
+      // @ts-expect-error - Remark return type doesn't match ts type
       remarkAlert,
     ],
     rehypePlugins: [
