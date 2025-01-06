@@ -3,6 +3,7 @@ const siteMetadata = {
   title: 'Francisco Moretti',
   author: 'Francisco Moretti',
   headerTitle: 'Francisco Moretti',
+  hideHeaderTitle: true,
   description:
     "Hi, I'm Francisco! I'm learning in public and sharing my journey. I'm working with modern web technologies like Next.js, React, TailwindCSS, and TypeScript.",
   heroTitle: "Hi, I'm Francisco!",

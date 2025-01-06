@@ -6,6 +6,7 @@ import { ThemeSwitch } from './ThemeSwitch'
 import Image from 'next/image'
 import { Suspense } from 'react'
 import SearchButton from './SearchButton'
+import { Logo } from '../data/logo'
 
 const Header = () => {
   let headerClass = 'flex items-center w-full bg-background justify-between py-10'
@@ -18,13 +19,18 @@ const Header = () => {
       <Link href="/" aria-label={siteMetadata.headerTitle}>
         <div className="flex items-center justify-between gap-3">
           {siteMetadata.siteLogo && (
-            <Image src={siteMetadata.siteLogo} alt="Logo" width={24} height={24} />
+            // TODO: Show image logo optionally
+            // <Image src={siteMetadata.siteLogo} alt="Logo" width={24} height={24} />
+            <Logo />
           )}
-          {typeof siteMetadata.headerTitle === 'string' ? (
-            <div className="hidden text-2xl font-semibold lg:block">{siteMetadata.headerTitle}</div>
-          ) : (
-            siteMetadata.headerTitle
-          )}
+          {!siteMetadata.hideHeaderTitle &&
+            (typeof siteMetadata.headerTitle === 'string' ? (
+              <div className="hidden text-2xl font-semibold lg:block">
+                {siteMetadata.headerTitle}
+              </div>
+            ) : (
+              siteMetadata.headerTitle
+            ))}
         </div>
       </Link>
       <div className="flex items-center justify-end space-x-2 leading-5 sm:space-x-4">
