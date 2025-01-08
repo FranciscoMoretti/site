@@ -129,7 +129,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                   </div>
                 )}
                 {(next || prev) && (
-                  <div className="flex justify-between py-4 xl:block xl:space-y-8 xl:py-8">
+                  <div className="flex justify-between gap-2 py-4 xl:block xl:space-y-8 xl:py-8">
                     {prev && prev.path && (
                       <div>
                         <h2 className="text-xs uppercase tracking-wide text-muted-foreground">
@@ -141,7 +141,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                       </div>
                     )}
                     {next && next.path && (
-                      <div>
+                      <div className="">
                         <h2 className="text-xs uppercase tracking-wide text-muted-foreground">
                           Next Article
                         </h2>
@@ -152,15 +152,15 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                     )}
                   </div>
                 )}
-              </div>
-              <div className="pt-4 xl:pt-8">
-                <Link
-                  href={`/${basePath}`}
-                  className="text-primary hover:text-primary/90"
-                  aria-label="Back to the blog"
-                >
-                  &larr; Back to the blog
-                </Link>
+                <div className="pt-4 xl:pt-8">
+                  <Link
+                    href={`/${basePath}`}
+                    className="text-primary hover:text-primary/90"
+                    aria-label="Back to the blog"
+                  >
+                    &larr; Back to the blog
+                  </Link>
+                </div>
               </div>
             </footer>
           </div>
