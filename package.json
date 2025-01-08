@@ -18,6 +18,7 @@
     "notion:cleanup": "notion-downloader cleanup"
   },
   "dependencies": {
+    "@giscus/react": "^3.1.0",
     "@headlessui/react": "2.2.0",
     "@libsql/client": "^0.6.0",
     "@next/bundle-analyzer": "15.0.2",

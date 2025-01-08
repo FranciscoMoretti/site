@@ -1,8 +1,8 @@
 'use client'
 
-import { Comments as CommentsComponent } from 'pliny/comments'
 import { useState } from 'react'
 import siteMetadata from '@/data/siteMetadata'
+import { Giscus } from './Giscus'
 
 export default function Comments({ slug }: { slug: string }) {
   const [loadComments, setLoadComments] = useState(false)
@@ -12,8 +12,8 @@ export default function Comments({ slug }: { slug: string }) {
   }
   return (
     <>
-      {loadComments ? (
-        <CommentsComponent commentsConfig={siteMetadata.comments} slug={slug} />
+      {loadComments && siteMetadata.comments.provider === 'giscus' ? (
+        <Giscus {...siteMetadata.comments.giscusConfig} />
       ) : (
         <button onClick={() => setLoadComments(true)}>Load Comments</button>
       )}
