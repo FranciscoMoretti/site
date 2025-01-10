@@ -1,5 +1,5 @@
 {
-  "JavaScript": 6,
+  "JavaScript": 7,
   "Debugging": 2,
   "Code Tips": 34,
   "Best Practices": 8,
@@ -18,7 +18,8 @@
   "Analytics": 1,
   "Services": 2,
   "CLI": 1,
-  "Performance": 3,
+  "Performance": 4,
+  "Node.js": 1,
   "Database": 1,
   "Testing": 2,
   "API": 1,
