@@ -15,6 +15,7 @@ const siteMetadata = {
   siteUrl: process.env.NEXT_PUBLIC_APP_URL,
   siteRepo: 'https://github.com/franciscomoretti/site',
   siteLogo: `${process.env.BASE_PATH || ''}/static/logo.svg`,
+  siteLogoDark: `${process.env.BASE_PATH || ''}/static/logo-dark.svg`,
   keywords: ['Next.js', 'React', 'Tailwind CSS', 'TypeScript', 'JavaScript', 'AI'],
   socialBanner: `${process.env.BASE_PATH || ''}/static/images/opengraph-image.png`,
   // mastodon: 'https://mastodon.social/@mastodonuser',

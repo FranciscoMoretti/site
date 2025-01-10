@@ -30,12 +30,15 @@ export async function GET(req: Request) {
     const { mode } = values
     const paint = mode === 'dark' ? '#fff' : '#000'
 
+    const logo = mode === 'dark' ? siteMetadata.siteLogoDark : siteMetadata.siteLogo
+    const logoUrl = logo.startsWith('/') ? siteMetadata.siteUrl + logo : logo
+
     // Dynamic font size calculation
     const getFontSize = (length: number) => {
-      if (length < 40) return 'text-[90px]'
-      if (length < 80) return 'text-[70px]'
-      if (length < 120) return 'text-[50px]'
-      return 'text-[40px]'
+      if (length < 40) return 'text-[80px]'
+      if (length < 80) return 'text-[60px]'
+      if (length < 120) return 'text-[45px]'
+      return 'text-[35px]'
     }
 
     return new ImageResponse(
@@ -47,18 +50,9 @@ export async function GET(req: Request) {
             background: mode === 'dark' ? 'linear-gradient(90deg, #000 0%, #111 100%)' : 'white',
           }}
         >
-          {siteMetadata.siteLogo && (
+          {logoUrl && (
             // eslint-disable-next-line @next/next/no-img-element
-            <img
-              src={
-                siteMetadata.siteLogo.startsWith('/')
-                  ? siteMetadata.siteUrl + siteMetadata.siteLogo
-                  : siteMetadata.siteLogo
-              }
-              alt="Logo"
-              width={50}
-              height={50}
-            />
+            <img src={logoUrl} alt="Logo" width={50} height={50} />
           )}
           <div tw="flex flex-col flex-1 py-10">
             <div
