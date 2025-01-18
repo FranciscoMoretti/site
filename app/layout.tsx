@@ -11,6 +11,7 @@ import Footer from '@/components/Footer'
 import siteMetadata from '@/data/siteMetadata'
 import { Providers } from './providers'
 import { Metadata, Viewport } from 'next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const fontSans = Inter({
   subsets: ['latin'],
@@ -91,6 +92,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <main className="mb-auto">{children}</main>
             <Footer />
           </SectionContainer>
+          <SpeedInsights />
         </Providers>
       </body>
     </html>

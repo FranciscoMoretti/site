@@ -14,6 +14,7 @@ const config: MdCastConfigInput = {
     canonical_url_base: 'https://www.franciscomoretti.com/blog',
     link_url_base: 'https://www.franciscomoretti.com',
     image_url_base: 'https://www.franciscomoretti.com',
+    default_lang: 'typescript',
   },
   devto: {
     should_publish: true,
@@ -21,7 +22,7 @@ const config: MdCastConfigInput = {
   hashnode: {
     should_hide: false,
     // Get tags for hashnode by:
-    // 1. Search the tag slug. E.g. Shadcn UI -> shadcn-ui
+    // 1. Search in https://hashnode.com/ the tag slug. E.g. Shadcn UI -> shadcn-ui
     // 2. Run the query to get the ID https://gql.hashnode.com/?source=legacy-api-page
     // E.g. query {
     //   tag(slug: "shadcn-ui") {
@@ -54,6 +55,7 @@ const config: MdCastConfigInput = {
       CLI: { slug: 'cli', id: '56744723958ef13879b953a7' },
       Databases: { slug: 'databases', id: '56744722958ef13879b950eb' },
       'Shadcn UI': { slug: 'shadcn-ui', id: '648b5554f9b78f110ed2c1eb' },
+      'Node.js': { slug: 'nodejs', id: '56744722958ef13879b94ffb' },
     },
   },
   medium: {
@@ -85,6 +87,7 @@ const config: MdCastConfigInput = {
       'VS Code': { slug: 'vscode' },
       Windows: { slug: 'windows' },
       'Shadcn UI': { slug: 'shadcn-ui' },
+      'Node.js': { slug: 'nodejs' },
     },
   },
 }
