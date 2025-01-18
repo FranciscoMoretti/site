@@ -8,16 +8,16 @@ import type { Blog } from 'contentlayer/generated'
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
-import { PostViews } from '@/components/post-views'
+import { PostViews } from '@/components/post-views/post-views'
 
 interface PaginationProps {
   totalPages: number
   currentPage: number
 }
 interface ListLayoutProps {
-  posts: (CoreContent<Blog> & { viewCount?: number })[]
+  posts: CoreContent<Blog>[]
   title: string
-  initialDisplayPosts?: (CoreContent<Blog> & { viewCount?: number })[]
+  initialDisplayPosts?: CoreContent<Blog>[]
   pagination?: PaginationProps
 }
 
@@ -114,7 +114,7 @@ export default function ListLayout({
         <ul>
           {!filteredBlogPosts.length && 'No posts found.'}
           {displayPosts.map((post) => {
-            const { path, date, title, summary, tags, viewCount, slug } = post
+            const { path, date, title, summary, tags, slug } = post
             return (
               <li key={path} className="py-4">
                 <article className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
@@ -125,14 +125,12 @@ export default function ListLayout({
                         {formatDate(date, siteMetadata.locale)}
                       </time>
                     </dd>
-                    {viewCount && (
-                      <div className="">
-                        <dt className="sr-only ">View count</dt>
-                        <dd className="flex flex-row items-center gap-1 text-sm font-medium text-muted-foreground">
-                          <PostViews slug={slug} prev={viewCount} />
-                        </dd>
-                      </div>
-                    )}
+                    <div className="">
+                      <dt className="sr-only ">View count</dt>
+                      <dd className="flex flex-row items-center gap-1 text-sm font-medium text-muted-foreground">
+                        <PostViews slug={slug} />
+                      </dd>
+                    </div>
                   </dl>
                   <div className="space-y-3 xl:col-span-3">
                     <div>

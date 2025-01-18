@@ -8,7 +8,7 @@ export async function upsertIncreasePostViews({ slug }: { slug: string }) {
   if (!db) {
     return null
   }
-  const result = await db.post.upsert({
+  await db.post.upsert({
     where: {
       slug: slug,
     },
@@ -22,39 +22,22 @@ export async function upsertIncreasePostViews({ slug }: { slug: string }) {
       },
     },
   })
-  revalidateTag('post-views')
-
-  const newRes = await getAllViews()
-  return result
 }
 
-export async function getPostViews({ slug }: { slug: string }) {
+export async function getAllViewsDb() {
   if (!db) {
     return null
   }
-  try {
-    const views = await getAllViews()
-    return views?.find((view) => view.slug === slug)?.views
-  } catch (error) {
-    console.error(error)
-    return null
-  }
-}
-
-export const getAllViews = unstable_cache(getAllViewsInternal, ['post-views'], {
-  tags: ['post-views'],
-})
-
-async function getAllViewsInternal() {
-  if (!db) {
-    return null
-  }
-  const postsViews = await db.post.findMany({
+  const views = await db.post.findMany({
     select: {
       slug: true,
       views: true,
     },
-    where: {},
   })
-  return postsViews
+  return views
 }
+
+export const getAllViewsCache = unstable_cache(getAllViewsDb, ['post-views'], {
+  tags: ['post-views'],
+  revalidate: 60 * 60 * 24, // 1 day
+})

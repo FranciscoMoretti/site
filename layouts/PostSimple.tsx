@@ -8,17 +8,17 @@ import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
 import siteMetadata from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
-import { PostViews } from '@/components/post-views'
+import { PostViews } from '@/components/post-views/post-views'
 
 interface LayoutProps {
-  content: CoreContent<Blog> & { viewCount?: number }
+  content: CoreContent<Blog>
   children: ReactNode
   next?: { path: string; title: string }
   prev?: { path: string; title: string }
 }
 
 export default function PostSimple({ content, next, prev, children }: LayoutProps) {
-  const { path, slug, date, title, viewCount } = content
+  const { path, slug, date, title } = content
 
   return (
     <SectionContainer>
@@ -34,14 +34,12 @@ export default function PostSimple({ content, next, prev, children }: LayoutProp
                     <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
                   </dd>
                 </div>
-                {viewCount && (
-                  <div className="">
-                    <dt className="sr-only ">View count</dt>
-                    <dd className="flex flex-row items-center gap-1 text-sm font-medium text-muted-foreground">
-                      <PostViews slug={slug} prev={viewCount} />
-                    </dd>
-                  </div>
-                )}
+                <div className="">
+                  <dt className="sr-only ">View count</dt>
+                  <dd className="flex flex-row items-center gap-1 text-sm font-medium text-muted-foreground">
+                    <PostViews slug={slug} />
+                  </dd>
+                </div>
               </dl>
               <div>
                 <PageTitle>{title}</PageTitle>

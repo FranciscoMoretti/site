@@ -2,7 +2,6 @@ import ListLayout from '@/layouts/ListLayoutWithTags'
 import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer'
 import { allBlogs } from 'contentlayer/generated'
 import { genPageMetadata } from 'app/seo'
-import { getAllViews } from '../actions'
 import { getOgImageUrl } from '@/lib/getOgImageUrl'
 
 const POSTS_PER_PAGE = 5
@@ -18,12 +17,6 @@ export const metadata = genPageMetadata({
 
 export default async function BlogPage() {
   const posts = allCoreContent(sortPosts(allBlogs.filter((blog) => blog.draft !== true)))
-  const views = await getAllViews()
-  const viewsBySlug =
-    views?.reduce((acc, view) => {
-      acc[view.slug] = view.views
-      return acc
-    }, {}) || {}
 
   const pageNumber = 1
   const initialDisplayPosts = posts.slice(
@@ -37,11 +30,8 @@ export default async function BlogPage() {
 
   return (
     <ListLayout
-      posts={posts.map((post) => ({ ...post, viewCount: viewsBySlug[post.slug] }))}
-      initialDisplayPosts={initialDisplayPosts.map((post) => ({
-        ...post,
-        viewCount: viewsBySlug[post.slug],
-      }))}
+      posts={posts}
+      initialDisplayPosts={initialDisplayPosts}
       pagination={pagination}
       title="All Posts"
     />

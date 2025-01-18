@@ -5,15 +5,15 @@ import { formatDate } from 'pliny/utils/formatDate'
 import NewsletterForm from 'pliny/ui/NewsletterForm'
 import { CoreContent } from 'pliny/utils/contentlayer'
 import { Blog } from 'contentlayer/generated'
-import { PostViews } from '@/components/post-views'
+import { PostViews } from '@/components/post-views/post-views'
+
+export const experimental_ppr = true
 
 export function Home({
   posts,
   hasMorePosts,
 }: {
-  posts: (CoreContent<Pick<Blog, 'slug' | 'date' | 'title' | 'summary' | 'tags'>> & {
-    viewCount?: number
-  })[]
+  posts: CoreContent<Pick<Blog, 'slug' | 'date' | 'title' | 'summary' | 'tags'>>[]
   hasMorePosts: boolean
 }) {
   return (
@@ -32,7 +32,7 @@ export function Home({
           <ul className="divide-y divide-border">
             {!posts.length && 'No posts found.'}
             {posts.map((post) => {
-              const { slug, date, title, summary, tags, viewCount } = post
+              const { slug, date, title, summary, tags } = post
               return (
                 <li key={slug} className="py-12">
                   <article>
@@ -44,14 +44,12 @@ export function Home({
                             <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
                           </dd>
                         </div>
-                        {viewCount && (
-                          <div className="">
-                            <dt className="sr-only ">View count</dt>
-                            <dd className="flex flex-row items-center gap-1 text-base font-medium text-muted-foreground">
-                              <PostViews slug={slug} prev={viewCount} />
-                            </dd>
-                          </div>
-                        )}
+                        <div className="">
+                          <dt className="sr-only ">View count</dt>
+                          <dd className="flex flex-row items-center gap-1 text-base font-medium text-muted-foreground">
+                            <PostViews slug={slug} />
+                          </dd>
+                        </div>
                       </dl>
 
                       <div className="space-y-5 xl:col-span-3">

@@ -7,7 +7,8 @@ import { TailwindIndicator } from '@/components/tailwind-indicator'
 import { ThemeProvider as NextThemesProvider } from 'next-themes'
 import { Suspense } from 'react'
 import { NavigationEvents } from '@/components/navigation-events'
-import { ReactQueryProvider } from './react-query-provider'
+import { QueryClient, QueryClientProvider, isServer } from '@tanstack/react-query'
+import { ReactQueryStreamedHydration } from '@tanstack/react-query-next-experimental'
 
 const PHProvider = dynamic(
   () => import('@/components/posthog-provider').then((mod) => mod.PHProvider),
@@ -16,29 +17,55 @@ const PHProvider = dynamic(
   }
 )
 
-export function Providers({ children }: { children: React.ReactNode }) {
-  return (
-    <NextThemesProvider
-      attribute="class"
-      defaultTheme={siteMetadata.theme}
-      enableSystem
-      disableTransitionOnChange
-    >
-      <ReactQueryProvider>
-        {/* Render children immediately */}
-        {children}
+// React Query SSR setup: https://tanstack.com/query/latest/docs/framework/react/guides/advanced-ssr
+function makeQueryClient() {
+  return new QueryClient({
+    defaultOptions: {
+      queries: {
+        staleTime: 60 * 1000, // 1 minute
+        refetchOnWindowFocus: false,
+      },
+    },
+  })
+}
 
-        {/* Defer analytics initialization */}
-        <Suspense fallback={null}>
-          {process.env.NEXT_PUBLIC_POSTHOG_KEY && (
-            <PHProvider>
-              <PostHogPostHogPageView />
-            </PHProvider>
-          )}
-          <NavigationEvents />
-        </Suspense>
-      </ReactQueryProvider>
-      <TailwindIndicator />
-    </NextThemesProvider>
+let browserQueryClient: QueryClient | undefined = undefined
+
+function getQueryClient() {
+  if (isServer) {
+    return makeQueryClient()
+  }
+  if (!browserQueryClient) browserQueryClient = makeQueryClient()
+  return browserQueryClient
+}
+
+export function Providers({ children }: { children: React.ReactNode }) {
+  const queryClient = getQueryClient()
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <ReactQueryStreamedHydration>
+        <NextThemesProvider
+          attribute="class"
+          defaultTheme={siteMetadata.theme}
+          enableSystem
+          disableTransitionOnChange
+        >
+          {/* Render children immediately */}
+          {children}
+
+          {/* Defer analytics initialization */}
+          <Suspense fallback={null}>
+            {process.env.NEXT_PUBLIC_POSTHOG_KEY && (
+              <PHProvider>
+                <PostHogPostHogPageView />
+              </PHProvider>
+            )}
+            <NavigationEvents />
+          </Suspense>
+          <TailwindIndicator />
+        </NextThemesProvider>
+      </ReactQueryStreamedHydration>
+    </QueryClientProvider>
   )
 }

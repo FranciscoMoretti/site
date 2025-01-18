@@ -21,7 +21,7 @@ export function NavigationEvents() {
         body: JSON.stringify({}),
       })
         .then((response) => {
-          queryClient.invalidateQueries({ queryKey: ['postViews', slug] })
+          queryClient.invalidateQueries({ queryKey: ['postViews'] })
           return response
         })
         .catch((error) => console.error(error))

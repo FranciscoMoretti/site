@@ -10,7 +10,7 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import { formatDate } from 'pliny/utils/formatDate'
-import { PostViews } from '@/components/post-views'
+import { PostViews } from '@/components/post-views/post-views'
 
 const editUrl = (path) => `${siteMetadata.siteRepo}/blob/main/data/${path}`
 const discussUrl = (path) =>
@@ -24,7 +24,7 @@ const postDateTemplate: Intl.DateTimeFormatOptions = {
 }
 
 interface LayoutProps {
-  content: CoreContent<Blog> & { viewCount?: number }
+  content: CoreContent<Blog>
   authorDetails: CoreContent<Authors>[]
   next?: { path: string; title: string }
   prev?: { path: string; title: string }
@@ -32,7 +32,7 @@ interface LayoutProps {
 }
 
 export default function PostLayout({ content, authorDetails, next, prev, children }: LayoutProps) {
-  const { filePath, path, slug, date, title, tags, viewCount } = content
+  const { path, slug, date, title, tags } = content
   const basePath = path.split('/')[0]
   return (
     <SectionContainer>
@@ -48,14 +48,12 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                     <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
                   </dd>
                 </div>
-                {viewCount && (
-                  <div className="">
-                    <dt className="sr-only ">View count</dt>
-                    <dd className="flex flex-row items-center gap-1 text-sm font-medium text-muted-foreground">
-                      <PostViews slug={slug} prev={viewCount} />
-                    </dd>
-                  </div>
-                )}
+                <div className="">
+                  <dt className="sr-only ">View count</dt>
+                  <dd className="flex flex-row items-center gap-1 text-sm font-medium text-muted-foreground">
+                    <PostViews slug={slug} />
+                  </dd>
+                </div>
               </dl>
               <div>
                 <PageTitle>{title}</PageTitle>

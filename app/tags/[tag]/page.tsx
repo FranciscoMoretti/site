@@ -7,7 +7,6 @@ import tagData from 'app/tag-data.json'
 import { genPageMetadata } from 'app/seo'
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { getAllViews } from '@/app/actions'
 import { getOgImageUrl } from '@/lib/getOgImageUrl'
 
 export async function generateMetadata(props: {
@@ -57,19 +56,9 @@ export default async function TagPage(props: { params: Promise<{ tag: string }> 
         .filter((post) => post.tags && post.tags.map((t) => slug(t)).includes(tag))
     )
   )
-  const views = await getAllViews()
-  const viewsBySlug =
-    views?.reduce((acc, view) => {
-      acc[view.slug] = view.views
-      return acc
-    }, {}) || {}
+
   if (filteredPosts.length === 0) {
     return notFound()
   }
-  return (
-    <ListLayout
-      posts={filteredPosts.map((post) => ({ ...post, viewCount: viewsBySlug[post.slug] }))}
-      title={title}
-    />
-  )
+  return <ListLayout posts={filteredPosts} title={title} />
 }

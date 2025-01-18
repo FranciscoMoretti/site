@@ -9,16 +9,16 @@ import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import tagData from 'app/tag-data.json'
-import { PostViews } from '@/components/post-views'
+import { PostViews } from '@/components/post-views/post-views'
 
 interface PaginationProps {
   totalPages: number
   currentPage: number
 }
 interface ListLayoutProps {
-  posts: (CoreContent<Blog> & { viewCount?: number })[]
+  posts: CoreContent<Blog>[]
   title: string
-  initialDisplayPosts?: (CoreContent<Blog> & { viewCount?: number })[]
+  initialDisplayPosts?: CoreContent<Blog>[]
   pagination?: PaginationProps
 }
 
@@ -122,7 +122,7 @@ export default function ListLayoutWithTags({
           <div>
             <ul>
               {displayPosts.map((post) => {
-                const { path, date, title, summary, tags, viewCount, slug } = post
+                const { path, date, title, summary, tags, slug } = post
                 return (
                   <li key={path} className="py-5">
                     <article className="flex flex-col space-y-2">
@@ -133,14 +133,12 @@ export default function ListLayoutWithTags({
                             {formatDate(date, siteMetadata.locale)}
                           </time>
                         </dd>
-                        {viewCount && (
-                          <div className="">
-                            <dt className="sr-only ">View count</dt>
-                            <dd className="flex flex-row items-center gap-1 text-sm font-medium text-muted-foreground">
-                              <PostViews slug={slug} prev={viewCount} />
-                            </dd>
-                          </div>
-                        )}
+                        <div className="">
+                          <dt className="sr-only ">View count</dt>
+                          <dd className="flex flex-row items-center gap-1 text-sm font-medium text-muted-foreground">
+                            <PostViews slug={slug} />
+                          </dd>
+                        </div>
                       </dl>
                       <div className="space-y-3">
                         <div>
