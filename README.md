@@ -41,6 +41,10 @@ Currently acting as my personal blog.
 - ✅ Server side code syntax highlight with **Rehype Pretty Code**
 - ✅ Preconfigured security headers
 
+- ✅ Perfect Lighthouse Scores (Mobile and Desktop)
+
+![Lighthouse Scroes](lighthouse_scores.png)
+
 ## Inspiration
 
 - [Tailwind Nextjs Starter Blog](https://github.com/timlrx/tailwind-nextjs-starter-blog)
@@ -55,14 +59,14 @@ npx degit 'FranciscoMoretti/site'
 ```
 
 2. Personalize `siteMetadata.js` (site related information)
-3. Modify the content security policy in `next.config.js` if you want to use
-   other analytics provider or a commenting solution other than giscus.
-4. Personalize `authors/default.md` (main author)
-5. Modify `projectsData.ts`
-6. Modify `headerNavLinks.ts` to customize navigation links
-7. Add blog posts
-8. Create the `.env` file `cp .env.example .env` and set the environment variables
-9. Deploy on Vercel
+<!-- 3. Modify the content security policy in `next.config.js` if you want to use
+   other analytics provider or a commenting solution other than **giscus**. -->
+3. Personalize `authors/default.md` (main author)
+4. Modify `projectsData.ts`
+5. Modify `headerNavLinks.ts` to customize navigation links
+6. Add blog posts
+7. Create the `.env` file `cp .env.example .env` and set the environment variables
+8. Deploy on Vercel
 
 ## Installation
 
@@ -96,7 +100,7 @@ bun dev
 
 `app/manifest.webmanifest` - store assets such as images ([Next.js Docs](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/manifest))
 
-`app/favicon.ico`, `app/icon.png`, and `app/apple-icon.png`, `app/android-chrome-192x192.png`, `app/android-chrome-512x512.png` - replace with your own favicon, and icon files ([Next.js Docs](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/app-icons))
+`app/favicon.ico`, `app/icon.svg`, and `app/apple-icon.png`, `app/android-chrome-192x192.png`, `app/android-chrome-512x512.png` - replace with your own favicon, and icon files ([Next.js Docs](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/app-icons)). Icons can be generated using [RealFaviconGenerator](https://realfavicongenerator.net/)
 
 `tailwind.config.js` and `css/tailwind.css` - tailwind configuration and stylesheet which can be modified to change the overall look and feel of the site.
 
