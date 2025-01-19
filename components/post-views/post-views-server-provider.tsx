@@ -5,6 +5,10 @@ import { getAllViewsCache, getAllViewsDb } from '@/app/actions'
 
 // Component for dynamic SSR
 export async function PostViewsProvider({ children }: { children: React.ReactNode }) {
+  if (!process.env.TURSO_DATABASE_URL) {
+    return <>{children}</>
+  }
+
   const queryClient = new QueryClient()
   await queryClient.prefetchQuery({
     queryKey: ['postViews'],
