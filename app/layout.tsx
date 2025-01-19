@@ -12,6 +12,7 @@ import siteMetadata from '@/data/siteMetadata'
 import { Providers } from './providers'
 import { Metadata, Viewport } from 'next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import { PostViewsProvider } from '@/components/post-views/post-views-server-provider'
 
 const fontSans = Inter({
   subsets: ['latin'],
@@ -87,12 +88,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         suppressHydrationWarning
       >
         <Providers>
-          <SectionContainer>
-            <Header />
-            <main className="mb-auto">{children}</main>
-            <Footer />
-          </SectionContainer>
-          <SpeedInsights />
+          <PostViewsProvider>
+            <SectionContainer>
+              <Header />
+              <main className="mb-auto">{children}</main>
+              <Footer />
+            </SectionContainer>
+            <SpeedInsights />
+          </PostViewsProvider>
         </Providers>
       </body>
     </html>

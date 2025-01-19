@@ -9,6 +9,8 @@ import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getOgImageUrl } from '@/lib/getOgImageUrl'
 
+export const experimental_ppr = true
+
 export async function generateMetadata(props: {
   params: Promise<{ tag: string }>
 }): Promise<Metadata> {

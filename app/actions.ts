@@ -1,6 +1,6 @@
 'use server'
 
-import { revalidateTag, unstable_cache } from 'next/cache'
+import { revalidateTag, unstable_cache, unstable_noStore } from 'next/cache'
 
 import { db } from '@/lib/db'
 
@@ -25,6 +25,8 @@ export async function upsertIncreasePostViews({ slug }: { slug: string }) {
 }
 
 export async function getAllViewsDb() {
+  unstable_noStore()
+
   if (!db) {
     return null
   }

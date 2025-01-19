@@ -6,6 +6,8 @@ import { getOgImageUrl } from '@/lib/getOgImageUrl'
 
 const POSTS_PER_PAGE = 5
 
+export const experimental_ppr = true
+
 export const generateStaticParams = async () => {
   const totalPages = Math.ceil(
     allBlogs.filter((blog) => blog.draft !== true).length / POSTS_PER_PAGE
