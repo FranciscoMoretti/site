@@ -6,7 +6,7 @@ import { getOgImageUrl } from '@/lib/getOgImageUrl'
 
 const POSTS_PER_PAGE = 5
 
-export const experimental_ppr = true
+export const dynamic = 'force-static'
 
 export const metadata = genPageMetadata({
   title: 'Blog',

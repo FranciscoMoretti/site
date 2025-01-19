@@ -5,6 +5,7 @@ import { revalidateTag, unstable_cache, unstable_noStore } from 'next/cache'
 import { db } from '@/lib/db'
 
 export async function upsertIncreasePostViews({ slug }: { slug: string }) {
+  unstable_noStore()
   if (!db) {
     return null
   }
@@ -26,7 +27,6 @@ export async function upsertIncreasePostViews({ slug }: { slug: string }) {
 
 export async function getAllViewsDb() {
   unstable_noStore()
-
   if (!db) {
     return null
   }

@@ -7,8 +7,6 @@ import { CoreContent } from 'pliny/utils/contentlayer'
 import { Blog } from 'contentlayer/generated'
 import { PostViews } from '@/components/post-views/post-views'
 
-export const experimental_ppr = true
-
 export function Home({
   posts,
   hasMorePosts,

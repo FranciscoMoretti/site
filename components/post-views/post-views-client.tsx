@@ -1,6 +1,6 @@
 'use client'
 
-import { getAllViewsDb } from '@/app/actions'
+import { getAllViewsCache, getAllViewsDb } from '@/app/actions'
 import { useQuery } from '@tanstack/react-query'
 
 // Update CSR views if changed by the client
@@ -14,5 +14,9 @@ export function PostViewsClient({ slug }: { slug: string }) {
 
   // Update views in the database
   const views = data?.find((view) => view.slug === slug)?.views || 0
-  return <span title="views">{views} views</span>
+  return (
+    <span title="views" className="animate-in fade-in duration-1000">
+      {views} views
+    </span>
+  )
 }
