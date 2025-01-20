@@ -24,7 +24,7 @@ For 401 jobs, that's hours of pure mechanical work!
 
 ## The Solution: Automation Pipeline
 
-I built a three-step automation pipeline that cut the process down to 30 minutes:
+I built a three-step automation pipeline that cut the process down to 10 minutes:
 
 1. Scrape job data using Python
 2. Filter in bulk using spreadsheets
@@ -34,9 +34,9 @@ I built a three-step automation pipeline that cut the process down to 30 minutes
 
 I used [JobSpy](https://github.com/Bunsly/JobSpy) as the base and built [JobsParser](https://github.com/FranciscoMoretti/jobsparser) to handle:
 
+- CLI
 - Rate limiting (to avoid LinkedIn blocks)
 - Retry logic for failed requests
-- CLI niceness
 
 Here's how to run it:
 
@@ -54,7 +54,7 @@ jobsparser \
     --job-type fulltime
 ```
 
-The output is a CSV with rich data:
+The output is a `CSV` with rich data:
 
 - Job title and company
 - Full description
@@ -94,7 +94,7 @@ For my partner who is looking for her first role, I filtered:
 
 _More complex filters can be created to check for multiple technologies._
 
-This cut 401 jobs down to 8 high-potential matches in seconds.
+This cut 401 jobs down to 8 matches!
 
 ### Step 3: Smart Review
 

@@ -56,6 +56,7 @@ const config: MdCastConfigInput = {
       Databases: { slug: 'databases', id: '56744722958ef13879b950eb' },
       'Shadcn UI': { slug: 'shadcn-ui', id: '648b5554f9b78f110ed2c1eb' },
       'Node.js': { slug: 'nodejs', id: '56744722958ef13879b94ffb' },
+      Python: { slug: 'python', id: '56744721958ef13879b94d67' },
     },
   },
   medium: {
@@ -88,6 +89,7 @@ const config: MdCastConfigInput = {
       Windows: { slug: 'windows' },
       'Shadcn UI': { slug: 'shadcn-ui' },
       'Node.js': { slug: 'nodejs' },
+      Python: { slug: 'python' },
     },
   },
 }
