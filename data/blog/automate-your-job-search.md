@@ -2,11 +2,11 @@
 title: 'Automate Your Job Search: Scraping 400+ LinkedIn Jobs with Python'
 date: '2025-01-20'
 tags: ['Automation', 'Python', 'Tools']
+layout: PostBanner
 draft: false
 summary: 'Learn how to automate job searching using Python: scrape hundreds of jobs, filter efficiently, and find the perfect role faster.'
+images: ['/assets/automate-your-job-search/cover_image.jpg']
 ---
-
-# Automate Your Job Search: Scraping 400+ LinkedIn Jobs with Python
 
 The average job seeker spends [11 hours per week searching for jobs](https://www.linkedin.com/pulse/how-many-hours-per-week-should-one-dedicate-job-search-bob-mcintosh/), according to LinkedIn. For tech roles, it's even worse, you're dealing with hundreds of postings across multiple platforms. When my partner started her job search, she was spending hours daily just scrolling through LinkedIn. There had to be a better way.
 
@@ -64,7 +64,7 @@ The output is a CSV with rich data:
 
 ![JobsParser CLI](/assets/automate-your-job-search/jobsparser_cli.png)
 
-Note: JobSpy and JobsParser are also compatible with other job boards like LinkedIn, Indeed, Glassdoor, Google & ZipRecruiter.
+_JobSpy and JobsParser are also compatible with other job boards like LinkedIn, Indeed, Glassdoor, Google & ZipRecruiter._
 
 ### Step 2: Bulk Filtering
 
@@ -92,7 +92,7 @@ For my partner who is looking for her first role, I filtered:
 
 ![Description Filter](/assets/automate-your-job-search/description_filter.gif)
 
-Note: More complex filters can be created to check for multiple technologies.
+_More complex filters can be created to check for multiple technologies._
 
 This cut 401 jobs down to 8 high-potential matches in seconds.
 
