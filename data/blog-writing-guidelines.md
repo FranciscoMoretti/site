@@ -15,6 +15,7 @@
 - Keep paragraphs short and focused
 - Use bullet points for lists
 - Include tables for comparisons when relevant
+- Use simple, direct language
 
 ## Code Examples
 
