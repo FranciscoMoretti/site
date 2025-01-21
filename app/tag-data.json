@@ -1,6 +1,9 @@
 {
   "JavaScript": 7,
   "Debugging": 2,
+  "Automation": 1,
+  "Python": 1,
+  "Tools": 12,
   "Code Tips": 34,
   "Best Practices": 8,
   "Next.js": 19,
@@ -9,7 +12,6 @@
   "React": 11,
   "SEO": 1,
   "UI": 5,
-  "Tools": 11,
   "TailwindCSS": 8,
   "HTML": 2,
   "Git": 1,

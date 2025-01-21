@@ -30,6 +30,7 @@ const config: MdCastConfigInput = {
     //   }
     // }
     tags_dictionary: {
+      Automation: { slug: 'automation', id: '56744723958ef13879b9535d' },
       JavaScript: { slug: 'javascript', id: '56744721958ef13879b94cad' },
       TypeScript: { slug: 'typescript', id: '56744723958ef13879b954e0' },
       Ubuntu: { slug: 'ubuntu', id: '56744721958ef13879b94988' },
@@ -66,6 +67,7 @@ const config: MdCastConfigInput = {
     // When found, get it from the URL
     // E.g. https://medium.com/tag/shadcn-ui -> shadcn-ui
     tags_dictionary: {
+      Automation: { slug: 'automation' },
       Analytics: { slug: 'analytics' },
       API: { slug: 'api' },
       'Best Practices': { slug: 'best-practices' },

@@ -27,7 +27,7 @@ For 401 jobs, that's hours of pure mechanical work!
 I built a three-step automation pipeline that cut the process down to 10 minutes:
 
 1. Scrape job data using Python
-2. Filter in bulk using spreadsheets
+2. Filter in bulk using Google Sheets
 3. Review only the most promising matches
 
 ### Step 1: Smart Scraping
@@ -43,6 +43,8 @@ Here's how to run it:
 ```bash
 pip install jobsparser
 ```
+
+**Bonus:** search manually on LinkedIn to the number of results and use it as the `--results-wanted` parameter.
 
 ```bash
 jobsparser \
