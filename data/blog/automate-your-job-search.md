@@ -54,6 +54,18 @@ jobsparser \
     --job-type fulltime
 ```
 
+If `jobsparser` is not in your path, you can run it as a module directly:
+
+```bash
+python -m jobsparser \
+    --search-term "Frontend Developer" \
+    --location "London" \
+    --site linkedin \
+    --results-wanted 200 \
+    --distance 25 \
+    --job-type fulltime
+```
+
 The output is a `CSV` with rich data:
 
 - Job title and company
