@@ -44,7 +44,7 @@ Here's how to run it:
 pip install jobsparser
 ```
 
-**Bonus:** search manually on LinkedIn to the number of results and use it as the `--results-wanted` parameter.
+**Bonus:** search manually on LinkedIn the number of results for your search term and use it for the `--results-wanted` parameter.
 
 ```bash
 jobsparser \
