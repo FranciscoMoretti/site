@@ -68,7 +68,7 @@ python -m jobsparser \
     --job-type fulltime
 ```
 
-The output is a `CSV` with rich data:
+The output is a `CSV` with rich data in the `data` directory:
 
 - Job title and company
 - Full description
