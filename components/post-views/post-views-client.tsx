@@ -1,6 +1,6 @@
 'use client'
 
-import { getAllViewsCache, getAllViewsDb } from '@/app/actions'
+import { getAllViewsDb } from '@/app/actions'
 import { useQuery } from '@tanstack/react-query'
 
 // Update CSR views if changed by the client

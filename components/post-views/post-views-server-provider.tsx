@@ -1,7 +1,7 @@
 'use server'
 
 import { QueryClient, dehydrate, HydrationBoundary } from '@tanstack/react-query'
-import { getAllViewsCache, getAllViewsDb } from '@/app/actions'
+import { getAllViewsCache } from '@/app/actions'
 
 // Component for dynamic SSR
 export async function PostViewsProvider({ children }: { children: React.ReactNode }) {

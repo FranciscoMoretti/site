@@ -26,7 +26,7 @@ export async function upsertIncreasePostViews({ slug }: { slug: string }) {
 }
 
 export async function getAllViewsDb() {
-  unstable_noStore()
+  // unstable_noStore()
   if (!db) {
     return null
   }
@@ -41,5 +41,6 @@ export async function getAllViewsDb() {
 
 export const getAllViewsCache = unstable_cache(getAllViewsDb, ['post-views'], {
   tags: ['post-views'],
-  revalidate: 60 * 60 * 24, // 1 day
+  // revalidate: 60 * 60, // 1 hour
+  revalidate: 2 * 60, // 2 minutes
 })

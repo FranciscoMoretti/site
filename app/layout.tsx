@@ -75,6 +75,9 @@ export const viewport: Viewport = {
   ],
 }
 
+// export const revalidate = 3600 // 1 hour
+export const revalidate = 120 // 2 minutes
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
