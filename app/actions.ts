@@ -45,6 +45,5 @@ export async function getAllViewsDb() {
 
 export const getAllViewsCache = unstable_cache(getAllViewsDb, ['post-views'], {
   tags: ['post-views'],
-  // revalidate: 60 * 60, // 1 hour
-  revalidate: 2 * 60, // 2 minutes
+  revalidate: 60 * 60, // 1 hour
 })
