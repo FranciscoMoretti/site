@@ -1,6 +1,6 @@
 'use server'
 
-import { revalidateTag, unstable_cache, unstable_noStore } from 'next/cache'
+import { revalidatePath, revalidateTag, unstable_cache, unstable_noStore } from 'next/cache'
 
 import { db } from '@/lib/db'
 
@@ -9,7 +9,7 @@ export async function upsertIncreasePostViews({ slug }: { slug: string }) {
   if (!db) {
     return null
   }
-  await db.post.upsert({
+  const result = await db.post.upsert({
     where: {
       slug: slug,
     },
@@ -23,10 +23,14 @@ export async function upsertIncreasePostViews({ slug }: { slug: string }) {
       },
     },
   })
+  if (result.views % 10 === 0) {
+    revalidateTag('post-views')
+    revalidatePath('/', 'layout')
+  }
+  return result.views
 }
 
 export async function getAllViewsDb() {
-  // unstable_noStore()
   if (!db) {
     return null
   }

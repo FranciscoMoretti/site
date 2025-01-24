@@ -2,10 +2,11 @@
 
 import { QueryClient, dehydrate, HydrationBoundary } from '@tanstack/react-query'
 import { getAllViewsCache } from '@/app/actions'
+import siteMetadata from '@/data/siteMetadata'
 
 // Component for dynamic SSR
 export async function PostViewsProvider({ children }: { children: React.ReactNode }) {
-  if (!process.env.TURSO_DATABASE_URL) {
+  if (!siteMetadata.viewCounter) {
     return <>{children}</>
   }
 

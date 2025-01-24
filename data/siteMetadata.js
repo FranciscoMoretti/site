@@ -33,6 +33,7 @@ const siteMetadata = {
   locale: 'en-US',
   discussTwitter: false,
   stickyNav: false, // set to true if you want a navbar fixed to the top
+  viewCounter: true,
   // newsletter: {
   //   // supports mailchimp, buttondown, convertkit, klaviyo, revue, emailoctopus, beehive
   //   // Please add your .env file and modify it according to your selection
