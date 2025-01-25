@@ -141,7 +141,7 @@ export default function ListLayoutWithTags({
                         </div>
                       </dl>
                       <div className="space-y-3">
-                        <div>
+                        <div className="flex flex-col gap-0.5">
                           <h2 className="text-2xl font-bold leading-8 tracking-tight">
                             <Link href={`/${path}`} className="text-foreground">
                               {title}
