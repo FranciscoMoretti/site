@@ -1,21 +1,20 @@
 ---
-tags: ["Next.js"]
-
+tags: ['Next.js']
 
 draft: false
 
 layout: PostBanner
-title: Next.js Authentication Best Practices
+title: Next.js Authentication Best Practices (Outdated)
 summary: Explore key Next.js authentication best practices, including middleware vs. page component auth, preserving static rendering, and implementing multi-layered protection.
 date: 2024-06-26
-images: ["/thumbnails/nextjs_authentication_best_practices.png"]
-
+images: ['/thumbnails/nextjs_authentication_best_practices.png']
 ---
 
+> **IMPORTANT**: This article contains outdated advice. Next.js has significantly changed its authentication recommendations. Please refer to our [updated authentication guide](/blog/modern-nextjs-authentication-best-practices) for current best practices.
 
 ## What is Next.js Authentication?
 
-Next.js authentication is the process of verifying user identity in Next.js applications. It ensures that only authorized users can access protected routes and data. 
+Next.js authentication is the process of verifying user identity in Next.js applications. It ensures that only authorized users can access protected routes and data.
 
 Authentication in Next.js is crucial for:
 
@@ -42,19 +41,19 @@ Here's a simple example of middleware authentication:
 
 ```tsx
 import type { NextRequest } from 'next/server'
- 
+
 export function middleware(request: NextRequest) {
   const currentUser = request.cookies.get('currentUser')?.value
- 
+
   if (currentUser && !request.nextUrl.pathname.startsWith('/dashboard')) {
     return Response.redirect(new URL('/dashboard', request.url))
   }
- 
+
   if (!currentUser && !request.nextUrl.pathname.startsWith('/login')) {
     return Response.redirect(new URL('/login', request.url))
   }
 }
- 
+
 export const config = {
   matcher: ['/((?!api|_next/static|_next/image|.*\\.png$).*)'],
 }
@@ -70,26 +69,24 @@ Page component authentication has its own benefits:
 Here's an example of page component authentication:
 
 ```tsx
-import { redirect } from 'next/navigation';
-import { checkAuth } from '@/lib/auth';
+import { redirect } from 'next/navigation'
+import { checkAuth } from '@/lib/auth'
 
 export default async function ProtectedPage() {
-  const isAuthenticated = await checkAuth();
+  const isAuthenticated = await checkAuth()
   if (!isAuthenticated) {
-    redirect('/login');
+    redirect('/login')
   }
   return (
     <div>
       <h1>Protected Content</h1>
       {/* Page content here */}
     </div>
-  );
+  )
 }
-
 ```
 
 > 💡 Tip: Choose middleware for better performance and cleaner code structure, especially for apps with many protected routes.
-> 
 
 ## Avoiding Authentication in Layout Components
 
@@ -100,7 +97,7 @@ It's important to avoid implementing authentication checks in layout components.
 Static rendering is a key performance feature in Next.js. To preserve it:
 
 1. Use middleware for authentication when possible
-2. Don’t add authentication inside specific routes (pages). 
+2. Don't add authentication inside specific routes (pages).
 
 Adding authentication inside a page makes it dynamic. However, many times the extra security layer benefit outweighs the performance improvement.
 
@@ -124,14 +121,13 @@ Here's an example of applying the proximity principle:
 
 ```tsx
 async function fetchUserData(userId: string) {
-	const isAuthenticated = await checkAuth();
+  const isAuthenticated = await checkAuth()
   if (!isAuthenticated) {
-    throw new Error('Unauthorized');
+    throw new Error('Unauthorized')
   }
 
   // Fetch and return user data
 }
-
 ```
 
 ## Multi-layered Approach
@@ -151,17 +147,16 @@ export function middleware(request: NextRequest) {
 
 // Page component (second layer)
 export default function ProtectedPage() {
-  const { user } = useUser(); // Custom hook for user data
-  if (!user) return <LoadingOrRedirect />;
+  const { user } = useUser() // Custom hook for user data
+  if (!user) return <LoadingOrRedirect />
 
-  return <ProtectedContent user={user} />;
+  return <ProtectedContent user={user} />
 }
 
 // Data fetching (third layer)
 async function fetchSensitiveData() {
   // Check auth and permissions before fetching
 }
-
 ```
 
 ## Conclusion
