@@ -17,31 +17,32 @@ Currently acting as my personal blog.
 
 ## Features
 
-- ✅ Next.js `/app` dir
-- ✅ Blog-like layouts
-- ✅ SEO friendly with RSS feed, sitemaps and metadata.
-- ✅ Projects page
-- ✅ TOC (Table of contents)
-- ✅ Static Site Generation (SSG)
-- ✅ UI Components built using **Shadcn/ui**
-- ✅ **blog** pages using **MDX** and **Contentlayer**
-- ✅ Styled using **Tailwind CSS**
-- ✅ Written in **TypeScript**
-- ✅ Copy code button
-- ✅ Search with **cmd+k**
-- ✅ Mobile-friendly
-- ✅ Customizable tailwind theme
-- ✅ View count for each post using **Prisma** and **Turso**
-- ✅ Font optimization with [next/font](https://nextjs.org/docs/app/api-reference/components/font)
-- ✅ Light and dark theme
-- ✅ **Posthog** for analytics
-- ✅ Math display supported via [KaTeX](https://katex.org/)
-- ✅ Github alerts via [remark-github-blockquote-alert](https://github.com/jaywcjlove/remark-github-blockquote-alert)
-- ✅ Automatic image optimization via [next/image](https://nextjs.org/docs/basic-features/image-optimization)
-- ✅ Server side code syntax highlight with **Rehype Pretty Code**
-- ✅ Preconfigured security headers
+- ✨ Next.js `/app` dir
+- 📝 Blog-like layouts
+- 🔍 SEO friendly with RSS feed, sitemaps and metadata.
+- 🚀 Projects page
+- 📑 TOC (Table of contents)
+- ⚡ Static Site Generation (SSG)
+- 🎨 UI Components built using **Shadcn/ui**
+- 📚 **blog** pages using **MDX** and **Contentlayer**
+- 🎯 Styled using **Tailwind CSS**
+- 📘 Written in **TypeScript**
+- 📋 Copy code button
+- 🔎 Search with **cmd+k**
+- 📱 Mobile-friendly
+- 🎨 Customizable tailwind theme
+- 👁️ View count for each post using **Prisma** and **Turso**
+- 📝 Font optimization with [next/font](https://nextjs.org/docs/app/api-reference/components/font)
+- 🌓 Light and dark theme
+- 📊 **Posthog** for analytics
+- ➗ Math display supported via [KaTeX](https://katex.org/)
+- ⚠️ Github alerts via [remark-github-blockquote-alert](https://github.com/jaywcjlove/remark-github-blockquote-alert)
+- 🖼️ Automatic image optimization via [next/image](https://nextjs.org/docs/basic-features/image-optimization)
+- 💻 Server side code syntax highlight with **Rehype Pretty Code**
+- 🔒 Preconfigured security headers
+- 🏆 Perfect Lighthouse Scores (Mobile and Desktop)
 
-- ✅ Perfect Lighthouse Scores (Mobile and Desktop)
+## Lighthouse Scores
 
 ![Lighthouse Scroes](lighthouse_scores.png)
 
