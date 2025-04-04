@@ -5,11 +5,11 @@
   "Python": 1,
   "Tools": 12,
   "Code Tips": 34,
-  "Best Practices": 8,
+  "Best Practices": 9,
   "Next.js": 20,
   "TypeScript": 3,
   "VS Code": 12,
-  "React": 11,
+  "React": 12,
   "SEO": 1,
   "UI": 5,
   "TailwindCSS": 8,
@@ -20,11 +20,11 @@
   "Analytics": 1,
   "Services": 2,
   "CLI": 1,
-  "Security": 1,
   "Performance": 4,
   "Node.js": 1,
   "Database": 1,
-  "Testing": 2,
+  "Testing": 3,
   "API": 1,
-  "Shadcn UI": 1
+  "Shadcn UI": 1,
+  "Web Development": 1
 }
