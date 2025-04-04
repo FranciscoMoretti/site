@@ -5,7 +5,7 @@ tags: ['Testing', 'React', 'Best Practices']
 date: 2025-04-04
 summary: Learn which tests actually matter for React development. From static tests to end-to-end testing, we'll explore the Testing Trophy approach and why integration tests deserve the spotlight.
 slug: what-tests-to-write-for-web-development
-images: ['/thumbnails/what-tests-to-write-for-react.png']
+images: ['/thumbnails/what-tests-to-write-for-react.jpg']
 ---
 
 This article explores what tests you should be writing for your web applications. Inspired by Igor Luchenkov's insightful talk at React Advanced London and drawing on wisdom from industry experts, we'll look at how testing strategies have evolved from the classic Test Pyramid to the more nuanced Testing Trophy approach.
@@ -31,6 +31,13 @@ The trophy flips the script by placing **integration tests as the largest, most 
 The Testing Trophy consists of four distinct layers:
 
 ![Testing Trophy showing the four types of tests](/assets/testing_throphy.jpg)
+
+The types of tests are:
+
+- End-to-End (Full app)
+- Integration (Component interactions)
+- Unit (Logic in isolation)
+- Static (Typing, linting, etc.)
 
 ### Static (The Base)
 
