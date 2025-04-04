@@ -8,7 +8,11 @@ import { CopyButton } from './copy-button'
 import { cn } from './lib/utils'
 
 export const components: MDXComponents = {
-  Image,
+  Image: ({ ...rest }) => (
+    <div className="m-0 w-full rounded-xl bg-muted/80 p-2">
+      <Image className="m-0 w-full rounded-lg" {...rest} />
+    </div>
+  ),
   TOCInline,
   a: CustomLink,
   table: TableWrapper,
