@@ -57,7 +57,7 @@ type UiMessage = {
     | FileUIPart
     | StepStartUIPart
   > // A message consists of multiple parts. A discriminated union of parts types
-  annotations?: JSONValue[] // Optional supplementary information
+  annotations?: JSONValue[] // A discriminated union of annotation types
 }
 ```
 
