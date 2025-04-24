@@ -7,14 +7,14 @@ summary: Comparing UI decisions in Deep Research interfaces in Perplexity, Manus
 slug: comparing-deep-research-uis
 images:
   [
-    '/public/assets/ui-perplexity-1.png',
-    '/public/assets/ui-perplexity-2.png',
-    '/public/assets/ui-manus-1.png',
-    '/public/assets/ui-manus-2.png',
-    '/public/assets/ui-chatgpt-1.png',
-    '/public/assets/ui-chatgpt-2.png',
-    '/public/assets/ui-gemini-1.png',
-    '/public/assets/ui-gemini-2.png',
+    '/assets/ui-perplexity-1.png',
+    '/assets/ui-perplexity-2.png',
+    '/assets/ui-manus-1.png',
+    '/assets/ui-manus-2.png',
+    '/assets/ui-chatgpt-1.png',
+    '/assets/ui-chatgpt-2.png',
+    '/assets/ui-gemini-1.png',
+    '/assets/ui-gemini-2.png',
   ]
 ---
 
@@ -38,7 +38,7 @@ The complexity comes from balancing _information density_ with _usability_. Rese
 
 ## Perplexity UI breakdown
 
-![Perplexity UI - 1](/public/assets/ui-perplexity-1.png)
+![Perplexity UI - 1](/assets/ui-perplexity-1.png)
 
 **Perplexity** takes a streamlined approach to research presentation. Their interface emphasizes **readability** while maintaining the contextual richness needed for deep research tasks.
 
@@ -49,7 +49,7 @@ What stands out most about Perplexity is its treatment of **sources**. Sources a
 1. **Inline citations** within the text (numbered references)
 2. A **dedicated sources panel** at the bottom of each research response
 
-![Perplexity UI - 2](/public/assets/ui-perplexity-2.png)
+![Perplexity UI - 2](/assets/ui-perplexity-2.png)
 
 This dual approach gives sources high visual prominence while maintaining the flow of the main content. By implementing this in the Vercel AI SDK schema, we might use:
 
@@ -71,7 +71,7 @@ Perplexity also includes **suggested follow-up questions** at the end of respons
 
 ## Manus UI breakdown
 
-![Manus UI - 1](/public/assets/ui-manus-1.png)
+![Manus UI - 1](/assets/ui-manus-1.png)
 
 **Manus** takes a different approach to research interfaces by making the **research process** itself a central part of the user experience. Their interface splits attention between the research output and the research method.
 
@@ -79,7 +79,7 @@ Perplexity also includes **suggested follow-up questions** at the end of respons
 
 One notable feature is how Manus handles **planning**. The interface displays an explicit research plan but _doesn't pause for user confirmation or feedback_. This creates a smoother experience but removes user agency from the research process.
 
-![Manus UI - 2](/public/assets/ui-manus-2.png)
+![Manus UI - 2](/assets/ui-manus-2.png)
 
 Manus generates **multiple documents** during research, providing information about intermediate steps. While informative, this approach can reduce the visual importance of the primary document requested by the user. The final output becomes just one of several documents rather than the clear focal point.
 
@@ -104,7 +104,7 @@ Using the Vercel AI SDK schema, this approach might be implemented with:
 
 ## ChatGPT UI breakdown
 
-![ChatGPT UI - 1](/public/assets/ui-chatgpt-1.png)
+![ChatGPT UI - 1](/assets/ui-chatgpt-1.png)
 
 **ChatGPT** takes a more balanced approach to research interfaces, focusing on **user control** while maintaining a clean presentation. It starts with a plan as a TextPart feature requiring feedback with a normal conversation message providing familiarity, practicality and flexibility.
 
@@ -112,7 +112,7 @@ Before conducting research, ChatGPT typically presents a **research plan** as a 
 
 For **research steps**, ChatGPT initially displays them in an **expandable sheet** that updates in real time. This keeps the research process visible without dominating the interface. Once research completes, these steps collapse into a compact component within the conversation, creating a clean history that can be referenced if needed.
 
-![ChatGPT UI - 2](/public/assets/ui-chatgpt-2.png)
+![ChatGPT UI - 2](/assets/ui-chatgpt-2.png)
 
 The final report appears as a **ToolInvocation** piece of the regular answer with a card style. This works well for shorter reports but can become cluttered for longer, more complex responses. The lack of dedicated document viewing capabilities limits the reading experience for extended content.
 
@@ -135,7 +135,7 @@ Using the Vercel AI SDK schema, this approach might be implemented with:
 
 ## Gemini UI breakdown
 
-![Gemini UI - 1](/public/assets/ui-gemini-1.png)
+![Gemini UI - 1](/assets/ui-gemini-1.png)
 
 **Gemini** offers a distinct approach to research interfaces with a strong focus on the **final output** while still providing process transparency. The interface uses a **two-panel design** that separates the conversation from research details.
 
@@ -143,7 +143,7 @@ The planning approach in Gemini appears as a special UI element (a tool result) 
 
 Research progress updates appear in the secondary panel labeled as "**Thoughts**," providing insight into the ongoing process. This creates clear separation between the conversation and the research mechanics.
 
-![Gemini UI - 2](/public/assets/ui-gemini-2.png)
+![Gemini UI - 2](/assets/ui-gemini-2.png)
 
 When research completes, Gemini displays the document (report) in the secondary panel, with research steps positioned below the report content. This creates a **hierarchy** that emphasizes results over process. However, this arrangement requires significant scrolling to review the research steps, making them less accessible than in other interfaces.
 
