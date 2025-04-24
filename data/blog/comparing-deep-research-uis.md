@@ -18,9 +18,7 @@ images:
   ]
 ---
 
-# Comparing deep research chat app UIs
-
-Building chat applications often involves tackling complex user interfaces, especially for **"deep research"** tasks where information density is high. Components like **reports**, **research steps**, and **source citations** present unique UI challenges. This post examines how four AI chat tools (**Perplexity**, **Manus**, **ChatGPT**, and **Gemini**) approach these challenges. By examining their UI decisions and trade-offs, particularly through the lens of Vercel's AI SDK message schema, we can extract valuable lessons for designing effective research-focused chat interfaces.
+Building chat applications often involves tackling complex user interfaces, especially for **"deep research"** tasks where **information density is high**. Components like **reports**, **research steps**, **sources**, and **source citations** present unique UI challenges. This post examines how four AI chat tools (**Perplexity**, **Manus**, **ChatGPT**, and **Gemini**) approach these challenges. By examining their UI decisions and trade-offs, particularly through the lens of Vercel's AI SDK message schema, we can extract valuable lessons for designing effective research-focused chat interfaces.
 
 ## Vercel AI SDK UI message schema
 
@@ -32,6 +30,37 @@ A simplified version of the Vercel AI SDK UI message schema includes:
 - **Annotation** - Information related to a message that can be streamed before writing the response. These are useful for displaying intermediate research steps, thinking processes, or source gathering.
 - **UiMessagePart** - A part of a message such as text, code, image, etc. Complex research responses often combine multiple part types to create rich information displays.
 
+```typescript
+// Simplified relationship between UiMessage, Annotation, and UiMessagePart
+
+// UiMessagePart represents different parts of the message content
+type TextUIPart = {
+  type: 'text'
+  text: string
+}
+
+type ToolInvocationUIPart = {
+  type: 'tool-invocation'
+  toolInvocation: ToolInvocation // Tool invocation is a discriminated union of tool info (results and calls)
+}
+
+// UiMessage represents a complete message unit in the chat
+type UiMessage = {
+  id: string
+  role: 'user' | 'assistant'
+  createdAt: Date
+  parts: Array<
+    | TextUIPart
+    | ReasoningUIPart
+    | ToolInvocationUIPart
+    | SourceUIPart
+    | FileUIPart
+    | StepStartUIPart
+  > // A message consists of multiple parts. A discriminated union of parts types
+  annotations?: JSONValue[] // Optional supplementary information
+}
+```
+
 When implementing a research interface, developers can use these components to create various arrangements of information. Each research tool we examine makes different decisions about how to structure and present information using similar underlying components.
 
 The complexity comes from balancing _information density_ with _usability_. Research interfaces must present substantial information without overwhelming users. How each tool handles this balance forms a core part of our analysis.
@@ -40,9 +69,9 @@ The complexity comes from balancing _information density_ with _usability_. Rese
 
 ![Perplexity UI - 1](/assets/ui-perplexity-1.png)
 
-**Perplexity** takes a streamlined approach to research presentation. Their interface emphasizes **readability** while maintaining the contextual richness needed for deep research tasks.
+**Perplexity** takes a simple approach to research presentation. Their interface emphasizes **readability** while maintaining the contextual richness needed for deep research tasks.
 
-The main answer or "report" appears as a standard message in the chat, with no special formatting to distinguish it from other messages. This simplifies the UI but might make it harder for users to identify the final answer among intermediate research steps.
+The main answer or "report" appears as a standard message in the chat, with no special formatting to distinguish it from other messages. This simplifies the UI but might make it harder for users to identify the final answer among regular conversation messages.
 
 What stands out most about Perplexity is its treatment of **sources**. Sources appear in **two distinct places**:
 
@@ -67,7 +96,7 @@ This dual approach gives sources high visual prominence while maintaining the fl
 
 - Interface can become cluttered with many sources
 
-Perplexity also includes **suggested follow-up questions** at the end of responses. These can be implemented as UiMessageParts with interactive components. They serve both as navigation aids and as subtle guides toward productive use of the tool.
+Perplexity also includes **suggested follow-up questions** at the end of responses. They serve both as navigation aids and as subtle guides toward productive use of the tool.
 
 ## Manus UI breakdown
 
@@ -106,7 +135,7 @@ Using the Vercel AI SDK schema, this approach might be implemented with:
 
 ![ChatGPT UI - 1](/assets/ui-chatgpt-1.png)
 
-**ChatGPT** takes a more balanced approach to research interfaces, focusing on **user control** while maintaining a clean presentation. It starts with a plan as a TextPart feature requiring feedback with a normal conversation message providing familiarity, practicality and flexibility.
+**ChatGPT** takes a more balanced approach to research interfaces, focusing on **user control** while maintaining a clean presentation. It starts with a **plan as a `TextUIPart`** requiring feedback with a normal conversation message providing familiarity, practicality and flexibility.
 
 Before conducting research, ChatGPT typically presents a **research plan** as a regular text message part and _asks for user feedback_. This creates a pause point that gives users agency in the research process. They can approve, modify, or redirect the plan before execution begins.
 
@@ -145,7 +174,7 @@ Research progress updates appear in the secondary panel labeled as "**Thoughts**
 
 ![Gemini UI - 2](/assets/ui-gemini-2.png)
 
-When research completes, Gemini displays the document (report) in the secondary panel, with research steps positioned below the report content. This creates a **hierarchy** that emphasizes results over process. However, this arrangement requires significant scrolling to review the research steps, making them less accessible than in other interfaces.
+When research completes, Gemini displays the document (report) in the secondary panel, with research steps positioned below the report content. This creates a hierarchy that **emphasizes results over process**. However, this arrangement requires significant scrolling to review the research steps, making them less accessible than in other interfaces.
 
 Sources receive some visual emphasis in the Gemini UI but remain integrated within the report. This approach creates a cleaner appearance but may reduce source importance compared to interfaces like Perplexity that highlight attribution more explicitly.
 
