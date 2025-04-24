@@ -106,7 +106,7 @@ Perplexity also includes **suggested follow-up questions** at the end of respons
 
 "**Research Steps**" occupy a significant portion of the screen real estate, making the process transparent to users. Unlike interfaces that focus solely on the result, Manus treats the journey as equally important.
 
-One notable feature is how Manus handles **planning**. The interface displays an explicit research plan but _doesn't pause for user confirmation or feedback_. This creates a smoother experience but removes user agency from the research process.
+One notable feature is how Manus handles **planning**. The interface displays an explicit research plan but _doesn't pause for user confirmation or feedback_. However, it does ask clarifying questions when needed. This creates a smoother experience, when gotten right but depends a lot on quality of the decision making.
 
 ![Manus UI - 2](/assets/ui-manus-2.png)
 
