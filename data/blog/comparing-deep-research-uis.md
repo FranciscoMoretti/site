@@ -1,5 +1,5 @@
 ---
-title: AI Research UIs - Perplexity vs. Manus vs. ChatGPT vs. Gemini
+title: Deep Research UIs - Perplexity vs. Manus vs. ChatGPT vs. Gemini
 draft: false
 tags: ['AI', 'UI']
 date: 2025-04-24
