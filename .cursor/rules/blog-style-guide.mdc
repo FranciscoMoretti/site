@@ -1,3 +1,8 @@
+---
+description: 
+globs: data/blog/*.md
+alwaysApply: false
+---
 # Blog Writing Guidelines
 
 ## Content Structure
@@ -10,18 +15,18 @@
 
 ## Style Preferences
 
-- Write in a casual, friendly tone
+- Write in a casual, friendly tone.
 - Use emojis sparingly to enhance key points 🎯
 - Keep paragraphs short and focused
 - Use bullet points for lists
 - Include tables for comparisons when relevant
-- Use simple, direct language
+- Use simple, direct language where possible, but use precise technical terms when appropriate.
 
 ## Code Examples
 
 - Always specify the language after the opening backticks
 - Include meaningful comments
-- Show both "bad" and "good" examples when demonstrating practices
+- Show both "bad" and "good" examples when demonstrating best practices
 - Keep examples concise and focused
 - Use TypeScript when possible
 
@@ -29,13 +34,13 @@
 
 - Use frontmatter for metadata
 - Required frontmatter fields:
-  - title: <title of the blog post using 50 to 60 characters>
-  - tags: <A list of tags that use the ones from `/data/tag-data.json` (and can add new ones if needed)>
+  - title: title of the blog post using 50 to 60 characters
+  - tags: list of tags that use the ones from `/data/tag-data.json` (and can add new ones if needed)
   - draft: true
-  - date: <current date in the format YYYY-MM-DD>
-  - summary: <a meta description of the blog post using 110 to 160 characters>
+  - date: current date in the format YYYY-MM-DD
+  - summary: meta description of the blog post using 110 to 160 characters
 - Optional frontmatter fields:
-  - images: []
+  - images: list of images to be used in the blog post
 
 ## Technical Content
 
@@ -68,3 +73,11 @@
 - Link to related blog posts using relative paths
 - Include a "Related principles" section when relevant
 - Reference official documentation or trusted sources
+
+## Avoid these
+
+### Words
+- delve, dive, prominent
+
+### Characters
+- Do not use hyphens (`-`, `–`) or similar characters to connect or separate parts of sentences or independent clauses.

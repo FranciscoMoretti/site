@@ -51,5 +51,5 @@ yarn-error.log*
 .downloader
 
 # Cursor
-.cursor
 .env*.local
+

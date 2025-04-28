@@ -30,8 +30,8 @@ export default function PostBanner({ content, next, prev, children }: LayoutProp
           <div className="space-y-1 border-border pb-10 text-center">
             <div className="w-full">
               <Bleed>
-                <div className="relative aspect-[2/1] w-full">
-                  <Image src={displayImage} alt={title} fill className="object-cover" />
+                <div className="relative aspect-[2/1] w-full ">
+                  <Image src={displayImage} alt={title} fill className="rounded-lg object-cover" />
                 </div>
               </Bleed>
             </div>
