@@ -30,6 +30,13 @@ import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer.js'
 // import { trimWhitespace } from './utilities';
 import type { ShikiTransformer } from 'shiki'
 
+// Added imports for AST processing
+import { unified } from 'unified'
+import remarkParse from 'remark-parse'
+import remarkStringify from 'remark-stringify'
+import { visit } from 'unist-util-visit'
+import type { Root, Heading, Link, Image } from 'mdast'
+
 const root = process.cwd()
 const isProduction = process.env.NODE_ENV === 'production'
 
@@ -148,6 +155,50 @@ export const Blog = defineDocumentType(() => ({
   },
   computedFields: {
     ...computedFields,
+    markdownForCopy: {
+      type: 'string',
+      resolve: (doc) => {
+        // Transformer function that clones and modifies the tree
+        const transformPlugin = () => (tree: Root) => {
+          // Simple deep clone using JSON stringify/parse
+          const clonedTree = JSON.parse(JSON.stringify(tree)) as Root
+
+          // Prepend H1 Title to the *cloned* tree
+          const titleHeading: Heading = {
+            type: 'heading',
+            depth: 1,
+            children: [{ type: 'text', value: doc.title }],
+          }
+          clonedTree.children.unshift(titleHeading)
+
+          // Make links/images absolute in the *cloned* tree
+          // Visit all nodes and check type
+          visit(clonedTree, (node) => {
+            if (node.type === 'link' || node.type === 'image') {
+              // Type assertion is safe here due to the check
+              const typedNode = node as Link | Image
+              if (typedNode.url?.startsWith('/')) {
+                // Avoid modifying fragment-only links
+                if (typedNode.type === 'link' && typedNode.url.startsWith('/#')) {
+                  return
+                }
+                typedNode.url = `${siteMetadata.siteUrl}${typedNode.url}`
+              }
+            }
+          })
+          // Return the modified clone
+          return clonedTree
+        }
+
+        const processor = unified()
+          .use(remarkParse)
+          .use(transformPlugin) // Apply the cloning and modifying transformer
+          .use(remarkStringify)
+
+        // Process the original raw content, the transformPlugin ensures modifications happen on a clone
+        return processor.processSync(doc.body.raw).toString()
+      },
+    },
     structuredData: {
       type: 'json',
       resolve: (doc) => ({

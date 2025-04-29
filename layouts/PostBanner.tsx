@@ -9,6 +9,7 @@ import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
 import siteMetadata from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
+import { HeaderInfoRow } from '@/components/HeaderInfoRow'
 
 interface LayoutProps {
   content: CoreContent<Blog>
@@ -18,7 +19,7 @@ interface LayoutProps {
 }
 
 export default function PostBanner({ content, next, prev, children }: LayoutProps) {
-  const { slug, title, images } = content
+  const { slug, title, images, date, markdownForCopy } = content
   const displayImage =
     images && images.length > 0 ? images[0] : 'https://picsum.photos/seed/picsum/800/400'
 
@@ -36,6 +37,9 @@ export default function PostBanner({ content, next, prev, children }: LayoutProp
               </Bleed>
             </div>
             <div className="relative pt-10">
+              <div className="py-4">
+                <HeaderInfoRow date={date} slug={slug} markdownForCopy={markdownForCopy} />
+              </div>
               <PageTitle>{title}</PageTitle>
             </div>
           </div>

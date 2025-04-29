@@ -1,3 +1,5 @@
+'use client'
+
 import { ReactNode } from 'react'
 import { CoreContent } from 'pliny/utils/contentlayer'
 import type { Blog, Authors } from 'contentlayer/generated'
@@ -9,8 +11,7 @@ import Image from '@/components/Image'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
-import { formatDate } from 'pliny/utils/formatDate'
-import { PostViews } from '@/components/post-views/post-views'
+import { HeaderInfoRow } from '@/components/HeaderInfoRow'
 
 const editUrl = (path) => `${siteMetadata.siteRepo}/blob/main/data/${path}`
 const discussUrl = (path) =>
@@ -24,7 +25,7 @@ const postDateTemplate: Intl.DateTimeFormatOptions = {
 }
 
 interface LayoutProps {
-  content: CoreContent<Blog>
+  content: Blog
   authorDetails: CoreContent<Authors>[]
   next?: { path: string; title: string }
   prev?: { path: string; title: string }
@@ -32,29 +33,17 @@ interface LayoutProps {
 }
 
 export default function PostLayout({ content, authorDetails, next, prev, children }: LayoutProps) {
-  const { path, slug, date, title, tags } = content
+  const { path, slug, date, title, tags, markdownForCopy } = content
   const basePath = path.split('/')[0]
+
   return (
     <SectionContainer>
       <ScrollTopAndComment />
       <article>
         <div className="xl:divide-y xl:divide-border">
           <header className="pt-6 xl:pb-6">
-            <div className="space-y-1 text-center">
-              <dl className="mb-1 flex flex-row items-center justify-start gap-4 font-mono">
-                <div className="">
-                  <dt className="sr-only">Published on</dt>
-                  <dd className="text-sm font-medium text-muted-foreground">
-                    <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
-                  </dd>
-                </div>
-                <div className="">
-                  <dt className="sr-only ">View count</dt>
-                  <dd className="flex flex-row items-center gap-1 text-sm font-medium text-muted-foreground">
-                    <PostViews slug={slug} />
-                  </dd>
-                </div>
-              </dl>
+            <div className="space-y-1 ">
+              <HeaderInfoRow date={date} slug={slug} markdownForCopy={markdownForCopy} />
               <div>
                 <PageTitle>{title}</PageTitle>
               </div>
