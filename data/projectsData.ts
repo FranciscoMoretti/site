@@ -7,6 +7,14 @@ interface Project {
 
 const projectsData: Project[] = [
   {
+    title: 'Sparka AI',
+    description: `AI for everyone, from everyone - Access Claude, ChatGPT, Gemini, Grok, and every major AI assistant`,
+    imgSrc:
+      'https://raw.githubusercontent.com/FranciscoMoretti/sparka/refs/heads/main/app/opengraph-image.png',
+    href: 'https://sparka.ai',
+  },
+
+  {
     title: 'Carousel Generator',
     description: `An open source AI carousel maker for LinkedIn.`,
     imgSrc:
