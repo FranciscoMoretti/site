@@ -28,6 +28,6 @@ const projectsData: Project[] = [
       'https://raw.githubusercontent.com/FranciscoMoretti/notion-downloader/refs/heads/main/apps/www/app/opengraph-image.png',
     href: 'https://github.com/FranciscoMoretti/notion-downloader',
   },
-]
+] as const
 
 export default projectsData

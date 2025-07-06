@@ -1,5 +1,5 @@
 import projectsData from '@/data/projectsData'
-import Card from '@/components/Card'
+import { Card } from '@/components/Card'
 import { genPageMetadata } from 'app/seo'
 import { getOgImageUrl } from '@/lib/getOgImageUrl'
 
@@ -25,10 +25,10 @@ export default function Projects() {
           </p> */}
         </div>
         <div className="container py-12">
-          <div className="-m-4 flex flex-wrap">
+          <div className="-m-4 flex flex-wrap justify-center">
             {projectsData.map((d) => (
               <Card
-                key={d.title}
+                key={d.imgSrc}
                 title={d.title}
                 description={d.description}
                 imgSrc={d.imgSrc}
