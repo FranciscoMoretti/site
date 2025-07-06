@@ -21,13 +21,13 @@ const projectsData: Project[] = [
       'https://raw.githubusercontent.com/FranciscoMoretti/carousel-generator/refs/heads/main/src/app/opengraph-image.png',
     href: 'https://www.google.com',
   },
-  {
-    title: 'Notion Downloader',
-    description: `Easily download your Notion pages and databases to Markdown, images, and more. Keep your content in sync with automatic updates.`,
-    imgSrc:
-      'https://raw.githubusercontent.com/FranciscoMoretti/notion-downloader/refs/heads/main/apps/www/app/opengraph-image.png',
-    href: 'https://github.com/FranciscoMoretti/notion-downloader',
-  },
+  // {
+  //   title: 'Notion Downloader',
+  //   description: `Easily download your Notion pages and databases to Markdown, images, and more. Keep your content in sync with automatic updates.`,
+  //   imgSrc:
+  //     'https://raw.githubusercontent.com/FranciscoMoretti/notion-downloader/refs/heads/main/apps/www/app/opengraph-image.png',
+  //   href: 'https://github.com/FranciscoMoretti/notion-downloader',
+  // },
 ] as const
 
 export default projectsData
