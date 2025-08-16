@@ -20,7 +20,7 @@ export const components: MDXComponents = {
     ...props
   }: React.HTMLAttributes<HTMLPreElement> & { __rawcode__?: string; __withmeta__?: string }) => {
     return (
-      <div className="relative">
+      <div className="relative max-w-[calc(100vw-6rem)] sm:max-w-[calc(100vw-8rem)] md:max-w-none">
         <pre
           className={cn(
             'relative my-2 max-h-[650px] overflow-x-auto rounded-lg bg-[#262626] p-0',
