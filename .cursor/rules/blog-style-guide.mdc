@@ -16,7 +16,6 @@ alwaysApply: false
 ## Style Preferences
 
 - Write in a casual, friendly tone.
-- Use emojis sparingly to enhance key points 🎯
 - Keep paragraphs short and focused
 - Use bullet points for lists
 - Include tables for comparisons when relevant
@@ -24,23 +23,10 @@ alwaysApply: false
 
 ## Code Examples
 
-- Always specify the language after the opening backticks
+- Always specify the language after the opening backticks. E.g. '```tsx ... ```
 - Include meaningful comments
-- Show both "bad" and "good" examples when demonstrating best practices
 - Keep examples concise and focused
-- Use TypeScript when possible
-
-## Formatting
-
-- Use frontmatter for metadata
-- Required frontmatter fields:
-  - title: title of the blog post using 50 to 60 characters
-  - tags: list of tags that use the ones from `/data/tag-data.json` (and can add new ones if needed)
-  - draft: true
-  - date: current date in the format YYYY-MM-DD
-  - summary: meta description of the blog post using 110 to 160 characters
-- Optional frontmatter fields:
-  - images: list of images to be used in the blog post
+- Default language is TypeScript
 
 ## Technical Content
 
@@ -74,10 +60,24 @@ alwaysApply: false
 - Include a "Related principles" section when relevant
 - Reference official documentation or trusted sources
 
-## Avoid these
+## Blog Post Format
+- Filepath is `data/bloc/<slug>.md`
+- Use frontmatter for metadata
+### Frontmatter format
 
-### Words
-- delve, dive, prominent
+```md
+---
+title: {Article Title, 50 characters max}
+draft: false
+tags: {Tags selected from `/app/tag-data.json`}
+date: {Current date in YYYY-MM-DD format}
+layout: PostBanner
+summary: {Article Summary, 130 characters max}
+slug: {article slug}
+images: []
+---
 
-### Characters
-- Do not use hyphens (`-`, `–`) or similar characters to connect or separate parts of sentences or independent clauses.
+{File content without including the main h1 title `# title`}
+
+```
+
