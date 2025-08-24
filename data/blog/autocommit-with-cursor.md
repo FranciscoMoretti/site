@@ -1,6 +1,6 @@
 ---
 title: Autocommit with Cursor
-draft: false
+draft: true
 tags: ['cursor', 'git', 'productivity', 'automation']
 date: 2025-05-23
 layout: PostBanner
@@ -66,7 +66,7 @@ No clicking. No typing. No thinking about commit messages.
 
 ## Demo
 
-<!-- TODO: Insert demo video here -->
+TODO: Insert demo video here
 
 ## Setup in 2 minutes
 

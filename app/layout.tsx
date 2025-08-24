@@ -85,7 +85,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       suppressHydrationWarning
     >
       <body
-        className="min-h-screen bg-background pl-[calc(100vw-100%)] text-foreground antialiased"
+        className="flex min-h-screen flex-col bg-background pl-[calc(100vw-100%)] text-foreground antialiased"
         //  Hydration warning Needed for https://github.com/pacocoursey/next-themes
         suppressHydrationWarning
       >
@@ -93,7 +93,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <PostViewsProvider>
             <SectionContainer>
               <Header />
-              <main className="mb-auto">{children}</main>
+              <main className="mb-auto flex-1">{children}</main>
               <Footer />
             </SectionContainer>
             <SpeedInsights />
