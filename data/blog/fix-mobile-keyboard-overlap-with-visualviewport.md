@@ -119,7 +119,6 @@ Using it in isolation for any full‑height container:
 
 - **Truth source**: `visualViewport.height` reflects the post‑keyboard visible height.
 - **CSS variable**: We mirror that value to `--app-height` so layout follows the real visual viewport.
-- **Safari fix**: Avoids `vh`/`dvh` inconsistencies when browser chrome or the keyboard alters the visible area.
 
 ## Progressive enhancement (optional meta)
 
