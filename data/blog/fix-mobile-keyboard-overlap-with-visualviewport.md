@@ -14,6 +14,8 @@ Bottom‑pinned chat inputs get buried when the mobile keyboard opens. The page 
 
 To solve this, we can use the VisualViewport API to sync the visual viewport height to a CSS variable.
 
+I hit this building Sparka. The fix is in the [Sparka GitHub repo](https://github.com/franciscomoretti/sparka) if you want a real‑world reference.
+
 ![Update height with mobile virtual keyboard](/assets/mobile-resize-virtual-keyboard.png)
 
 ## What partially helps (but isn’t universal)
