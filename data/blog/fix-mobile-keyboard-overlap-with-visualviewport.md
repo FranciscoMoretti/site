@@ -4,7 +4,7 @@ tags: ['CSS', 'HTML', 'UI']
 draft: false
 
 title: Fix mobile keyboard overlap with dvh (no observers)
-summary: Prevent the on‑screen keyboard from covering bottom inputs using dynamic viewport height. Just use h-dvh; no VisualViewport observers or CSS vars needed.
+summary: Prevent the on‑screen keyboard from covering bottom inputs using dynamic viewport height. Just use h-dvh and viewport meta.
 date: 2025-08-24
 ---
 
