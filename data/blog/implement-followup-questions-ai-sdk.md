@@ -10,6 +10,8 @@ images: []
 
 Follow-up questions keep users engaged in your AI app. They provide natural conversation starters when users hit a dead end. This guide shows you how to build them using [AI SDK](https://ai-sdk.dev/)'s streaming data parts feature.
 
+![Follow-up questions example](/assets/follow-up-questions-example.png)
+
 You'll see code that streams suggestions as they're generated, thanks to the partial object streaming feature. The result feels smooth and professional.
 
 ## Set up the backend suggestion generator
@@ -94,55 +96,52 @@ Build React components that display the suggestions and handle user clicks. The 
 
 Create a new file `components/followup-suggestions.tsx`:
 
-```typescript
-'use client';
+```tsx
+'use client'
 
-import type { ChatMessage } from '@/lib/ai/types';
-import { useCallback } from 'react';
-import { Button } from './ui/button';
-import { Separator } from './ui/separator';
+import type { ChatMessage } from '@/lib/ai/types'
+import { useCallback } from 'react'
+import { Button } from './ui/button'
+import { Separator } from './ui/separator'
 
 export function FollowUpSuggestions({
   message,
   sendMessage,
 }: {
-  message: ChatMessage;
+  message: ChatMessage
   sendMessage: UseChatHelpers<ChatMessage>['sendMessage']
 }) {
-
-  const suggestions = message.parts.find((p) => p.type === 'data-followupSuggestions')?.data.suggestions;
-
+  const suggestions = message.parts.find((p) => p.type === 'data-followupSuggestions')?.data
+    .suggestions
 
   const handleClick = useCallback(
-      (suggestion: string) => {
-          sendMessage({text: suggestion});
+    (suggestion: string) => {
+      sendMessage({ text: suggestion })
     },
-    [sendMessage],
-  );
+    [sendMessage]
+  )
 
-  if (!suggestions || suggestions.length === 0) return null;
+  if (!suggestions || suggestions.length === 0) return null
 
   return (
-    <div className={'flex flex-col gap-2 mt-3 mb-2'}>
+    <div className={'mb-2 mt-3 flex flex-col gap-2'}>
       <div className="text-base font-medium">Related</div>
       <div className="flex flex-wrap items-center gap-y-1">
         {suggestions.map((s, i) => (
-          <div key={s} className="flex flex-col w-full">
+          <div key={s} className="flex w-full flex-col">
             <button
               type="button"
               onClick={() => handleClick(s)}
-              className="w-full text-left py-2 text-foreground hover:text-primary cursor-pointer"
+              className="w-full cursor-pointer py-2 text-left text-foreground hover:text-primary"
             >
               {s}
             </button>
-            {i < suggestions.length - 1 && (
-              <hr className="h-px w-full bg-border border-0" />
-            )}
+            {i < suggestions.length - 1 && <hr className="h-px w-full border-0 bg-border" />}
           </div>
         ))}
       </div>
     </div>
-  );
+  )
 }
 ```
 
@@ -152,24 +151,24 @@ The component works with AI SDK's message parts system. It finds the right part 
 
 Finally, add the component to your assistant message. This shows follow-up suggestions after each AI response.
 
-```typescript
-import { FollowUpSuggestions } from './followup-suggestions';
+```tsx
+import { FollowUpSuggestions } from './followup-suggestions'
 
 const AssistantMessage = ({
   message,
   sendMessage,
 }: {
-  message: ChatMessage;
+  message: ChatMessage
   sendMessage: UseChatHelpers<ChatMessage>['sendMessage']
 }) => {
   return (
     <div className="relative flex flex-col gap-2">
-        {/* ... render other parts of the message */}
+      {/* ... render other parts of the message */}
 
-        <FollowUpSuggestions message={message} sendMessage={sendMessage} />
+      <FollowUpSuggestions message={message} sendMessage={sendMessage} />
     </div>
-  );
-};
+  )
+}
 ```
 
 ## Integrate with your chat API
