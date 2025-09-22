@@ -10,7 +10,7 @@ images: []
 
 Follow-up questions keep users engaged in your AI app. They provide natural conversation starters when users hit a dead end. This guide shows you how to build them using [AI SDK](https://ai-sdk.dev/)'s streaming data parts feature.
 
-![Follow-up questions example](/assets/follow-up-questions-example.png)
+![Follow-up questions example](/assets/follow-up_questions.png)
 
 You'll see code that streams suggestions as they're generated, thanks to the partial object streaming feature. The result feels smooth and professional.
 
