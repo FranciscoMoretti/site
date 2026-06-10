@@ -7,8 +7,7 @@
     "format": "prettier --write .",
     "dev": "cross-env INIT_CWD=$PWD next dev",
     "build": "cross-env INIT_CWD=$PWD next build",
-    "canonical:medium": "node scripts/canonical-to-medium.mjs",
-    "lint": "eslint app components data scripts next.config.ts tailwind.config.ts --fix",
+    "lint": "eslint app components data next.config.ts tailwind.config.ts --fix",
     "prepare": "husky",
     "serve": "next start"
   },
