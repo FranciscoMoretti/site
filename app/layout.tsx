@@ -3,7 +3,6 @@ import 'css/tailwind.css'
 import 'pliny/search/algolia.css'
 import 'remark-github-blockquote-alert/alert.css'
 
-import { Inter } from 'next/font/google'
 // import { SearchProvider, SearchConfig } from 'pliny/search'
 import Header from '@/components/Header'
 import SectionContainer from '@/components/SectionContainer'
@@ -11,12 +10,6 @@ import Footer from '@/components/Footer'
 import siteMetadata from '@/data/siteMetadata'
 import { Providers } from './providers'
 import { Metadata, Viewport } from 'next'
-import { SpeedInsights } from '@vercel/speed-insights/next'
-
-const fontSans = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-})
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteMetadata.siteUrl),
@@ -43,9 +36,6 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: './',
-    types: {
-      'application/rss+xml': `${siteMetadata.siteUrl}/feed.xml`,
-    },
   },
   robots: {
     index: true,
@@ -76,11 +66,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang={siteMetadata.language}
-      className={`${fontSans.variable} scroll-smooth`}
-      suppressHydrationWarning
-    >
+    <html lang={siteMetadata.language} className="scroll-smooth" suppressHydrationWarning>
       <body
         className="flex min-h-screen flex-col bg-background pl-[calc(100vw-100%)] text-foreground antialiased"
         //  Hydration warning Needed for https://github.com/pacocoursey/next-themes
@@ -92,7 +78,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <main className="mb-auto flex-1">{children}</main>
             <Footer />
           </SectionContainer>
-          <SpeedInsights />
         </Providers>
       </body>
     </html>

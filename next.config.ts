@@ -64,6 +64,10 @@ const config: NextConfig = {
   output,
   basePath,
   reactStrictMode: true,
+  devIndicators: {
+    appIsrStatus: false,
+    buildActivity: false,
+  },
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   eslint: {
     dirs: ['app', 'components', 'layouts', 'scripts'],

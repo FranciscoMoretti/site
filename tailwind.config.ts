@@ -20,7 +20,7 @@ const config: Config = {
         14: '3.5rem',
       },
       fontFamily: {
-        sans: ['var(--font-inter)'],
+        sans: ['Georgia', 'Times New Roman', 'Times', 'serif'],
       },
       colors: {
         primary: {
@@ -95,7 +95,7 @@ const config: Config = {
             },
             'h1,h2': {
               fontWeight: '700',
-              letterSpacing: theme('letterSpacing.tight'),
+              letterSpacing: '0',
             },
             h3: {
               fontWeight: '600',
@@ -112,7 +112,7 @@ const config: Config = {
             },
             'h1,h2': {
               fontWeight: '700',
-              letterSpacing: theme('letterSpacing.tight'),
+              letterSpacing: '0',
             },
             h3: {
               fontWeight: '600',

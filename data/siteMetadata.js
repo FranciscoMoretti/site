@@ -3,16 +3,15 @@ const siteMetadata = {
   title: 'Francisco Moretti',
   author: 'Francisco Moretti',
   headerTitle: 'Francisco Moretti',
-  hideHeaderTitle: true,
+  hideHeaderTitle: false,
   description:
-    "Hi, I'm Francisco! I'm learning in public and sharing my journey. I'm working with modern web technologies like Next.js, React, TailwindCSS, and TypeScript.",
-  heroTitle: "Hi, I'm Francisco!",
-  heroSubtitle:
-    "Welcome to my blog - I'm learning in public and sharing my journey. I'm working with modern web technologies like Next.js, React, TailwindCSS, and TypeScript.",
+    'Francisco Moretti is a Frontend Product Engineer based in London, specializing in building AI applications.',
+  heroTitle: 'Francisco Moretti',
+  heroSubtitle: 'Frontend Product Engineer specializing in building AI applications.',
 
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: process.env.NEXT_PUBLIC_APP_URL,
+  siteUrl: process.env.NEXT_PUBLIC_APP_URL || 'https://www.franciscomoretti.com',
   siteRepo: 'https://github.com/franciscomoretti/site',
   siteLogo: `${process.env.BASE_PATH || ''}/static/logo.svg`,
   siteLogoDark: `${process.env.BASE_PATH || ''}/static/logo-dark.svg`,
@@ -28,7 +27,6 @@ const siteMetadata = {
   linkedin: 'https://www.linkedin.com/in/franciscomoretti/',
   // threads: 'https://www.threads.net',
   // instagram: 'https://www.instagram.com',
-  // medium: 'https://medium.com',
   // bluesky: 'https://bsky.app/',
   locale: 'en-US',
   discussTwitter: false,
@@ -68,20 +66,6 @@ const siteMetadata = {
       // This corresponds to the `data-lang="en"` in giscus's configurations
       lang: 'en',
     },
-  },
-  search: {
-    provider: 'kbar', // kbar or algolia
-    kbarConfig: {
-      searchDocumentsPath: `${process.env.BASE_PATH || ''}/search.json`, // path to load documents to search
-    },
-    // provider: 'algolia',
-    // algoliaConfig: {
-    //   // The application ID provided by Algolia
-    //   appId: 'R2IYF7ETH7',
-    //   // Public API key: it is safe to commit it
-    //   apiKey: '599cec31baffa4868cae4e79f180729b',
-    //   indexName: 'docsearch',
-    // },
   },
 }
 

@@ -1,101 +1,115 @@
 import Link from '@/components/Link'
-import Tag from '@/components/Tag'
+import projectsData from '@/data/projectsData'
 import siteMetadata from '@/data/siteMetadata'
-import { formatDate } from 'pliny/utils/formatDate'
-import NewsletterForm from 'pliny/ui/NewsletterForm'
-import { CoreContent } from 'pliny/utils/contentlayer'
-import { Blog } from 'contentlayer/generated'
-import { PostViews } from '@/components/post-views/post-views'
 
-export function Home({
-  posts,
-  hasMorePosts,
+const profileLinks = [
+  { title: 'GitHub', href: siteMetadata.github },
+  { title: 'LinkedIn', href: siteMetadata.linkedin },
+  { title: 'X', href: siteMetadata.x },
+]
+
+function TextLink({ href, children }: { href: string; children: React.ReactNode }) {
+  return (
+    <Link href={href} className="plain-link">
+      {children}
+    </Link>
+  )
+}
+
+function ProfileLinks() {
+  return (
+    <p>
+      You can find me on{' '}
+      {profileLinks.map((link, index) => (
+        <span key={link.title}>
+          <Link href={link.href} className="plain-link">
+            {link.title}
+          </Link>
+          {index === profileLinks.length - 2
+            ? ', or '
+            : index < profileLinks.length - 1
+              ? ', '
+              : ''}
+        </span>
+      ))}
+      .
+    </p>
+  )
+}
+
+function ProjectRow({
+  title,
+  description,
+  href,
 }: {
-  posts: CoreContent<Pick<Blog, 'slug' | 'date' | 'title' | 'summary' | 'tags'>>[]
-  hasMorePosts: boolean
+  title: string
+  description: string
+  href: string
 }) {
   return (
-    <>
-      <div className="">
-        <div className="space-y-2 pb-8 pt-6 md:space-y-5">
-          <h1 className="text-4xl font-extrabold leading-9 tracking-tight text-foreground sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            {siteMetadata.heroTitle}
-          </h1>
-          <p className="text-lg leading-7 text-muted-foreground">{siteMetadata.heroSubtitle}</p>
-        </div>
-        <div className="divide-y divide-border">
-          <h2 className="pb-4 text-3xl font-extrabold leading-9 tracking-tight text-foreground sm:text-4xl md:text-5xl">
-            Latest
-          </h2>
-          <ul className="divide-y divide-border">
-            {!posts.length && 'No posts found.'}
-            {posts.map((post) => {
-              const { slug, date, title, summary, tags } = post
-              return (
-                <li key={slug} className="py-12">
-                  <article>
-                    <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-x-6 xl:space-y-0">
-                      <dl className="flex flex-row items-center justify-start gap-4 font-mono xl:flex-col xl:items-end xl:gap-3">
-                        <div className="">
-                          <dt className="sr-only">Published on</dt>
-                          <dd className="text-base font-medium text-muted-foreground">
-                            <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
-                          </dd>
-                        </div>
-                        <div className="">
-                          <dt className="sr-only ">View count</dt>
-                          <dd className="flex flex-row items-center gap-1 text-base font-medium text-muted-foreground">
-                            <PostViews slug={slug} />
-                          </dd>
-                        </div>
-                      </dl>
+    <li>
+      <Link href={href} className="plain-link text-base font-semibold">
+        {title}
+      </Link>
+      <span> - {description}</span>
+    </li>
+  )
+}
 
-                      <div className="space-y-5 xl:col-span-3">
-                        <div className="space-y-6">
-                          <div className="flex flex-col gap-0.5">
-                            <h2 className="text-2xl font-bold leading-8 tracking-tight">
-                              <Link href={`/blog/${slug}`} className="text-foreground">
-                                {title}
-                              </Link>
-                            </h2>
-                            <div className="flex flex-wrap">
-                              {tags.map((tag) => (
-                                <Tag key={tag} text={tag} />
-                              ))}
-                            </div>
-                          </div>
-                          <div className="max-w-none text-muted-foreground">{summary}</div>
-                        </div>
-                        <div className="text-base font-medium leading-6">
-                          <Link
-                            href={`/blog/${slug}`}
-                            className="text-primary hover:text-primary/90"
-                            aria-label={`Read more: "${title}"`}
-                          >
-                            Read more &rarr;
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </article>
-                </li>
-              )
-            })}
+export function Home() {
+  return (
+    <main className="pb-20 pt-28 sm:pt-32">
+      <article className="space-y-7 text-lg leading-8 text-foreground">
+        <h1 className="text-3xl font-semibold leading-10">Francisco Moretti</h1>
+
+        <div className="space-y-5">
+          <p>
+            I&apos;m a Frontend Product Engineer specializing in building AI applications. I&apos;m
+            based in London and originally from Argentina.
+          </p>
+
+          <p>
+            I&apos;m currently building an AI law firm at{' '}
+            <TextLink href="https://alaro.ai/">Alaro</TextLink>. Previously, I worked at{' '}
+            <TextLink href="https://samaya.ai/">Samaya AI</TextLink>, building AI for finance.
+          </p>
+
+          <p>
+            My open-source work is mostly around the Vercel AI SDK ecosystem. I built{' '}
+            <TextLink href="https://chatjs.dev">ChatJS</TextLink> and{' '}
+            <TextLink href="https://airegistry.app">AI Registry</TextLink>, and have contributed to{' '}
+            <TextLink href="https://github.com/vercel/ai">AI SDK</TextLink>,{' '}
+            <TextLink href="https://github.com/vercel/streamdown">Streamdown</TextLink>,{' '}
+            <TextLink href="https://github.com/vercel/ai-elements">AI Elements</TextLink>, and{' '}
+            <TextLink href="https://github.com/midday-ai/ai-sdk-devtools">AI SDK Devtools</TextLink>
+            . That work was selected for{' '}
+            <TextLink href="https://rauchg-oss-grants.vercel.app/">
+              Guillermo Rauch&apos;s OSS Grants
+            </TextLink>
+            , and ChatJS, formerly Sparka, was selected for the{' '}
+            <TextLink href="https://vercel.com/blog/vercel-open-source-program-fall-2025-cohort#sparka">
+              Vercel Open Source Program
+            </TextLink>
+            .
+          </p>
+        </div>
+
+        <section className="space-y-4">
+          <p>Some selected open-source projects include:</p>
+          <ul className="list-inside list-[square] space-y-1">
+            {projectsData.map((project) => (
+              <ProjectRow
+                key={project.title}
+                title={project.title}
+                description={project.description}
+                href={project.href}
+              />
+            ))}
           </ul>
-        </div>
-      </div>
-      {hasMorePosts && (
-        <div className="flex justify-end text-base font-medium leading-6">
-          <Link href="/blog" className="text-primary hover:text-primary/90" aria-label="All posts">
-            All Posts &rarr;
-          </Link>
-        </div>
-      )}
-      {siteMetadata.newsletter?.provider && (
-        <div className="flex items-center justify-center pt-4">
-          <NewsletterForm />
-        </div>
-      )}
-    </>
+        </section>
+
+        <ProfileLinks />
+      </article>
+    </main>
   )
 }

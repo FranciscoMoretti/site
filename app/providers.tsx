@@ -3,12 +3,10 @@
 import dynamic from 'next/dynamic'
 import siteMetadata from '@/data/siteMetadata'
 import { PostHogPostHogPageView } from '@/components/PostHogPageView'
-import { TailwindIndicator } from '@/components/tailwind-indicator'
 import { ThemeProvider as NextThemesProvider } from 'next-themes'
 import { Suspense } from 'react'
 import { NavigationEvents } from '@/components/navigation-events'
 import { QueryClient, QueryClientProvider, isServer } from '@tanstack/react-query'
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { ReactQueryStreamedHydration } from '@tanstack/react-query-next-experimental'
 
 const PHProvider = dynamic(
@@ -63,9 +61,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
               </PHProvider>
             )}
             <NavigationEvents />
-            <ReactQueryDevtools />
           </Suspense>
-          <TailwindIndicator />
         </NextThemesProvider>
       </ReactQueryStreamedHydration>
     </QueryClientProvider>
