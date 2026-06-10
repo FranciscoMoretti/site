@@ -1,5 +1,4 @@
 import Link from '@/components/Link'
-import { buttonVariants } from '@/components/ui/button'
 
 export default function NotFound() {
   return (
@@ -16,9 +15,7 @@ export default function NotFound() {
         <p className="mb-8">But dont worry, you can find plenty of other things on our homepage.</p>
         <Link
           href="/"
-          className={buttonVariants({
-            variant: 'secondary',
-          })}
+          className="inline-flex h-9 items-center justify-center rounded-md bg-secondary px-4 py-2 text-sm font-medium text-secondary-foreground transition-colors hover:bg-secondary/80"
         >
           Back to homepage
         </Link>
