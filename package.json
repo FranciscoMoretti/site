@@ -8,7 +8,6 @@
     "dev": "cross-env INIT_CWD=$PWD next dev",
     "build": "cross-env INIT_CWD=$PWD next build",
     "lint": "eslint app components data next.config.ts tailwind.config.ts --fix",
-    "prepare": "husky",
     "serve": "next start"
   },
   "dependencies": {
@@ -33,19 +32,9 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.0",
     "globals": "^15.12.0",
-    "husky": "^9.0.0",
-    "lint-staged": "^13.0.0",
     "prettier": "^3.6.2",
     "prettier-plugin-tailwindcss": "^0.5.11",
     "typescript": "^5.1.3"
-  },
-  "lint-staged": {
-    "*.+(js|jsx|ts|tsx)": [
-      "eslint --fix"
-    ],
-    "*.+(js|jsx|ts|tsx|json|css|md|mdx)": [
-      "prettier --write"
-    ]
   },
   "packageManager": "bun@1.0.30"
 }

@@ -12,6 +12,10 @@
 # testing
 /coverage
 
+# generated
+/output/
+tsconfig.tsbuildinfo
+
 # next.js
 /.next/
 /out/
