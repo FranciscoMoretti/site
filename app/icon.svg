@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="24" height="24"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 22V2" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
-<path d="M4 2L21 2" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
-<path d="M13 13H14" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
-</svg><style>@media (prefers-color-scheme: light) { :root { filter: none; } }
-@media (prefers-color-scheme: dark) { :root { filter: none; } }
-</style></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#fcfcfc" />
+  <path
+    d="M147 122H382L343 174H209V241H316L276 293H209V378L147 422V122Z"
+    fill="#141414"
+  />
+</svg>
