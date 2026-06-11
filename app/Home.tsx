@@ -18,7 +18,7 @@ function TextLink({ href, children }: { href: string; children: React.ReactNode 
 
 function ProfileLinks() {
   return (
-    <p>
+    <p className="text-base">
       You can find me on{' '}
       {profileLinks.map((link, index) => (
         <span key={link.title}>
@@ -38,20 +38,30 @@ function ProfileLinks() {
 }
 
 function ProjectRow({
+  index,
   title,
   description,
   href,
 }: {
+  index: number
   title: string
   description: string
   href: string
 }) {
   return (
-    <li>
-      <Link href={href} className="plain-link text-base font-semibold">
-        {title}
-      </Link>
-      <span> - {description}</span>
+    <li className="group grid grid-cols-[2.75rem_1fr]">
+      <span
+        aria-hidden
+        className="pt-0.5 font-mono text-sm leading-7 text-muted-foreground/70 transition-colors duration-200 group-hover:text-[hsl(var(--highlight))]"
+      >
+        {String(index + 1).padStart(2, '0')}
+      </span>
+      <div>
+        <Link href={href} className="plain-link font-semibold">
+          {title}
+        </Link>
+        <p className="text-base leading-7 text-muted-foreground">{description}</p>
+      </div>
     </li>
   )
 }
@@ -59,10 +69,12 @@ function ProjectRow({
 export function Home() {
   return (
     <main className="pb-20 pt-28 sm:pt-32">
-      <article className="space-y-7 text-lg leading-8 text-foreground">
-        <h1 className="text-3xl font-semibold leading-10">Francisco Moretti</h1>
+      <article className="space-y-8 text-lg leading-8 text-foreground">
+        <h1 className="reveal reveal-1 text-balance text-4xl font-semibold leading-tight tracking-tight">
+          Francisco Moretti
+        </h1>
 
-        <div className="space-y-5">
+        <div className="reveal reveal-2 space-y-5 text-pretty">
           <p>
             I&apos;m a Frontend Product Engineer specializing in building AI applications. I&apos;m
             based in London and originally from Argentina.
@@ -94,12 +106,15 @@ export function Home() {
           </p>
         </div>
 
-        <section className="space-y-4">
-          <p>Some selected open-source projects include:</p>
-          <ul className="list-inside list-[square] space-y-1">
-            {projectsData.map((project) => (
+        <section className="reveal reveal-3 space-y-5">
+          <h2 className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground">
+            Projects
+          </h2>
+          <ul className="space-y-4">
+            {projectsData.map((project, index) => (
               <ProjectRow
                 key={project.title}
+                index={index}
                 title={project.title}
                 description={project.description}
                 href={project.href}
@@ -108,7 +123,9 @@ export function Home() {
           </ul>
         </section>
 
-        <ProfileLinks />
+        <footer className="reveal reveal-4 border-t border-border/60 pt-6">
+          <ProfileLinks />
+        </footer>
       </article>
     </main>
   )

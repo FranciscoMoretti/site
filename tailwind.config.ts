@@ -11,7 +11,8 @@ const config: Config = {
         14: '3.5rem',
       },
       fontFamily: {
-        sans: ['Georgia', 'Times New Roman', 'Times', 'serif'],
+        sans: ['var(--font-sans)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        mono: ['var(--font-mono)', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
       },
       colors: {
         primary: {

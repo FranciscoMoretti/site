@@ -4,6 +4,17 @@ import SectionContainer from '@/components/SectionContainer'
 import siteMetadata from '@/data/siteMetadata'
 import { Providers } from './providers'
 import { Metadata, Viewport } from 'next'
+import { Geist, Geist_Mono } from 'next/font/google'
+
+const geist = Geist({
+  subsets: ['latin'],
+  variable: '--font-sans',
+})
+
+const geistMono = Geist_Mono({
+  subsets: ['latin'],
+  variable: '--font-mono',
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteMetadata.siteUrl),
@@ -53,14 +64,17 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#fff' },
+    { media: '(prefers-color-scheme: light)', color: '#fcfcfc' },
     { media: '(prefers-color-scheme: dark)', color: '#000' },
   ],
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang={siteMetadata.language} className="scroll-smooth">
+    <html
+      lang={siteMetadata.language}
+      className={`scroll-smooth ${geist.variable} ${geistMono.variable}`}
+    >
       <body className="flex min-h-screen flex-col bg-background pl-[calc(100vw-100%)] text-foreground antialiased">
         <Providers>
           <SectionContainer>
