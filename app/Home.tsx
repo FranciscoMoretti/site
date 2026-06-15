@@ -83,7 +83,8 @@ export function Home() {
           <p>
             I&apos;m currently building an AI law firm at{' '}
             <TextLink href="https://alaro.ai/">Alaro</TextLink>. Previously, I worked at{' '}
-            <TextLink href="https://samaya.ai/">Samaya AI</TextLink>, building AI for finance.
+            <TextLink href="https://samaya.ai/">Samaya AI</TextLink>, building AI for financial
+            research.
           </p>
 
           <p>
